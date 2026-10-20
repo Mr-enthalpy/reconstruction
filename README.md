@@ -1,9 +1,11 @@
 # reconstruction
 
 Offline research for measured-PSF spectral sensing in a UDC-like laboratory system.
-D2 studies fixed-region Face / Non-face with public hyperspectral scenes, explicit
-approximate forward/adjoint operators and a small spatial-spectral unrolled estimator.
-Task validity matters more than reconstruction PSNR. No hardware is operated and
+D4 prioritizes general spatial-spectral reconstruction independent of face tasks.
+R (RGB recovery/proposals) and N1 consume the same raw observation in the intended
+integrated system; C independently consumes their aligned outputs. Reconstruction
+quality is a necessary explanatory foundation, not an expendable intermediate.
+No hardware is operated and
 no Meta checkout or sibling Python package is required.
 
 The initial multi-exposure operator-handoff architecture was a proposal. D2 uses
@@ -32,3 +34,11 @@ Frozen-head classification. [Commands](experiments/d3/README.md) reproduce the
 bounded pilot with authorized local inputs. Source bias remains and the task score
 matches achromatic/intensity controls; general recovery and spectral task gain
 are not established. Historical D2 results remain unchanged.
+
+## D4 active work
+
+See the [D4 status](docs/reports/2026-10-20-d4/README.md) and
+[run instructions](experiments/d4/README.md). The general scene loader, full-state
+PGD and training entry do not consume classification labels or face ROIs. CPU
+execution checks are distinct from pending GPU training and quality acceptance.
+Scalar physics does not establish calibrated same-RAW RGB+spectral recovery.

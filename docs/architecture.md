@@ -1,6 +1,47 @@
-# Spatial-spectral reconstruction and independent task evaluation
+# Independent RGB, general reconstruction and downstream classification
 
-## Approved baseline architecture
+## D4: current architecture and acceptance
+
+```text
+                         one UDC RAW observation
+                           /                 \
+             R: RGB recovery             N1: full-field
+             mature face proposals       spatial-spectral reconstruction
+                           \                 /
+                             aligned regions
+                                    |
+                         C: RGB + spectral task
+```
+
+R and N1 run independently. Face proposals select downstream regions; they do not
+condition N1 execution, training eligibility, supervision or output. Classification
+consumes reconstruction and does not select its checkpoint. General full scenes,
+not face-classification ROI lists, supply N1's training distribution.
+
+N1 exports `spectral_cube_hat [B,21,H,W]`, `reprojected_measurement`,
+`global_spectrum` (derived), and residual/quality diagnostics. No imposed low-rank
+or global-average bottleneck. Select checkpoints using reconstruction validation;
+report PSNR with declared range, SSIM, local/band/mean spectral errors, SAM,
+structure/frequency errors, residual, unseen-scene/domain behavior and resources.
+Reconstruction quality is the explanatory foundation of the sensing claim.
+Poor reconstruction cannot be excused by calling it an intermediate task.
+
+R exports RGB, boxes/scores, coordinates and observation identity. Use mature
+preprocessing/detection and evaluate restoration and recall/localization separately.
+Demosaicing alone is not UDC deblurring or calibrated colour recovery.
+Current N1 physics is scalar shape-only, not Bayer RAW: R must not interpret it
+as a CFA mosaic. Fusion requires one explicitly modelled `y_raw=A_raw(X)+noise`
+for both branches. Independent ideal RGB is Oracle, not same-RAW recovery.
+
+C is deferred until N1 independent acceptance. Compare RGB-only, RGB+N1,
+Oracle RGB+Oracle spectral and RAW controls with matched groups/budgets and frozen
+N1. Final task scenes cannot enter N1 supervision. Preserve detector misses and
+false positives. Compression/joint training require later comparative evidence.
+
+The sections below describe the D3 implementation preserved as historical context.
+[D4 status](reports/2026-10-20-d4/README.md) owns current execution evidence.
+
+## D3 baseline architecture (historical)
 
 ```text
 True hyperspectral scene X [B,21,H,W]

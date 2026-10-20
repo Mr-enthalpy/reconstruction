@@ -1,0 +1,15 @@
+{
+  "seed": 20261020,
+  "stages": 6,
+  "hidden": 64,
+  "depth": 4,
+  "batch": 2,
+  "epochs": 400,
+  "patience": 60,
+  "learning_rate": 0.0003,
+  "train_noise_rms_fraction": 0.005,
+  "brightness_range": [0.9, 1.1],
+  "spatial_augmentation": "common full-scene horizontal/vertical flips and quarter rotations; no crops",
+  "selection": "minimum validation reconstruction objective",
+  "test_policy": "development_test only after checkpoint selection; reserved_final never loaded"
+}

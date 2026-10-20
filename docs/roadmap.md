@@ -1,5 +1,20 @@
 # Evidence-led next steps
 
+## Current D4 priority
+
+1. General whole-scene data independent of face labels/ROIs. Preserve prior held
+   groups and a separate final integration reserve; expand legally accessible data.
+2. GPU training and validation of full-channel N1. Independently measure spatial,
+   spectral and measurement fidelity, unseen-scene generalization and resources.
+3. Mature R preprocessing/detection and a consistent shared RAW convention.
+4. Only after reconstruction acceptance, independently evaluate C on RGB/spectral
+   inputs, including detector failures and source confounding.
+5. Compression and joint optimization follow evidence against this full-state baseline.
+
+Detailed current status: [D4 report](reports/2026-10-20-d4/README.md).
+The following D2/D3 sequence is retained as historical context, not current
+instructions to prioritize classification-selected training data.
+
 The completed [D2 pilot](reports/2026-10-20-d2/README.md) remains historical evidence.
 The [revised architecture](architecture.md) separates spatial-spectral scene recovery
 from downstream classification. The original design sequence follows; actual D3 execution is recorded below.
