@@ -1,0 +1,35 @@
+{
+  "original_count": 145,
+  "finite": true,
+  "shape": [
+    241,
+    21,
+    32,
+    32
+  ],
+  "wavelengths_nm": [
+    450,
+    460,
+    470,
+    480,
+    490,
+    500,
+    510,
+    520,
+    530,
+    540,
+    550,
+    560,
+    570,
+    580,
+    590,
+    600,
+    610,
+    620,
+    630,
+    640,
+    650
+  ],
+  "supervision_mean_error": 0.0,
+  "rejected_augmentation_draws": 2
+}

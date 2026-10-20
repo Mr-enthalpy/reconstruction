@@ -1,0 +1,47 @@
+{
+  "original_rois": 145,
+  "augmented_training_views": 96,
+  "counts": {
+    "train": {
+      "UWA": {
+        "face": 39,
+        "non_face": 39
+      },
+      "CAVE": {
+        "face": 3,
+        "non_face": 15
+      }
+    },
+    "val": {
+      "UWA": {
+        "face": 10,
+        "non_face": 10
+      },
+      "CAVE": {
+        "face": 0,
+        "non_face": 5
+      }
+    },
+    "test": {
+      "UWA": {
+        "face": 9,
+        "non_face": 9
+      },
+      "CAVE": {
+        "face": 0,
+        "non_face": 6
+      }
+    }
+  },
+  "cave_face_source_scenes": 2,
+  "cave_face_conservative_groups": 1,
+  "cave_face_rois": 3,
+  "group_isolation": true,
+  "replay": true,
+  "psf_source_verified": true,
+  "d2_scenes_sha256": "14cd5c2500b037e99042c7d0c36b9488631adf98307d989ed2edc2cbf15255b3",
+  "d2_manifest_sha256": "66ffc1deef97b98f96b5c96dc86a93d4c9af2ef4e96dcce4c6c31426ef2993f2",
+  "kernels_sha256": "1d74251916d26aaf641fe71291323679cbfb86c2a6e2536e3770443ca3471f14",
+  "d1_manifest_sha256": "6b78be9362302780d75319852f4c46a944e5acdaf8ca01a30150fec431888da0",
+  "d1_splits_sha256": "a32f71e88bee1379237ae11db68c90fae6e45cf47a5098c5108ac0930ee8aac3"
+}

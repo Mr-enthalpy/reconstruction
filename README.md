@@ -22,4 +22,13 @@ source confounding and achromatic controls do not establish a spectral task gain
 The approved next baseline separates **scene reconstruction** from **spectral task
 gain**: N1 exports a spatial-spectral matrix and is trained without classification
 loss; a frozen N1 feeds an independent classifier. See [architecture](docs/architecture.md).
-This revision is a design decision; D2 code/results remain the earlier low-rank pilot.
+This architecture was adopted after D2; D3 execution is documented below. D2 results remain the earlier low-rank pilot.
+
+## D3 execution status
+
+The [D3 report](docs/reports/2026-10-20-d3/README.md) records an actually trained
+full 21-channel spatial-state PGD model and independent Oracle / Reconstruction /
+Frozen-head classification. [Commands](experiments/d3/README.md) reproduce the
+bounded pilot with authorized local inputs. Source bias remains and the task score
+matches achromatic/intensity controls; general recovery and spectral task gain
+are not established. Historical D2 results remain unchanged.

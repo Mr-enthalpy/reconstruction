@@ -1,0 +1,18 @@
+{
+  "seed": 20261020,
+  "hw": [32, 32],
+  "stages": 3,
+  "hidden": 32,
+  "epochs": 60,
+  "batch": 16,
+  "learning_rate": 0.001,
+  "conditions": ["measured_aug", "achromatic_aug", "measured_noaug"],
+  "checkpoint_selection": "fixed final epoch, no test selection",
+  "noise_train_rms_fraction": 0.0,
+  "noise_sensitivity_fractions": [0.01, 0.05],
+  "illumination": "flat, dimensionless equal-energy scene; not calibrated radiance",
+  "weights": "21 ones, per-band shape-normalized measured kernels",
+  "c1": "balanced L2=0.01 logistic regression on 4x4 pooled cube, train-only standardization",
+  "loss": "MSE + 0.2 spatial gradient MSE + 0.05 cosine shape error + 0.02 normalized measurement MSE",
+  "test_policy": "frozen UWA subjects, frozen 26 CAVE scene splits; both face scenes grouped train-only because independent acquisition identity is unverified"
+}

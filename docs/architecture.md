@@ -44,8 +44,10 @@ against CAVE approximate reflectance. Data sources remain explicit in evaluation
 
 The existing D2 code is a completed low-rank 32x32 pilot, not implementation or
 acceptance of the revised general scene baseline. Preserve its measured results.
-The next baseline must be implemented and tested separately before claiming it runs.
-No training, relabeling or new dataset build accompanies this architecture revision.
+D3 now implements and tests the separate full 21-channel baseline at 32x32, with
+reconstruction-only training and frozen downstream heads. See the dated
+[D3 report](reports/2026-10-20-d3/README.md) for actual results and limitations.
+This bounded implementation does not establish general recoverability or task gain.
 
 The current forward uses shape-normalized measured kernels with assumed spectral
 weights, spatial scale, shift invariance and boundary conditions. Bayer response

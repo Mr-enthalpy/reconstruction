@@ -1,7 +1,7 @@
 # Research implementation rules
 
 This independent repository owns offline measured-PSF simulation, dataset protocols,
-small spatial-spectral unrolling prototypes, and task evaluation. Current D2 scope
+small spatial-spectral unrolling prototypes, and task evaluation. Current D3 scope
 is fixed-region Face / Non-face, not general face detection or identity recognition.
 
 Preserve originals and frozen subject/acquisition/scene splits. Keep raw/derived
