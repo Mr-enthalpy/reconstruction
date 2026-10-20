@@ -1,51 +1,20 @@
 # reconstruction
 
-`reconstruction` is a bounded operator-consuming reconstruction platform for static-scene, multi-exposure, multi-band coded spectral reconstruction under published LCD-forward operators.
+Offline research for measured-PSF spectral sensing in a UDC-like laboratory system.
+D2 studies fixed-region Face / Non-face with public hyperspectral scenes, explicit
+approximate forward/adjoint operators and a small spatial-spectral unrolled estimator.
+Task validity matters more than reconstruction PSNR. No hardware is operated and
+no Meta checkout or sibling Python package is required.
 
-The repository consumes `OperatorHandoff` outputs from `LCD_forward` and `MeasuredResponseHandoff` outputs from `optic_system`. It does not own hardware control, LCD mask families, operator modelling, or raw capture generation.
+The initial multi-exposure operator-handoff architecture was a proposal. D2 uses
+existing dense measured ROI PSFs through explicit operators without a new handoff
+framework. See [current architecture](docs/architecture.md) and [rules](AGENTS.md).
 
-The mainline inverse problem is:
+Keep datasets and outputs outside Git. UWA restrictions apply to raw and derived
+faces. CAVE negatives require content review; cross-source classification is not
+general face recognition evidence. Optional experiment dependencies belong in an
+independent research environment, never in the acquisition environment.
 
-```text
-Given:
-  y = multi-frame coded measurements of one static scene
-  A = published forward operator from LCD_forward
-  A* = matching adjoint operator
-  metadata = wavelengths, mask sequence identity, exposure/frame identity, calibration provenance
-
-Recover:
-  x = multi-band spectral scene
-```
-
-Preferred tensor convention:
-
-```text
-x: [B, L, H, W]
-y: [B, T, 1, H, W]
-```
-
-`T` is a coded measurement index, not video time.
-
-Deep unrolling is the preferred learned method route. Classical and variational baselines are included as first-class diagnostic references because they diagnose the operator and establish reconstruction reference levels.
-
-This repository is currently architecture-only. It contains no solver implementation, network implementation, dataset loader, or final external handoff schema.
-
-## Scope
-
-This repository owns inverse-problem formulation, reconstruction baselines, physics-guided deep unrolling designs, learned or variational priors, evaluation protocols, metrics, diagnostics, ablation runners, and comparison reports.
-
-It must not own camera control, LCD display control, TLS control, synchronized acquisition, raw capture generation, mask-family definitions, mask rendering, LCD mask-to-operator surrogate modelling, peak-cluster extraction, operator package generation, or canonical operator diagnostics.
-
-## Initial Phase
-
-Phase 0 initializes the repository shape only:
-
-```text
-- architecture documentation
-- placeholder source package
-- placeholder handoff directories
-- import-only test
-- no reconstruction algorithms
-- no final schemas
-- no external repository imports
-```
+See the [D2 evidence report](docs/reports/2026-10-20-d2/README.md) and
+[reproduction commands](experiments/d2/README.md). The bounded pilot runs, but
+source confounding and achromatic controls do not establish a spectral task gain.

@@ -1,0 +1,9 @@
+{
+  "d1_parity_max_abs": 8.881784197001252e-16,
+  "adjoint_relative_error": 4.3333283004974425e-16,
+  "seconds": 39.76053940001293,
+  "torch": "2.7.1+cpu",
+  "numpy": "2.5.4",
+  "cpu_threads": 4,
+  "config_sha256": "5b7e3d0363417e3a266e54a8b8abef6b899bc69c248dacf3fa7cbef3d12770bb"
+}

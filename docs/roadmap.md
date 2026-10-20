@@ -1,55 +1,10 @@
-# Roadmap
+# Evidence-led research status
 
-## Phase 0: Architecture Initialization
+D2 implements a bounded, offline measured-PSF simulation pilot. Its dated report owns
+results and limitations. The original initialization roadmap is superseded.
 
-```text
-- Create repository structure.
-- Add README, AGENTS, and architecture docs.
-- Add placeholder source package.
-- Add handoff placeholder directories.
-- Add import-only test.
-- Add no solver implementation.
-```
-
-## Phase 1: Handoff Contract Alignment
-
-```text
-- Align with LCD_forward OperatorHandoff once it exists.
-- Align with optic_system MeasuredResponseHandoff once it exists.
-- Document expected fields.
-- Do not implement fragile loaders against unstable files.
-```
-
-## Phase 2: Classical Operator-Consuming Baselines
-
-```text
-- Add A* y backprojection.
-- Add ridge / Tikhonov.
-- Add CG / LSQR.
-- Add residual diagnostics.
-```
-
-## Phase 3: Variational Baselines
-
-```text
-- Add spectral smoothness.
-- Add TV.
-- Add low-rank spectral prior.
-```
-
-## Phase 4: Deep Unrolling Mainline
-
-```text
-- Add physics-guided unrolling.
-- Use A and A* in each stage.
-- Add learned prior / proximal modules.
-- Keep architecture multi-band and multi-exposure.
-```
-
-## Phase 5: Evaluation and Reporting
-
-```text
-- Add benchmark runners.
-- Add method comparison reports.
-- Add ablations across operators, mask sequences, and reconstruction methods.
-```
+Before expanding training, review source-confounded negatives, effective sample
+size, achromatic controls, scale/radiometry assumptions and nonzero predictions for
+zero measurements. Further data collection or larger models need a concrete
+research decision. No speculative handoff service or multiple-exposure framework
+is required for the present single-plane experiment.

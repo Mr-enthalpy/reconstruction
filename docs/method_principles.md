@@ -1,40 +1,15 @@
-# Method Principles
+# D2 method principles
 
-The preferred learned method family is physics-guided deep unrolling.
+Use an explicit forward/adjoint pair and a small trainable proximal correction.
+The internal low-rank spatial coefficient maps produce an inspectable 21-band map,
+a spatial-mean spectrum and a measurement reprojection. Spectral state is an
+intermediate representation for task validity, not a high-resolution PSNR target.
 
-A reconstruction stage should preserve this structure:
+Keep source/acquisition/subject/scene separation. Fit the basis only on training
+originals. Match source samples and observation budget across PSF controls; an
+oracle sees privileged information and is not an equal-budget sensor baseline.
 
-```text
-data consistency:
-  uses A and A*
-
-learned prior / proximal:
-  uses a learned spatial-spectral prior
-
-diagnostics:
-  reports residual and reconstruction quality
-```
-
-Conceptual form:
-
-```text
-x^0 = A*(y) or classical warm start
-
-for k = 1..K:
-    z^k = data_consistency_update(x^k, y, A, A*)
-    x^{k+1} = learned_or_variational_prior(z^k, metadata)
-```
-
-The repository should avoid black-box `frames -> spectra` networks as the mainline. Such models may appear only as explicit baselines.
-
-## Multi-Band Principle
-
-The repository must not be hard-coded to three spectral bands. Mainline modules should support arbitrary `L` and should use terms such as `spectral`, `multi_band`, `wavelength_grid`, and `band_index` instead of RGB-specific names.
-
-## Multi-Frame Principle
-
-The repository should support multiple coded exposures of the same static target. `T` is the number of coded observations, exposures, or measurement frames. It is not video time by default.
-
-Allowed future concepts include frame-index conditioning, mask-sequence conditioning, multi-exposure fusion, and operator-aware frame weighting.
-
-Motion compensation, optical flow, temporal consistency losses for moving scenes, video restoration priors, and dynamic-scene assumptions are not mainline concepts.
+Current measurements are a dimensionless, noiseless single-plane approximation.
+Do not interpret shape-normalized kernels or processed dataset intensities as
+absolute throughput. No arbitrary-band, multiple-exposure or future-classifier
+framework is needed for this explicitly scoped 21-band pilot.

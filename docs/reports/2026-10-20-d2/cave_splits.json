@@ -1,0 +1,34 @@
+{
+  "train": [
+    "real_and_fake_peppers",
+    "fake_and_real_food",
+    "jelly_beans",
+    "glass_tiles",
+    "fake_and_real_beers",
+    "hairs",
+    "sponges",
+    "clay",
+    "balloons",
+    "pompoms",
+    "paints",
+    "thread_spools",
+    "fake_and_real_peppers",
+    "oil_painting",
+    "cd"
+  ],
+  "val": [
+    "fake_and_real_tomatoes",
+    "fake_and_real_lemon_slices",
+    "fake_and_real_lemons",
+    "fake_and_real_sushi",
+    "fake_and_real_strawberries"
+  ],
+  "test": [
+    "superballs",
+    "cloth",
+    "flowers",
+    "real_and_fake_apples",
+    "feathers",
+    "beads"
+  ]
+}
