@@ -1,15 +1,21 @@
-# D2 method principles
+# Method principles
 
-Use an explicit forward/adjoint pair and a small trainable proximal correction.
-The internal low-rank spatial coefficient maps produce an inspectable 21-band map,
-a spatial-mean spectrum and a measurement reprojection. Spectral state is an
-intermediate representation for task validity, not a high-resolution PSNR target.
+Use explicit forward and adjoint operators inside a spatial-spectral Deep Unrolling
+reconstructor. The first baseline exposes X_hat [B,21,H,W], its spatial mean and
+measurement reprojection. Declare the spatial resolution and valid domain.
+Do not impose a single global spectral output or a low-rank bottleneck before
+establishing the scene reconstruction baseline.
 
-Keep source/acquisition/subject/scene separation. Fit the basis only on training
-originals. Match source samples and observation budget across PSF controls; an
-oracle sees privileged information and is not an equal-budget sensor baseline.
+Train N1 without task labels or classification loss. Freeze it for downstream
+classification. This separates reconstruction fidelity from evidence of spectral
+task gain. Later compression or joint learning requires an explicit comparison.
+Keep model capacity proportional to independent samples; do not tune on test data.
 
-Current measurements are a dimensionless, noiseless single-plane approximation.
-Do not interpret shape-normalized kernels or processed dataset intensities as
-absolute throughput. No arbitrary-band, multiple-exposure or future-classifier
-framework is needed for this explicitly scoped 21-band pilot.
+Preserve source, subject, acquisition and scene isolation. Both labels should be
+reviewed within each source where possible; report remaining source/label imbalance.
+Use shared band geometry and physically stated brightness assumptions. Source
+normalization is not radiometric calibration. Preserve achromatic PSF controls.
+
+The existing D2 low-rank pilot and its scores are retained as historical results.
+They do not validate the revised baseline, absolute radiometry, general face
+recognition or information gain beyond RGB.

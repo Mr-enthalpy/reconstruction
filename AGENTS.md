@@ -18,11 +18,17 @@ All bands share augmentation geometry. Fit bases/models only on training groups;
 no test selection. Separate original and augmented counts. Report source confounding.
 Three narrow bands are not calibrated RGB. Preserve achromatic-PSF controls.
 
-N1 exposes spatial spectral maps, global 21-point curves and reprojections. Small
-D2 unrolling is explicitly authorized, not a general training platform or a
-PSNR-driven high-resolution reconstruction target. No hardware, mask optimization,
-network services, schema registries or C2/C3 placeholders. Existing initialization
-placeholders do not require implementation.
+N1's approved baseline is task-independent spatial-spectral reconstruction with
+primary output [B,21,H,W], plus a mean spectrum, reprojection and quality diagnostics.
+Train it without classification loss; freeze it for independent downstream task
+comparisons. Low-rank compression/global taps are later ablations, not baseline
+requirements. The existing D2 low-rank pilot remains historical evidence.
+
+Review CAVE real-face ROIs as positive candidates as well as negatives; do not infer
+labels from source. Keep scene groups intact and version revised annotations.
+Cleaning/augmentation must preserve spectra and be checked for remaining source cues.
+No hardware, mask optimization, services, schema registries or C2/C3 placeholders.
+Existing initialization placeholders do not require implementation.
 
 Run no-hardware tests in an explicit independent research environment. Commit here
 before any validated Meta pin change. Never deploy this environment to acquisition.

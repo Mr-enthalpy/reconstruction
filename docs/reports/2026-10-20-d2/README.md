@@ -158,3 +158,12 @@ frozen manifest, augmentation seeds, kernels and provenance, all nine checkpoint
 map/curve/reprojection examples and individual failures. Restricted data are
 excluded from this report. No acquisition host, production code or existing
 Meta acquisition pin was changed; no hardware validation was run.
+
+## Subsequent research decision (2026-10-20)
+
+After reviewing this pilot, the approved next baseline separates task-independent
+spatial-spectral reconstruction from downstream classification. CAVE real-face
+ROIs will be reviewed as positive candidates; shared cleaning and augmentation
+will be assessed for reducing source cues. These decisions do not relabel the
+26 negative scenes above or change any recorded score. The revised full scene
+baseline is not yet implemented or trained. See [current architecture](../../architecture.md).

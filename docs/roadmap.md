@@ -1,10 +1,20 @@
-# Evidence-led research status
+# Evidence-led next steps
 
-D2 implements a bounded, offline measured-PSF simulation pilot. Its dated report owns
-results and limitations. The original initialization roadmap is superseded.
+The completed [D2 pilot](reports/2026-10-20-d2/README.md) remains historical evidence.
+The [revised architecture](architecture.md) separates spatial-spectral scene recovery
+from downstream classification. This is a design decision, not newly completed work.
 
-Before expanding training, review source-confounded negatives, effective sample
-size, achromatic controls, scale/radiometry assumptions and nonzero predictions for
-zero measurements. Further data collection or larger models need a concrete
-research decision. No speculative handoff service or multiple-exposure framework
-is required for the present single-plane experiment.
+1. Review CAVE face and non-face ROIs; retain scene isolation and frozen UWA subject
+   groups. Version the new protocol and audit source/label balance and sample limits.
+2. Check whether shared cleaning and augmentation reduce source cues without
+   changing real spectral shapes or leaking groups.
+3. Build the independent spatial-spectral unrolling reconstruction baseline, with
+   inspectable scene matrices and reconstruction-only supervision. Validate local
+   spectra, spatial structure, amplitude and measurement consistency.
+4. Freeze the reconstructor and compare independent classifiers on common splits,
+   including oracle scenes, encoded observations and achromatic controls.
+5. Only then assess low-rank compression, global/local spectral taps or other
+   intermediate coding choices against the uncompressed baseline.
+
+No hardware work, larger training platform or speculative classifier modules are
+part of this documentation update. Progress is recorded once in dated reports.
