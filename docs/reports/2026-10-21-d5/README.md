@@ -2,7 +2,7 @@
 
 Started 2026-10-21 on branch `codex/d5-hsfaut-reconstruction` from D4 commit
 `809e6664661fdfd741665c0acd39fec73e4a0c78`. This report records G0/G1 and the G2 model/pilot checkpoint. Formal G3 training
-has not started.
+has not started. 中文完整实验报告：[EXPERIMENT_REPORT.md](EXPERIMENT_REPORT.md)。
 
 ## Status
 
@@ -108,5 +108,6 @@ python -X utf8 -m pytest -q -p no:cacheprovider
 
 These commands were executed on 2026-10-21; the placeholders identify required
 local inputs and are not claimed as a fresh-clone one-liner.
+
 
 
