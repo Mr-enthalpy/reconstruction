@@ -77,6 +77,29 @@ def evaluate_loss(model, data, records, scale):
     return float(torch.stack(values).mean())
 
 
+def evaluate_metrics(model, data, records):
+    model.eval()
+    values = {}
+    with torch.no_grad():
+        for record in records:
+            x = torch.from_numpy(data[record["array_index"]:record["array_index"] + 1]).to(
+                next(model.parameters()).device)
+            y = model.physics(x)
+            out = model(y)
+            values.setdefault(record["dataset_id"], []).append(reconstruction_metrics(
+                out["spectral_cube_hat"][0].cpu().numpy(), x[0].cpu().numpy(),
+                y[0].cpu().numpy(), out["reprojected_measurement"][0].cpu().numpy()))
+    keys = ["psnr_unit_range_db", "ssim_band_mean", "sam_deg", "cube_relative_l2",
+            "global_spectrum_relative_l2", "high_frequency_relative_l2",
+            "spatial_gradient_relative_l2", "measurement_relative_l2"]
+    grouped = {}
+    for source, rows in values.items():
+        grouped[source] = {key: float(np.mean([row[key] for row in rows])) for key in keys}
+    grouped["ALL"] = {key: float(np.mean([row[key] for rows in values.values() for row in rows]))
+                      for key in keys}
+    return grouped
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--prepared", type=Path, required=True)
@@ -85,6 +108,7 @@ def main():
     ap.add_argument("--kernel-file", type=Path)
     ap.add_argument("--resume", type=Path)
     ap.add_argument("--epochs", type=int)
+    ap.add_argument("--stop-after", type=int)
     ap.add_argument("--overfit", action="store_true")
     ap.add_argument("--overfit-steps", type=int, default=100)
     ap.add_argument("--device", default="cuda")
@@ -179,16 +203,19 @@ def main():
                             weight_decay=cfg["weight_decay"])
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(
         opt, cfg["epochs"], eta_min=cfg["learning_rate"] / 20)
-    start_epoch, best, stale = 0, float("inf"), 0
+    start_epoch, best, stale, best_epoch, global_step = 0, float("inf"), 0, 0, 0
+    eval_every = int(cfg.get("eval_every", 5))
     history = []
     if args.resume:
         checkpoint = torch.load(args.resume, map_location=args.device, weights_only=True)
         model.load_state_dict(checkpoint["state"])
         opt.load_state_dict(checkpoint["optimizer"])
         scheduler.load_state_dict(checkpoint["scheduler"])
-        start_epoch = checkpoint["epoch"]
+        start_epoch = checkpoint.get("next_epoch", checkpoint["epoch"])
         best = checkpoint["best"]
         stale = checkpoint["stale"]
+        best_epoch = checkpoint.get("best_epoch", 0)
+        global_step = checkpoint.get("global_step", start_epoch * cfg["steps_per_epoch"])
         history = json.loads((args.output / "history.json").read_text(encoding="utf-8"))
         torch.set_rng_state(checkpoint["torch_rng"].to(torch.uint8).cpu())
         if args.device == "cuda" and "cuda_rng" in checkpoint:
@@ -216,30 +243,38 @@ def main():
                 raise RuntimeError("nonfinite gradients")
             torch.nn.utils.clip_grad_norm_(model.parameters(), cfg["grad_clip"])
             opt.step()
+            global_step += 1
             losses.append(float(loss.detach()))
             parts.append(part)
         val_loss = evaluate_loss(model, val, val_records, scale)
-        row = dict(epoch=epoch + 1, train_loss=float(np.mean(losses)),
-                   validation_loss=val_loss, learning_rate=opt.param_groups[0]["lr"],
+        improved = val_loss < best
+        if improved:
+            best, stale, best_epoch = val_loss, 0, epoch + 1
+        else:
+            stale += 1
+        scheduler.step()
+        row = dict(epoch=epoch + 1, global_step=global_step, train_loss=float(np.mean(losses)),
+                   validation_loss=val_loss, best=best, best_epoch=best_epoch, stale=stale,
+                   learning_rate=opt.param_groups[0]["lr"],
                    **{key: float(np.mean([p[key] for p in parts])) for key in parts[0]})
+        if (epoch + 1) % eval_every == 0 or improved:
+            row["metrics"] = evaluate_metrics(model, val, val_records)
         history.append(row)
         payload = dict(state=model.state_dict(), optimizer=opt.state_dict(),
                        scheduler=scheduler.state_dict(), config=cfg, model=cfg["model"],
-                       epoch=epoch + 1, hw=list(train.shape[-2:]), best=best,
+                       epoch=epoch + 1, next_epoch=epoch + 1, global_step=global_step,
+                       hw=list(train.shape[-2:]), best=best, best_epoch=best_epoch,
                        stale=stale, validation_loss=val_loss, scale=float(scale),
                        torch_rng=torch.get_rng_state(),
                        cuda_rng=torch.cuda.get_rng_state_all() if args.device == "cuda" else None,
                        numpy_rng=sampler.rng.bit_generator.state)
         atomic_save(payload, args.output / "last.pt")
-        if val_loss < best:
-            best, stale = val_loss, 0
-            payload["best"] = best
+        if improved:
             atomic_save(payload, args.output / "best.pt")
-        else:
-            stale += 1
         (args.output / "history.json").write_text(json.dumps(history, indent=2), encoding="utf-8")
         print(json.dumps(row), flush=True)
-        scheduler.step()
+        if args.stop_after and epoch + 1 >= args.stop_after:
+            break
         if stale >= cfg["patience"]:
             break
     checkpoint = torch.load(args.output / "best.pt", map_location=args.device, weights_only=True)
@@ -267,6 +302,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
 
 
 
