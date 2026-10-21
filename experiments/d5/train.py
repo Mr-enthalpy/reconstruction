@@ -82,6 +82,7 @@ def main():
     ap.add_argument("--prepared", type=Path, required=True)
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--config", type=Path, required=True)
+    ap.add_argument("--kernel-file", type=Path)
     ap.add_argument("--resume", type=Path)
     ap.add_argument("--epochs", type=int)
     ap.add_argument("--overfit", action="store_true")
@@ -109,13 +110,14 @@ def main():
     val_records = [r for r in records if r["split"] == "val"]
     if any(r["split"] == "test" for r in train_records + val_records):
         raise ValueError("test records must not enter training")
-    kernels = np.load(args.prepared / "kernels.npz")["kernels"]
+    kernel_file = args.kernel_file or (args.prepared / "kernels.npz")
+    kernels = np.load(kernel_file)["kernels"]
     model = build_model(cfg, kernels, tuple(train.shape[-2:])).to(args.device)
     execution = dict(config=cfg, model=cfg["model"], prepared=str(args.prepared),
                      train_manifest_sha256=sha(args.prepared / "manifest.json"),
                      train_sha256=sha(args.prepared / "train.npz"),
                      val_sha256=sha(args.prepared / "val.npz"),
-                     kernel_sha256=sha(args.prepared / "kernels.npz"),
+                     kernel_sha256=sha(kernel_file),
                      torch_version=torch.__version__, seed=cfg["seed"],
                      device=torch.cuda.get_device_name(0) if args.device == "cuda" else "cpu",
                      parameters=sum(p.numel() for p in model.parameters()),
@@ -265,5 +267,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 

@@ -1,0 +1,75 @@
+{
+  "protocol": "D5.1-operator-benchmark",
+  "model": "A6",
+  "size": 512,
+  "batch": 1,
+  "results": [
+    {
+      "model": "A",
+      "stages": 6,
+      "size": 512,
+      "batch": 1,
+      "parameters": 98139,
+      "step_ms": 227.30855305989584,
+      "peak_cuda_allocated_bytes": 4328220160,
+      "status": "ok",
+      "config": "baseline"
+    },
+    {
+      "model": "A",
+      "stages": 6,
+      "size": 512,
+      "batch": 1,
+      "parameters": 98139,
+      "step_ms": 229.08927408854166,
+      "peak_cuda_allocated_bytes": 4328220160,
+      "status": "ok",
+      "config": "S1"
+    },
+    {
+      "model": "A",
+      "stages": 6,
+      "size": 512,
+      "batch": 1,
+      "parameters": 98139,
+      "step_ms": 228.8024698893229,
+      "peak_cuda_allocated_bytes": 4328220160,
+      "status": "ok",
+      "config": "S2"
+    },
+    {
+      "model": "A",
+      "stages": 6,
+      "size": 512,
+      "batch": 1,
+      "parameters": 98139,
+      "step_ms": 229.3944295247396,
+      "peak_cuda_allocated_bytes": 4328220160,
+      "status": "ok",
+      "config": "S3"
+    },
+    {
+      "model": "A",
+      "stages": 6,
+      "size": 512,
+      "batch": 1,
+      "parameters": 98139,
+      "step_ms": 227.05753580729166,
+      "peak_cuda_allocated_bytes": 4328220160,
+      "status": "ok",
+      "config": "S4"
+    },
+    {
+      "model": "A",
+      "stages": 6,
+      "size": 512,
+      "batch": 1,
+      "parameters": 98139,
+      "step_ms": 229.48612467447916,
+      "peak_cuda_allocated_bytes": 4328220160,
+      "status": "ok",
+      "config": "S5"
+    }
+  ],
+  "note": "forward+backward+optimizer step; operator and full A6 step share the same input grid"
+}

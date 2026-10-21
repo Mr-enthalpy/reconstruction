@@ -11,6 +11,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--prepared", type=Path, required=True)
     ap.add_argument("--config", type=Path, required=True)
+    ap.add_argument("--kernel-file", type=Path)
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--size", type=int, default=256)
     ap.add_argument("--batches", default="1,2")
@@ -21,7 +22,7 @@ def main():
     if not torch.cuda.is_available():
         raise RuntimeError("CUDA required for model benchmark")
     cfg = json.loads(args.config.read_text(encoding="utf-8"))
-    kernels = np.load(args.prepared / "kernels.npz")["kernels"]
+    kernels = np.load(args.kernel_file or (args.prepared / "kernels.npz"))["kernels"]
     results = []
     for batch in [int(v) for v in args.batches.split(",")]:
         torch.manual_seed(cfg["seed"])
@@ -68,3 +69,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
