@@ -257,7 +257,7 @@ def main():
                    validation_loss=val_loss, best=best, best_epoch=best_epoch, stale=stale,
                    learning_rate=opt.param_groups[0]["lr"],
                    **{key: float(np.mean([p[key] for p in parts])) for key in parts[0]})
-        if (epoch + 1) % eval_every == 0 or improved:
+        if (epoch + 1) % eval_every == 0:
             row["metrics"] = evaluate_metrics(model, val, val_records)
         history.append(row)
         payload = dict(state=model.state_dict(), optimizer=opt.state_dict(),
@@ -291,7 +291,7 @@ def main():
                                     out["spectral_cube_hat"][0].cpu().numpy(),
                                     x[0].cpu().numpy(), y[0].cpu().numpy(),
                                     out["reprojected_measurement"][0].cpu().numpy())))
-    summary = dict(status="pilot training completed; validation only",
+    summary = dict(status="training completed; validation only",
                    best_epoch=checkpoint["epoch"], best_validation_loss=checkpoint["validation_loss"],
                    results=results, seconds=time.perf_counter() - started,
                    execution=execution)
@@ -302,6 +302,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
 
 
 
