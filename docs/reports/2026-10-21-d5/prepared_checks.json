@@ -1,0 +1,64 @@
+{
+  "counts": {
+    "train": {
+      "CAVE": 23,
+      "KAIST": 16
+    },
+    "val": {
+      "CAVE": 5,
+      "KAIST": 4
+    },
+    "test": {
+      "CAVE": 4,
+      "KAIST": 10
+    }
+  },
+  "total": 62,
+  "shape": [
+    21,
+    256,
+    256
+  ],
+  "kernels": [
+    21,
+    64,
+    64
+  ],
+  "kernel_sha256": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+  "manifest_sha256": "78ecf24fdaa6627b810aa74297b27aaac50d2b0dc24b4efd7f6fa1bfaa9cbdf1",
+  "physics_sha256": "70c070e4f772ba61b87188f521af8b739883078a5ab13c737133a2bd2d0d9aa2",
+  "cave_source_sha256": {
+    "balloons": "ddf4789f16d05be13f896082e198b1a23979c02a766dc4683a6e27aecd0533ab",
+    "beads": "6720141758c29b030fa30125c3c0af06346f497154b477466f34474a1c092941",
+    "cd": "dac4566f8c62cd908ca90b3269b483b33b5fd82e569b275560e96e228356805c",
+    "chart_and_stuffed_toy": "89ac004fed2411714ee08f6ee77a5b48012ec75ba5129c0997e2a8ef6eee9006",
+    "clay": "5364754f6ce40fad84b90ad35a7077176f47810ee9d43e7c312c2ca44e1ef685",
+    "cloth": "493c889022db7a49b2d928db600df5bc0cc24402196b830f66e1cb9c18eacce0",
+    "egyptian_statue": "3145494e016b131022e1f7587105e5f090f306113a4e8662a7984e27f7d5e506",
+    "face": "d5b4b09e058e92834d25a40c26e9a2606a2bfddb3f61a795320047db94571dd1",
+    "fake_and_real_beers": "384dd0942dfb46201f290c9582faf94d46451fbe273f8b8afd3c412d361b635a",
+    "fake_and_real_food": "ff5cf4c4d48323c36f8858c6280066dd30b575965acb8bd50b263965db05f0c9",
+    "fake_and_real_lemon_slices": "66034ec654ddd0128e4f98aef5062e18d2c64c01eaaa53d34305c5f8a50497e4",
+    "fake_and_real_lemons": "43035e2fea0fc4f3ff9a036b2deba6a9cb81a48689db5d3ee7ea8999f6f888ac",
+    "fake_and_real_peppers": "8b259694344f443c1f066256c0398961c2e8580d2ac72159716e5872522d468b",
+    "fake_and_real_strawberries": "f1c8aafc44a72da162706b98250ec2f80241e354901c7951d000e9b982757012",
+    "fake_and_real_sushi": "11b0c1251a1b9bd0a7f1f1344fe1ba01618069784f96e326eaa3998e6214d794",
+    "fake_and_real_tomatoes": "3488d9eb08a9dfc74aca4af4108c5d10ad52720a8e8a784f7f8032f251dbeb39",
+    "feathers": "24b7661030c7bccdef59698aa59f10838530f90e680fcba187661ecb57920051",
+    "flowers": "64e03fa38224a781aa6ebca73e75c040b98e40281d233b4142b43a1ec7a1755b",
+    "glass_tiles": "37722a2ef21cb332a644a954a4ae640547df9b3ee4413676bcd9113ce993ab0d",
+    "hairs": "493328257aa7c0d6dc6849c8ee8976448c7105ab4d7ae70a2eceb0bb8cc8c44f",
+    "jelly_beans": "82bfcb8e0571ea614259830876f7a7f9e6facd7df72a284b7f19c084acfb08a3",
+    "oil_painting": "3f096cc699e48b867975ad2b322546bb157603490d91f31953dbd8e7039b159d",
+    "paints": "58a25f1ab85f580f64f19f19240cd7846f209137bc8529f651385de442d23e2b",
+    "photo_and_face": "3c4dc8cbdb7a469a55c0e8353068880f759ca7aa1b1bc736d1c7f6875fc37681",
+    "pompoms": "621f25e1b88a94288d40918fdb855bd71fdc4998836bf78391c6a1709f9b4e9b",
+    "real_and_fake_apples": "61f581ac102ae618b7cbe56d7057195d4cdd56b91ae4be0add41b39aedf102d9",
+    "real_and_fake_peppers": "dc1abb8747a36779f8a0e7ccadba5c9a00c424accb1132fae46c7857bdfcc8fe",
+    "sponges": "06e844a5db0dbdae299eee491cfbb34704fe58ffc9113c4e6b84183e464a8a14",
+    "stuffed_toys": "4036ea839df1c5214429336a16864bbebbc02983fd64d1e10b0395720cf4dd51",
+    "superballs": "f914fd72cfd068c1736926a39cecb174dff781090e13e9ab546405eff3992b1f",
+    "thread_spools": "756d7271fa3173f293332682c5038ff77a8b77f2134fdd605c48c5172cd418ff"
+  },
+  "watercolors_sha256": "72d2b36a10b40ed50853d8cf456c6512fee2f62af45c4c845a3573c00cf5bb8d"
+}

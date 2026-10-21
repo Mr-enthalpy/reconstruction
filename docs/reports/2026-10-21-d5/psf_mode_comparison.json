@@ -1,0 +1,736 @@
+{
+  "protocol": "D5-G1-psf-modes",
+  "scale": 8,
+  "primary_mode": "S_signed_shape_only",
+  "wavelength_nm": [
+    450,
+    460,
+    470,
+    480,
+    490,
+    500,
+    510,
+    520,
+    530,
+    540,
+    550,
+    560,
+    570,
+    580,
+    590,
+    600,
+    610,
+    620,
+    630,
+    640,
+    650
+  ],
+  "band_pair_correlation": {
+    "before_integration_mean": 0.5205454237940637,
+    "before_integration_min": 0.04648259107906023,
+    "after_integration_mean": 0.9205374478220177,
+    "after_integration_min": 0.7067828877715445,
+    "achromatic_before_mean": 0.7352204707463104,
+    "achromatic_after_mean": 0.9614025262817691
+  },
+  "integration": {
+    "integrated_sum": [
+      0.9999999403953552,
+      1.0,
+      0.9999998807907104,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.9999999403953552,
+      0.9999999403953552,
+      0.9999999403953552,
+      1.0,
+      1.0,
+      1.0,
+      0.9999998807907104,
+      1.0,
+      1.0
+    ],
+    "negative_fraction_before": [
+      0.8734054565429688,
+      0.8744125366210938,
+      0.8416519165039062,
+      0.8081626892089844,
+      0.785919189453125,
+      0.7945747375488281,
+      0.7955513000488281,
+      0.7959480285644531,
+      0.8012886047363281,
+      0.8119659423828125,
+      0.7653427124023438,
+      0.7786102294921875,
+      0.7933731079101562,
+      0.7807426452636719,
+      0.7704544067382812,
+      0.7894744873046875,
+      0.8068733215332031,
+      0.8234786987304688,
+      0.8364410400390625,
+      0.8493423461914062,
+      0.7452163696289062
+    ],
+    "negative_fraction_after": [
+      0.46142578125,
+      0.59375,
+      0.70556640625,
+      0.7470703125,
+      0.716552734375,
+      0.563232421875,
+      0.258544921875,
+      0.326416015625,
+      0.343017578125,
+      0.310302734375,
+      0.259765625,
+      0.364501953125,
+      0.401611328125,
+      0.4052734375,
+      0.39306640625,
+      0.332275390625,
+      0.296142578125,
+      0.304931640625,
+      0.3408203125,
+      0.3466796875,
+      0.344970703125
+    ],
+    "note": "8x8 sum is exactly block integration; information change is assessed by band-pair correlation"
+  },
+  "support": {
+    "signed_512": [
+      {
+        "radius_50pct": 37.0,
+        "radius_90pct": 118.0,
+        "radius_99pct": 257.0
+      },
+      {
+        "radius_50pct": 38.0,
+        "radius_90pct": 106.0,
+        "radius_99pct": 258.0
+      },
+      {
+        "radius_50pct": 39.0,
+        "radius_90pct": 106.0,
+        "radius_99pct": 257.0
+      },
+      {
+        "radius_50pct": 41.0,
+        "radius_90pct": 123.0,
+        "radius_99pct": 256.0
+      },
+      {
+        "radius_50pct": 42.0,
+        "radius_90pct": 130.0,
+        "radius_99pct": 254.0
+      },
+      {
+        "radius_50pct": 43.0,
+        "radius_90pct": 122.0,
+        "radius_99pct": 253.0
+      },
+      {
+        "radius_50pct": 43.0,
+        "radius_90pct": 117.0,
+        "radius_99pct": 250.0
+      },
+      {
+        "radius_50pct": 44.0,
+        "radius_90pct": 120.0,
+        "radius_99pct": 252.0
+      },
+      {
+        "radius_50pct": 45.0,
+        "radius_90pct": 120.0,
+        "radius_99pct": 253.0
+      },
+      {
+        "radius_50pct": 46.0,
+        "radius_90pct": 121.0,
+        "radius_99pct": 254.0
+      },
+      {
+        "radius_50pct": 47.0,
+        "radius_90pct": 124.0,
+        "radius_99pct": 254.0
+      },
+      {
+        "radius_50pct": 48.0,
+        "radius_90pct": 124.0,
+        "radius_99pct": 250.0
+      },
+      {
+        "radius_50pct": 49.0,
+        "radius_90pct": 125.0,
+        "radius_99pct": 243.0
+      },
+      {
+        "radius_50pct": 49.0,
+        "radius_90pct": 122.0,
+        "radius_99pct": 240.0
+      },
+      {
+        "radius_50pct": 50.0,
+        "radius_90pct": 123.0,
+        "radius_99pct": 240.0
+      },
+      {
+        "radius_50pct": 51.0,
+        "radius_90pct": 123.0,
+        "radius_99pct": 239.0
+      },
+      {
+        "radius_50pct": 51.0,
+        "radius_90pct": 121.0,
+        "radius_99pct": 241.0
+      },
+      {
+        "radius_50pct": 52.0,
+        "radius_90pct": 117.0,
+        "radius_99pct": 244.0
+      },
+      {
+        "radius_50pct": 53.0,
+        "radius_90pct": 116.0,
+        "radius_99pct": 248.0
+      },
+      {
+        "radius_50pct": 53.0,
+        "radius_90pct": 114.0,
+        "radius_99pct": 252.0
+      },
+      {
+        "radius_50pct": 55.0,
+        "radius_90pct": 119.0,
+        "radius_99pct": 250.0
+      }
+    ],
+    "integrated_64": [
+      {
+        "radius_50pct": 5.0,
+        "radius_90pct": 12.0,
+        "radius_99pct": 32.0
+      },
+      {
+        "radius_50pct": 5.0,
+        "radius_90pct": 12.0,
+        "radius_99pct": 32.0
+      },
+      {
+        "radius_50pct": 5.0,
+        "radius_90pct": 12.0,
+        "radius_99pct": 32.0
+      },
+      {
+        "radius_50pct": 5.0,
+        "radius_90pct": 14.0,
+        "radius_99pct": 32.0
+      },
+      {
+        "radius_50pct": 6.0,
+        "radius_90pct": 14.0,
+        "radius_99pct": 31.0
+      },
+      {
+        "radius_50pct": 6.0,
+        "radius_90pct": 14.0,
+        "radius_99pct": 31.0
+      },
+      {
+        "radius_50pct": 6.0,
+        "radius_90pct": 14.0,
+        "radius_99pct": 31.0
+      },
+      {
+        "radius_50pct": 6.0,
+        "radius_90pct": 15.0,
+        "radius_99pct": 31.0
+      },
+      {
+        "radius_50pct": 6.0,
+        "radius_90pct": 15.0,
+        "radius_99pct": 31.0
+      },
+      {
+        "radius_50pct": 6.0,
+        "radius_90pct": 15.0,
+        "radius_99pct": 31.0
+      },
+      {
+        "radius_50pct": 6.0,
+        "radius_90pct": 15.0,
+        "radius_99pct": 32.0
+      },
+      {
+        "radius_50pct": 6.0,
+        "radius_90pct": 15.0,
+        "radius_99pct": 30.0
+      },
+      {
+        "radius_50pct": 6.0,
+        "radius_90pct": 15.0,
+        "radius_99pct": 30.0
+      },
+      {
+        "radius_50pct": 7.0,
+        "radius_90pct": 15.0,
+        "radius_99pct": 29.0
+      },
+      {
+        "radius_50pct": 7.0,
+        "radius_90pct": 15.0,
+        "radius_99pct": 29.0
+      },
+      {
+        "radius_50pct": 7.0,
+        "radius_90pct": 15.0,
+        "radius_99pct": 28.0
+      },
+      {
+        "radius_50pct": 7.0,
+        "radius_90pct": 15.0,
+        "radius_99pct": 28.0
+      },
+      {
+        "radius_50pct": 7.0,
+        "radius_90pct": 13.0,
+        "radius_99pct": 28.0
+      },
+      {
+        "radius_50pct": 7.0,
+        "radius_90pct": 13.0,
+        "radius_99pct": 28.0
+      },
+      {
+        "radius_50pct": 7.0,
+        "radius_90pct": 12.0,
+        "radius_99pct": 28.0
+      },
+      {
+        "radius_50pct": 7.0,
+        "radius_90pct": 13.0,
+        "radius_99pct": 29.0
+      }
+    ],
+    "support512_vs_central512_of_1024_relative_l2": [
+      3.985316731058732e-08,
+      7.433538311633729e-08,
+      6.401347009144659e-08,
+      1.0957700253119307e-07,
+      7.650908782035435e-08,
+      4.2872267879821054e-08,
+      5.246633443188293e-08,
+      4.56898133496866e-08,
+      6.333609199008968e-08,
+      4.471106286938268e-08,
+      7.573628659986225e-08,
+      1.6789482953146195e-08,
+      5.12998680875398e-08,
+      4.642367700736477e-08,
+      5.785143693510036e-08,
+      7.155849093489314e-08,
+      4.4533240716031205e-08,
+      8.133116399406307e-08,
+      6.198682695615192e-08,
+      4.9844835479471395e-08,
+      5.160548861180811e-08
+    ]
+  },
+  "mode_p_nonnegative_projection": {
+    "negative_fraction": [
+      0.46142578125,
+      0.59375,
+      0.70556640625,
+      0.7470703125,
+      0.716552734375,
+      0.563232421875,
+      0.258544921875,
+      0.326416015625,
+      0.343017578125,
+      0.310302734375,
+      0.259765625,
+      0.364501953125,
+      0.401611328125,
+      0.4052734375,
+      0.39306640625,
+      0.332275390625,
+      0.296142578125,
+      0.304931640625,
+      0.3408203125,
+      0.3466796875,
+      0.344970703125
+    ],
+    "relative_l2_change": [
+      0.005455022248247503,
+      0.0077689062745072025,
+      0.01353417893830043,
+      0.017571980897195316,
+      0.014848029220519338,
+      0.004700597215401946,
+      0.0013319444044781034,
+      0.0015907690303626505,
+      0.0017749524795783397,
+      0.0018149309147446288,
+      0.0010010976140905875,
+      0.001628699137622939,
+      0.0021537016025753946,
+      0.0019477925388045212,
+      0.0015925112793504165,
+      0.0015193907808543241,
+      0.0015001685099618768,
+      0.0016741421229454453,
+      0.0021804025568912524,
+      0.0030472128821706413,
+      0.0020620036708541138
+    ],
+    "removed_absolute_energy_fraction": [
+      0.010607131756842136,
+      0.015164753422141075,
+      0.02640821412205696,
+      0.034184932708740234,
+      0.028945693746209145,
+      0.009193937294185162,
+      0.002548026852309704,
+      0.003058468457311392,
+      0.0034245590213686228,
+      0.0034929863177239895,
+      0.0019191558239981532,
+      0.0031504014041274786,
+      0.004176209680736065,
+      0.003778668586164713,
+      0.003088917350396514,
+      0.0029275291599333286,
+      0.002867617877200246,
+      0.0032037044875323772,
+      0.004185371100902557,
+      0.005866008345037699,
+      0.003982711583375931
+    ]
+  },
+  "audit": [
+    {
+      "wavelength_nm": 450,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "75b34de9079c4fb113f19d55765870b6378a7c34336b69897ca4220e6668e0b2",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 30323.106148374012,
+      "negative_fraction": 0.8734054565429688,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 460,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "864e7c5e1bfbb538bdb8554c8f494dc82c683287733743c91f411361a045dc03",
+      "dark_sha256": [
+        "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+        "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+      ],
+      "raw_signed_sum": 31969.100711382118,
+      "negative_fraction": 0.8744125366210938,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 470,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "6a3f9a7bc4e159e32bf8e217c9b55b351fbd217738fa4f0df809dca35aeb3e86",
+      "dark_sha256": [
+        "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+        "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+      ],
+      "raw_signed_sum": 47018.480640243935,
+      "negative_fraction": 0.8416519165039062,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 480,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "98d49f7a07d3f8f43c4eb5ac9153e7dae2d2d288547c1d9bc6d1beb7d4ce865c",
+      "dark_sha256": [
+        "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+        "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+      ],
+      "raw_signed_sum": 54758.54278455282,
+      "negative_fraction": 0.8081626892089844,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 490,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "cc6956cf9f4609e6e07aa1f1ca6d04a3b26bc59519cdb8506eea61ce8265e04f",
+      "dark_sha256": [
+        "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+        "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+      ],
+      "raw_signed_sum": 64888.04588414635,
+      "negative_fraction": 0.785919189453125,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 500,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "52264826dbb1d575cac716425af97b6f558d8ceedccd0e5af23354ccbb630031",
+      "dark_sha256": [
+        "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+        "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+      ],
+      "raw_signed_sum": 57172.04491869919,
+      "negative_fraction": 0.7945747375488281,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 510,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "313cb679156d52fa65c123265b7cf0dfdbd5290e56d6588bfb53b7dacbb28f9b",
+      "dark_sha256": [
+        "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+        "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+      ],
+      "raw_signed_sum": 58153.148983739804,
+      "negative_fraction": 0.7955513000488281,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 520,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "e79553719519073e62fb8149e586b280bff40b4d2ee3c69c01053baeac10ca81",
+      "dark_sha256": [
+        "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+        "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+      ],
+      "raw_signed_sum": 57199.079166666634,
+      "negative_fraction": 0.7959480285644531,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 530,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "986b29d24b34171bed912413603eb4dbc9cea6a5930a576599c1bd2490e059e7",
+      "dark_sha256": [
+        "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+        "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+      ],
+      "raw_signed_sum": 54990.01138211387,
+      "negative_fraction": 0.8012886047363281,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 540,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "f34ea62a52c918020eff0d984ccdd4add1c0989a7df4b19df9bd935d60251f95",
+      "dark_sha256": [
+        "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+        "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+      ],
+      "raw_signed_sum": 51266.91092479673,
+      "negative_fraction": 0.8119659423828125,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 550,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "eae6a468176128a6ccf2d5e2849ac5d75e68805e0dd97c2f7b53d905fdae923a",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 84059.5694105691,
+      "negative_fraction": 0.7653427124023438,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 560,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "6968df8d1b10ea5133e5ccfe227584be9fd10c6f72494138f6ae974a4d1f62b2",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 77712.04197154474,
+      "negative_fraction": 0.7786102294921875,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 570,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "6a176a4d86ee294af9a02da14bc074966f524691779055def17391bef1806988",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 65901.15929878043,
+      "negative_fraction": 0.7933731079101562,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 580,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "5129028117f3338b2c236eb3f3d74dba6dff06dbad80d2a1590fe17706062ac1",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 74105.82997967483,
+      "negative_fraction": 0.7807426452636719,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 590,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "7fd8b78f815254d31d90d7a95baaa39f735a482a8d4f1275120d0b30899464bb",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 85959.7920731707,
+      "negative_fraction": 0.7704544067382812,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 600,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "5f3d1a37decd661073a8b5915d6188ca6553c6f4bb441282dca7dc2d18faaa63",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 70926.47901422763,
+      "negative_fraction": 0.7894744873046875,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 610,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "be35687e04317160b2e45ff3c02fe952b7c573666b80526d5492200bfa699109",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 58960.18932926827,
+      "negative_fraction": 0.8068733215332031,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 620,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "9df4f6be87f2f96f753aa08f6982da906e55cd6f008f009ebab3846f7210438d",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 48947.6278455285,
+      "negative_fraction": 0.8234786987304688,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 630,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "48c387da3487af88508e694fc29adfccf51ff4c911180d77052ea1252f516a63",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 41812.327743902395,
+      "negative_fraction": 0.8364410400390625,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 640,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "53be44c15fed9329b5582dc1b724a17016974d00ea07bcf2f5e3b0c9ae346942",
+      "dark_sha256": [
+        "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+        "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+      ],
+      "raw_signed_sum": 34497.08531504062,
+      "negative_fraction": 0.8493423461914062,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    },
+    {
+      "wavelength_nm": 650,
+      "support_sensor_pixels": 512,
+      "roi_sha256": "817cd0e995a6d2ae2b784da9b0da711188dbc9b7616d45e809face06ceb25953",
+      "dark_sha256": [
+        "1012c9e3b6038a6b01b36077926a4513c27b732b9e693b7fc4fb8097e2905b3a",
+        "8f0f3a037af0ededdd046eef697415b772f6600a33e7591d0f3aab14f197fa27"
+      ],
+      "raw_signed_sum": 31297.1578379065,
+      "negative_fraction": 0.7452163696289062,
+      "integrated_kernel_shape": [
+        64,
+        64
+      ]
+    }
+  ],
+  "note": "Mode P is a sensitivity analysis, not a calibrated nonnegative PSF; 512 and 1024 supports remain signed."
+}

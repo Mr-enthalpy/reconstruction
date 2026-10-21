@@ -1,0 +1,221 @@
+{
+  "protocol": "D5-G1-forward-validation",
+  "git_commit": "809e6664661fdfd741665c0acd39fec73e4a0c78",
+  "cuda_available": true,
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "torch_version": "2.7.1+cu128",
+  "checks": [
+    {
+      "name": "single_band_impulse_vs_reference",
+      "value": 2.09859457809857e-16,
+      "threshold": 1e-11,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "adjoint_vs_reference",
+      "value": 2.962369292317646e-16,
+      "threshold": 1e-11,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "21_band_linear_superposition",
+      "value": 2.891828682268735e-16,
+      "threshold": 1e-11,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "forward_adjoint_inner_product",
+      "value": 1.9842572990589482e-16,
+      "threshold": 1e-11,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "cpu_gpu_forward",
+      "value": 2.412743280618826e-16,
+      "threshold": 1e-06,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "cpu_gpu_adjoint",
+      "value": 2.1122689888409447e-16,
+      "threshold": 1e-06,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "directional_derivative_fp64",
+      "value": 3.5417588886370915e-09,
+      "threshold": 1e-07,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "asymmetric_even_kernel_reference",
+      "value": 3.6888458022301064e-16,
+      "threshold": 1e-11,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "boundary_impulse_0_0",
+      "value": 4.566803274893574e-16,
+      "threshold": 1e-11,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "boundary_impulse_0_8",
+      "value": 4.3314963924713227e-16,
+      "threshold": 1e-11,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "boundary_impulse_3_4",
+      "value": 2.4222120624583955e-16,
+      "threshold": 1e-11,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "boundary_impulse_6_8",
+      "value": 2.6720761974033725e-16,
+      "threshold": 1e-11,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "batch_consistency",
+      "value": 0.0,
+      "threshold": 1e-11,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "measured_kernel_adjoint",
+      "value": 4.3685669029857495e-07,
+      "threshold": 0.0001,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "measured_kernel_fft_vs_scipy",
+      "value": 1.280248255004702e-07,
+      "threshold": 0.0001,
+      "passed": true,
+      "detail": {}
+    },
+    {
+      "name": "measured_kernel_cpu_gpu",
+      "value": 1.189522122218189e-07,
+      "threshold": 0.0001,
+      "passed": true,
+      "detail": {}
+    }
+  ],
+  "benchmark": [
+    {
+      "support_sensor_pixels": 512,
+      "size": 128,
+      "batch": 1,
+      "forward_adjoint_ms": 0.40938239097595214,
+      "peak_cuda_allocated_bytes": 29444096,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 512,
+      "size": 128,
+      "batch": 2,
+      "forward_adjoint_ms": 0.6700479984283447,
+      "peak_cuda_allocated_bytes": 53254144,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 512,
+      "size": 256,
+      "batch": 1,
+      "forward_adjoint_ms": 1.4275967597961425,
+      "peak_cuda_allocated_bytes": 122159104,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 512,
+      "size": 256,
+      "batch": 2,
+      "forward_adjoint_ms": 2.4549312591552734,
+      "peak_cuda_allocated_bytes": 213377024,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 512,
+      "size": 512,
+      "batch": 1,
+      "forward_adjoint_ms": 5.350604629516601,
+      "peak_cuda_allocated_bytes": 469401600,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 512,
+      "size": 512,
+      "batch": 2,
+      "forward_adjoint_ms": 10.0421630859375,
+      "peak_cuda_allocated_bytes": 848453632,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 128,
+      "batch": 1,
+      "forward_adjoint_ms": 0.5769216060638428,
+      "peak_cuda_allocated_bytes": 139937792,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 128,
+      "batch": 2,
+      "forward_adjoint_ms": 0.6529024124145508,
+      "peak_cuda_allocated_bytes": 53254144,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 256,
+      "batch": 1,
+      "forward_adjoint_ms": 1.8511871337890624,
+      "peak_cuda_allocated_bytes": 122159104,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 256,
+      "batch": 2,
+      "forward_adjoint_ms": 2.4409791946411135,
+      "peak_cuda_allocated_bytes": 213377024,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 512,
+      "batch": 1,
+      "forward_adjoint_ms": 5.310464096069336,
+      "peak_cuda_allocated_bytes": 469401600,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 512,
+      "batch": 2,
+      "forward_adjoint_ms": 10.147840118408203,
+      "peak_cuda_allocated_bytes": 848453632,
+      "status": "ok"
+    }
+  ],
+  "note": "Numerical identity is not optical validation; zero-boundary scalar shape-only model.",
+  "all_passed": true
+}

@@ -1,0 +1,85 @@
+{
+  "protocol": "D5-v1",
+  "frozen_before_training": true,
+  "cave": {
+    "train": [
+      "balloons",
+      "beads",
+      "cd",
+      "clay",
+      "cloth",
+      "face",
+      "fake_and_real_beers",
+      "fake_and_real_food",
+      "fake_and_real_peppers",
+      "feathers",
+      "flowers",
+      "glass_tiles",
+      "hairs",
+      "jelly_beans",
+      "oil_painting",
+      "paints",
+      "photo_and_face",
+      "pompoms",
+      "real_and_fake_apples",
+      "real_and_fake_peppers",
+      "sponges",
+      "superballs",
+      "thread_spools"
+    ],
+    "val": [
+      "fake_and_real_lemon_slices",
+      "fake_and_real_lemons",
+      "fake_and_real_strawberries",
+      "fake_and_real_sushi",
+      "fake_and_real_tomatoes"
+    ],
+    "test": [
+      "chart_and_stuffed_toy",
+      "egyptian_statue",
+      "stuffed_toys",
+      "watercolors"
+    ]
+  },
+  "kaist": {
+    "train": [
+      "kaist_2",
+      "kaist_4",
+      "kaist_5",
+      "kaist_6",
+      "kaist_8",
+      "kaist_9",
+      "kaist_10",
+      "kaist_12",
+      "kaist_13",
+      "kaist_14",
+      "kaist_15",
+      "kaist_16",
+      "kaist_17",
+      "kaist_18",
+      "kaist_19",
+      "kaist_20"
+    ],
+    "val": [
+      "kaist_25",
+      "kaist_26",
+      "kaist_28",
+      "kaist_29"
+    ],
+    "test": [
+      "kaist_1",
+      "kaist_3",
+      "kaist_7",
+      "kaist_11",
+      "kaist_21",
+      "kaist_22",
+      "kaist_23",
+      "kaist_24",
+      "kaist_27",
+      "kaist_30"
+    ]
+  },
+  "cave_test_note": "three never-trained reserve scenes plus 8-bit watercolors stress scene",
+  "d4_note": "D4 development-test scenes are training data in D5; D4 results are not reused as D5 test",
+  "source": "CAVE local 31-scene set; KAIST official non-selected/selected split; no cave_1024_28 grouping assumed"
+}
