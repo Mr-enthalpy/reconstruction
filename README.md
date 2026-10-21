@@ -39,6 +39,8 @@ are not established. Historical D2 results remain unchanged.
 
 See the [D4 status](docs/reports/2026-10-20-d4/README.md) and
 [run instructions](experiments/d4/README.md). The general scene loader, full-state
-PGD and training entry do not consume classification labels or face ROIs. CPU
-execution checks are distinct from pending GPU training and quality acceptance.
+PGD and training entry do not consume classification labels or face ROIs. Two CUDA
+training runs and independent diagnostics are complete. The selected model still
+has substantial local spectral/high-frequency error; general quality acceptance
+and downstream C training remain deferred.
 Scalar physics does not establish calibrated same-RAW RGB+spectral recovery.

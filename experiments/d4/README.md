@@ -36,8 +36,28 @@ patience60, cosine LR, 0.5% training-RMS Gaussian measurement noise.
 Curves must determine adequacy; those settings do not prove convergence.
 Development-test evaluation follows checkpoint selection, with fixed100-step
 Landweber and1%/5% noise checks. Final-reserve arrays are unavailable to training.
-Weights and per-scene outputs stay private. New-domain/model-mismatch evaluation
-and larger-data training remain execution requirements.
+Weights and per-scene outputs stay private. Two GPU runs, UWA/Harvard diagnostics
+and model/support-mismatch tests have now executed; see the dated D4 report.
+Larger-data training and general reconstruction quality acceptance remain open.
+
+## Capacity comparison and post-selection commands
+
+The single larger-capacity candidate was fixed before development-test inspection.
+It uses eight stages, width96 and depth5; select checkpoints/candidates using only
+the validation objective. Actual selection was epoch244 of this candidate.
+
+```powershell
+python -X utf8 experiments/d4/train.py --prepared <prepared-directory> --output <new-capacity-run> --config experiments/d4/config_capacity.json
+python -X utf8 experiments/d4/diagnostics.py --prepared <prepared-directory> --run <selected-run> --output <new-diagnostics> --psf <spectral21_20261018_reset01>
+python -X utf8 experiments/d4/evaluate_uwa.py --prepared <prepared-directory> --run <selected-run> --archive <audited-UWA-v1.1.zip> --splits <frozen-D1-splits.json> --output <new-UWA-diagnostic>
+python -X utf8 experiments/d4/evaluate_harvard_sample.py --prepared <prepared-directory> --run <selected-run> --sample <verified-img3.mat> --output <new-Harvard-diagnostic>
+```
+
+The source evaluators verify the audited archive/sample SHA256 and never fit a
+model. Harvard reports both fixed native/gain10 cases, not a selected gain.
+The optional1024 support test retains scale8 and signed normalization; it changes
+input physics, not trained weights. None of these diagnostics reads final-reserve
+arrays or establishes a retrained achromatic comparison.
 
 `rgb_smoke.py --cave <validated-CAVE-cubes> --model <licensed-YuNet.onnx>
 --output <new-private-directory>` checks the mature R interface on Oracle

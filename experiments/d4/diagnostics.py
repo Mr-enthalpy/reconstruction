@@ -13,12 +13,35 @@ from lcd_reconstruction.unrolling.full_spectral import SinglePlanePhysics
 from train import metrics
 
 
+def support1024(psf_root):
+    """Same measured correction as preparation, retaining the full1024 support."""
+    kernels = []
+    for nm in range(450, 651, 10):
+        with np.load(psf_root/f"roi_extent_review/roi1024_{nm}.npz") as z:
+            meta = json.loads(str(z["metadata_json"]))
+            if meta["roi_xywh"] != [866, 554, 1024, 1024] or meta["wavelength_nm"] != nm:
+                raise ValueError("PSF source geometry mismatch")
+            probe = {201.6: 1, 403.2: 2, 1612.8: 3}[meta["camera_settings"]["requested_exposure_us"]]
+            dark = sum(np.load(psf_root/f"received/R21Dark{phase}01/probe_{probe:03d}_mean.npy")
+                       [554:1578, 866:1890].astype(float) for phase in ["Pre", "Post"])/2
+            k = z["psf"].astype(float)-dark
+        border = np.ones((1024, 1024), bool)
+        border[40:-40, 40:-40] = False
+        k -= k[border].mean()
+        if not np.isfinite(k).all() or k.sum() <= 0:
+            raise ValueError("invalid full-support kernel")
+        k /= k.sum()
+        kernels.append(k.reshape(128, 8, 128, 8).sum((1, 3)))
+    return np.asarray(kernels, np.float32)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--prepared", type=Path, required=True)
     ap.add_argument("--run", type=Path, required=True)
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--device", choices=["cuda", "cpu"], default="cuda")
+    ap.add_argument("--psf", type=Path, help="Original PSF experiment for optional1024 support mismatch")
     args = ap.parse_args()
     args.output.mkdir(parents=True, exist_ok=False)
     torch.set_num_threads(4)
@@ -36,6 +59,8 @@ def main():
         "assumed_efficiency_ramp_0.8_to_1.2": k*np.linspace(.8, 1.2, 21, dtype=np.float32)[:, None, None],
         "negative_tail_clipped_input_mismatch": np.maximum(k, 0)/np.maximum(k, 0).sum((1, 2), keepdims=True)
     }
+    if args.psf is not None:
+        alternative["signed_support1024_input_mismatch"] = support1024(args.psf)
     # These deliberately changed input physics do NOT replace the original signed kernel.
     ops = {n: SinglePlanePhysics(torch.from_numpy(v), tuple(checkpoint["hw"])).to(args.device)
            for n, v in alternative.items()}

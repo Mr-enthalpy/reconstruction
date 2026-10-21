@@ -1,0 +1,480 @@
+{
+  "selection": {
+    "criterion": "Minimum validation objective only; development test not used for selection",
+    "candidates": [
+      {
+        "run": "gpu01",
+        "epochs": 398,
+        "epoch": 338,
+        "validation_loss": 0.0029556100256741048
+      },
+      {
+        "run": "gpu_capacity01",
+        "epochs": 304,
+        "epoch": 244,
+        "validation_loss": 0.0026943152071908115
+      }
+    ],
+    "selected": "gpu_capacity01"
+  },
+  "split_metrics": {
+    "train": {
+      "n1": {
+        "psnr_unit_range_db": 24.981572028311028,
+        "ssim_band_mean": 0.7931356824913613,
+        "sam_deg": 15.958216611076804,
+        "map_relative_l2": 0.35546086290303397,
+        "spatial_gradient_relative_l2": 0.6960887067458209,
+        "global_spectrum_relative_l2": 0.14420787113554337,
+        "measurement_relative_l2": 0.03153623585753581,
+        "high_frequency_relative_l2": 0.8701234530000126,
+        "negative_fraction": 0.0001342089570203081
+      },
+      "landweber100": {
+        "psnr_unit_range_db": 23.98054437732096,
+        "ssim_band_mean": 0.7710218438748218,
+        "sam_deg": 24.220470877254712,
+        "map_relative_l2": 0.39935557894846974,
+        "spatial_gradient_relative_l2": 0.6715999561197618,
+        "global_spectrum_relative_l2": 0.22022474228459246,
+        "measurement_relative_l2": 0.007363952860674437,
+        "high_frequency_relative_l2": 0.8113833174985998,
+        "negative_fraction": 0.031205377658876047
+      },
+      "scenes": 17
+    },
+    "val": {
+      "n1": {
+        "psnr_unit_range_db": 29.33394584975241,
+        "ssim_band_mean": 0.8889827966690064,
+        "sam_deg": 9.599418640136719,
+        "map_relative_l2": 0.32560179233551023,
+        "spatial_gradient_relative_l2": 0.6651021003723144,
+        "global_spectrum_relative_l2": 0.13762506172060968,
+        "measurement_relative_l2": 0.03517852276563645,
+        "high_frequency_relative_l2": 0.8611306548118591,
+        "negative_fraction": 1.3369605654761903e-05
+      },
+      "landweber100": {
+        "psnr_unit_range_db": 28.00995427727532,
+        "ssim_band_mean": 0.8593369131996518,
+        "sam_deg": 18.035188484191895,
+        "map_relative_l2": 0.3849791377782822,
+        "spatial_gradient_relative_l2": 0.6822860240936279,
+        "global_spectrum_relative_l2": 0.2206444799900055,
+        "measurement_relative_l2": 0.008998445700854063,
+        "high_frequency_relative_l2": 0.8680777072906494,
+        "negative_fraction": 0.02387172154017857
+      },
+      "scenes": 5
+    },
+    "development_test": {
+      "n1": {
+        "psnr_unit_range_db": 24.66787003640739,
+        "ssim_band_mean": 0.7026188446888848,
+        "sam_deg": 19.212748368581135,
+        "map_relative_l2": 0.4188447544972102,
+        "spatial_gradient_relative_l2": 0.7509821156660715,
+        "global_spectrum_relative_l2": 0.17975005507469177,
+        "measurement_relative_l2": 0.034134804271161556,
+        "high_frequency_relative_l2": 0.8937262495358785,
+        "negative_fraction": 0.00013078962053571428
+      },
+      "landweber100": {
+        "psnr_unit_range_db": 23.742708575171253,
+        "ssim_band_mean": 0.7014356868134604,
+        "sam_deg": 27.905201594034832,
+        "map_relative_l2": 0.46781668066978455,
+        "spatial_gradient_relative_l2": 0.720302681128184,
+        "global_spectrum_relative_l2": 0.29534050449728966,
+        "measurement_relative_l2": 0.008644080953672528,
+        "high_frequency_relative_l2": 0.829616516828537,
+        "negative_fraction": 0.02421933128720238
+      },
+      "scenes": 6
+    }
+  },
+  "resources": {
+    "parameters": 285533,
+    "seconds_total": 251.11966590001248,
+    "inference_seconds_median": 0.012528999999631196,
+    "peak_cuda_allocated_bytes": 1094155776,
+    "torch_version": "2.7.1+cu128",
+    "device_name": "NVIDIA GeForce RTX 3060 Ti",
+    "best_epoch": 244,
+    "manifest_sha256": "de334816a9b7a4dd381f193336a9db891b47db404a6b3c5c503c052c77d544bb",
+    "physics_sha256": "a39f2423e06a01e96dffe495b3d026a71428b35252fa6225c87812b3c8781d22",
+    "final_holdout_loaded": false
+  },
+  "checkpoint_sha256": "d7c331ae3319e14aac49509f5f978c04448337341ee76187410b14d5f3d1442a",
+  "noise": {
+    "0.01": {
+      "psnr_unit_range_db": 24.66411061635617,
+      "ssim_band_mean": 0.702163706932749,
+      "sam_deg": 19.330323378245037,
+      "map_relative_l2": 0.41899755597114563,
+      "global_spectrum_relative_l2": 0.17978526651859283,
+      "measurement_relative_l2": 0.03734028339385986,
+      "spatial_gradient_relative_l2": 0.7520836889743805,
+      "high_frequency_relative_l2": 0.8950153390566508
+    },
+    "0.05": {
+      "psnr_unit_range_db": 24.568682869242924,
+      "ssim_band_mean": 0.688128727296042,
+      "sam_deg": 21.490121523539226,
+      "map_relative_l2": 0.42300161222616833,
+      "global_spectrum_relative_l2": 0.1798531860113144,
+      "measurement_relative_l2": 0.07984514099856217,
+      "spatial_gradient_relative_l2": 0.7703702847162882,
+      "high_frequency_relative_l2": 0.9116962055365244
+    }
+  },
+  "per_scene": {
+    "beads": {
+      "psnr_unit_range_db": 18.257571888321525,
+      "ssim_band_mean": 0.45943611718359445,
+      "sam_deg": 25.36639404296875,
+      "map_relative_l2": 0.5982292294502258,
+      "global_spectrum_relative_l2": 0.17727836966514587,
+      "measurement_relative_l2": 0.044056832790374756,
+      "spatial_gradient_relative_l2": 0.885723352432251,
+      "high_frequency_relative_l2": 0.9635604023933411
+    },
+    "cloth": {
+      "psnr_unit_range_db": 25.626716175151167,
+      "ssim_band_mean": 0.606397237096514,
+      "sam_deg": 19.986061096191406,
+      "map_relative_l2": 0.3857594430446625,
+      "global_spectrum_relative_l2": 0.20441268384456635,
+      "measurement_relative_l2": 0.030218107625842094,
+      "spatial_gradient_relative_l2": 0.875740647315979,
+      "high_frequency_relative_l2": 0.9653341770172119
+    },
+    "feathers": {
+      "psnr_unit_range_db": 23.370178246824814,
+      "ssim_band_mean": 0.7125485908417475,
+      "sam_deg": 21.360546112060547,
+      "map_relative_l2": 0.3268466293811798,
+      "global_spectrum_relative_l2": 0.06557127833366394,
+      "measurement_relative_l2": 0.032684169709682465,
+      "spatial_gradient_relative_l2": 0.7096391916275024,
+      "high_frequency_relative_l2": 0.8884629011154175
+    },
+    "flowers": {
+      "psnr_unit_range_db": 25.603967667729563,
+      "ssim_band_mean": 0.7685861445608593,
+      "sam_deg": 19.782684326171875,
+      "map_relative_l2": 0.3599516451358795,
+      "global_spectrum_relative_l2": 0.2098919004201889,
+      "measurement_relative_l2": 0.03465179726481438,
+      "spatial_gradient_relative_l2": 0.7592852115631104,
+      "high_frequency_relative_l2": 0.8782148361206055
+    },
+    "real_and_fake_apples": {
+      "psnr_unit_range_db": 31.608545006553626,
+      "ssim_band_mean": 0.8750856830960229,
+      "sam_deg": 14.196673393249512,
+      "map_relative_l2": 0.2740955352783203,
+      "global_spectrum_relative_l2": 0.13620662689208984,
+      "measurement_relative_l2": 0.031841665506362915,
+      "spatial_gradient_relative_l2": 0.5188378095626831,
+      "high_frequency_relative_l2": 0.7650508284568787
+    },
+    "superballs": {
+      "psnr_unit_range_db": 23.54024123386363,
+      "ssim_band_mean": 0.7936592953545707,
+      "sam_deg": 14.584131240844727,
+      "map_relative_l2": 0.5681860446929932,
+      "global_spectrum_relative_l2": 0.2851394712924957,
+      "measurement_relative_l2": 0.03135625272989273,
+      "spatial_gradient_relative_l2": 0.7566664814949036,
+      "high_frequency_relative_l2": 0.9017343521118164
+    }
+  },
+  "band_relative_l2_mean": [
+    0.5213346034288406,
+    0.5394032994906107,
+    0.547439898053805,
+    0.5284317508339882,
+    0.4720953280727069,
+    0.42967655758063,
+    0.4316645786166191,
+    0.43394854416449863,
+    0.42973291377226513,
+    0.4234415292739868,
+    0.41157922397057217,
+    0.3930341973900795,
+    0.3644941945870717,
+    0.3183728630344073,
+    0.3035130947828293,
+    0.3602076346675555,
+    0.39021778851747513,
+    0.41138458748658496,
+    0.4273070991039276,
+    0.43975689510504407,
+    0.44131310284137726
+  ],
+  "wavelengths_nm": [
+    450,
+    460,
+    470,
+    480,
+    490,
+    500,
+    510,
+    520,
+    530,
+    540,
+    550,
+    560,
+    570,
+    580,
+    590,
+    600,
+    610,
+    620,
+    630,
+    640,
+    650
+  ],
+  "uwa": {
+    "dataset": "UWA HSFD v1.1",
+    "independent_subjects": 16,
+    "acquisitions": 16,
+    "scene_selection": "all frozen D1 test subjects, first session, full frame; no ROI/label filter",
+    "model_fit_on_uwa": false,
+    "final_cave_reserve_accessed": false,
+    "archive_sha256": "34f78b92f496285d8f32374f94a777fae82896b433085d8e0fe40096715b9c53",
+    "checkpoint_sha256": "d7c331ae3319e14aac49509f5f978c04448337341ee76187410b14d5f3d1442a",
+    "normalization": "DN / 255; processed intensity, not CAVE reflectance or calibrated radiance",
+    "limitations": [
+      "Uncorrected sequential-band motion",
+      "255 is not proven saturation",
+      "Whole-frame resizing changes assumed magnification",
+      "Some source acquisitions were evaluated historically in D3; no D4 N1 fitting"
+    ],
+    "metrics": {
+      "psnr_unit_range_db": 25.389638056489314,
+      "ssim_band_mean": 0.8964603608917623,
+      "sam_deg": 16.81331193447113,
+      "map_relative_l2": 0.28082590736448765,
+      "spatial_gradient_relative_l2": 0.8250025697052479,
+      "measurement_relative_l2": 0.012910907622426748,
+      "global_spectrum_relative_l2": 0.2528086332604289
+    }
+  },
+  "harvard": {
+    "scene_count": 1,
+    "source": "Harvard artificial/mixed illumination img3",
+    "sample_sha256": "d1d59fb149bbf127a354ef8893d801eeb06f21266c7d8af8b34b213609a863b6",
+    "crop_xywh": [
+      440,
+      264,
+      512,
+      512
+    ],
+    "source_shape": [
+      1040,
+      1392,
+      31
+    ],
+    "nominal_wavelengths_nm": [
+      450,
+      460,
+      470,
+      480,
+      490,
+      500,
+      510,
+      520,
+      530,
+      540,
+      550,
+      560,
+      570,
+      580,
+      590,
+      600,
+      610,
+      620,
+      630,
+      640,
+      650
+    ],
+    "all_roi_pixels_valid": true,
+    "source_range": [
+      0.0,
+      0.05334554055085069
+    ],
+    "crop_mean_native": 0.003363502910360694,
+    "cases": {
+      "1.0": {
+        "psnr_unit_range_db": 50.497283551957366,
+        "ssim_band_mean": 0.9564573055221921,
+        "sam_deg": 34.057106018066406,
+        "valid_spectral_fraction": 1.0,
+        "map_relative_l2": 0.6646579504013062,
+        "global_spectrum_relative_l2": 0.5907231569290161,
+        "band_rmse": [
+          0.004360925871878862,
+          0.0035315772984176874,
+          0.00315178744494915,
+          0.0031382241286337376,
+          0.002531461650505662,
+          0.0022461628541350365,
+          0.002441524062305689,
+          0.0026468695141375065,
+          0.0022969141136854887,
+          0.0032168864272534847,
+          0.004544142633676529,
+          0.0012075958075001836,
+          0.001264566439203918,
+          0.0014662647154182196,
+          0.0019960578065365553,
+          0.0027229003608226776,
+          0.0049171834252774715,
+          0.004083363339304924,
+          0.0015924883773550391,
+          0.00268146232701838,
+          0.0028512044809758663
+        ],
+        "band_relative_l2": [
+          5.2572340965271,
+          3.3281428813934326,
+          2.6577727794647217,
+          1.996767520904541,
+          1.0185052156448364,
+          1.0595710277557373,
+          1.3698461055755615,
+          1.4276224374771118,
+          0.9108592867851257,
+          0.4743959605693817,
+          0.6025363802909851,
+          0.3723350763320923,
+          0.49192243814468384,
+          0.35672152042388916,
+          0.3980182707309723,
+          0.4382818639278412,
+          0.5449386835098267,
+          0.4827493727207184,
+          0.33656179904937744,
+          0.8029172420501709,
+          1.0442160367965698
+        ],
+        "high_frequency_relative_l2": 2.0284676551818848,
+        "spatial_gradient_relative_l2": 1.7268621921539307,
+        "measurement_relative_l2": 0.23275932669639587,
+        "negative_fraction": 0.0
+      },
+      "10.0": {
+        "psnr_unit_range_db": 32.107336449063055,
+        "ssim_band_mean": 0.8256070202305203,
+        "sam_deg": 32.54634475708008,
+        "valid_spectral_fraction": 1.0,
+        "map_relative_l2": 0.552199125289917,
+        "global_spectrum_relative_l2": 0.5354439616203308,
+        "band_rmse": [
+          0.029582655057311058,
+          0.023865647614002228,
+          0.0220416821539402,
+          0.01908770762383938,
+          0.011304446496069431,
+          0.015356643125414848,
+          0.018592413514852524,
+          0.018380561843514442,
+          0.011983994394540787,
+          0.033388249576091766,
+          0.04250320419669151,
+          0.004540357738733292,
+          0.008495043031871319,
+          0.008820566348731518,
+          0.016391638666391373,
+          0.026314809918403625,
+          0.05230134725570679,
+          0.04485700652003288,
+          0.008729159832000732,
+          0.0127787534147501,
+          0.020022323355078697
+        ],
+        "band_relative_l2": [
+          3.566281318664551,
+          2.249087333679199,
+          1.8586839437484741,
+          1.2144994735717773,
+          0.45482170581817627,
+          0.7244110703468323,
+          1.043149471282959,
+          0.9913788437843323,
+          0.475234717130661,
+          0.4923783540725708,
+          0.5635765790939331,
+          0.13999171555042267,
+          0.330461323261261,
+          0.21459193527698517,
+          0.3268527686595917,
+          0.42356687784194946,
+          0.5796210169792175,
+          0.530315101146698,
+          0.18448495864868164,
+          0.3826375901699066,
+          0.7332913279533386
+        ],
+        "high_frequency_relative_l2": 0.9076357483863831,
+        "spatial_gradient_relative_l2": 0.9381241202354431,
+        "measurement_relative_l2": 0.03213643282651901,
+        "negative_fraction": 0.0
+      }
+    },
+    "checkpoint_sha256": "d7c331ae3319e14aac49509f5f978c04448337341ee76187410b14d5f3d1442a",
+    "interpretation": "As-provided camera-dependent float intensity; not CAVE reflectance. No sensitivity-vector correction or absolute radiometric calibration assumed. Gain10 is an explicit synthetic illumination/range sensitivity, not a calibrated conversion. Fixed PSNR range1 can flatter dim data; read relative errors and SAM too. One sample cannot establish domain generalization; full archive not acquired."
+  },
+  "mismatch": {
+    "achromatic_input_mismatch": {
+      "psnr_unit_range_db": 24.68126565707046,
+      "ssim_band_mean": 0.7054274252482823,
+      "sam_deg": 19.211816151936848,
+      "map_relative_l2": 0.41806018352508545,
+      "global_spectrum_relative_l2": 0.18027514840165773,
+      "measurement_relative_l2": 0.03392584187289079,
+      "spatial_gradient_relative_l2": 0.7502962350845337,
+      "high_frequency_relative_l2": 0.8948272267977396,
+      "true_changed_operator_residual": 0.03363001470764478
+    },
+    "assumed_efficiency_ramp_0.8_to_1.2": {
+      "psnr_unit_range_db": 24.723587013524135,
+      "ssim_band_mean": 0.6993881069005482,
+      "sam_deg": 19.13480567932129,
+      "map_relative_l2": 0.41654540598392487,
+      "global_spectrum_relative_l2": 0.17738961428403854,
+      "measurement_relative_l2": 0.033996229991316795,
+      "spatial_gradient_relative_l2": 0.7511281967163086,
+      "high_frequency_relative_l2": 0.8926460246245066,
+      "true_changed_operator_residual": 0.03621455064664284
+    },
+    "negative_tail_clipped_input_mismatch": {
+      "psnr_unit_range_db": 24.66736984967594,
+      "ssim_band_mean": 0.702162117475555,
+      "sam_deg": 19.205057462056477,
+      "map_relative_l2": 0.4188454697529475,
+      "global_spectrum_relative_l2": 0.17970792576670647,
+      "measurement_relative_l2": 0.0340417322392265,
+      "spatial_gradient_relative_l2": 0.7510908742745718,
+      "high_frequency_relative_l2": 0.8939232726891836,
+      "true_changed_operator_residual": 0.03486691880971193
+    },
+    "signed_support1024_input_mismatch": {
+      "psnr_unit_range_db": 24.619980084461307,
+      "ssim_band_mean": 0.6953159244287582,
+      "sam_deg": 19.119341532389324,
+      "map_relative_l2": 0.42079297204812366,
+      "global_spectrum_relative_l2": 0.18025710433721542,
+      "measurement_relative_l2": 0.033501796113948025,
+      "spatial_gradient_relative_l2": 0.7529968321323395,
+      "high_frequency_relative_l2": 0.8968647619088491,
+      "true_changed_operator_residual": 0.04609088599681854
+    },
+    "zero_observation_prior": {
+      "output_rms": 0.0021227088291198015
+    }
+  }
+}
