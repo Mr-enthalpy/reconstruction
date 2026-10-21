@@ -1,5 +1,6 @@
 """D5 G1 forward/adjoint contract and operator benchmark."""
 import argparse
+import hashlib
 import json
 import subprocess
 from pathlib import Path
@@ -159,8 +160,12 @@ def main():
     checks = numeric_checks() + measured_checks(args.prepared)
     sizes = [int(v) for v in args.sizes.split(",")]
     batches = [int(v) for v in args.batches.split(",")]
+    script = Path(__file__).resolve()
+    prepared_checks = Path(args.prepared) / "checks.json"
     result = dict(
         protocol="D5-G1-forward-validation",
+        preflight_sha256=hashlib.sha256(script.read_bytes()).hexdigest(),
+        prepared_checks_sha256=hashlib.sha256(prepared_checks.read_bytes()).hexdigest(),
         git_commit=subprocess.run(["git", "-C", str(Path(__file__).resolve().parents[2]), "rev-parse", "HEAD"], capture_output=True, text=True, check=True).stdout.strip(),
         cuda_available=torch.cuda.is_available(),
         device=torch.cuda.get_device_name(0) if torch.cuda.is_available() else "cpu",
@@ -178,6 +183,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
