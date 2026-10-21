@@ -12,6 +12,9 @@
 5. Compression and joint optimization follow evidence against this full-state baseline.
 
 Detailed current status: [D4 report](reports/2026-10-20-d4/README.md).
+The [subsequent pipeline review](reports/2026-10-21-d4-review/README.md) records
+ADIS/SDI lessons and the next evidence gates; it does not claim a migrated model
+or completed shared-server training.
 Two independent GPU training runs and domain/model-mismatch diagnostics are now
 complete. General reconstruction quality is not accepted: local spectral and
 high-frequency errors remain large. Keep classification and compression deferred;
