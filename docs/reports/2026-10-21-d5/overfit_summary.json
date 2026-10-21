@@ -1,0 +1,38 @@
+{
+  "protocol": "D5-G2-single-sample-overfit",
+  "runs": [
+    {
+      "scene": "balloons",
+      "steps": 1000,
+      "initial_loss": 0.12578099966049194,
+      "final_loss": 0.03517618402838707,
+      "loss_decreased": true,
+      "checkpoint_reload_max_abs": 0.0,
+      "seconds": 61.19166080001742,
+      "parameters": 60696,
+      "name": "C3"
+    },
+    {
+      "scene": "balloons",
+      "steps": 600,
+      "initial_loss": 0.11538282781839371,
+      "final_loss": 0.03907717764377594,
+      "loss_decreased": true,
+      "checkpoint_reload_max_abs": 0.0,
+      "seconds": 55.10080970003037,
+      "parameters": 60698,
+      "name": "C5"
+    },
+    {
+      "scene": "balloons",
+      "steps": 600,
+      "initial_loss": 0.04823976382613182,
+      "final_loss": 0.03348606452345848,
+      "loss_decreased": true,
+      "checkpoint_reload_max_abs": 0.0,
+      "seconds": 44.38000850001117,
+      "parameters": 98139,
+      "name": "A6"
+    }
+  ]
+}

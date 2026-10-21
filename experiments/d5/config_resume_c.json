@@ -1,0 +1,26 @@
+{
+  "seed": 20261021,
+  "model": "C",
+  "stages": 3,
+  "width": 64,
+  "depth": 4,
+  "sfat_width": 32,
+  "sfat_levels": 3,
+  "batch": 1,
+  "steps_per_epoch": 10,
+  "epochs": 5,
+  "patience": 5,
+  "learning_rate": 0.0002,
+  "weight_decay": 1E-05,
+  "grad_clip": 1.0,
+  "train_noise_rms_fraction": 0.005,
+  "brightness_range": [
+    0.9,
+    1.1
+  ],
+  "lambda_grad": 0.2,
+  "lambda_spectral": 0.05,
+  "lambda_data": 0.02,
+  "selection": "minimum validation reconstruction objective",
+  "test_policy": "test.npz not loaded; frozen D5 test only in G4"
+}

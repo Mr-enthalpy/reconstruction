@@ -1,8 +1,8 @@
 # D5 — HSFAU-inspired general spatial-spectral reconstruction
 
 Started 2026-10-21 on branch `codex/d5-hsfaut-reconstruction` from D4 commit
-`809e6664661fdfd741665c0acd39fec73e4a0c78`. This report records G0 and G1 only.
-G2 model work and any formal training are not yet executed.
+`809e6664661fdfd741665c0acd39fec73e4a0c78`. This report records G0/G1 and the G2 model/pilot checkpoint. Formal G3 training
+has not started.
 
 ## Status
 
@@ -14,8 +14,8 @@ G2 model work and any formal training are not yet executed.
 | G1 forward/adjoint contract | executed | `forward_validation.json`, 21 tests passed |
 | G1 PSF mode analysis | executed | `psf_mode_comparison.json`, `psf_policy.md` |
 | G1 operator benchmark | executed | `compute_benchmark.json` |
-| G2 model, overfit and pilot | not started | none |
-| G3 formal training | not started | none |
+| G2 model, overfit and pilot | executed, not accepted | `g2_model_pilot.md` |
+| G3 formal training | not started (blocked by G2) | none |
 | G4 frozen test | not started | none |
 
 ## G0 facts
@@ -85,11 +85,11 @@ integrated operator alone.
 
 ## Next gate
 
-G2 must first use the existing D4 PGD as Model A, then add the HSFAU-style
-filter-split and SFAT prior only after the G1 contracts. Required before formal
-training: single-sample overfit, stage/gradient checks, checkpoint/resume test,
-10-20 epoch pilot, and a measured 256x256 model memory benchmark. No classification
-or compression work enters D5.
+G2 mechanics and a 1000-step pilot are complete, but the pilot is not accepted:
+SFAT (C6) did not beat the CNN prior (B6), high-frequency error remains about 0.975,
+and the single-sample fit is not tight. Do not start G3. First run a matched-capacity
+A/B/C comparison and decide whether SFAT contributes; then freeze the formal
+training configuration. No classification or compression work enters D5.
 
 ## Reproduction
 
@@ -108,3 +108,5 @@ python -X utf8 -m pytest -q -p no:cacheprovider
 
 These commands were executed on 2026-10-21; the placeholders identify required
 local inputs and are not claimed as a fresh-clone one-liner.
+
+
