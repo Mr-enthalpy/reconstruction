@@ -7,6 +7,9 @@ import torch
 from lcd_reconstruction.unrolling.general_pgd import GeneralSpectralPGD
 from lcd_reconstruction.unrolling.hsfaut import HSFAUReconstructor
 from lcd_reconstruction.unrolling.full_spectral import SinglePlanePhysics
+from lcd_reconstruction.operators.psf_provenance import (
+    PSFProvenanceError, array_digest, physics_buffers_from_model,
+    physics_buffers_from_state, resolve_psf_policy)
 from metrics import reconstruction_metrics
 
 
@@ -44,7 +47,14 @@ def main():
     checkpoint = torch.load(args.checkpoint, map_location="cuda", weights_only=True)
     cfg = checkpoint["config"]
     model = build_model(cfg, correct, tuple(checkpoint["hw"])).cuda()
+    policy = resolve_psf_policy(checkpoint.get("psf_provenance"),
+                                physics_buffers_from_model(model),
+                                physics_buffers_from_state(checkpoint["state"]),
+                                allow_mismatch=False, split="val",
+                                requested_array=array_digest(correct))
     model.load_state_dict(checkpoint["state"])
+    if physics_buffers_from_model(model) != policy["stored"]:
+        raise PSFProvenanceError("--correct-kernel does not match the checkpoint operator")
     model.eval().requires_grad_(False)
     alt_physics = SinglePlanePhysics(torch.tensor(alternative), tuple(checkpoint["hw"])).cuda()
     rows = []

@@ -9,6 +9,9 @@ import numpy as np
 import torch
 from lcd_reconstruction.unrolling.general_pgd import GeneralSpectralPGD
 from lcd_reconstruction.unrolling.hsfaut import HSFAUReconstructor, reconstruction_loss
+from lcd_reconstruction.operators.psf_provenance import (
+    PSFProvenanceError, array_digest, build_psf_record, physics_buffers_from_model,
+    physics_buffers_from_state, resolve_psf_policy)
 from metrics import reconstruction_metrics
 
 
@@ -137,11 +140,15 @@ def main():
     kernel_file = args.kernel_file or (args.prepared / "kernels.npz")
     kernels = np.load(kernel_file)["kernels"]
     model = build_model(cfg, kernels, tuple(train.shape[-2:])).to(args.device)
+    psf_record = build_psf_record(model, kernels, kernel_file, tuple(train.shape[-2:]))
     execution = dict(config=cfg, model=cfg["model"], prepared=str(args.prepared),
                      train_manifest_sha256=sha(args.prepared / "manifest.json"),
                      train_sha256=sha(args.prepared / "train.npz"),
                      val_sha256=sha(args.prepared / "val.npz"),
                      kernel_sha256=sha(kernel_file),
+                     kernel_sha256_array=psf_record["kernel_sha256_array"],
+                     kernel_shape=psf_record["kernel_shape"],
+                     psf_buffers=psf_record["physics_buffers"],
                      torch_version=torch.__version__, seed=cfg["seed"],
                      device=torch.cuda.get_device_name(0) if args.device == "cuda" else "cpu",
                      parameters=sum(p.numel() for p in model.parameters()),
@@ -208,7 +215,14 @@ def main():
     history = []
     if args.resume:
         checkpoint = torch.load(args.resume, map_location=args.device, weights_only=True)
+        psf_policy = resolve_psf_policy(
+            checkpoint.get("psf_provenance"), physics_buffers_from_model(model),
+            physics_buffers_from_state(checkpoint["state"]),
+            allow_mismatch=False, requested_array=array_digest(kernels))
         model.load_state_dict(checkpoint["state"])
+        if physics_buffers_from_model(model) != psf_policy["stored"]:
+            raise PSFProvenanceError("operator changed after loading the checkpoint state")
+        print("D5.2 stage: psf", psf_policy["policy"], flush=True)
         opt.load_state_dict(checkpoint["optimizer"])
         scheduler.load_state_dict(checkpoint["scheduler"])
         start_epoch = checkpoint.get("next_epoch", checkpoint["epoch"])
@@ -257,14 +271,28 @@ def main():
                    validation_loss=val_loss, best=best, best_epoch=best_epoch, stale=stale,
                    learning_rate=opt.param_groups[0]["lr"],
                    **{key: float(np.mean([p[key] for p in parts])) for key in parts[0]})
+        metric_roles = []
         if (epoch + 1) % eval_every == 0:
+            metric_roles.append("cadence")
+        if improved:
+            metric_roles.append("best")
+        if (epoch + 1 == cfg["epochs"] or stale >= cfg["patience"]
+                or (args.stop_after and epoch + 1 >= args.stop_after)):
+            metric_roles.append("final")
+        if metric_roles:
             row["metrics"] = evaluate_metrics(model, val, val_records)
+            row["metrics_roles"] = metric_roles
         history.append(row)
         payload = dict(state=model.state_dict(), optimizer=opt.state_dict(),
                        scheduler=scheduler.state_dict(), config=cfg, model=cfg["model"],
                        epoch=epoch + 1, next_epoch=epoch + 1, global_step=global_step,
                        hw=list(train.shape[-2:]), best=best, best_epoch=best_epoch,
                        stale=stale, validation_loss=val_loss, scale=float(scale),
+                       psf_provenance=psf_record,
+                       selection=dict(rule="min_validation_loss", epoch=epoch + 1,
+                                      is_best=bool(improved), validation_loss=val_loss,
+                                      best_epoch=best_epoch, best_validation_loss=best,
+                                      metrics=row.get("metrics")),
                        torch_rng=torch.get_rng_state(),
                        cuda_rng=torch.cuda.get_rng_state_all() if args.device == "cuda" else None,
                        numpy_rng=sampler.rng.bit_generator.state)
@@ -278,6 +306,8 @@ def main():
         if stale >= cfg["patience"]:
             break
     checkpoint = torch.load(args.output / "best.pt", map_location=args.device, weights_only=True)
+    if physics_buffers_from_state(checkpoint["state"]) != physics_buffers_from_model(model):
+        raise PSFProvenanceError("best.pt operator differs from the training operator")
     model.load_state_dict(checkpoint["state"])
     model.eval().requires_grad_(False)
     results = []
@@ -291,9 +321,29 @@ def main():
                                     out["spectral_cube_hat"][0].cpu().numpy(),
                                     x[0].cpu().numpy(), y[0].cpu().numpy(),
                                     out["reprojected_measurement"][0].cpu().numpy())))
+    recorded_metrics = (checkpoint.get("selection") or {}).get("metrics")
+    consistency = None
+    if recorded_metrics:
+        recomputed = {key: float(np.mean([r["metrics"][key] for r in results]))
+                      for key in recorded_metrics.get("ALL", {})}
+        differences = {key: abs(recomputed[key] - float(recorded_metrics["ALL"][key]))
+                       for key in recomputed if recorded_metrics["ALL"].get(key) is not None}
+        consistency = dict(
+            recorded_epoch=checkpoint.get("selection", {}).get("epoch"),
+            rule=checkpoint.get("selection", {}).get("rule"),
+            max_abs_difference=max(differences.values()) if differences else None,
+            consistent=all(value <= max(1e-9, 1e-6 * abs(float(recorded_metrics["ALL"][key])))
+                           for key, value in differences.items()))
     summary = dict(status="training completed; validation only",
                    best_epoch=checkpoint["epoch"], best_validation_loss=checkpoint["validation_loss"],
                    results=results, seconds=time.perf_counter() - started,
+                   selection=dict(rule="min_validation_loss", best_epoch=checkpoint["epoch"],
+                                  best_validation_loss=checkpoint["validation_loss"],
+                                  checkpoint=str(args.output / "best.pt"),
+                                  checkpoint_sha256=sha(args.output / "best.pt"),
+                                  metrics_in_checkpoint=recorded_metrics),
+                   consistency=consistency,
+                   psf_provenance=checkpoint.get("psf_provenance", psf_record),
                    execution=execution)
     (args.output / "validation.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(dict(best_epoch=checkpoint["epoch"], best=checkpoint["validation_loss"],
