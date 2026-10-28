@@ -26,8 +26,36 @@ python3 -X utf8 experiments/d5/train.py \
 ```
 
 `configs/a6_formal.json` uses 6 stages, batch 1, 100 steps/epoch, 300 epochs,
-patience 40 and validation-only selection. `eval_every=5` limits the expensive
-SSIM/FFT validation metrics; validation loss is still computed every epoch.
+patience 40 and validation-only selection. `eval_every=5` still limits the expensive
+SSIM/FFT validation metrics, but full metrics are now also computed whenever validation
+loss sets a new best and on the final epoch, so the selected checkpoint always carries
+its own metrics. Each checkpoint records `selection` (rule, epoch, value, metrics) and
+`psf_provenance`; `validation.json` re-checks the recorded metrics against a fresh pass.
+
+## PSF provenance
+
+Kernel identity is the canonical array digest (shape + float64 C-order bytes), because
+two `.npz` containers of the same array hash differently. Checkpoints store that digest
+plus the digests of the physics buffers (`kernel_fft`, `weights`, `L`).
+
+- `train.py --resume` refuses to continue when `--kernel-file` does not match the
+  checkpoint operator, so two matched arms cannot be cross-wired.
+- `evaluate.py --kernel-file` must match the checkpoint operator. A deliberate
+  substitution requires `--allow-psf-mismatch`, which keeps the requested operator,
+  records both digests, marks `formal_result=false` and is refused on the test split.
+- Checkpoints without a provenance record (before `8c50c88`) are still checked
+  operator-vs-operator and reported as `matched-legacy-no-record`.
+
+## Matched-arm comparison
+
+```bash
+python3 -X utf8 experiments/d5_2/compare_arms.py \
+  --chromatic <run>/s1_chromatic_20261028 --achromatic <run>/s3_achromatic_20261028 \
+  --output comparison.json
+```
+
+It compares each arm's rule-selected checkpoint on the same scenes, the trajectory at
+matching epochs, and the within-arm plateau spread. It never re-selects a checkpoint.
 
 ## Resume
 

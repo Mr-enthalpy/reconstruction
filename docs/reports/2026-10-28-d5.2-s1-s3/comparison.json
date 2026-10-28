@@ -1,0 +1,3823 @@
+{
+  "protocol": "D5.2-matched-arm-comparison",
+  "selection_rule": "each arm keeps its own minimum-validation-loss checkpoint",
+  "arms": {
+    "chromatic": {
+      "directory": "C:\\Users\\hanni\\PycharmProjects\\udc-research\\outputs\\c4_rerun_20261028\\arms\\s1_chromatic",
+      "best_epoch": 208,
+      "best_validation_loss": 0.012923688627779484,
+      "epochs_completed": 248,
+      "global_steps": 24800,
+      "kernel_sha256_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "kernel_sha256_file": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+      "best_metrics": {
+        "psnr_unit_range_db": 30.724774515044146,
+        "ssim_band_mean": 0.940027774130194,
+        "sam_deg": 9.899127546166865,
+        "cube_relative_l2": 0.2492537300529524,
+        "global_spectrum_relative_l2": 0.1009250593593879,
+        "high_frequency_relative_l2": 0.7619300554818212,
+        "spatial_gradient_relative_l2": 0.590041298152696,
+        "measurement_relative_l2": 0.010974769972749866
+      }
+    },
+    "achromatic": {
+      "directory": "C:\\Users\\hanni\\PycharmProjects\\udc-research\\outputs\\c4_rerun_20261028\\arms\\s3_achromatic",
+      "best_epoch": 296,
+      "best_validation_loss": 0.013399962335824966,
+      "epochs_completed": 300,
+      "global_steps": 30000,
+      "kernel_sha256_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "kernel_sha256_file": "88305f76aea486e592948b0e39eb31edfe0109372e3821d1da7ec8d79cff9341",
+      "best_metrics": {
+        "psnr_unit_range_db": 30.30589031213821,
+        "ssim_band_mean": 0.9333394809622799,
+        "sam_deg": 9.73430902007976,
+        "cube_relative_l2": 0.26055718795387534,
+        "global_spectrum_relative_l2": 0.10314129308077946,
+        "high_frequency_relative_l2": 0.8246309882020277,
+        "spatial_gradient_relative_l2": 0.6551255976789331,
+        "measurement_relative_l2": 0.018432889191998716
+      }
+    }
+  },
+  "comparison": {
+    "paired_scenes": [
+      {
+        "scene_id": "fake_and_real_lemon_slices",
+        "dataset_id": "CAVE",
+        "metrics": {
+          "psnr_unit_range_db": {
+            "chromatic": 31.474224189628522,
+            "achromatic": 31.12101911728162,
+            "delta": 0.3532050723469027
+          },
+          "ssim_band_mean": {
+            "chromatic": 0.9390723489804018,
+            "achromatic": 0.9313067300534932,
+            "delta": 0.007765618926908635
+          },
+          "sam_deg": {
+            "chromatic": 10.01859209132416,
+            "achromatic": 9.876155252017345,
+            "delta": 0.14243683930681605
+          },
+          "cube_relative_l2": {
+            "chromatic": 0.23050157267979396,
+            "achromatic": 0.24006792929831247,
+            "delta": -0.009566356618518512
+          },
+          "global_spectrum_relative_l2": {
+            "chromatic": 0.09870874726613793,
+            "achromatic": 0.10286040017945287,
+            "delta": -0.004151652913314943
+          },
+          "high_frequency_relative_l2": {
+            "chromatic": 0.8389174707069523,
+            "achromatic": 0.8843621624223488,
+            "delta": -0.045444691715396446
+          },
+          "spatial_gradient_relative_l2": {
+            "chromatic": 0.6798546468682568,
+            "achromatic": 0.726848297485653,
+            "delta": -0.04699365061739624
+          },
+          "measurement_relative_l2": {
+            "chromatic": 0.011478940906716735,
+            "achromatic": 0.018830044548016487,
+            "delta": -0.007351103641299752
+          }
+        }
+      },
+      {
+        "scene_id": "fake_and_real_lemons",
+        "dataset_id": "CAVE",
+        "metrics": {
+          "psnr_unit_range_db": {
+            "chromatic": 28.956478694154136,
+            "achromatic": 28.963919047872384,
+            "delta": -0.00744035371824836
+          },
+          "ssim_band_mean": {
+            "chromatic": 0.945377726320497,
+            "achromatic": 0.9412138817138562,
+            "delta": 0.004163844606640765
+          },
+          "sam_deg": {
+            "chromatic": 10.064162228513032,
+            "achromatic": 9.873566018822753,
+            "delta": 0.19059620969027868
+          },
+          "cube_relative_l2": {
+            "chromatic": 0.24759830899519394,
+            "achromatic": 0.24738630650882185,
+            "delta": 0.00021200248637209818
+          },
+          "global_spectrum_relative_l2": {
+            "chromatic": 0.12329134261144017,
+            "achromatic": 0.12418293471193902,
+            "delta": -0.000891592100498842
+          },
+          "high_frequency_relative_l2": {
+            "chromatic": 0.6466031253928434,
+            "achromatic": 0.7051321178975495,
+            "delta": -0.05852899250470611
+          },
+          "spatial_gradient_relative_l2": {
+            "chromatic": 0.4700220417523298,
+            "achromatic": 0.5480175012854002,
+            "delta": -0.07799545953307035
+          },
+          "measurement_relative_l2": {
+            "chromatic": 0.005791654749958898,
+            "achromatic": 0.009844645108412613,
+            "delta": -0.004052990358453715
+          }
+        }
+      },
+      {
+        "scene_id": "fake_and_real_strawberries",
+        "dataset_id": "CAVE",
+        "metrics": {
+          "psnr_unit_range_db": {
+            "chromatic": 31.61304451308274,
+            "achromatic": 31.237636141738342,
+            "delta": 0.375408371344399
+          },
+          "ssim_band_mean": {
+            "chromatic": 0.9051068580640447,
+            "achromatic": 0.8976889012547253,
+            "delta": 0.007417956809319337
+          },
+          "sam_deg": {
+            "chromatic": 13.353270183304467,
+            "achromatic": 13.514303723356123,
+            "delta": -0.1610335400516565
+          },
+          "cube_relative_l2": {
+            "chromatic": 0.1940356079998731,
+            "achromatic": 0.20260579095386813,
+            "delta": -0.008570182953995031
+          },
+          "global_spectrum_relative_l2": {
+            "chromatic": 0.05168125744217607,
+            "achromatic": 0.06084573972568669,
+            "delta": -0.00916448228351062
+          },
+          "high_frequency_relative_l2": {
+            "chromatic": 0.7094592899591415,
+            "achromatic": 0.7707529235400856,
+            "delta": -0.061293633580944085
+          },
+          "spatial_gradient_relative_l2": {
+            "chromatic": 0.5330817578723896,
+            "achromatic": 0.5934460550604901,
+            "delta": -0.060364297188100435
+          },
+          "measurement_relative_l2": {
+            "chromatic": 0.006795249420125917,
+            "achromatic": 0.010762071455716964,
+            "delta": -0.003966822035591047
+          }
+        }
+      },
+      {
+        "scene_id": "fake_and_real_sushi",
+        "dataset_id": "CAVE",
+        "metrics": {
+          "psnr_unit_range_db": {
+            "chromatic": 32.91631302636,
+            "achromatic": 32.295679629163836,
+            "delta": 0.6206333971961655
+          },
+          "ssim_band_mean": {
+            "chromatic": 0.9669559627331419,
+            "achromatic": 0.9625114040957863,
+            "delta": 0.0044445586373556
+          },
+          "sam_deg": {
+            "chromatic": 7.032145645730256,
+            "achromatic": 7.278371064128863,
+            "delta": -0.24622541839860723
+          },
+          "cube_relative_l2": {
+            "chromatic": 0.28458792054120036,
+            "achromatic": 0.3056667027232822,
+            "delta": -0.021078782182081868
+          },
+          "global_spectrum_relative_l2": {
+            "chromatic": 0.12249208314040838,
+            "achromatic": 0.12735219336642872,
+            "delta": -0.004860110226020342
+          },
+          "high_frequency_relative_l2": {
+            "chromatic": 0.8667546131098482,
+            "achromatic": 0.9572381495929768,
+            "delta": -0.09048353648312857
+          },
+          "spatial_gradient_relative_l2": {
+            "chromatic": 0.6274955959878828,
+            "achromatic": 0.7192857861903,
+            "delta": -0.09179019020241719
+          },
+          "measurement_relative_l2": {
+            "chromatic": 0.013956426589760443,
+            "achromatic": 0.023730717290306524,
+            "delta": -0.009774290700546081
+          }
+        }
+      },
+      {
+        "scene_id": "fake_and_real_tomatoes",
+        "dataset_id": "CAVE",
+        "metrics": {
+          "psnr_unit_range_db": {
+            "chromatic": 29.092137725518803,
+            "achromatic": 28.850788139450493,
+            "delta": 0.24134958606830992
+          },
+          "ssim_band_mean": {
+            "chromatic": 0.9607195600377536,
+            "achromatic": 0.9573936377146733,
+            "delta": 0.003325922323080266
+          },
+          "sam_deg": {
+            "chromatic": 9.28503154298012,
+            "achromatic": 9.386844031823893,
+            "delta": -0.10181248884377325
+          },
+          "cube_relative_l2": {
+            "chromatic": 0.4005620983691177,
+            "achromatic": 0.41184835225879973,
+            "delta": -0.011286253889682019
+          },
+          "global_spectrum_relative_l2": {
+            "chromatic": 0.29146417354049875,
+            "achromatic": 0.2899076664727135,
+            "delta": 0.0015565070677852622
+          },
+          "high_frequency_relative_l2": {
+            "chromatic": 0.802272801643352,
+            "achromatic": 0.8793722549779984,
+            "delta": -0.0770994533346464
+          },
+          "spatial_gradient_relative_l2": {
+            "chromatic": 0.6798157221122574,
+            "achromatic": 0.7559727881837465,
+            "delta": -0.07615706607148909
+          },
+          "measurement_relative_l2": {
+            "chromatic": 0.015715397365130567,
+            "achromatic": 0.02642583462705821,
+            "delta": -0.010710437261927643
+          }
+        }
+      },
+      {
+        "scene_id": "kaist_25",
+        "dataset_id": "KAIST",
+        "metrics": {
+          "psnr_unit_range_db": {
+            "chromatic": 28.384756347629704,
+            "achromatic": 27.988811035454482,
+            "delta": 0.3959453121752219
+          },
+          "ssim_band_mean": {
+            "chromatic": 0.9223032666898634,
+            "achromatic": 0.9161559027490381,
+            "delta": 0.006147363940825268
+          },
+          "sam_deg": {
+            "chromatic": 11.234940087391852,
+            "achromatic": 10.787494583606819,
+            "delta": 0.44744550378503334
+          },
+          "cube_relative_l2": {
+            "chromatic": 0.25970293112562676,
+            "achromatic": 0.27181543654302504,
+            "delta": -0.012112505417398278
+          },
+          "global_spectrum_relative_l2": {
+            "chromatic": 0.043844016377437026,
+            "achromatic": 0.0469977697505068,
+            "delta": -0.0031537533730697717
+          },
+          "high_frequency_relative_l2": {
+            "chromatic": 0.7234227824105943,
+            "achromatic": 0.785574143381498,
+            "delta": -0.06215136097090368
+          },
+          "spatial_gradient_relative_l2": {
+            "chromatic": 0.5735758886461318,
+            "achromatic": 0.632860174116484,
+            "delta": -0.05928428547035214
+          },
+          "measurement_relative_l2": {
+            "chromatic": 0.012685588236699612,
+            "achromatic": 0.021215665126888928,
+            "delta": -0.008530076890189316
+          }
+        }
+      },
+      {
+        "scene_id": "kaist_26",
+        "dataset_id": "KAIST",
+        "metrics": {
+          "psnr_unit_range_db": {
+            "chromatic": 31.576514665336482,
+            "achromatic": 31.283883917025115,
+            "delta": 0.2926307483113675
+          },
+          "ssim_band_mean": {
+            "chromatic": 0.957083691799875,
+            "achromatic": 0.9476824263234049,
+            "delta": 0.009401265476470022
+          },
+          "sam_deg": {
+            "chromatic": 7.69142878730489,
+            "achromatic": 7.189278467054997,
+            "delta": 0.5021503202498927
+          },
+          "cube_relative_l2": {
+            "chromatic": 0.22783304163528764,
+            "achromatic": 0.23563958302807594,
+            "delta": -0.007806541392788302
+          },
+          "global_spectrum_relative_l2": {
+            "chromatic": 0.05751672594106322,
+            "achromatic": 0.0504367589023083,
+            "delta": 0.0070799670387549155
+          },
+          "high_frequency_relative_l2": {
+            "chromatic": 0.6654238201824721,
+            "achromatic": 0.7096942174345738,
+            "delta": -0.04427039725210169
+          },
+          "spatial_gradient_relative_l2": {
+            "chromatic": 0.5045425995983018,
+            "achromatic": 0.553302038756273,
+            "delta": -0.04875943915797121
+          },
+          "measurement_relative_l2": {
+            "chromatic": 0.012352388074551177,
+            "achromatic": 0.020179419770221627,
+            "delta": -0.00782703169567045
+          }
+        }
+      },
+      {
+        "scene_id": "kaist_28",
+        "dataset_id": "KAIST",
+        "metrics": {
+          "psnr_unit_range_db": {
+            "chromatic": 30.468442149869563,
+            "achromatic": 29.193076912124553,
+            "delta": 1.2753652377450102
+          },
+          "ssim_band_mean": {
+            "chromatic": 0.9210395492915909,
+            "achromatic": 0.906367148397063,
+            "delta": 0.014672400894527926
+          },
+          "sam_deg": {
+            "chromatic": 10.483351043979447,
+            "achromatic": 10.16045776385356,
+            "delta": 0.32289328012588747
+          },
+          "cube_relative_l2": {
+            "chromatic": 0.1601472236041886,
+            "achromatic": 0.18547598057848308,
+            "delta": -0.025328756974294486
+          },
+          "global_spectrum_relative_l2": {
+            "chromatic": 0.05690994359722506,
+            "achromatic": 0.06231031401048379,
+            "delta": -0.005400370413258734
+          },
+          "high_frequency_relative_l2": {
+            "chromatic": 0.8571890701106324,
+            "achromatic": 0.9661228340779767,
+            "delta": -0.10893376396734433
+          },
+          "spatial_gradient_relative_l2": {
+            "chromatic": 0.6068177905967238,
+            "achromatic": 0.7053322539697722,
+            "delta": -0.09851446337304837
+          },
+          "measurement_relative_l2": {
+            "chromatic": 0.011180183049101193,
+            "achromatic": 0.019495097321859795,
+            "delta": -0.008314914272758602
+          }
+        }
+      },
+      {
+        "scene_id": "kaist_29",
+        "dataset_id": "KAIST",
+        "metrics": {
+          "psnr_unit_range_db": {
+            "chromatic": 32.04105932381739,
+            "achromatic": 31.81819886913308,
+            "delta": 0.22286045468431226
+          },
+          "ssim_band_mean": {
+            "chromatic": 0.9425910032545788,
+            "achromatic": 0.939735296358479,
+            "delta": 0.002855706896099819
+          },
+          "sam_deg": {
+            "chromatic": 9.929226304973554,
+            "achromatic": 9.542310276053486,
+            "delta": 0.3869160289200675
+          },
+          "cube_relative_l2": {
+            "chromatic": 0.23831486552628955,
+            "achromatic": 0.24450860969220975,
+            "delta": -0.006193744165920195
+          },
+          "global_spectrum_relative_l2": {
+            "chromatic": 0.06241724431810459,
+            "achromatic": 0.06337786060749541,
+            "delta": -0.0009606162893908213
+          },
+          "high_frequency_relative_l2": {
+            "chromatic": 0.7473275258205542,
+            "achromatic": 0.7634300904932414,
+            "delta": -0.016102564672687225
+          },
+          "spatial_gradient_relative_l2": {
+            "chromatic": 0.6351656399399894,
+            "achromatic": 0.661065484062279,
+            "delta": -0.025899844122289628
+          },
+          "measurement_relative_l2": {
+            "chromatic": 0.008817101362704232,
+            "achromatic": 0.01541250747950732,
+            "delta": -0.006595406116803088
+          }
+        }
+      }
+    ],
+    "aggregate": {
+      "psnr_unit_range_db": {
+        "chromatic": 30.724774515044146,
+        "achromatic": 30.30589031213821,
+        "delta": 0.41888420290593587,
+        "relative_delta": 0.013821874183256153,
+        "better": "chromatic",
+        "scenes_favouring_chromatic": 8,
+        "scenes_compared": 9
+      },
+      "ssim_band_mean": {
+        "chromatic": 0.940027774130194,
+        "achromatic": 0.9333394809622799,
+        "delta": 0.006688293167914083,
+        "relative_delta": 0.0071659811937007135,
+        "better": "chromatic",
+        "scenes_favouring_chromatic": 9,
+        "scenes_compared": 9
+      },
+      "sam_deg": {
+        "chromatic": 9.899127546166865,
+        "achromatic": 9.73430902007976,
+        "delta": 0.1648185260871049,
+        "relative_delta": 0.01693171294923144,
+        "better": "achromatic",
+        "scenes_favouring_chromatic": 3,
+        "scenes_compared": 9
+      },
+      "cube_relative_l2": {
+        "chromatic": 0.2492537300529524,
+        "achromatic": 0.26055718795387534,
+        "delta": -0.011303457900922936,
+        "relative_delta": -0.0433818694072025,
+        "better": "chromatic",
+        "scenes_favouring_chromatic": 8,
+        "scenes_compared": 9
+      },
+      "global_spectrum_relative_l2": {
+        "chromatic": 0.1009250593593879,
+        "achromatic": 0.10314129308077946,
+        "delta": -0.0022162337213915556,
+        "relative_delta": -0.02148735637486936,
+        "better": "chromatic",
+        "scenes_favouring_chromatic": 7,
+        "scenes_compared": 9
+      },
+      "high_frequency_relative_l2": {
+        "chromatic": 0.7619300554818212,
+        "achromatic": 0.8246309882020277,
+        "delta": -0.06270093272020649,
+        "relative_delta": -0.07603514010177517,
+        "better": "chromatic",
+        "scenes_favouring_chromatic": 9,
+        "scenes_compared": 9
+      },
+      "spatial_gradient_relative_l2": {
+        "chromatic": 0.590041298152696,
+        "achromatic": 0.6551255976789331,
+        "delta": -0.06508429952623707,
+        "relative_delta": -0.09934629291974922,
+        "better": "chromatic",
+        "scenes_favouring_chromatic": 9,
+        "scenes_compared": 9
+      },
+      "measurement_relative_l2": {
+        "chromatic": 0.010974769972749866,
+        "achromatic": 0.018432889191998716,
+        "delta": -0.007458119219248851,
+        "relative_delta": -0.40460934482730165,
+        "better": "chromatic",
+        "scenes_favouring_chromatic": 9,
+        "scenes_compared": 9
+      }
+    },
+    "trajectory_overlap_epochs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      10,
+      11,
+      14,
+      15,
+      17,
+      19,
+      20,
+      23,
+      24,
+      25,
+      30,
+      35,
+      40,
+      41,
+      44,
+      45,
+      48,
+      50,
+      53,
+      55,
+      60,
+      63,
+      65,
+      66,
+      70,
+      72,
+      75,
+      80,
+      83,
+      85,
+      87,
+      90,
+      95,
+      100,
+      105,
+      107,
+      110,
+      115,
+      116,
+      120,
+      125,
+      130,
+      135,
+      140,
+      145,
+      150,
+      153,
+      155,
+      160,
+      165,
+      170,
+      175,
+      180,
+      181,
+      185,
+      190,
+      195,
+      200,
+      205,
+      208,
+      210,
+      215,
+      220,
+      225,
+      230,
+      235,
+      240,
+      245
+    ],
+    "trajectory": [
+      {
+        "epoch": 1,
+        "psnr_unit_range_db": {
+          "chromatic": 28.43517130277306,
+          "achromatic": 28.491828089486585,
+          "delta": -0.05665678671352481
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.8966354532122806,
+          "achromatic": 0.8989255587215906,
+          "delta": -0.002290105509310081
+        },
+        "sam_deg": {
+          "chromatic": 14.037738608840726,
+          "achromatic": 13.371849647806012,
+          "delta": 0.6658889610347138
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.3239760624305662,
+          "achromatic": 0.3221554956605675,
+          "delta": 0.0018205667699986994
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.14785741432093802,
+          "achromatic": 0.15022101642741875,
+          "delta": -0.0023636021064807333
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9708990348510351,
+          "achromatic": 0.9701513358926169,
+          "delta": 0.000747698958418197
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.8128288861662294,
+          "achromatic": 0.8065537147468967,
+          "delta": 0.006275171419332648
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.03334457081633422,
+          "achromatic": 0.03478676846541363,
+          "delta": -0.0014421976490794075
+        }
+      },
+      {
+        "epoch": 2,
+        "psnr_unit_range_db": {
+          "chromatic": 28.656773501742666,
+          "achromatic": 28.774874406692252,
+          "delta": -0.11810090494958558
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.8985066233544455,
+          "achromatic": 0.9013554563364514,
+          "delta": -0.002848832982005889
+        },
+        "sam_deg": {
+          "chromatic": 13.755697588965042,
+          "achromatic": 13.267250762106304,
+          "delta": 0.48844682685873764
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.31539322477410736,
+          "achromatic": 0.3113438143801841,
+          "delta": 0.004049410393923258
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11502620956834522,
+          "achromatic": 0.11120353799747784,
+          "delta": 0.003822671570867381
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9707022842814725,
+          "achromatic": 0.9699264833625598,
+          "delta": 0.0007758009189127169
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.8119558949355464,
+          "achromatic": 0.8054923648783133,
+          "delta": 0.006463530057233102
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.033256351255295566,
+          "achromatic": 0.03481875800244102,
+          "delta": -0.001562406747145452
+        }
+      },
+      {
+        "epoch": 3,
+        "psnr_unit_range_db": {
+          "chromatic": 28.597194328244896,
+          "achromatic": 28.67862564710229,
+          "delta": -0.08143131885739407
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.8993300819441663,
+          "achromatic": 0.9025803143965923,
+          "delta": -0.0032502324524259496
+        },
+        "sam_deg": {
+          "chromatic": 13.642178225755666,
+          "achromatic": 12.874251063175912,
+          "delta": 0.7679271625797544
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.31804353628389237,
+          "achromatic": 0.315384203905658,
+          "delta": 0.002659332378234347
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.1296849203438187,
+          "achromatic": 0.13146912286610507,
+          "delta": -0.0017842025222863656
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9705144341895379,
+          "achromatic": 0.9696799021193723,
+          "delta": 0.0008345320701655945
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.8108331654215933,
+          "achromatic": 0.8040734157596836,
+          "delta": 0.006759749661909731
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.032965961032120926,
+          "achromatic": 0.03452868942402439,
+          "delta": -0.0015627283919034674
+        }
+      },
+      {
+        "epoch": 4,
+        "psnr_unit_range_db": {
+          "chromatic": 28.844312029397503,
+          "achromatic": 28.987621812987484,
+          "delta": -0.1433097835899808
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9029286532222329,
+          "achromatic": 0.9065994320320835,
+          "delta": -0.003670778809850561
+        },
+        "sam_deg": {
+          "chromatic": 12.713012489204742,
+          "achromatic": 11.979648094161364,
+          "delta": 0.7333643950433775
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.30735694315778683,
+          "achromatic": 0.3026775899623563,
+          "delta": 0.004679353195430558
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10947846474928363,
+          "achromatic": 0.10965719728205599,
+          "delta": -0.0001787325327723549
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9699611327669143,
+          "achromatic": 0.9690559702332769,
+          "delta": 0.0009051625336373714
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.804370553485775,
+          "achromatic": 0.7982531023746793,
+          "delta": 0.00611745111109574
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.03218347432697355,
+          "achromatic": 0.03409541723415913,
+          "delta": -0.0019119429071855834
+        }
+      },
+      {
+        "epoch": 5,
+        "psnr_unit_range_db": {
+          "chromatic": 29.054715073744106,
+          "achromatic": 29.169058577736102,
+          "delta": -0.11434350399199644
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.904155664193394,
+          "achromatic": 0.9076974830612377,
+          "delta": -0.00354181886784366
+        },
+        "sam_deg": {
+          "chromatic": 12.340725539499523,
+          "achromatic": 11.678637931283252,
+          "delta": 0.6620876082162717
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.29865739276216496,
+          "achromatic": 0.29501742059674957,
+          "delta": 0.003639972165415395
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09509564937111846,
+          "achromatic": 0.09675310967806926,
+          "delta": -0.0016574603069507976
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9702514756354516,
+          "achromatic": 0.9692434547869058,
+          "delta": 0.0010080208485457876
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.804611902469006,
+          "achromatic": 0.797407648853087,
+          "delta": 0.007204253615919032
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.03257709120044158,
+          "achromatic": 0.034512463232071994,
+          "delta": -0.0019353720316304113
+        }
+      },
+      {
+        "epoch": 6,
+        "psnr_unit_range_db": {
+          "chromatic": 29.08317287738252,
+          "achromatic": 29.184116625275117,
+          "delta": -0.10094374789259675
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.905206985701741,
+          "achromatic": 0.9091475247521412,
+          "delta": -0.00394053905040026
+        },
+        "sam_deg": {
+          "chromatic": 11.405041180810494,
+          "achromatic": 10.52805568563455,
+          "delta": 0.8769854951759442
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.298318474928873,
+          "achromatic": 0.2949361940720762,
+          "delta": 0.00338228085679676
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10163388489209224,
+          "achromatic": 0.09817015235668011,
+          "delta": 0.0034637325354121284
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9699880090286618,
+          "achromatic": 0.9691479322045282,
+          "delta": 0.0008400768241335621
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.8037418409389017,
+          "achromatic": 0.7971362069097638,
+          "delta": 0.00660563402913783
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.031440414185182966,
+          "achromatic": 0.0325512104023243,
+          "delta": -0.0011107962171413369
+        }
+      },
+      {
+        "epoch": 10,
+        "psnr_unit_range_db": {
+          "chromatic": 29.204116911225597,
+          "achromatic": 29.2633742051471,
+          "delta": -0.059257293921504584
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9055552967575413,
+          "achromatic": 0.9083768436683469,
+          "delta": -0.0028215469108056057
+        },
+        "sam_deg": {
+          "chromatic": 12.819573594285444,
+          "achromatic": 12.105315505256065,
+          "delta": 0.7142580890293786
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.29441661569464966,
+          "achromatic": 0.2923254831732843,
+          "delta": 0.002091132521365391
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10760462576675371,
+          "achromatic": 0.10290295718326371,
+          "delta": 0.0047016685834899985
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9673388071940382,
+          "achromatic": 0.966767162590648,
+          "delta": 0.000571644603390209
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7892633990019164,
+          "achromatic": 0.7875165853599189,
+          "delta": 0.00174681364199758
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.0354252007991709,
+          "achromatic": 0.035229735427062106,
+          "delta": 0.000195465372108794
+        }
+      },
+      {
+        "epoch": 11,
+        "psnr_unit_range_db": {
+          "chromatic": 29.137172923017268,
+          "achromatic": 29.13381499468291,
+          "delta": 0.0033579283343563304
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9068495814441175,
+          "achromatic": 0.909500027744106,
+          "delta": -0.0026504462999884515
+        },
+        "sam_deg": {
+          "chromatic": 11.691020741927096,
+          "achromatic": 10.699225636190976,
+          "delta": 0.9917951057361201
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2975442091544915,
+          "achromatic": 0.29798526810792864,
+          "delta": -0.00044105895343715673
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11973978188780676,
+          "achromatic": 0.1216188003091166,
+          "delta": -0.0018790184213098443
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9663072591842585,
+          "achromatic": 0.9663782780913791,
+          "delta": -7.101890712057912e-05
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7857622925236689,
+          "achromatic": 0.7870454765346204,
+          "delta": -0.0012831840109515102
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.03292977016876725,
+          "achromatic": 0.034068715488695604,
+          "delta": -0.001138945319928357
+        }
+      },
+      {
+        "epoch": 14,
+        "psnr_unit_range_db": {
+          "chromatic": 29.21385259960046,
+          "achromatic": 29.18901868665004,
+          "delta": 0.024833912950420256
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9092703649480433,
+          "achromatic": 0.9109477856774159,
+          "delta": -0.001677420729372603
+        },
+        "sam_deg": {
+          "chromatic": 11.446977528315243,
+          "achromatic": 10.515724220511894,
+          "delta": 0.9312533078033489
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.294847796441798,
+          "achromatic": 0.29604428268564603,
+          "delta": -0.0011964862438480495
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.12554650911971746,
+          "achromatic": 0.12835085321659123,
+          "delta": -0.002804344096873773
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9618127405654823,
+          "achromatic": 0.9611111669525183,
+          "delta": 0.0007015736129639683
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7741716734996557,
+          "achromatic": 0.7735266811521738,
+          "delta": 0.000644992347481832
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.03261013379560558,
+          "achromatic": 0.032904381920458727,
+          "delta": -0.0002942481248531456
+        }
+      },
+      {
+        "epoch": 15,
+        "psnr_unit_range_db": {
+          "chromatic": 29.34042382943364,
+          "achromatic": 29.30081819277406,
+          "delta": 0.03960563665958006
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.910749422221213,
+          "achromatic": 0.9117552646489153,
+          "delta": -0.001005842427702297
+        },
+        "sam_deg": {
+          "chromatic": 11.530296212661003,
+          "achromatic": 11.629391966258773,
+          "delta": -0.09909575359776923
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2906461030411307,
+          "achromatic": 0.29277135656422765,
+          "delta": -0.0021252535230969483
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10525590869418794,
+          "achromatic": 0.11610535777321629,
+          "delta": -0.01084944907902835
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9607420632440752,
+          "achromatic": 0.9584016309759141,
+          "delta": 0.0023404322681610523
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7738085740847901,
+          "achromatic": 0.7707600867071149,
+          "delta": 0.0030484873776751575
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.030182562938864527,
+          "achromatic": 0.03010832005967911,
+          "delta": 7.424287918541758e-05
+        }
+      },
+      {
+        "epoch": 17,
+        "psnr_unit_range_db": {
+          "chromatic": 29.36457299103965,
+          "achromatic": 29.36170887888822,
+          "delta": 0.002864112151431897
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9118073664961991,
+          "achromatic": 0.9129377849651468,
+          "delta": -0.0011304184689476804
+        },
+        "sam_deg": {
+          "chromatic": 11.220935938348743,
+          "achromatic": 10.577218274321238,
+          "delta": 0.6437176640275055
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.29005936988399694,
+          "achromatic": 0.2903510204934998,
+          "delta": -0.00029165060950286925
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11333833438266112,
+          "achromatic": 0.11731019019670266,
+          "delta": -0.003971855814041539
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9593115239972312,
+          "achromatic": 0.9552380450034038,
+          "delta": 0.004073478993827373
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7700730139308805,
+          "achromatic": 0.7668068199317369,
+          "delta": 0.0032661939991435185
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.031297189621180214,
+          "achromatic": 0.031127719342725495,
+          "delta": 0.00016947027845471904
+        }
+      },
+      {
+        "epoch": 19,
+        "psnr_unit_range_db": {
+          "chromatic": 29.44879047277865,
+          "achromatic": 29.424266717005057,
+          "delta": 0.024523755773593336
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9128038832318839,
+          "achromatic": 0.9134029072657612,
+          "delta": -0.0005990240338773489
+        },
+        "sam_deg": {
+          "chromatic": 11.001249356434833,
+          "achromatic": 10.427754422854186,
+          "delta": 0.5734949335806476
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.28711312424381513,
+          "achromatic": 0.28806460403888523,
+          "delta": -0.0009514797950700982
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10805587591743518,
+          "achromatic": 0.11060415097211235,
+          "delta": -0.002548275054677168
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9571414554126212,
+          "achromatic": 0.9514975424292325,
+          "delta": 0.0056439129833887325
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7695620159082472,
+          "achromatic": 0.7646993708210492,
+          "delta": 0.004862645087198025
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.03245156101545519,
+          "achromatic": 0.031603032802744575,
+          "delta": 0.0008485282127106142
+        }
+      },
+      {
+        "epoch": 20,
+        "psnr_unit_range_db": {
+          "chromatic": 29.3098022765734,
+          "achromatic": 29.33875862549199,
+          "delta": -0.02895634891859089
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9127464282703835,
+          "achromatic": 0.9130127290445691,
+          "delta": -0.0002663007741855461
+        },
+        "sam_deg": {
+          "chromatic": 11.448380436791643,
+          "achromatic": 11.355764291011686,
+          "delta": 0.09261614577995658
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.292730605336765,
+          "achromatic": 0.29181316047881584,
+          "delta": 0.0009174448579491457
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.118683914945303,
+          "achromatic": 0.12571035199661817,
+          "delta": -0.007026437051315171
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9546734623349494,
+          "achromatic": 0.9470080335425443,
+          "delta": 0.007665428792405171
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7687239095748415,
+          "achromatic": 0.7640592945662665,
+          "delta": 0.004664615008574957
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.033777445711802884,
+          "achromatic": 0.03419213448056625,
+          "delta": -0.0004146887687633688
+        }
+      },
+      {
+        "epoch": 23,
+        "psnr_unit_range_db": {
+          "chromatic": 29.463357106205997,
+          "achromatic": 29.469378645728327,
+          "delta": -0.006021539522329533
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9144539992977623,
+          "achromatic": 0.9150422400520947,
+          "delta": -0.000588240754332392
+        },
+        "sam_deg": {
+          "chromatic": 11.3606506929939,
+          "achromatic": 11.066346645675189,
+          "delta": 0.29430404731871107
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.28673424108552176,
+          "achromatic": 0.28692958793629353,
+          "delta": -0.0001953468507717715
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10722224113003527,
+          "achromatic": 0.11021863896880366,
+          "delta": -0.002996397838768386
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9538053787118501,
+          "achromatic": 0.9440055322163727,
+          "delta": 0.009799846495477382
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7609589158119353,
+          "achromatic": 0.7577255057884971,
+          "delta": 0.0032334100234382435
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.03189490457103019,
+          "achromatic": 0.03356662021922934,
+          "delta": -0.0016717156481991513
+        }
+      },
+      {
+        "epoch": 24,
+        "psnr_unit_range_db": {
+          "chromatic": 29.506333041081557,
+          "achromatic": 29.498181469843004,
+          "delta": 0.008151571238553146
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9142296393937084,
+          "achromatic": 0.9144450329360028,
+          "delta": -0.00021539354229438423
+        },
+        "sam_deg": {
+          "chromatic": 11.249078451267529,
+          "achromatic": 11.146623665221803,
+          "delta": 0.10245478604572611
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2853443000421924,
+          "achromatic": 0.28584465567337214,
+          "delta": -0.0005003556311797275
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11882900162883242,
+          "achromatic": 0.12135264082298648,
+          "delta": -0.002523639194154062
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9542605601090286,
+          "achromatic": 0.9456273269064737,
+          "delta": 0.008633233202554935
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7607765265618024,
+          "achromatic": 0.7561530312910238,
+          "delta": 0.004623495270778544
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.03175363039257404,
+          "achromatic": 0.02961674312377094,
+          "delta": 0.002136887268803102
+        }
+      },
+      {
+        "epoch": 25,
+        "psnr_unit_range_db": {
+          "chromatic": 29.57740620533736,
+          "achromatic": 29.626518476756985,
+          "delta": -0.04911227141962371
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9155320794833641,
+          "achromatic": 0.9162997745118976,
+          "delta": -0.000767695028533466
+        },
+        "sam_deg": {
+          "chromatic": 11.177039828007874,
+          "achromatic": 10.789781231520688,
+          "delta": 0.38725859648718597
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.28239010238994067,
+          "achromatic": 0.2807765410420792,
+          "delta": 0.0016135613478614474
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09632659446498493,
+          "achromatic": 0.09526324470167273,
+          "delta": 0.0010633497633121963
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9525462774177854,
+          "achromatic": 0.9422944388202737,
+          "delta": 0.010251838597511664
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7600653956485531,
+          "achromatic": 0.7540361270415021,
+          "delta": 0.006029268607050997
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.03054499613066696,
+          "achromatic": 0.02973788523625233,
+          "delta": 0.0008071108944146324
+        }
+      },
+      {
+        "epoch": 30,
+        "psnr_unit_range_db": {
+          "chromatic": 29.6779873847086,
+          "achromatic": 29.68033091039214,
+          "delta": -0.002343525683539127
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.917651591217796,
+          "achromatic": 0.917783592337305,
+          "delta": -0.000132001119508951
+        },
+        "sam_deg": {
+          "chromatic": 10.794398266468379,
+          "achromatic": 10.807203849843523,
+          "delta": -0.012805583375143925
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.27882894656259904,
+          "achromatic": 0.27856960504090134,
+          "delta": 0.0002593415216977091
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09275934192218144,
+          "achromatic": 0.09305021163222894,
+          "delta": -0.00029086971004750606
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9518177147142755,
+          "achromatic": 0.9382631918712874,
+          "delta": 0.013554522842988082
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7564592935084399,
+          "achromatic": 0.7505948384472476,
+          "delta": 0.005864455061192264
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.02563798044007716,
+          "achromatic": 0.02837998171582393,
+          "delta": -0.00274200127574677
+        }
+      },
+      {
+        "epoch": 35,
+        "psnr_unit_range_db": {
+          "chromatic": 29.71198064851008,
+          "achromatic": 29.717813168709604,
+          "delta": -0.005832520199522406
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9185011687676842,
+          "achromatic": 0.9185842340835642,
+          "delta": -8.306531587998212e-05
+        },
+        "sam_deg": {
+          "chromatic": 10.830306355053217,
+          "achromatic": 10.543254496081849,
+          "delta": 0.28705185897136865
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.27835811660937604,
+          "achromatic": 0.2783236184402707,
+          "delta": 3.4498169105334764e-05
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10292473385926332,
+          "achromatic": 0.1062663219111045,
+          "delta": -0.0033415880518411767
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9501711291382952,
+          "achromatic": 0.9324884214444791,
+          "delta": 0.01768270769381608
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7518719613405707,
+          "achromatic": 0.7450223450487443,
+          "delta": 0.006849616291826344
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.0241973246490845,
+          "achromatic": 0.027494791585443008,
+          "delta": -0.003297466936358507
+        }
+      },
+      {
+        "epoch": 40,
+        "psnr_unit_range_db": {
+          "chromatic": 29.777389322096823,
+          "achromatic": 29.745111425181634,
+          "delta": 0.032277896915189785
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.920244486546944,
+          "achromatic": 0.9197157755327954,
+          "delta": 0.0005287110141486417
+        },
+        "sam_deg": {
+          "chromatic": 11.000104111601315,
+          "achromatic": 10.568700548395029,
+          "delta": 0.4314035632062865
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2753830495191848,
+          "achromatic": 0.2764690046482615,
+          "delta": -0.001085955129076721
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09413510923678936,
+          "achromatic": 0.0957597599943555,
+          "delta": -0.00162465075756614
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9424139034653661,
+          "achromatic": 0.9223789815172516,
+          "delta": 0.020034921948114515
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7440397132853543,
+          "achromatic": 0.7392877140311578,
+          "delta": 0.0047519992541965594
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.026880293626278653,
+          "achromatic": 0.027092226023921973,
+          "delta": -0.00021193239764331906
+        }
+      },
+      {
+        "epoch": 41,
+        "psnr_unit_range_db": {
+          "chromatic": 29.681962515006276,
+          "achromatic": 29.680506881596607,
+          "delta": 0.0014556334096695878
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9205279907802058,
+          "achromatic": 0.9202671328076766,
+          "delta": 0.00026085797252917153
+        },
+        "sam_deg": {
+          "chromatic": 10.616573232882262,
+          "achromatic": 10.321909937695047,
+          "delta": 0.294663295187215
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.27973663268400567,
+          "achromatic": 0.2802597711600201,
+          "delta": -0.0005231384760144286
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10882332022368792,
+          "achromatic": 0.11224872891840018,
+          "delta": -0.0034254086947122647
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9400936463408356,
+          "achromatic": 0.9185572053896398,
+          "delta": 0.02153644095119578
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7415872018694196,
+          "achromatic": 0.7338792056503584,
+          "delta": 0.007707996219061264
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.02644039147594059,
+          "achromatic": 0.02580194538411628,
+          "delta": 0.0006384460918243094
+        }
+      },
+      {
+        "epoch": 44,
+        "psnr_unit_range_db": {
+          "chromatic": 29.788479940332746,
+          "achromatic": 29.747136567701077,
+          "delta": 0.041343372631668984
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9207340583356071,
+          "achromatic": 0.9202584479857896,
+          "delta": 0.00047561034981746797
+        },
+        "sam_deg": {
+          "chromatic": 10.96867960185594,
+          "achromatic": 10.709234083967864,
+          "delta": 0.259445517888075
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2758157732223979,
+          "achromatic": 0.2773925601770432,
+          "delta": -0.001576786954645304
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10282597200136669,
+          "achromatic": 0.10525981315515534,
+          "delta": -0.0024338411537886545
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9387469660077077,
+          "achromatic": 0.9190687244054724,
+          "delta": 0.019678241602235302
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7386638344170969,
+          "achromatic": 0.7357396461013478,
+          "delta": 0.0029241883157491433
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.021203291944268992,
+          "achromatic": 0.02562286323884508,
+          "delta": -0.004419571294576086
+        }
+      },
+      {
+        "epoch": 45,
+        "psnr_unit_range_db": {
+          "chromatic": 29.809053085981986,
+          "achromatic": 29.73778547144336,
+          "delta": 0.07126761453862684
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9215344405762783,
+          "achromatic": 0.92045242530001,
+          "delta": 0.0010820152762682778
+        },
+        "sam_deg": {
+          "chromatic": 10.792188349943867,
+          "achromatic": 10.708593796564585,
+          "delta": 0.08359455337928168
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.27613786470957846,
+          "achromatic": 0.27854128479220486,
+          "delta": -0.002403420082626395
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.1082486281092057,
+          "achromatic": 0.11240738636618519,
+          "delta": -0.004158758256979492
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9351845574920605,
+          "achromatic": 0.915972774220315,
+          "delta": 0.019211783271745553
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.734498321599586,
+          "achromatic": 0.7318787107866548,
+          "delta": 0.0026196108129311613
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.022422040708021517,
+          "achromatic": 0.024466976815836997,
+          "delta": -0.0020449361078154794
+        }
+      },
+      {
+        "epoch": 48,
+        "psnr_unit_range_db": {
+          "chromatic": 29.809524334262132,
+          "achromatic": 29.77358609457547,
+          "delta": 0.03593823968666143
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.922346462757731,
+          "achromatic": 0.9216506386641671,
+          "delta": 0.0006958240935639459
+        },
+        "sam_deg": {
+          "chromatic": 10.54575571892493,
+          "achromatic": 10.127196602759915,
+          "delta": 0.4185591161650155
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.27539752022972064,
+          "achromatic": 0.27700456969734577,
+          "delta": -0.0016070494676251323
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10855497648685467,
+          "achromatic": 0.11044339676448352,
+          "delta": -0.0018884202776288522
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9294953647384967,
+          "achromatic": 0.9125738060798521,
+          "delta": 0.016921558658644642
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7294000359990432,
+          "achromatic": 0.7290920370520007,
+          "delta": 0.000307998947042587
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.02046296370087489,
+          "achromatic": 0.02501770455664606,
+          "delta": -0.004554740855771171
+        }
+      },
+      {
+        "epoch": 50,
+        "psnr_unit_range_db": {
+          "chromatic": 29.806711892794777,
+          "achromatic": 29.72273649167152,
+          "delta": 0.08397540112325785
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.92225767190729,
+          "achromatic": 0.9213608517220341,
+          "delta": 0.0008968201852559421
+        },
+        "sam_deg": {
+          "chromatic": 11.241690464208542,
+          "achromatic": 10.721990156476078,
+          "delta": 0.5197003077324638
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.27596075843003676,
+          "achromatic": 0.2786112418240699,
+          "delta": -0.0026504833940331207
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09330655156854278,
+          "achromatic": 0.09627923270864128,
+          "delta": -0.002972681140098493
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9243716390360084,
+          "achromatic": 0.90783211659252,
+          "delta": 0.01653952244348833
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7272406537769156,
+          "achromatic": 0.7282868208024682,
+          "delta": -0.0010461670255526023
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.021012868967305677,
+          "achromatic": 0.024447042448428154,
+          "delta": -0.0034341734811224774
+        }
+      },
+      {
+        "epoch": 53,
+        "psnr_unit_range_db": {
+          "chromatic": 29.926373554476584,
+          "achromatic": 29.81136787425492,
+          "delta": 0.11500568022166391
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9242427140702768,
+          "achromatic": 0.9219344638924485,
+          "delta": 0.0023082501778283193
+        },
+        "sam_deg": {
+          "chromatic": 10.408785716396904,
+          "achromatic": 10.240041350432708,
+          "delta": 0.16874436596419606
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.271424576017252,
+          "achromatic": 0.2750234021849493,
+          "delta": -0.0035988261676973
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10464970704844585,
+          "achromatic": 0.10379666815342478,
+          "delta": 0.0008530388950210716
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9204034934208719,
+          "achromatic": 0.9064942657372792,
+          "delta": 0.013909227683592706
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7215402484201887,
+          "achromatic": 0.7265504965116757,
+          "delta": -0.00501024809148698
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.019798635036465933,
+          "achromatic": 0.022936073274076436,
+          "delta": -0.0031374382376105035
+        }
+      },
+      {
+        "epoch": 55,
+        "psnr_unit_range_db": {
+          "chromatic": 29.65223407923947,
+          "achromatic": 29.67965715127947,
+          "delta": -0.027423072040001273
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9232857560407197,
+          "achromatic": 0.9220173513624808,
+          "delta": 0.0012684046782389657
+        },
+        "sam_deg": {
+          "chromatic": 11.07804893822934,
+          "achromatic": 10.592870615335272,
+          "delta": 0.48517832289406826
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2811991334550833,
+          "achromatic": 0.2804817427615338,
+          "delta": 0.00071739069354948
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.1259158467814444,
+          "achromatic": 0.119882204956755,
+          "delta": 0.006033641824689406
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9150030955167229,
+          "achromatic": 0.9010146573334201,
+          "delta": 0.013988438183302754
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7192732318609592,
+          "achromatic": 0.7238265234952235,
+          "delta": -0.004553291634264323
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.02244136312835152,
+          "achromatic": 0.025815737786809827,
+          "delta": -0.003374374658458308
+        }
+      },
+      {
+        "epoch": 60,
+        "psnr_unit_range_db": {
+          "chromatic": 29.96633478218029,
+          "achromatic": 29.828103934469254,
+          "delta": 0.13823084771103566
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9253901133831983,
+          "achromatic": 0.9208729847335122,
+          "delta": 0.00451712864968612
+        },
+        "sam_deg": {
+          "chromatic": 10.84475308800221,
+          "achromatic": 11.206915652523602,
+          "delta": -0.36216256452139106
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2701852129156,
+          "achromatic": 0.27478751714897576,
+          "delta": -0.004602304233375765
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11040928171974099,
+          "achromatic": 0.11456893280440461,
+          "delta": -0.004159651084663624
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9100646462059852,
+          "achromatic": 0.8901573248359314,
+          "delta": 0.0199073213700538
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7107251771307252,
+          "achromatic": 0.7172417095579947,
+          "delta": -0.006516532427269461
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.01812548004676976,
+          "achromatic": 0.023580723919169273,
+          "delta": -0.005455243872399512
+        }
+      },
+      {
+        "epoch": 63,
+        "psnr_unit_range_db": {
+          "chromatic": 30.027089862295536,
+          "achromatic": 29.83836816478711,
+          "delta": 0.18872169750842716
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9269828010017578,
+          "achromatic": 0.9237633186905185,
+          "delta": 0.0032194823112392523
+        },
+        "sam_deg": {
+          "chromatic": 10.578779055640787,
+          "achromatic": 10.136255319411822,
+          "delta": 0.44252373622896535
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.26857556957619977,
+          "achromatic": 0.2749187828122884,
+          "delta": -0.006343213236088607
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10648543456389846,
+          "achromatic": 0.11104628290595978,
+          "delta": -0.004560848342061316
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.9023595355352426,
+          "achromatic": 0.885726374478235,
+          "delta": 0.016633161057007628
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.7032780699058659,
+          "achromatic": 0.7138567383444797,
+          "delta": -0.01057866843861377
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.01814650655142811,
+          "achromatic": 0.02443973221122737,
+          "delta": -0.00629322565979926
+        }
+      },
+      {
+        "epoch": 65,
+        "psnr_unit_range_db": {
+          "chromatic": 30.023786707486163,
+          "achromatic": 29.85528785532775,
+          "delta": 0.16849885215841454
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9275310871009474,
+          "achromatic": 0.9237665293314176,
+          "delta": 0.003764557769529886
+        },
+        "sam_deg": {
+          "chromatic": 10.831288075373363,
+          "achromatic": 10.50166932317081,
+          "delta": 0.32961875220255266
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.26934842868056763,
+          "achromatic": 0.2745055902303912,
+          "delta": -0.005157161549823597
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.1058731429458414,
+          "achromatic": 0.10783254553387468,
+          "delta": -0.0019594025880332877
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8956680801014715,
+          "achromatic": 0.8875477026474897,
+          "delta": 0.008120377453981753
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6996668431728117,
+          "achromatic": 0.7139375663878254,
+          "delta": -0.014270723215013659
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.018523714040718394,
+          "achromatic": 0.023295180469237283,
+          "delta": -0.004771466428518889
+        }
+      },
+      {
+        "epoch": 66,
+        "psnr_unit_range_db": {
+          "chromatic": 30.063348577998024,
+          "achromatic": 29.917629495699273,
+          "delta": 0.14571908229875064
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9278877474865017,
+          "achromatic": 0.9248499532772811,
+          "delta": 0.003037794209220568
+        },
+        "sam_deg": {
+          "chromatic": 10.25324748608693,
+          "achromatic": 10.174709739622743,
+          "delta": 0.07853774646418721
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.26739671356964767,
+          "achromatic": 0.2722794430758493,
+          "delta": -0.004882729506201611
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10173299027600215,
+          "achromatic": 0.10466052230257451,
+          "delta": -0.002927532026572366
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8988188015035996,
+          "achromatic": 0.8820503199260104,
+          "delta": 0.016768481577589256
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.698565835854707,
+          "achromatic": 0.7098042497207941,
+          "delta": -0.011238413866087149
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.01625267154984558,
+          "achromatic": 0.02416446325927785,
+          "delta": -0.007911791709432271
+        }
+      },
+      {
+        "epoch": 70,
+        "psnr_unit_range_db": {
+          "chromatic": 30.110416601694297,
+          "achromatic": 29.857818887428575,
+          "delta": 0.25259771426572186
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9284977696472025,
+          "achromatic": 0.9238771191235919,
+          "delta": 0.004620650523610603
+        },
+        "sam_deg": {
+          "chromatic": 10.702114848358518,
+          "achromatic": 10.376569490577193,
+          "delta": 0.32554535778132454
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.26637435511592017,
+          "achromatic": 0.27439344778591884,
+          "delta": -0.008019092669998673
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11371081189497789,
+          "achromatic": 0.11272783827281128,
+          "delta": 0.000982973622166608
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8878695801302986,
+          "achromatic": 0.879943008395736,
+          "delta": 0.00792657173456257
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6874434497968498,
+          "achromatic": 0.7083183654705238,
+          "delta": -0.020874915673674055
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.015862306245006376,
+          "achromatic": 0.023089736913655123,
+          "delta": -0.0072274306686487474
+        }
+      },
+      {
+        "epoch": 72,
+        "psnr_unit_range_db": {
+          "chromatic": 30.21182685541387,
+          "achromatic": 29.957828846410752,
+          "delta": 0.2539980090031193
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9301612952721521,
+          "achromatic": 0.9256231640669836,
+          "delta": 0.004538131205168439
+        },
+        "sam_deg": {
+          "chromatic": 10.222923079672828,
+          "achromatic": 10.080969556294216,
+          "delta": 0.14195352337861245
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.26240388222410105,
+          "achromatic": 0.2703774510383115,
+          "delta": -0.007973568814210463
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09566971169749654,
+          "achromatic": 0.09826904781460032,
+          "delta": -0.0025993361171037788
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8819919621455857,
+          "achromatic": 0.8730301669612799,
+          "delta": 0.008961795184305843
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6832576414924759,
+          "achromatic": 0.7047170144259305,
+          "delta": -0.021459372933454568
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.016304480835705674,
+          "achromatic": 0.024928473486422655,
+          "delta": -0.00862399265071698
+        }
+      },
+      {
+        "epoch": 75,
+        "psnr_unit_range_db": {
+          "chromatic": 30.278051148066552,
+          "achromatic": 29.92131781004937,
+          "delta": 0.35673333801718243
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9290741933068856,
+          "achromatic": 0.9206497671400121,
+          "delta": 0.008424426166873444
+        },
+        "sam_deg": {
+          "chromatic": 11.183829117067482,
+          "achromatic": 12.198416327789683,
+          "delta": -1.0145872107222011
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25966366035739713,
+          "achromatic": 0.2694724637345678,
+          "delta": -0.00980880337717066
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09693869175868321,
+          "achromatic": 0.0937404108291805,
+          "delta": 0.0031982809295027087
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8806696312141641,
+          "achromatic": 0.8764542438922326,
+          "delta": 0.004215387321931496
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6790410860719769,
+          "achromatic": 0.7072437058604288,
+          "delta": -0.028202619788451955
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.015546227673838543,
+          "achromatic": 0.023306823869341173,
+          "delta": -0.0077605961955026295
+        }
+      },
+      {
+        "epoch": 80,
+        "psnr_unit_range_db": {
+          "chromatic": 30.262432818994753,
+          "achromatic": 29.974697829506383,
+          "delta": 0.28773498948837073
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9320117825954054,
+          "achromatic": 0.9262407311248965,
+          "delta": 0.005771051470508937
+        },
+        "sam_deg": {
+          "chromatic": 10.345499043807585,
+          "achromatic": 10.086352658517372,
+          "delta": 0.2591463852902134
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.26183167038360144,
+          "achromatic": 0.27034455016062314,
+          "delta": -0.008512879777021698
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09870598146872087,
+          "achromatic": 0.09990476832359897,
+          "delta": -0.001198786854878106
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8721711309106185,
+          "achromatic": 0.8707347389785455,
+          "delta": 0.0014363919320730112
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6710092029520754,
+          "achromatic": 0.701231639303441,
+          "delta": -0.030222436351365567
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.014502226732097646,
+          "achromatic": 0.022688388399025938,
+          "delta": -0.008186161666928291
+        }
+      },
+      {
+        "epoch": 83,
+        "psnr_unit_range_db": {
+          "chromatic": 30.234789627266284,
+          "achromatic": 29.930301729377724,
+          "delta": 0.3044878978885599
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9320906443144037,
+          "achromatic": 0.9262400245187288,
+          "delta": 0.005850619795674916
+        },
+        "sam_deg": {
+          "chromatic": 10.227929474116792,
+          "achromatic": 10.115248478253967,
+          "delta": 0.11268099586282432
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.26336572127592,
+          "achromatic": 0.27276345315635625,
+          "delta": -0.009397731880436244
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09930975371032918,
+          "achromatic": 0.10294882501722064,
+          "delta": -0.0036390713068914504
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8740353630463309,
+          "achromatic": 0.8682751820705075,
+          "delta": 0.005760180975823426
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6724741429857894,
+          "achromatic": 0.7002808825553313,
+          "delta": -0.027806739569541827
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.015108248293420449,
+          "achromatic": 0.022250461622477603,
+          "delta": -0.0071422133290571545
+        }
+      },
+      {
+        "epoch": 85,
+        "psnr_unit_range_db": {
+          "chromatic": 30.304465723227104,
+          "achromatic": 29.99745936856668,
+          "delta": 0.30700635466042314
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9322712420572032,
+          "achromatic": 0.9255473050767906,
+          "delta": 0.006723936980412626
+        },
+        "sam_deg": {
+          "chromatic": 10.311517998064595,
+          "achromatic": 10.571873547252329,
+          "delta": -0.26035554918773407
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.26040348092069565,
+          "achromatic": 0.2694602772354358,
+          "delta": -0.009056796314740156
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10952504536296725,
+          "achromatic": 0.108354628264839,
+          "delta": 0.0011704170981282486
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8655918466126719,
+          "achromatic": 0.8656036214041534,
+          "delta": -1.1774791481511393e-05
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6653586924702696,
+          "achromatic": 0.697071903117903,
+          "delta": -0.03171321064763344
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.015678981473760973,
+          "achromatic": 0.023273652512004632,
+          "delta": -0.007594671038243659
+        }
+      },
+      {
+        "epoch": 87,
+        "psnr_unit_range_db": {
+          "chromatic": 30.354349284577488,
+          "achromatic": 30.053903348229703,
+          "delta": 0.30044593634778494
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9326750579630614,
+          "achromatic": 0.9264686420348451,
+          "delta": 0.006206415928216247
+        },
+        "sam_deg": {
+          "chromatic": 10.48041498699559,
+          "achromatic": 10.152543211713843,
+          "delta": 0.32787177528174816
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25920494311537995,
+          "achromatic": 0.26805842036612665,
+          "delta": -0.0088534772507467
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10787870956999684,
+          "achromatic": 0.10647692015322004,
+          "delta": 0.001401789416776808
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8639272538976693,
+          "achromatic": 0.8651863337187939,
+          "delta": -0.001259079821124609
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6621536358372275,
+          "achromatic": 0.6963315196851009,
+          "delta": -0.03417788384787335
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.014726300835448482,
+          "achromatic": 0.023829174535006367,
+          "delta": -0.009102873699557885
+        }
+      },
+      {
+        "epoch": 90,
+        "psnr_unit_range_db": {
+          "chromatic": 30.247051167519707,
+          "achromatic": 29.926666257139136,
+          "delta": 0.3203849103805716
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9329371610085033,
+          "achromatic": 0.9261311401174823,
+          "delta": 0.006806020891021003
+        },
+        "sam_deg": {
+          "chromatic": 10.390003865042281,
+          "achromatic": 10.324309625192644,
+          "delta": 0.06569423984963763
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2632899035852759,
+          "achromatic": 0.2730148604328277,
+          "delta": -0.009724956847551813
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11369023679253101,
+          "achromatic": 0.1170865390846747,
+          "delta": -0.003396302292143688
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8544622409096431,
+          "achromatic": 0.8561048059593501,
+          "delta": -0.0016425650497070565
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6581875311504791,
+          "achromatic": 0.6911672654729473,
+          "delta": -0.032979734322468146
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.01576074183922559,
+          "achromatic": 0.02345091252036536,
+          "delta": -0.007690170681139769
+        }
+      },
+      {
+        "epoch": 95,
+        "psnr_unit_range_db": {
+          "chromatic": 30.363508605558156,
+          "achromatic": 30.059166680042114,
+          "delta": 0.30434192551604156
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9329395501927594,
+          "achromatic": 0.9263833191579488,
+          "delta": 0.006556231034810622
+        },
+        "sam_deg": {
+          "chromatic": 10.40752614969648,
+          "achromatic": 10.074745378939053,
+          "delta": 0.3327807707574273
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25794926830729026,
+          "achromatic": 0.26676599448594546,
+          "delta": -0.008816726178655199
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10956798602722836,
+          "achromatic": 0.10507567050438509,
+          "delta": 0.004492315522843279
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8532011365966008,
+          "achromatic": 0.858589712453772,
+          "delta": -0.0053885758571712294
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6550794320190738,
+          "achromatic": 0.6912047281507798,
+          "delta": -0.03612529613170601
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.013962106187072061,
+          "achromatic": 0.02139341445831928,
+          "delta": -0.00743130827124722
+        }
+      },
+      {
+        "epoch": 100,
+        "psnr_unit_range_db": {
+          "chromatic": 30.325885923475507,
+          "achromatic": 29.981104897636946,
+          "delta": 0.34478102583856085
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9320710145620943,
+          "achromatic": 0.9250407289899358,
+          "delta": 0.007030285572158457
+        },
+        "sam_deg": {
+          "chromatic": 10.994471301190597,
+          "achromatic": 11.189761051475008,
+          "delta": -0.1952897502844113
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2602086976561327,
+          "achromatic": 0.27046899780923506,
+          "delta": -0.010260300153102364
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.12245412497720617,
+          "achromatic": 0.12427676086438441,
+          "delta": -0.0018226358871782367
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.845657079483174,
+          "achromatic": 0.8547951743954448,
+          "delta": -0.0091380949122708
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6467932350381927,
+          "achromatic": 0.6864392659988374,
+          "delta": -0.039646030960644674
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.013144670600833824,
+          "achromatic": 0.02169215582065504,
+          "delta": -0.008547485219821217
+        }
+      },
+      {
+        "epoch": 105,
+        "psnr_unit_range_db": {
+          "chromatic": 30.247525183406538,
+          "achromatic": 29.861613064637897,
+          "delta": 0.3859121187686405
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9322205140039588,
+          "achromatic": 0.9234362807021103,
+          "delta": 0.00878423330184852
+        },
+        "sam_deg": {
+          "chromatic": 10.723034110859023,
+          "achromatic": 11.338732471163265,
+          "delta": -0.6156983603042416
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2627619596662372,
+          "achromatic": 0.2744330937290258,
+          "delta": -0.01167113406278858
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.12562641778443137,
+          "achromatic": 0.13333088753203737,
+          "delta": -0.0077044697476059965
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8494657647322865,
+          "achromatic": 0.8586532251288905,
+          "delta": -0.009187460396604008
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6495623291088544,
+          "achromatic": 0.6907109424048179,
+          "delta": -0.04114861329596353
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.013050055375274873,
+          "achromatic": 0.023327019983589648,
+          "delta": -0.010276964608314775
+        }
+      },
+      {
+        "epoch": 107,
+        "psnr_unit_range_db": {
+          "chromatic": 30.445856189055025,
+          "achromatic": 30.08139652245055,
+          "delta": 0.3644596666044748
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9354603165930189,
+          "achromatic": 0.9283811932649289,
+          "delta": 0.00707912332809002
+        },
+        "sam_deg": {
+          "chromatic": 10.125555569759618,
+          "achromatic": 10.113866809255592,
+          "delta": 0.011688760504025453
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2566083600909149,
+          "achromatic": 0.26720504444000986,
+          "delta": -0.010596684349094943
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09971517885509422,
+          "achromatic": 0.10229168841458242,
+          "delta": -0.0025765095594881965
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8389535138696602,
+          "achromatic": 0.8503655364111753,
+          "delta": -0.011412022541515077
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6423034089143511,
+          "achromatic": 0.6851737986821095,
+          "delta": -0.042870389767758366
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.013489276697212104,
+          "achromatic": 0.023502099811635133,
+          "delta": -0.010012823114423029
+        }
+      },
+      {
+        "epoch": 110,
+        "psnr_unit_range_db": {
+          "chromatic": 30.381684619167995,
+          "achromatic": 29.98511841132783,
+          "delta": 0.3965662078401664
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9344852943210048,
+          "achromatic": 0.926901519526758,
+          "delta": 0.007583774794246767
+        },
+        "sam_deg": {
+          "chromatic": 10.404019594829249,
+          "achromatic": 10.620584986834375,
+          "delta": -0.21656539200512626
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2589810304484478,
+          "achromatic": 0.2702240983621975,
+          "delta": -0.011243067913749738
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10279254121646915,
+          "achromatic": 0.10130396231375534,
+          "delta": 0.0014885789027138108
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8350218689595059,
+          "achromatic": 0.8475914699190702,
+          "delta": -0.012569600959564275
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6404738327390543,
+          "achromatic": 0.6839911926194534,
+          "delta": -0.043517359880399065
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.013682747571795849,
+          "achromatic": 0.02168200643757486,
+          "delta": -0.00799925886577901
+        }
+      },
+      {
+        "epoch": 115,
+        "psnr_unit_range_db": {
+          "chromatic": 30.462387147186202,
+          "achromatic": 30.093680320783026,
+          "delta": 0.36870682640317654
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9352047506468154,
+          "achromatic": 0.9282221168001984,
+          "delta": 0.006982633846617015
+        },
+        "sam_deg": {
+          "chromatic": 10.297734318721357,
+          "achromatic": 10.307386915126784,
+          "delta": -0.00965259640542726
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2563770419002419,
+          "achromatic": 0.2671349077048708,
+          "delta": -0.010757865804628897
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10839674826313166,
+          "achromatic": 0.10621261712789629,
+          "delta": 0.0021841311352353704
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8353186313902434,
+          "achromatic": 0.8535318379704226,
+          "delta": -0.01821320658017922
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.638634805377509,
+          "achromatic": 0.6850691037917955,
+          "delta": -0.04643429841428648
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.013983429660892863,
+          "achromatic": 0.02240172795239256,
+          "delta": -0.008418298291499697
+        }
+      },
+      {
+        "epoch": 116,
+        "psnr_unit_range_db": {
+          "chromatic": 30.510102073472506,
+          "achromatic": 30.120124423494946,
+          "delta": 0.3899776499775598
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9366711768821447,
+          "achromatic": 0.9292247474048769,
+          "delta": 0.007446429477267813
+        },
+        "sam_deg": {
+          "chromatic": 10.03123591306095,
+          "achromatic": 9.802022945574215,
+          "delta": 0.2292129674867347
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2549510985958742,
+          "achromatic": 0.2660081553779931,
+          "delta": -0.01105705678211888
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10204148496006199,
+          "achromatic": 0.1018569832392911,
+          "delta": 0.000184501720770891
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8336778516548076,
+          "achromatic": 0.8482779803324165,
+          "delta": -0.014600128677608959
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.636377546684427,
+          "achromatic": 0.6815479631619186,
+          "delta": -0.04517041647749154
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.012131959847692227,
+          "achromatic": 0.02086233205430564,
+          "delta": -0.008730372206613414
+        }
+      },
+      {
+        "epoch": 120,
+        "psnr_unit_range_db": {
+          "chromatic": 30.359188410737588,
+          "achromatic": 30.0681503022194,
+          "delta": 0.2910381085181868
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9331348518101501,
+          "achromatic": 0.9273007793616203,
+          "delta": 0.005834072448529848
+        },
+        "sam_deg": {
+          "chromatic": 11.077939068909394,
+          "achromatic": 10.64571776417577,
+          "delta": 0.4322213047336252
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25887705160634095,
+          "achromatic": 0.26721953302683166,
+          "delta": -0.00834248142049071
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11760356867874378,
+          "achromatic": 0.1124098700648894,
+          "delta": 0.005193698613854381
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8333820163110419,
+          "achromatic": 0.8536554106997576,
+          "delta": -0.02027339438871567
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6420431600085588,
+          "achromatic": 0.6846369471823074,
+          "delta": -0.04259378717374862
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.017175951950687326,
+          "achromatic": 0.023065356141622972,
+          "delta": -0.005889404190935647
+        }
+      },
+      {
+        "epoch": 125,
+        "psnr_unit_range_db": {
+          "chromatic": 30.395600648026548,
+          "achromatic": 30.099173509733173,
+          "delta": 0.2964271382933745
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9337841928046431,
+          "achromatic": 0.9285448888558032,
+          "delta": 0.0052393039488398685
+        },
+        "sam_deg": {
+          "chromatic": 10.682256390385795,
+          "achromatic": 10.48112777968686,
+          "delta": 0.20112861069893562
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2578333781550787,
+          "achromatic": 0.26668659045273957,
+          "delta": -0.008853212297660895
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10705760829090048,
+          "achromatic": 0.10777522495100464,
+          "delta": -0.0007176166601041561
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8255526970959118,
+          "achromatic": 0.8442593400259035,
+          "delta": -0.01870664292999169
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6339722580236247,
+          "achromatic": 0.6765885137357136,
+          "delta": -0.042616255712088935
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.012235246091851108,
+          "achromatic": 0.021069491630454754,
+          "delta": -0.008834245538603645
+        }
+      },
+      {
+        "epoch": 130,
+        "psnr_unit_range_db": {
+          "chromatic": 30.52575650212635,
+          "achromatic": 30.13193609614394,
+          "delta": 0.3938204059824102
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9364615504158764,
+          "achromatic": 0.9289209366976561,
+          "delta": 0.007540613718220346
+        },
+        "sam_deg": {
+          "chromatic": 10.289748039436347,
+          "achromatic": 10.440382013837393,
+          "delta": -0.1506339744010461
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25445790329793483,
+          "achromatic": 0.26546405334776524,
+          "delta": -0.01100615004983041
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10771568918206507,
+          "achromatic": 0.10566149168117571,
+          "delta": 0.0020541975008893654
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8127686533325202,
+          "achromatic": 0.843441997811512,
+          "delta": -0.030673344478991726
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6251316311391321,
+          "achromatic": 0.6753950001671405,
+          "delta": -0.05026336902800843
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.013557196118710778,
+          "achromatic": 0.02086165587146541,
+          "delta": -0.007304459752754632
+        }
+      },
+      {
+        "epoch": 135,
+        "psnr_unit_range_db": {
+          "chromatic": 30.527777648815896,
+          "achromatic": 30.11648313953968,
+          "delta": 0.4112945092762139
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9369938486467464,
+          "achromatic": 0.9295494897715505,
+          "delta": 0.0074443588751959
+        },
+        "sam_deg": {
+          "chromatic": 10.254463704161562,
+          "achromatic": 10.369332775462702,
+          "delta": -0.11486907130113977
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25439673003248875,
+          "achromatic": 0.26584021283808956,
+          "delta": -0.011443482805600813
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09728073350529469,
+          "achromatic": 0.09808239600923181,
+          "delta": -0.0008016625039371228
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8062987848145621,
+          "achromatic": 0.8382999782114848,
+          "delta": -0.032001193396922756
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6197245769760094,
+          "achromatic": 0.6724946972909054,
+          "delta": -0.05277012031489603
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.014041245928112416,
+          "achromatic": 0.020256931871201367,
+          "delta": -0.006215685943088951
+        }
+      },
+      {
+        "epoch": 140,
+        "psnr_unit_range_db": {
+          "chromatic": 30.535329769804214,
+          "achromatic": 30.132197592423623,
+          "delta": 0.40313217738059137
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9373428758802235,
+          "achromatic": 0.9301035074045634,
+          "delta": 0.007239368475660091
+        },
+        "sam_deg": {
+          "chromatic": 10.115468443056972,
+          "achromatic": 10.27498180509031,
+          "delta": -0.1595133620333371
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.254552310135449,
+          "achromatic": 0.2659033604632237,
+          "delta": -0.011351050327774725
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09999919249596546,
+          "achromatic": 0.09767868597550285,
+          "delta": 0.0023205065204626174
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.8058459336741307,
+          "achromatic": 0.8452517324134872,
+          "delta": -0.03940579873935646
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6204758948688887,
+          "achromatic": 0.6761694595823492,
+          "delta": -0.05569356471346054
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.013354009772077909,
+          "achromatic": 0.02086409254234183,
+          "delta": -0.00751008277026392
+        }
+      },
+      {
+        "epoch": 145,
+        "psnr_unit_range_db": {
+          "chromatic": 30.55946168317888,
+          "achromatic": 30.161135446673104,
+          "delta": 0.3983262365057776
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.937199214102785,
+          "achromatic": 0.9299029349266661,
+          "delta": 0.007296279176118858
+        },
+        "sam_deg": {
+          "chromatic": 10.0986696057358,
+          "achromatic": 10.207361004423845,
+          "delta": -0.10869139868804467
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25354929194684855,
+          "achromatic": 0.26485986133791434,
+          "delta": -0.011310569391065783
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10594129790216568,
+          "achromatic": 0.10585809483090053,
+          "delta": 8.320307126515047e-05
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7972205471648564,
+          "achromatic": 0.841334096289327,
+          "delta": -0.04411354912447063
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6142423079486727,
+          "achromatic": 0.6726203488335686,
+          "delta": -0.05837804088489584
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011618738844926617,
+          "achromatic": 0.01978027993675001,
+          "delta": -0.008161541091823392
+        }
+      },
+      {
+        "epoch": 150,
+        "psnr_unit_range_db": {
+          "chromatic": 30.557433020583645,
+          "achromatic": 30.176388295303713,
+          "delta": 0.3810447252799314
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9379298933171758,
+          "achromatic": 0.9304728801969959,
+          "delta": 0.007457013120179878
+        },
+        "sam_deg": {
+          "chromatic": 10.287548431510254,
+          "achromatic": 10.279349056961992,
+          "delta": 0.008199374548262028
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2538587664469096,
+          "achromatic": 0.2644377998951113,
+          "delta": -0.010579033448201713
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.1007391492234344,
+          "achromatic": 0.10186093380049388,
+          "delta": -0.0011217845770594842
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7926798096970324,
+          "achromatic": 0.8375760625372602,
+          "delta": -0.0448962528402278
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6105226899932856,
+          "achromatic": 0.668250685377774,
+          "delta": -0.05772799538448836
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.012321081729872063,
+          "achromatic": 0.01933789983277272,
+          "delta": -0.007016818102900658
+        }
+      },
+      {
+        "epoch": 153,
+        "psnr_unit_range_db": {
+          "chromatic": 30.626512842221068,
+          "achromatic": 30.206411942112272,
+          "delta": 0.4201009001087961
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9379708307314542,
+          "achromatic": 0.9308051239539579,
+          "delta": 0.0071657067774962835
+        },
+        "sam_deg": {
+          "chromatic": 10.023291998348945,
+          "achromatic": 9.856054039428232,
+          "delta": 0.16723795892071358
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2513602700870996,
+          "achromatic": 0.2632483540382213,
+          "delta": -0.011888083951121675
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10504815912221967,
+          "achromatic": 0.10245989598339095,
+          "delta": 0.0025882631388287197
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7943085020279462,
+          "achromatic": 0.844059169351171,
+          "delta": -0.04975066732322475
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6114953656777781,
+          "achromatic": 0.6734075821375606,
+          "delta": -0.06191221645978251
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.012138908881113283,
+          "achromatic": 0.021028907478566342,
+          "delta": -0.008889998597453059
+        }
+      },
+      {
+        "epoch": 155,
+        "psnr_unit_range_db": {
+          "chromatic": 30.480999044431794,
+          "achromatic": 30.16896077724438,
+          "delta": 0.3120382671874147
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9356170523146456,
+          "achromatic": 0.9297895319357098,
+          "delta": 0.005827520378935858
+        },
+        "sam_deg": {
+          "chromatic": 10.155162002151023,
+          "achromatic": 10.530639165570417,
+          "delta": -0.37547716341939363
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25557491275952265,
+          "achromatic": 0.2649459034809406,
+          "delta": -0.009370990721417949
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10704017495897833,
+          "achromatic": 0.11054653164861007,
+          "delta": -0.0035063566896317427
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7972091184069426,
+          "achromatic": 0.8376243904516367,
+          "delta": -0.040415272044694084
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6181164051680661,
+          "achromatic": 0.6687102358139614,
+          "delta": -0.05059383064589529
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011850596328837457,
+          "achromatic": 0.020191260443072716,
+          "delta": -0.00834066411423526
+        }
+      },
+      {
+        "epoch": 160,
+        "psnr_unit_range_db": {
+          "chromatic": 30.515148197552282,
+          "achromatic": 30.10706420482468,
+          "delta": 0.408083992727601
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9377082116231313,
+          "achromatic": 0.930531782677255,
+          "delta": 0.007176428945876334
+        },
+        "sam_deg": {
+          "chromatic": 10.167919249442077,
+          "achromatic": 10.14577276257593,
+          "delta": 0.02214648686614673
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25516280974094085,
+          "achromatic": 0.2666339743894917,
+          "delta": -0.011471164648550858
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10484527249061908,
+          "achromatic": 0.1041388468490921,
+          "delta": 0.000706425641526981
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.785108379239977,
+          "achromatic": 0.8367240032848967,
+          "delta": -0.051615624044919706
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6061012934308978,
+          "achromatic": 0.6687572467397421,
+          "delta": -0.06265595330884433
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011796325897089198,
+          "achromatic": 0.01941881394870105,
+          "delta": -0.00762248805161185
+        }
+      },
+      {
+        "epoch": 165,
+        "psnr_unit_range_db": {
+          "chromatic": 30.52289764789021,
+          "achromatic": 30.144072154528587,
+          "delta": 0.3788254933616244
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.938380442115903,
+          "achromatic": 0.9311370583880118,
+          "delta": 0.007243383727891239
+        },
+        "sam_deg": {
+          "chromatic": 10.029384789279241,
+          "achromatic": 9.965052762810348,
+          "delta": 0.06433202646889313
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2550552705396965,
+          "achromatic": 0.2656179239433288,
+          "delta": -0.010562653403632272
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10898511244532351,
+          "achromatic": 0.10541971302396357,
+          "delta": 0.003565399421359944
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7825959772561971,
+          "achromatic": 0.8423818169734719,
+          "delta": -0.0597858397172748
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6042165536323959,
+          "achromatic": 0.6713177878097929,
+          "delta": -0.067101234177397
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011588621826013275,
+          "achromatic": 0.019873379229543246,
+          "delta": -0.00828475740352997
+        }
+      },
+      {
+        "epoch": 170,
+        "psnr_unit_range_db": {
+          "chromatic": 30.65095778170731,
+          "achromatic": 30.243187502089654,
+          "delta": 0.40777027961765455
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9385214441816978,
+          "achromatic": 0.9315630066150818,
+          "delta": 0.00695843756661596
+        },
+        "sam_deg": {
+          "chromatic": 10.181175396387339,
+          "achromatic": 9.991521201769899,
+          "delta": 0.1896541946174395
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25097281455163106,
+          "achromatic": 0.26221959482500207,
+          "delta": -0.011246780273371004
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09837793611203503,
+          "achromatic": 0.09708794678041957,
+          "delta": 0.0012899893316154626
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7773682371993863,
+          "achromatic": 0.8329198797304446,
+          "delta": -0.055551642531058265
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6017743671890285,
+          "achromatic": 0.6652564235991156,
+          "delta": -0.06348205641008708
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011735605194928908,
+          "achromatic": 0.018896478449112956,
+          "delta": -0.007160873254184049
+        }
+      },
+      {
+        "epoch": 175,
+        "psnr_unit_range_db": {
+          "chromatic": 30.682237467067807,
+          "achromatic": 30.260939328163015,
+          "delta": 0.42129813890479184
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9384279522792015,
+          "achromatic": 0.9310363489900028,
+          "delta": 0.007391603289198745
+        },
+        "sam_deg": {
+          "chromatic": 10.240944920966538,
+          "achromatic": 10.310687541013293,
+          "delta": -0.06974262004675502
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2494581156568617,
+          "achromatic": 0.2611804575018097,
+          "delta": -0.01172234184494797
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.097008087009623,
+          "achromatic": 0.09831313266898482,
+          "delta": -0.0013050456593618198
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7767454719878444,
+          "achromatic": 0.8364123935565679,
+          "delta": -0.05966692156872355
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6018687439014636,
+          "achromatic": 0.6670726792110854,
+          "delta": -0.06520393530962176
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.012950151819523574,
+          "achromatic": 0.01917285189012772,
+          "delta": -0.006222700070604145
+        }
+      },
+      {
+        "epoch": 180,
+        "psnr_unit_range_db": {
+          "chromatic": 30.607590595633685,
+          "achromatic": 30.229122024624523,
+          "delta": 0.37846857100916154
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9383407082270122,
+          "achromatic": 0.9318612466647659,
+          "delta": 0.006479461562246325
+        },
+        "sam_deg": {
+          "chromatic": 10.210510822447029,
+          "achromatic": 10.044505476837566,
+          "delta": 0.166005345609463
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2525196085287176,
+          "achromatic": 0.2629186757789414,
+          "delta": -0.010399067250223826
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.09931029099684166,
+          "achromatic": 0.0971835133292681,
+          "delta": 0.0021267776675735622
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7707720451045673,
+          "achromatic": 0.8307195430091687,
+          "delta": -0.05994749790460141
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5973720749426451,
+          "achromatic": 0.6629530737784783,
+          "delta": -0.06558099883583324
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.012602139954755141,
+          "achromatic": 0.018990297288487265,
+          "delta": -0.006388157333732124
+        }
+      },
+      {
+        "epoch": 181,
+        "psnr_unit_range_db": {
+          "chromatic": 30.59754112802517,
+          "achromatic": 30.170593484972805,
+          "delta": 0.4269476430523653
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9386739387655637,
+          "achromatic": 0.9313246072841288,
+          "delta": 0.0073493314814349064
+        },
+        "sam_deg": {
+          "chromatic": 9.96997678553532,
+          "achromatic": 9.804991635582008,
+          "delta": 0.1649851499533117
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2532772857606755,
+          "achromatic": 0.26549948128497497,
+          "delta": -0.012222195524299484
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11250791735949559,
+          "achromatic": 0.10978516768360676,
+          "delta": 0.0027227496758888275
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7712824448013831,
+          "achromatic": 0.8328209730113643,
+          "delta": -0.06153852820998118
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5973142804985673,
+          "achromatic": 0.6650830964786945,
+          "delta": -0.06776881598012718
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011644546238494476,
+          "achromatic": 0.020405114843409154,
+          "delta": -0.008760568604914677
+        }
+      },
+      {
+        "epoch": 185,
+        "psnr_unit_range_db": {
+          "chromatic": 30.612252872663355,
+          "achromatic": 30.232161288236757,
+          "delta": 0.38009158442659796
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9382833289742835,
+          "achromatic": 0.9311823192664596,
+          "delta": 0.007101009707823902
+        },
+        "sam_deg": {
+          "chromatic": 10.256524083117313,
+          "achromatic": 10.216462856347347,
+          "delta": 0.04006122676996604
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2523907787314236,
+          "achromatic": 0.2632114017327244,
+          "delta": -0.010820623001300766
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11024220962711427,
+          "achromatic": 0.1089808969601806,
+          "delta": 0.0012613126669336755
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7696338925585225,
+          "achromatic": 0.8332434813661498,
+          "delta": -0.06360958880762724
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5971120968441277,
+          "achromatic": 0.6628657883810406,
+          "delta": -0.0657536915369129
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.01188109913961783,
+          "achromatic": 0.019381854827296464,
+          "delta": -0.007500755687678634
+        }
+      },
+      {
+        "epoch": 190,
+        "psnr_unit_range_db": {
+          "chromatic": 30.556477127947787,
+          "achromatic": 30.18529506512779,
+          "delta": 0.3711820628199973
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9379872751543227,
+          "achromatic": 0.9313618351479024,
+          "delta": 0.006625440006420291
+        },
+        "sam_deg": {
+          "chromatic": 10.296522730459541,
+          "achromatic": 10.024340963101032,
+          "delta": 0.27218176735850896
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25361190060871824,
+          "achromatic": 0.2641880733465118,
+          "delta": -0.010576172737793543
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10637489315671683,
+          "achromatic": 0.10525638358481401,
+          "delta": 0.0011185095719028204
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7680490325618049,
+          "achromatic": 0.8331396479043166,
+          "delta": -0.0650906153425117
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.6000068344275988,
+          "achromatic": 0.6636612179702072,
+          "delta": -0.06365438354260833
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.01394793336096446,
+          "achromatic": 0.01882871489430655,
+          "delta": -0.004880781533342088
+        }
+      },
+      {
+        "epoch": 195,
+        "psnr_unit_range_db": {
+          "chromatic": 30.582418992730425,
+          "achromatic": 30.210135019412967,
+          "delta": 0.3722839733174581
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9379074574311765,
+          "achromatic": 0.9311380098957424,
+          "delta": 0.006769447535434181
+        },
+        "sam_deg": {
+          "chromatic": 10.247298715326911,
+          "achromatic": 10.363962358408257,
+          "delta": -0.11666364308134547
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25303083903681384,
+          "achromatic": 0.26352627623276337,
+          "delta": -0.01049543719594953
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10915391756576177,
+          "achromatic": 0.10866979778236398,
+          "delta": 0.00048411978339779616
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7692199497006779,
+          "achromatic": 0.8316692354655812,
+          "delta": -0.062449285764903384
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5961530761954096,
+          "achromatic": 0.6617057046156243,
+          "delta": -0.0655526284202147
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.012360718572334397,
+          "achromatic": 0.017993950571225163,
+          "delta": -0.005633231998890766
+        }
+      },
+      {
+        "epoch": 200,
+        "psnr_unit_range_db": {
+          "chromatic": 30.605559031918006,
+          "achromatic": 30.20013544878672,
+          "delta": 0.40542358313128446
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9391164819985048,
+          "achromatic": 0.9321840875291532,
+          "delta": 0.006932394469351677
+        },
+        "sam_deg": {
+          "chromatic": 10.116431999024043,
+          "achromatic": 9.879343457201948,
+          "delta": 0.2370885418220947
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2529100116409203,
+          "achromatic": 0.2644886431329254,
+          "delta": -0.01157863149200511
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10879856263696198,
+          "achromatic": 0.10853626880080738,
+          "delta": 0.00026229383615460067
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7675776108572561,
+          "achromatic": 0.829514389334902,
+          "delta": -0.06193677847764589
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5940596286116946,
+          "achromatic": 0.661330293479819,
+          "delta": -0.06727066486812439
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.010805587749004211,
+          "achromatic": 0.019158652990529663,
+          "delta": -0.008353065241525452
+        }
+      },
+      {
+        "epoch": 205,
+        "psnr_unit_range_db": {
+          "chromatic": 30.688467227340837,
+          "achromatic": 30.281008417417898,
+          "delta": 0.4074588099229395
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9391273453679209,
+          "achromatic": 0.9317489016050939,
+          "delta": 0.007378443762826925
+        },
+        "sam_deg": {
+          "chromatic": 10.261322208785318,
+          "achromatic": 10.245860264440882,
+          "delta": 0.015461944344435707
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.24988264452779443,
+          "achromatic": 0.26099130064345605,
+          "delta": -0.011108656115661614
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.1044626757547215,
+          "achromatic": 0.10246169512950161,
+          "delta": 0.002000980625219889
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.757680199176159,
+          "achromatic": 0.8305373270747991,
+          "delta": -0.07285712789864007
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5902362372655261,
+          "achromatic": 0.6608850405040868,
+          "delta": -0.07064880323856071
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.012254523362094063,
+          "achromatic": 0.01930566101824978,
+          "delta": -0.0070511376561557156
+        }
+      },
+      {
+        "epoch": 208,
+        "psnr_unit_range_db": {
+          "chromatic": 30.724774515044146,
+          "achromatic": 30.298968453489596,
+          "delta": 0.4258060615545496
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.940027774130194,
+          "achromatic": 0.9328339583776647,
+          "delta": 0.007193815752529309
+        },
+        "sam_deg": {
+          "chromatic": 9.899127546166865,
+          "achromatic": 9.88978924528135,
+          "delta": 0.009338300885515238
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2492537300529524,
+          "achromatic": 0.2610784710556446,
+          "delta": -0.01182474100269218
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.1009250593593879,
+          "achromatic": 0.09857783132835288,
+          "delta": 0.0023472280310350285
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7619300554818212,
+          "achromatic": 0.8283296887543239,
+          "delta": -0.06639963327250265
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.590041298152696,
+          "achromatic": 0.6598029607332436,
+          "delta": -0.06976166258054761
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.010974769972749866,
+          "achromatic": 0.018962057505386643,
+          "delta": -0.007987287532636778
+        }
+      },
+      {
+        "epoch": 210,
+        "psnr_unit_range_db": {
+          "chromatic": 30.650617312170553,
+          "achromatic": 30.24436833710739,
+          "delta": 0.40624897506316415
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9395218466792952,
+          "achromatic": 0.9326353909743548,
+          "delta": 0.006886455704940397
+        },
+        "sam_deg": {
+          "chromatic": 10.13938106551413,
+          "achromatic": 9.963234618801188,
+          "delta": 0.17614644671294144
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25128513696278576,
+          "achromatic": 0.26269808104995473,
+          "delta": -0.011412944087168975
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.0984605436607659,
+          "achromatic": 0.10046974507807045,
+          "delta": -0.002009201417304554
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7583054422217034,
+          "achromatic": 0.8286193835704387,
+          "delta": -0.07031394134873536
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.589232201044802,
+          "achromatic": 0.6595107983038903,
+          "delta": -0.07027859725908825
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.01133741450400804,
+          "achromatic": 0.018929521177030527,
+          "delta": -0.007592106673022486
+        }
+      },
+      {
+        "epoch": 215,
+        "psnr_unit_range_db": {
+          "chromatic": 30.67088088516107,
+          "achromatic": 30.256091747634304,
+          "delta": 0.41478913752676405
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9394894783141972,
+          "achromatic": 0.9324365163410477,
+          "delta": 0.007052961973149419
+        },
+        "sam_deg": {
+          "chromatic": 10.053570222222241,
+          "achromatic": 9.861563776995133,
+          "delta": 0.19200644522710775
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25056315301390614,
+          "achromatic": 0.26223616140853456,
+          "delta": -0.011673008394628426
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.1068280972493869,
+          "achromatic": 0.10471791193675004,
+          "delta": 0.0021101853126368614
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7575837576278178,
+          "achromatic": 0.8289869977600905,
+          "delta": -0.07140324013227273
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5881493239130037,
+          "achromatic": 0.6592314148319017,
+          "delta": -0.07108209091889806
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011731299596578114,
+          "achromatic": 0.01950784319156632,
+          "delta": -0.007776543594988205
+        }
+      },
+      {
+        "epoch": 220,
+        "psnr_unit_range_db": {
+          "chromatic": 30.60220371666894,
+          "achromatic": 30.20543133526647,
+          "delta": 0.3967723814024673
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9387498855316083,
+          "achromatic": 0.9317149420036972,
+          "delta": 0.007034943527911119
+        },
+        "sam_deg": {
+          "chromatic": 10.350756055746544,
+          "achromatic": 10.277483851977362,
+          "delta": 0.0732722037691822
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25282487388292796,
+          "achromatic": 0.2640612871931809,
+          "delta": -0.011236413310252935
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10959735912228309,
+          "achromatic": 0.11113091385296725,
+          "delta": -0.0015335547306841585
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7581410892863744,
+          "achromatic": 0.8276091556175671,
+          "delta": -0.06946806633119273
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5900247299923735,
+          "achromatic": 0.6576688400087547,
+          "delta": -0.06764411001638115
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011651055862314559,
+          "achromatic": 0.018149189833995074,
+          "delta": -0.006498133971680515
+        }
+      },
+      {
+        "epoch": 225,
+        "psnr_unit_range_db": {
+          "chromatic": 30.61901006967024,
+          "achromatic": 30.240267160879725,
+          "delta": 0.37874290879051387
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9396547697931708,
+          "achromatic": 0.9327824050616395,
+          "delta": 0.0068723647315313
+        },
+        "sam_deg": {
+          "chromatic": 10.0018762381042,
+          "achromatic": 9.904503197697185,
+          "delta": 0.09737304040701567
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25232910020482247,
+          "achromatic": 0.26297327405913185,
+          "delta": -0.01064417385430938
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.108746063381273,
+          "achromatic": 0.10603723612464463,
+          "delta": 0.0027088272566283683
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7532465888817017,
+          "achromatic": 0.8257061830739848,
+          "delta": -0.0724595941922831
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5856389275590245,
+          "achromatic": 0.6570212088205393,
+          "delta": -0.0713822812615148
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011590492616420036,
+          "achromatic": 0.01868178659859304,
+          "delta": -0.007091293982173003
+        }
+      },
+      {
+        "epoch": 230,
+        "psnr_unit_range_db": {
+          "chromatic": 30.668482623803737,
+          "achromatic": 30.276314514512748,
+          "delta": 0.39216810929098855
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9396753913900565,
+          "achromatic": 0.9325282291905638,
+          "delta": 0.00714716219949274
+        },
+        "sam_deg": {
+          "chromatic": 10.008294627184291,
+          "achromatic": 10.120043477847387,
+          "delta": -0.11174885066309592
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25097727984799856,
+          "achromatic": 0.2617214894166698,
+          "delta": -0.010744209568671226
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10151773247950688,
+          "achromatic": 0.10264940226359988,
+          "delta": -0.0011316697840930007
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7527482932564284,
+          "achromatic": 0.8257036250366586,
+          "delta": -0.07295533178023017
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5859179141549071,
+          "achromatic": 0.6558718057998917,
+          "delta": -0.06995389164498456
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011202989496065036,
+          "achromatic": 0.01770947713007766,
+          "delta": -0.006506487634012625
+        }
+      },
+      {
+        "epoch": 235,
+        "psnr_unit_range_db": {
+          "chromatic": 30.625921266235373,
+          "achromatic": 30.241372567392393,
+          "delta": 0.3845486988429805
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9392564984901095,
+          "achromatic": 0.9325019783582356,
+          "delta": 0.006754520131873942
+        },
+        "sam_deg": {
+          "chromatic": 10.075011001633001,
+          "achromatic": 10.073119635355111,
+          "delta": 0.0018913662778903273
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.25231062368450524,
+          "achromatic": 0.26297912173185756,
+          "delta": -0.010668498047352315
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.11053912429614646,
+          "achromatic": 0.1074561423244909,
+          "delta": 0.00308298197165556
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7538755265609001,
+          "achromatic": 0.8243461227477947,
+          "delta": -0.07047059618689466
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5869687759072792,
+          "achromatic": 0.6564015833548226,
+          "delta": -0.06943280744754332
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.012585754373787415,
+          "achromatic": 0.018955942248485902,
+          "delta": -0.006370187874698487
+        }
+      },
+      {
+        "epoch": 240,
+        "psnr_unit_range_db": {
+          "chromatic": 30.66315170658538,
+          "achromatic": 30.24840910683295,
+          "delta": 0.414742599752433
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.939305132807552,
+          "achromatic": 0.9321873250181318,
+          "delta": 0.007117807789420172
+        },
+        "sam_deg": {
+          "chromatic": 10.11336835004833,
+          "achromatic": 10.201997570382625,
+          "delta": -0.08862922033429577
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2509252437106462,
+          "achromatic": 0.26255758065902485,
+          "delta": -0.011632336948378674
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.10967050991691324,
+          "achromatic": 0.10806872657949265,
+          "delta": 0.001601783337420587
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7512770127369159,
+          "achromatic": 0.8258559252654084,
+          "delta": -0.07457891252849247
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5846684397968381,
+          "achromatic": 0.6575866211659374,
+          "delta": -0.07291818136909922
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.011915049015829106,
+          "achromatic": 0.019378748734078004,
+          "delta": -0.007463699718248899
+        }
+      },
+      {
+        "epoch": 245,
+        "psnr_unit_range_db": {
+          "chromatic": 30.56898098448986,
+          "achromatic": 30.17462138451902,
+          "delta": 0.39435959997083714
+        },
+        "ssim_band_mean": {
+          "chromatic": 0.9391016190870063,
+          "achromatic": 0.9323908624887609,
+          "delta": 0.006710756598245382
+        },
+        "sam_deg": {
+          "chromatic": 10.01676589100075,
+          "achromatic": 9.851429285446617,
+          "delta": 0.165336605554133
+        },
+        "cube_relative_l2": {
+          "chromatic": 0.2543158304381653,
+          "achromatic": 0.2654496351495477,
+          "delta": -0.011133804711382422
+        },
+        "global_spectrum_relative_l2": {
+          "chromatic": 0.1160309078153486,
+          "achromatic": 0.11431603914016795,
+          "delta": 0.001714868675180642
+        },
+        "high_frequency_relative_l2": {
+          "chromatic": 0.7512083830440466,
+          "achromatic": 0.8255281437632521,
+          "delta": -0.07431976071920554
+        },
+        "spatial_gradient_relative_l2": {
+          "chromatic": 0.5843001255739694,
+          "achromatic": 0.6559636848009122,
+          "delta": -0.07166355922694279
+        },
+        "measurement_relative_l2": {
+          "chromatic": 0.012667764379388578,
+          "achromatic": 0.01840575646142297,
+          "delta": -0.005737992082034394
+        }
+      }
+    ]
+  },
+  "plateau_spread": {
+    "window_metric_rows": 40,
+    "chromatic": {
+      "psnr_unit_range_db": 0.10771755591978772,
+      "ssim_band_mean": 0.0021017727041752533,
+      "sam_deg": 0.2531840626327791,
+      "cube_relative_l2": 0.002981472799018406,
+      "global_spectrum_relative_l2": 0.006360920073812929,
+      "high_frequency_relative_l2": 0.031069225068972674,
+      "spatial_gradient_relative_l2": 0.02047949996858687,
+      "measurement_relative_l2": 0.0011833630151064029
+    },
+    "achromatic": {
+      "psnr_unit_range_db": 0.05590769703982188,
+      "ssim_band_mean": 0.0010556776126518165,
+      "sam_deg": 0.19313453506617573,
+      "cube_relative_l2": 0.0017367551966262777,
+      "global_spectrum_relative_l2": 0.004175098646830722,
+      "high_frequency_relative_l2": 0.0065234184532724565,
+      "spatial_gradient_relative_l2": 0.0066429906172756565,
+      "measurement_relative_l2": 0.0008834438477196264
+    }
+  },
+  "notes": [
+    "no checkpoint is re-selected from this comparison",
+    "differences below the plateau spread are not treated as demonstrated"
+  ]
+}

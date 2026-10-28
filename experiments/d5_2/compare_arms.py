@@ -127,9 +127,9 @@ def main():
         notes=["no checkpoint is re-selected from this comparison",
                "differences below the plateau spread are not treated as demonstrated"])
     args.output.write_text(json.dumps(result, indent=2), encoding="utf-8")
-    print(json.dumps({k: {m: round(v[m], 4) for m in ("psnr_unit_range_db",
-                                                      "high_frequency_relative_l2",
-                                                      "sam_deg")}
+    print(json.dumps({k: dict(chromatic=round(v["chromatic"], 4),
+                              achromatic=round(v["achromatic"], 4),
+                              delta=round(v["delta"], 4), better=v["better"])
                       for k, v in aggregate.items()}, indent=2))
     print(json.dumps({name: dict(best_epoch=summary[name]["best_epoch"],
                                  epochs=summary[name]["epochs_completed"])
