@@ -61,7 +61,12 @@ def spectral_weights(kernels):
 
 
 def noise_statistics(delta_y, sigma, hw):
-    """Per-pixel and per-radial-bin detection statistics for two noise draws."""
+    """Per-pixel and per-radial-bin detection statistics for two noise draws.
+
+    ``matched_filter_snr`` is the integrated detectability of a *known* pattern;
+    ``per_pixel_snr`` is the RMS of the difference divided by the per-pixel noise,
+    i.e. whether any single pixel is informative. They differ by sqrt(pixels).
+    """
     delta = np.asarray(delta_y, dtype=np.float64).reshape(hw)
     variance = 2.0 * float(sigma) ** 2
     per_pixel = np.abs(delta) / np.sqrt(variance)
@@ -84,6 +89,8 @@ def noise_statistics(delta_y, sigma, hw):
         sigma=float(sigma),
         energy_snr=float(np.linalg.norm(delta) /
                          max(np.sqrt(variance) * np.sqrt(delta.size), 1e-30)),
+        per_pixel_snr=float(np.sqrt((delta ** 2).mean()) / max(np.sqrt(variance), 1e-30)),
+        matched_filter_snr=float(np.linalg.norm(delta) / max(np.sqrt(variance), 1e-30)),
         per_pixel_snr_mean=float(per_pixel.mean()),
         per_pixel_snr_max=float(per_pixel.max()),
         detectable_pixel_fraction=float((per_pixel > 2.0).mean()),
@@ -172,6 +179,8 @@ def summarise(rows):
                 [r["analytic"]["relative_to_measurement"] for r in group]),
             mean_energy_snr=average([r["noise_chromatic"]["energy_snr"] for r in group
                                      if "noise_chromatic" in r]),
+            mean_matched_filter_snr=average([r["noise_chromatic"]["matched_filter_snr"]
+                                             for r in group if "noise_chromatic" in r]),
             mean_detectable_fraction=average([
                 r["noise_chromatic"]["detectable_pixel_fraction"] for r in group
                 if "noise_chromatic" in r]),

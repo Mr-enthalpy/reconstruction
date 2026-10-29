@@ -192,6 +192,9 @@ def summarise(rows):
                                                    for r in group]),
             median_noise_only_fraction=median([r["noise_only"]["response_fraction"] for r in group
                                                if "noise_only" in r]),
+            median_response_over_noise=median([
+                r["response"]["response_fraction"] / r["noise_only"]["response_fraction"]
+                for r in group if "noise_only" in r and r["noise_only"]["response_fraction"] > 0]),
             max_identity_abs=max((r["identity_max_abs"] for r in group), default=None),
             median_truth_delta_l2=median([r["truth_delta_l2"] for r in group]))
     by_seed = {}
@@ -204,6 +207,9 @@ def summarise(rows):
         median_cosine=median([r["response"]["cosine"] for r in group]),
         median_direction_accuracy=median([r["response"]["band_contrast_direction_accuracy"]
                                           for r in group]),
+        median_response_over_noise=median([
+            r["response"]["response_fraction"] / r["noise_only"]["response_fraction"]
+            for r in group if "noise_only" in r and r["noise_only"]["response_fraction"] > 0]),
         median_noise_only_fraction=median([r["noise_only"]["response_fraction"] for r in group
                                            if "noise_only" in r]))
         for key, group in by_seed.items()}

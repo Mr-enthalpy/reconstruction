@@ -97,6 +97,9 @@ def test_noise_statistics_reports_bins_and_two_draw_variance():
     assert set(stats["radial"]) == {"0.0-0.1", "0.1-0.2", "0.2-0.3", "0.3-0.4", "0.4-0.5"}
     expected = np.linalg.norm(delta) / (np.sqrt(2) * 0.01 * np.sqrt(delta.size))
     assert stats["energy_snr"] == pytest.approx(expected, rel=1e-6)
+    assert stats["matched_filter_snr"] == pytest.approx(expected * np.sqrt(delta.size), rel=1e-6)
+    assert stats["per_pixel_snr"] == pytest.approx(expected, rel=1e-12)
+    assert stats["matched_filter_snr"] > stats["per_pixel_snr"]
     assert 0.0 <= stats["detectable_pixel_fraction"] <= 1.0
 
 
