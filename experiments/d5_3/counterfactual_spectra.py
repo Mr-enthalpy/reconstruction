@@ -228,13 +228,13 @@ def iter_cases(prepared: Path, scenes, pairs, strengths, masks, seed: int,
                         return
 
 
-def protocol_document(cases, scenes, pairs, strengths, masks, seed):
-    entries = []
-    for case in cases:
-        stats = case_statistics(case)
-        entries.append(dict(scene_id=case["scene_id"], dataset_id=case["dataset_id"],
-                            bands_nm=case["bands_nm"], mask=case["mask"], strength=case["strength"],
-                            mask_params=case["mask_params"], statistics=stats))
+def case_entry(case):
+    return dict(scene_id=case["scene_id"], dataset_id=case["dataset_id"],
+                bands_nm=case["bands_nm"], mask=case["mask"], strength=case["strength"],
+                mask_params=case["mask_params"], statistics=case_statistics(case))
+
+
+def protocol_document(entries, scenes, pairs, strengths, masks, seed):
     residuals = [e["statistics"]["verification"]["wideband_relative_residual"] for e in entries]
     return dict(
         protocol="D5.3-fixed-wideband-counterfactual",
@@ -273,9 +273,10 @@ def main():
     strengths = [float(v) for v in args.strengths.split(",") if v]
     masks = [m for m in args.masks.split(",") if m]
     scenes = [s for s in args.scenes.split(",") if s]
-    cases = build_cases(args.prepared, scenes, pairs, strengths, masks, args.seed,
-                        args.max_cases)
-    document = protocol_document(cases, scenes, pairs, strengths, masks, args.seed)
+    cases = iter_cases(args.prepared, scenes, pairs, strengths, masks, args.seed,
+                       args.max_cases)
+    entries = [case_entry(case) for case in cases]
+    document = protocol_document(entries, scenes, pairs, strengths, masks, args.seed)
     args.output.write_text(json.dumps(document, indent=2), encoding="utf-8")
     print(json.dumps(dict(cases=len(document["cases"]),
                           verification=document["verification"])))

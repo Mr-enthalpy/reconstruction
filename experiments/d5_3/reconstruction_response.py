@@ -28,6 +28,11 @@ from pathlib import Path
 import numpy as np
 import torch
 
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+for _path in (_REPO_ROOT / "src", Path(__file__).resolve().parent):
+    if str(_path) not in sys.path:
+        sys.path.insert(0, str(_path))
+
 from lcd_reconstruction.operators.psf_provenance import (
     PSFProvenanceError, array_digest, file_digest, physics_buffers_from_model,
     physics_buffers_from_state, resolve_psf_policy)

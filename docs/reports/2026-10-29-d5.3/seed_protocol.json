@@ -1,0 +1,109 @@
+{
+  "protocol": "D5.3-multiseed-protocol",
+  "frozen_at_utc": "2026-10-29T16:19:00Z",
+  "frozen_note": "written and committed before the first D5.3 epoch was produced; the acceptance rule below was fixed before any D5.3 result existed",
+  "code_commit": "1203ac9",
+  "config_file": "experiments/d5_3/configs/d5_3_a6.json",
+  "config_sha256": "ceed995b35fb96dcea8d898a26666ed25303219d32897b5978a076555df20a34",
+  "config": {
+    "model": "A",
+    "stages": 6,
+    "width": 64,
+    "depth": 4,
+    "batch": 1,
+    "steps_per_epoch": 100,
+    "epochs": 400,
+    "patience": 60,
+    "eval_every": 5,
+    "learning_rate": 0.0002,
+    "weight_decay": 0.00001,
+    "grad_clip": 1.0,
+    "train_noise_rms_fraction": 0.005,
+    "brightness_range": [0.9, 1.1],
+    "lambda_grad": 0.2,
+    "lambda_spectral": 0.05,
+    "lambda_data": 0.02,
+    "selection": "minimum validation reconstruction objective"
+  },
+  "seeds": [20261021, 20261022, 20261023],
+  "arms": {
+    "s1c": {
+      "role": "chromatic",
+      "kernel_file": "kernels.npz",
+      "kernel_array_sha256": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04"
+    },
+    "s3a": {
+      "role": "achromatic-mean",
+      "kernel_file": "kernels_achromatic.npz",
+      "kernel_array_sha256": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0"
+    },
+    "s3a550": {
+      "role": "achromatic-550",
+      "kernel_file": "kernels_achromatic_550.npz",
+      "kernel_array_sha256": "87073bc41592e69fb7c1f6a295373494d56c8ab11bac607d7ac81c60a205375a",
+      "planned_seeds": [20261021, 20261022, 20261023],
+      "lease": "second lease, after the S1 conclusion is read"
+    }
+  },
+  "run_matrix": [
+    {"wave": 1, "run": "s1c_s20261021", "arm": "s1c", "seed": 20261021, "gpu": 0},
+    {"wave": 1, "run": "s3a_s20261021", "arm": "s3a", "seed": 20261021, "gpu": 1},
+    {"wave": 1, "run": "s1c_s20261022", "arm": "s1c", "seed": 20261022, "gpu": 2},
+    {"wave": 1, "run": "s3a_s20261022", "arm": "s3a", "seed": 20261022, "gpu": 3},
+    {"wave": 2, "run": "s1c_s20261023", "arm": "s1c", "seed": 20261023, "gpu": "first free"},
+    {"wave": 2, "run": "s3a_s20261023", "arm": "s3a", "seed": 20261023, "gpu": "second free"}
+  ],
+  "budget": {
+    "max_epochs": 400,
+    "steps_per_epoch": 100,
+    "max_steps": 40000,
+    "patience": 60,
+    "cosine_eta_min": 0.00001,
+    "note": "one uniform budget for every arm; D5.2's 300-epoch runs stay historical evidence and are not pooled with D5.3"
+  },
+  "censoring_rule": {
+    "budget_censored": "the run reached the 400-epoch cap and its best epoch lies inside the final patience window",
+    "reason": "a run still improving at the cap has not shown converged capability; the equal-budget comparison remains valid",
+    "extension_policy": "any extension must cover all arms in one new uniform budget, never only the arm that looks weaker"
+  },
+  "acceptance_rule": {
+    "primary_unit": "seed (n = 3), each arm's own minimum-validation-loss checkpoint",
+    "stable": [
+      "the paired difference chromatic - achromatic has the same sign in 3/3 seeds",
+      "|mean across seeds| > sd across seeds",
+      "at least 8 of 9 validation scenes agree in every seed"
+    ],
+    "reported_regardless": [
+      "per-seed and per-scene paired differences",
+      "CAVE and KAIST aggregates separately",
+      "plateau epoch-to-epoch standard deviation as a training-stability diagnostic"
+    ],
+    "not_allowed": [
+      "treating three seeds times nine scenes as 27 independent experiments",
+      "using plateau variation as a substitute for seed variance",
+      "re-selecting a checkpoint per metric",
+      "comparing validation loss across arms (each arm normalises by its own forward RMS; measured difference 0.04%)"
+    ]
+  },
+  "data": {
+    "train_npz_sha256": "024d2b4c8956707387289242ddbadce08e3379a51ed6e0752a167666dbb32908",
+    "val_npz_sha256": "e61ac4f102d58a44bdb8f7174a960d13f2e102c5db00cc0bc408ea5583ff9247",
+    "manifest_sha256": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3",
+    "train_scenes": 39,
+    "validation_scenes": 9,
+    "test_policy": "test.npz is never downloaded, uploaded or loaded in D5.3"
+  },
+  "environment": {
+    "server": "kunqian",
+    "allocation": "3d3e5397eb17409c9a81b1499c66c637",
+    "gpus": 4,
+    "cpus": 32,
+    "memory_gb": 48,
+    "hours": 8,
+    "torch": "2.7.1+cu128",
+    "gpu_name": "NVIDIA GeForce RTX 3090",
+    "threads_per_process": 4,
+    "deterministic": true,
+    "tf32": false
+  }
+}

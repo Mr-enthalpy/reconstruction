@@ -13,9 +13,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 import numpy as np
+
+_REPO_ROOT = Path(__file__).resolve().parents[2]
+for _path in (_REPO_ROOT / "src", Path(__file__).resolve().parent):
+    if str(_path) not in sys.path:
+        sys.path.insert(0, str(_path))
 
 from lcd_reconstruction.operators.psf_provenance import array_digest
 
