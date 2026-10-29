@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
 # D5.3 arm launcher. Every path is an explicit argument; nothing is hard-coded.
 #
-#   run_arm.sh <prepared> <arm> <gpu> <kernel-file> <output-dir> <seed> [config]
+#   run_arm.sh <prepared> <arm> <gpu> <kernel-file> <output-dir> <seed> [config] [resume]
 #
-# The script caps CPU thread pools because containers often report all host CPUs
-# while the lease grants only a fraction of them.
+# The optional resume checkpoint is used by the provenance check: resuming an
+# arm with the other arm's kernel must fail instead of silently swapping the
+# physics operator.
 set -euo pipefail
 
 if [ "$#" -lt 6 ]; then
-  echo "usage: $0 <prepared> <arm> <gpu> <kernel-file> <output-dir> <seed> [config]" >&2
+  echo "usage: $0 <prepared> <arm> <gpu> <kernel-file> <output-dir> <seed> [config] [resume]" >&2
   exit 2
 fi
 
@@ -19,6 +20,7 @@ KERNEL=$4
 OUT=$5
 SEED=$6
 CONFIG=${7:-experiments/d5_3/configs/d5_3_a6.json}
+RESUME=${8:-}
 
 cd "$(dirname "$0")/../.."
 
@@ -30,11 +32,16 @@ export NUMEXPR_NUM_THREADS="$OMP_NUM_THREADS"
 export PYTHONPATH="$PWD/src"
 
 echo "START $(date -u '+%FT%TZ') arm=$ARM gpu=$GPU seed=$SEED kernel=$KERNEL output=$OUT"
+EXTRA=()
+if [ -n "$RESUME" ]; then
+  EXTRA=(--resume "$RESUME")
+fi
 python3 -X utf8 experiments/d5/train.py \
   --prepared "$PREPARED" \
   --output "$OUT" \
   --config "$CONFIG" \
   --kernel-file "$KERNEL" \
   --seed "$SEED" \
-  --device cuda
+  --device cuda \
+  "${EXTRA[@]}"
 echo "END $(date -u '+%FT%TZ') arm=$ARM"
