@@ -1,0 +1,1195 @@
+{
+  "protocol": "D5.3-encoding-observability",
+  "operator": "y = sum_b K_b * X_b (zero-padded convolution, all-1 spectral weights)",
+  "identity": "delta_Y(f) = sum_b (K_b(f) - mean_b K_b(f)) * delta_X_b(f); identically zero for any single-kernel-per-band operator",
+  "rank_note": "at each spatial frequency the map from 21 band coefficients to one measurement is rank 1; dispersion changes the band weights per frequency",
+  "kernels": {
+    "chromatic": {
+      "file": "kernels.npz",
+      "array_sha256": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04"
+    },
+    "achromatic": {
+      "kind": "mean over 21 bands",
+      "array_sha256": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0"
+    },
+    "achromatic550": {
+      "kind": "550 nm band replicated",
+      "array_sha256": "87073bc41592e69fb7c1f6a295373494d56c8ab11bac607d7ac81c60a205375a"
+    },
+    "band_sensitivity_l1": [
+      0.5994023808477644,
+      0.5539890248351109,
+      0.5275535349016299,
+      0.5027655107987248,
+      0.46046257442062954,
+      0.40717941480922176,
+      0.3643472569944448,
+      0.32672286516602655,
+      0.30549321616709146,
+      0.28711217584921533,
+      0.2720813178901583,
+      0.268962299995358,
+      0.28095548500382267,
+      0.30527598497396635,
+      0.3376627280301451,
+      0.38027604220352507,
+      0.4220059884355678,
+      0.4654136433120253,
+      0.5113483063300281,
+      0.5594214727144954,
+      0.6808623956877207
+    ]
+  },
+  "noise": {
+    "sigma_chromatic": 0.017329356670379638,
+    "sigma_achromatic": 0.01733642578125,
+    "convention": "two independent draws: variance 2*sigma^2"
+  },
+  "summary": {
+    "cases": 675,
+    "per_configuration": [
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "block",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 4.276566006636721e-05,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.180195615309761e-07,
+        "mean_energy_snr": 0.0037530475203457116,
+        "mean_matched_filter_snr": 1.9215603304170044,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "block",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 8.337465701136668e-05,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.2073935648812847e-07,
+        "mean_energy_snr": 0.008887879406103909,
+        "mean_matched_filter_snr": 4.550594255925201,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "block",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00010813198118867107,
+        "max_achromatic_abs": 2.013312445746528e-06,
+        "mean_analytic_relative_to_measurement": 1.1860542770136817e-07,
+        "mean_energy_snr": 0.009799964298234853,
+        "mean_matched_filter_snr": 5.017581720696245,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "chroma",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00012997262544837667,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3150169940622112e-07,
+        "mean_energy_snr": 0.011743754798442387,
+        "mean_matched_filter_snr": 6.012802456802502,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "chroma",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0002599486804557469,
+        "max_achromatic_abs": 2.0662943522135415e-06,
+        "mean_analytic_relative_to_measurement": 1.3044587711242963e-07,
+        "mean_energy_snr": 0.023487453349660306,
+        "mean_matched_filter_snr": 12.025576115026077,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "chroma",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0005199143373614176,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.308276122497571e-07,
+        "mean_energy_snr": 0.04697496864803838,
+        "mean_matched_filter_snr": 24.05118394779565,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "edge",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00014106466929499995,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3138766677103479e-07,
+        "mean_energy_snr": 0.012410948660795009,
+        "mean_matched_filter_snr": 6.3544057143270445,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "edge",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00028213359694722115,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3112080428830572e-07,
+        "mean_energy_snr": 0.024821991930128785,
+        "mean_matched_filter_snr": 12.708859868225938,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "edge",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0005642795873427655,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3094790397695357e-07,
+        "mean_energy_snr": 0.049643887835665285,
+        "mean_matched_filter_snr": 25.417670571860626,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "stripes",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00023558616673846728,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3051445238134977e-07,
+        "mean_energy_snr": 0.0220523751062943,
+        "mean_matched_filter_snr": 11.290816054422681,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "stripes",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00047118124184732015,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3049044077383263e-07,
+        "mean_energy_snr": 0.044104815169607965,
+        "mean_matched_filter_snr": 22.581665366839278,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "stripes",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0009423963634840388,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.319801599366757e-07,
+        "mean_energy_snr": 0.08820971219939362,
+        "mean_matched_filter_snr": 45.163372646089535,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "uniform",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00020394045163838753,
+        "max_achromatic_abs": 2.013312445746528e-06,
+        "mean_analytic_relative_to_measurement": 1.3120944844205144e-07,
+        "mean_energy_snr": 0.018508211193969414,
+        "mean_matched_filter_snr": 9.47620413131234,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "uniform",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00040789650085707975,
+        "max_achromatic_abs": 2.013312445746528e-06,
+        "mean_analytic_relative_to_measurement": 1.3064260586917146e-07,
+        "mean_energy_snr": 0.03701648657366917,
+        "mean_matched_filter_snr": 18.952441125718615,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          460
+        ],
+        "mask": "uniform",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0008158541449564036,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.314711144889063e-07,
+        "mean_energy_snr": 0.07403300683218679,
+        "mean_matched_filter_snr": 37.90489949807964,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "block",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0004257942652405826,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.2100763689836134e-07,
+        "mean_energy_snr": 0.03402863826324388,
+        "mean_matched_filter_snr": 17.422662790780866,
+        "mean_detectable_fraction": 1.8225775824652777e-05
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "block",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0007002345851451766,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.1605595062746943e-07,
+        "mean_energy_snr": 0.06954375763507367,
+        "mean_matched_filter_snr": 35.60640390915772,
+        "mean_detectable_fraction": 0.0005560980902777778
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "block",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00204523303070945,
+        "max_achromatic_abs": 2.013312445746528e-06,
+        "mean_analytic_relative_to_measurement": 1.2035563419961667e-07,
+        "mean_energy_snr": 0.16468141262743918,
+        "mean_matched_filter_snr": 84.31688326524886,
+        "mean_detectable_fraction": 0.001712799072265625
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "chroma",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0006478026811844207,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3086602261106842e-07,
+        "mean_energy_snr": 0.056771883936335664,
+        "mean_matched_filter_snr": 29.06720457540386,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "chroma",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0012955678899448835,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3165227920176727e-07,
+        "mean_energy_snr": 0.11354376211294531,
+        "mean_matched_filter_snr": 58.134406201828,
+        "mean_detectable_fraction": 0.000179290771484375
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "chroma",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.002590984319759395,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3099611982801838e-07,
+        "mean_energy_snr": 0.22708745654763873,
+        "mean_matched_filter_snr": 116.26877775239103,
+        "mean_detectable_fraction": 0.002544826931423611
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "edge",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0013599124976223112,
+        "max_achromatic_abs": 2.4371676974826387e-06,
+        "mean_analytic_relative_to_measurement": 1.311054123536653e-07,
+        "mean_energy_snr": 0.11792782688040233,
+        "mean_matched_filter_snr": 60.379047362765995,
+        "mean_detectable_fraction": 4.8319498697916664e-05
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "edge",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.002719728310590657,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3102730633818283e-07,
+        "mean_energy_snr": 0.2358556348080177,
+        "mean_matched_filter_snr": 120.75808502170506,
+        "mean_detectable_fraction": 0.0020773145887586805
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "edge",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.005439061498370024,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3156841305317357e-07,
+        "mean_energy_snr": 0.47171127839183835,
+        "mean_matched_filter_snr": 241.51617453662124,
+        "mean_detectable_fraction": 0.013971116807725694
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "stripes",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0037575661866771468,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.324312866775775e-07,
+        "mean_energy_snr": 0.35692579010683706,
+        "mean_matched_filter_snr": 182.74600453470057,
+        "mean_detectable_fraction": 0.008463117811414931
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "stripes",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.007514587971404241,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3122911626497728e-07,
+        "mean_energy_snr": 0.7138515629437663,
+        "mean_matched_filter_snr": 365.49200022720834,
+        "mean_detectable_fraction": 0.03731960720486111
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "stripes",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.015026835720368788,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3105479328916974e-07,
+        "mean_energy_snr": 1.4277031527615862,
+        "mean_matched_filter_snr": 730.9840142139321,
+        "mean_detectable_fraction": 0.07396613226996528
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "uniform",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.001782101579901108,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3152473204374675e-07,
+        "mean_energy_snr": 0.16157584589384444,
+        "mean_matched_filter_snr": 82.72683309764835,
+        "mean_detectable_fraction": 0.00018395317925347222
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "uniform",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0035637054916947113,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3157334895671133e-07,
+        "mean_energy_snr": 0.32315169467585525,
+        "mean_matched_filter_snr": 165.4536676740379,
+        "mean_detectable_fraction": 0.006086137559678819
+      },
+      {
+        "bands_nm": [
+          450,
+          650
+        ],
+        "mask": "uniform",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.007125404204217512,
+        "max_achromatic_abs": 2.0662943522135415e-06,
+        "mean_analytic_relative_to_measurement": 1.3136251513717272e-07,
+        "mean_energy_snr": 0.6463034049553111,
+        "mean_matched_filter_snr": 330.9073433371193,
+        "mean_detectable_fraction": 0.0257157219780816
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "block",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00038697913574302,
+        "max_achromatic_abs": 2.490149603949653e-06,
+        "mean_analytic_relative_to_measurement": 1.2211303454831875e-07,
+        "mean_energy_snr": 0.03631937533772666,
+        "mean_matched_filter_snr": 18.59552017291605,
+        "mean_detectable_fraction": 5.510118272569444e-06
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "block",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0002868706275224127,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.1542341679968457e-07,
+        "mean_energy_snr": 0.029695519307642377,
+        "mean_matched_filter_snr": 15.204105885512897,
+        "mean_detectable_fraction": 0.00013775295681423612
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "block",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0014985603529925468,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.2074928513862284e-07,
+        "mean_energy_snr": 0.1346720026993106,
+        "mean_matched_filter_snr": 68.95206538204702,
+        "mean_detectable_fraction": 0.001743316650390625
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "chroma",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00046225264932344226,
+        "max_achromatic_abs": 2.304712931315104e-06,
+        "mean_analytic_relative_to_measurement": 1.3220121451872222e-07,
+        "mean_energy_snr": 0.04056577332664185,
+        "mean_matched_filter_snr": 20.769675943240628,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "chroma",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0009244781224887923,
+        "max_achromatic_abs": 2.3312038845486113e-06,
+        "mean_analytic_relative_to_measurement": 1.3102444048248193e-07,
+        "mean_energy_snr": 0.0811316056943141,
+        "mean_matched_filter_snr": 41.53938211548882,
+        "mean_detectable_fraction": 5.255805121527778e-05
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "chroma",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0018488447342207667,
+        "max_achromatic_abs": 2.357694837782118e-06,
+        "mean_analytic_relative_to_measurement": 1.3182428107130465e-07,
+        "mean_energy_snr": 0.16226321286562795,
+        "mean_matched_filter_snr": 83.07876498720151,
+        "mean_detectable_fraction": 0.0009659661187065972
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "edge",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0010237790433619046,
+        "max_achromatic_abs": 2.2517310248480903e-06,
+        "mean_analytic_relative_to_measurement": 1.3256288235020798e-07,
+        "mean_energy_snr": 0.08904106542186992,
+        "mean_matched_filter_snr": 45.5890254959974,
+        "mean_detectable_fraction": 7.205539279513889e-06
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "edge",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0020474778948687935,
+        "max_achromatic_abs": 2.013312445746528e-06,
+        "mean_analytic_relative_to_measurement": 1.3093642002735982e-07,
+        "mean_energy_snr": 0.17808211612546368,
+        "mean_matched_filter_snr": 91.1780434562374,
+        "mean_detectable_fraction": 0.0008383856879340278
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "edge",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.004094631345195696,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.315476683632571e-07,
+        "mean_energy_snr": 0.35616422896902855,
+        "mean_matched_filter_snr": 182.35608523214262,
+        "mean_detectable_fraction": 0.007626003689236111
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "stripes",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.002786913786911339,
+        "max_achromatic_abs": 2.1722581651475694e-06,
+        "mean_analytic_relative_to_measurement": 1.3055014689042662e-07,
+        "mean_energy_snr": 0.2642220641462512,
+        "mean_matched_filter_snr": 135.28169684288062,
+        "mean_detectable_fraction": 0.0014216105143229167
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "stripes",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.005573412616742582,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3201613550487915e-07,
+        "mean_energy_snr": 0.5284441294384326,
+        "mean_matched_filter_snr": 270.56339427247747,
+        "mean_detectable_fraction": 0.02377870347764757
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "stripes",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.01114509991385352,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3171138688347935e-07,
+        "mean_energy_snr": 1.0568882991235327,
+        "mean_matched_filter_snr": 541.1268091512487,
+        "mean_detectable_fraction": 0.05707761976453993
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "uniform",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0013203165065831673,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3224681557251947e-07,
+        "mean_energy_snr": 0.11955406475920362,
+        "mean_matched_filter_snr": 61.21168115671225,
+        "mean_detectable_fraction": 2.627902560763889e-05
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "uniform",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0026402412170679263,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3107723222876504e-07,
+        "mean_energy_snr": 0.23910813350553412,
+        "mean_matched_filter_snr": 122.42336435483347,
+        "mean_detectable_fraction": 0.0025533040364583335
+      },
+      {
+        "bands_nm": [
+          480,
+          620
+        ],
+        "mask": "uniform",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.005278910035370476,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3213700987711894e-07,
+        "mean_energy_snr": 0.4782163046710969,
+        "mean_matched_filter_snr": 244.8467479916016,
+        "mean_detectable_fraction": 0.0142669677734375
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "block",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00016677492951773322,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.2413423099309915e-07,
+        "mean_energy_snr": 0.014419431813687655,
+        "mean_matched_filter_snr": 7.3827490886080795,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "block",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00024364918961042594,
+        "max_achromatic_abs": 2.238485548231337e-06,
+        "mean_analytic_relative_to_measurement": 1.2367301375585763e-07,
+        "mean_energy_snr": 0.023553364600512616,
+        "mean_matched_filter_snr": 12.05932267546246,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "block",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0003297508589363512,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.184647765563164e-07,
+        "mean_energy_snr": 0.03461895373270762,
+        "mean_matched_filter_snr": 17.7249043111463,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "chroma",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00017314711224392535,
+        "max_achromatic_abs": 2.23186280992296e-06,
+        "mean_analytic_relative_to_measurement": 1.313076517640689e-07,
+        "mean_energy_snr": 0.015318317995994436,
+        "mean_matched_filter_snr": 7.842978813949151,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "chroma",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00034628139187951754,
+        "max_achromatic_abs": 2.1921263800726997e-06,
+        "mean_analytic_relative_to_measurement": 1.3183543343428835e-07,
+        "mean_energy_snr": 0.030636638780738037,
+        "mean_matched_filter_snr": 15.685959055737875,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "chroma",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0006925113898449111,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3055978974484282e-07,
+        "mean_energy_snr": 0.061273387935174034,
+        "mean_matched_filter_snr": 31.371974622809105,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "edge",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0002061138431366208,
+        "max_achromatic_abs": 2.2517310248480903e-06,
+        "mean_analytic_relative_to_measurement": 1.3200972798838646e-07,
+        "mean_energy_snr": 0.01804835105677747,
+        "mean_matched_filter_snr": 9.240755741070064,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "edge",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00041222010431870226,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3218963740908092e-07,
+        "mean_energy_snr": 0.03609680282160235,
+        "mean_matched_filter_snr": 18.481563044660405,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "edge",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0008244055696637638,
+        "max_achromatic_abs": 2.3312038845486113e-06,
+        "mean_analytic_relative_to_measurement": 1.3188095080194114e-07,
+        "mean_energy_snr": 0.07219357210381153,
+        "mean_matched_filter_snr": 36.9631089171515,
+        "mean_detectable_fraction": 2.1192762586805556e-06
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "stripes",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00036776776249832177,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.31907487204646e-07,
+        "mean_energy_snr": 0.03445025332755539,
+        "mean_matched_filter_snr": 17.63852970370836,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "stripes",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0007355070116263497,
+        "max_achromatic_abs": 1.9603305392795137e-06,
+        "mean_analytic_relative_to_measurement": 1.306439890590304e-07,
+        "mean_energy_snr": 0.06890051262556138,
+        "mean_matched_filter_snr": 35.277062464287425,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "stripes",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0014709004955577858,
+        "max_achromatic_abs": 2.3312038845486113e-06,
+        "mean_analytic_relative_to_measurement": 1.3070465046085803e-07,
+        "mean_energy_snr": 0.13780112272360046,
+        "mean_matched_filter_snr": 70.55417483448343,
+        "mean_detectable_fraction": 4.238552517361111e-07
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "uniform",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0003567665724898195,
+        "max_achromatic_abs": 2.1457672119140625e-06,
+        "mean_analytic_relative_to_measurement": 1.3126319705255204e-07,
+        "mean_energy_snr": 0.03234698179496045,
+        "mean_matched_filter_snr": 16.56165467901975,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "uniform",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0007134760649976722,
+        "max_achromatic_abs": 2.3444493611653647e-06,
+        "mean_analytic_relative_to_measurement": 1.3295165975553877e-07,
+        "mean_energy_snr": 0.06469400642565727,
+        "mean_matched_filter_snr": 33.12333128993652,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          490,
+          510
+        ],
+        "mask": "uniform",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0014267250982022664,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3238069761377523e-07,
+        "mean_energy_snr": 0.12938805136640075,
+        "mean_matched_filter_snr": 66.24668229959718,
+        "mean_detectable_fraction": 6.781684027777777e-06
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "block",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00010407900742479407,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.2054596175580122e-07,
+        "mean_energy_snr": 0.010414537079039915,
+        "mean_matched_filter_snr": 5.3322429844684365,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "block",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0002540070171022103,
+        "max_achromatic_abs": 2.013312445746528e-06,
+        "mean_analytic_relative_to_measurement": 1.2057464794502772e-07,
+        "mean_energy_snr": 0.02508210458059751,
+        "mean_matched_filter_snr": 12.842037545265924,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "block",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0005197659924191195,
+        "max_achromatic_abs": 1.9073486328125e-06,
+        "mean_analytic_relative_to_measurement": 1.2023765094681949e-07,
+        "mean_energy_snr": 0.050030262845659576,
+        "mean_matched_filter_snr": 25.615494576977703,
+        "mean_detectable_fraction": 3.5603841145833336e-05
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "chroma",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00021677393630383914,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.307447992833962e-07,
+        "mean_energy_snr": 0.01988671530390319,
+        "mean_matched_filter_snr": 10.181998235598433,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "chroma",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00043354365233511083,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3121866812879387e-07,
+        "mean_energy_snr": 0.03977349808469044,
+        "mean_matched_filter_snr": 20.364031019361505,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "chroma",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0008670671028176334,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3162288325929694e-07,
+        "mean_energy_snr": 0.0795469734179496,
+        "mean_matched_filter_snr": 40.728050389990194,
+        "mean_detectable_fraction": 8.477105034722222e-07
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "edge",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.00033840298141958624,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3098045630815452e-07,
+        "mean_energy_snr": 0.02981855168031239,
+        "mean_matched_filter_snr": 15.267098460319943,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "edge",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0006768005678728797,
+        "max_achromatic_abs": 2.1722581651475694e-06,
+        "mean_analytic_relative_to_measurement": 1.3057301215566338e-07,
+        "mean_energy_snr": 0.05963708669386277,
+        "mean_matched_filter_snr": 30.53418838725774,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "edge",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0013535784026544831,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.3171054844305115e-07,
+        "mean_energy_snr": 0.11927408005513603,
+        "mean_matched_filter_snr": 61.068328988229645,
+        "mean_detectable_fraction": 6.061130099826389e-05
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "stripes",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0008401639384015395,
+        "max_achromatic_abs": 2.1457672119140625e-06,
+        "mean_analytic_relative_to_measurement": 1.308459142516464e-07,
+        "mean_energy_snr": 0.07962025430592806,
+        "mean_matched_filter_snr": 40.76557020463517,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "stripes",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.001680302919016591,
+        "max_achromatic_abs": 1.9073486328125e-06,
+        "mean_analytic_relative_to_measurement": 1.3056303771463718e-07,
+        "mean_energy_snr": 0.1592405353938319,
+        "mean_matched_filter_snr": 81.53115412164193,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "stripes",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.003360502218505251,
+        "max_achromatic_abs": 2.013312445746528e-06,
+        "mean_analytic_relative_to_measurement": 1.3114278848055014e-07,
+        "mean_energy_snr": 0.31848093613932865,
+        "mean_matched_filter_snr": 163.06223930333627,
+        "mean_detectable_fraction": 0.0035188462999131945
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "uniform",
+        "strength": 0.25,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0003935422483950661,
+        "max_achromatic_abs": 2.013312445746528e-06,
+        "mean_analytic_relative_to_measurement": 1.3100768746375655e-07,
+        "mean_energy_snr": 0.03573252395574041,
+        "mean_matched_filter_snr": 18.29505226533909,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "uniform",
+        "strength": 0.5,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0007870602611614954,
+        "max_achromatic_abs": 2.2252400716145835e-06,
+        "mean_analytic_relative_to_measurement": 1.3061964744388712e-07,
+        "mean_energy_snr": 0.07146500159955937,
+        "mean_matched_filter_snr": 36.5900808189744,
+        "mean_detectable_fraction": 0.0
+      },
+      {
+        "bands_nm": [
+          530,
+          570
+        ],
+        "mask": "uniform",
+        "strength": 1.0,
+        "cases": 9,
+        "mean_relative_chromatic": 0.0015740246118193376,
+        "max_achromatic_abs": 2.1192762586805556e-06,
+        "mean_analytic_relative_to_measurement": 1.304888428421691e-07,
+        "mean_energy_snr": 0.142930025264512,
+        "mean_matched_filter_snr": 73.18017293543015,
+        "mean_detectable_fraction": 0.00024371676974826388
+      }
+    ],
+    "mean_relative_by_band_pair": {
+      "(450, 460)": 0.00034722937764257537,
+      "(450, 650)": 0.0037329680155220274,
+      "(480, 620)": 0.0027545845321497587,
+      "(490, 510)": 0.000564399826301611,
+      "(530, 570)": 0.0008933076571765957
+    },
+    "max_achromatic_abs_residual": 3.814697265625e-06,
+    "max_achromatic550_abs_residual": 3.814697265625e-06,
+    "max_analytic_relative_to_measurement": 1.390816208868273e-07
+  },
+  "notes": [
+    "operator-level result, no network involved",
+    "a non-zero achromatic residual means a bug in the forward, not information",
+    "only the val split is read; test is never loaded"
+  ],
+  "case_count": 675,
+  "note": "per-case difference records stay in the workspace"
+}

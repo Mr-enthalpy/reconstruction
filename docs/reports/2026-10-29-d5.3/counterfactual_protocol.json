@@ -1,0 +1,1201 @@
+{
+  "protocol": "D5.3-fixed-wideband-counterfactual",
+  "definition": "X_plus[i]=X[i]+q, X_plus[j]=X[j]-q, X_minus[i]=X[i]-q, X_minus[j]=X[j]+q, 0<=q<=min(X[i],X[j])",
+  "bands_nm": [
+    450,
+    460,
+    470,
+    480,
+    490,
+    500,
+    510,
+    520,
+    530,
+    540,
+    550,
+    560,
+    570,
+    580,
+    590,
+    600,
+    610,
+    620,
+    630,
+    640,
+    650
+  ],
+  "seed": 20261021,
+  "strengths": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "masks": [
+    "uniform",
+    "block",
+    "edge",
+    "stripes",
+    "chroma"
+  ],
+  "pairs_nm": [
+    [
+      450,
+      460
+    ],
+    [
+      480,
+      620
+    ],
+    [
+      490,
+      510
+    ],
+    [
+      450,
+      650
+    ],
+    [
+      530,
+      570
+    ]
+  ],
+  "scenes": [
+    "all"
+  ],
+  "identity": "sum_b X_plus[b] == sum_b X_minus[b] at every pixel",
+  "verification": {
+    "cases": 675,
+    "max_wideband_relative_residual": 7.582087613714017e-09,
+    "all_nonnegative": true,
+    "all_wideband_sums_equal": true
+  },
+  "per_configuration": [
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "block",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0005849143773149182,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.11064882431593207,
+      "max_wideband_relative_residual": 7.279016528291774e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 5.999366197765376
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "block",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0011751433388174821,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.21775111680229506,
+      "max_wideband_relative_residual": 5.954898935316175e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 14.616770003343422
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "block",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0017203703626162475,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.6401684168312285,
+      "max_wideband_relative_residual": 3.791043792484996e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 17.25412864850355
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "chroma",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0030713060405105352,
+      "mean_touched_fraction": 0.9994286431206597,
+      "mean_q_max": 0.21919571028815377,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 18.07546287382813
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "chroma",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0061426120810210705,
+      "mean_touched_fraction": 0.9994286431206597,
+      "mean_q_max": 0.43839142057630753,
+      "max_wideband_relative_residual": 7.582087570597979e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 36.15092579570617
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "chroma",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.012285224162042141,
+      "mean_touched_fraction": 0.9994286431206597,
+      "mean_q_max": 0.8767828411526151,
+      "max_wideband_relative_residual": 7.582087613714017e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 72.30185158805381
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "edge",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0016929342010472384,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.22525068124135336,
+      "max_wideband_relative_residual": 7.582087556225965e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 14.486942051525906
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "edge",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.003385868402094477,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.4505013624827067,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 28.9738842237405
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "edge",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.006771736804188954,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.9010027249654134,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 57.94776840331596
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "stripes",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.004938557019664181,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.21129632161723244,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 23.26593775235684
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "stripes",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.009877114039328363,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.4225926432344649,
+      "max_wideband_relative_residual": 7.582087570597979e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 46.531875532989545
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "stripes",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.019754228078656726,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.8451852864689298,
+      "max_wideband_relative_residual": 7.582087613714017e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 93.06375110398838
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "uniform",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.009903314626879163,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.22809027135372162,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 38.15579804961907
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "uniform",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.019806629253758326,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.45618054270744324,
+      "max_wideband_relative_residual": 7.582087570597979e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 76.31159617342125
+    },
+    {
+      "bands_nm": [
+        450,
+        460
+      ],
+      "mask": "uniform",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.03961325850751665,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.9123610854148865,
+      "max_wideband_relative_residual": 3.7910438068570085e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 152.62319230101352
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "block",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0006327168747601616,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.10603018539647262,
+      "max_wideband_relative_residual": 5.964997276680493e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 6.357395382522342
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "block",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0012533066668159638,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.16055209143087268,
+      "max_wideband_relative_residual": 6.441787265889105e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 13.966715913644025
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "block",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.00258073261162887,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.5592322515116798,
+      "max_wideband_relative_residual": 3.791043792484996e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 30.266354131067942
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "chroma",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0017326482662206723,
+      "mean_touched_fraction": 0.9993667602539062,
+      "mean_q_max": 0.13718300395541722,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 9.477162568656986
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "chroma",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0034652965324413446,
+      "mean_touched_fraction": 0.9993667602539062,
+      "mean_q_max": 0.27436600791083443,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 18.954325138354374
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "chroma",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.006930593064882689,
+      "mean_touched_fraction": 0.9993667602539062,
+      "mean_q_max": 0.5487320158216689,
+      "max_wideband_relative_residual": 7.582087599342004e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 37.908650283510305
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "edge",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0016366892571871479,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.21599331663714516,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 13.788175868507674
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "edge",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0032733785143742957,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.4319866332742903,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 27.576351786244032
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "edge",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0065467570287485915,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.8639732665485806,
+      "max_wideband_relative_residual": 7.582087556225965e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 55.152703601174636
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "stripes",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.004692433608902825,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.20415749649206796,
+      "max_wideband_relative_residual": 7.582087599342004e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 22.780189930872606
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "stripes",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.00938486721780565,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.4083149929841359,
+      "max_wideband_relative_residual": 7.582087556225965e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 45.56037986738882
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "stripes",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0187697344356113,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.8166299859682719,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 91.12075975545719
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "uniform",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.009409292342348231,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.22097355789608425,
+      "max_wideband_relative_residual": 7.582087599342004e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 37.304625453264364
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "uniform",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.018818584684696462,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.4419471157921685,
+      "max_wideband_relative_residual": 7.582087556225965e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 74.60925086966081
+    },
+    {
+      "bands_nm": [
+        450,
+        650
+      ],
+      "mask": "uniform",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.037637169369392924,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.883894231584337,
+      "max_wideband_relative_residual": 3.791043792484996e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 149.21850177791407
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "block",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0010421776460134424,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.09135648251200716,
+      "max_wideband_relative_residual": 6.441787265889105e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 11.697112798092968
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "block",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0009400427402902602,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.11687610246655014,
+      "max_wideband_relative_residual": 6.441787265889105e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 10.426896794791594
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "block",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.003234509705281299,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.5139704214202033,
+      "max_wideband_relative_residual": 3.639508264145887e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 32.06310366121767
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "chroma",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0016017592990667457,
+      "mean_touched_fraction": 0.9985508388943143,
+      "mean_q_max": 0.1381536755296919,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 9.082192666835441
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "chroma",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0032035185981334913,
+      "mean_touched_fraction": 0.9985508388943143,
+      "mean_q_max": 0.2763073510593838,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 18.164385339061496
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "chroma",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.006407037196266983,
+      "mean_touched_fraction": 0.9985508388943143,
+      "mean_q_max": 0.5526147021187676,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 36.328770673311745
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "edge",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0016669529076251718,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.21592554615603554,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 14.07451476504766
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "edge",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0033339058152503437,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.4318510923120711,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 28.149029479806302
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "edge",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.006667811630500687,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.8637021846241422,
+      "max_wideband_relative_residual": 7.582087570597979e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 56.29805898666315
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "stripes",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.004605049758942591,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.2048546572526296,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 23.117477560848343
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "stripes",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.009210099517885182,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.4097093145052592,
+      "max_wideband_relative_residual": 7.582087599342004e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 46.2349551537463
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "stripes",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.018420199035770364,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.8194186290105184,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 92.46991031002004
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "uniform",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.009234231379297044,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.22012193666564095,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 37.870036294979826
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "uniform",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.01846846275859409,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.4402438733312819,
+      "max_wideband_relative_residual": 7.582087599342004e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 75.74007260542345
+    },
+    {
+      "bands_nm": [
+        480,
+        620
+      ],
+      "mask": "uniform",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.03693692551718818,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.8804877466625638,
+      "max_wideband_relative_residual": 3.791043792484996e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 151.4801452277659
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "block",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0014300372826659845,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.1659003289209472,
+      "max_wideband_relative_residual": 7.279016528291774e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 14.634808881499616
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "block",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.002454984215243409,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.23623598276430535,
+      "max_wideband_relative_residual": 5.954898935316175e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 26.726413994008837
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "block",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0027125946879904303,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.444288220256567,
+      "max_wideband_relative_residual": 3.791043792484996e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 35.609147297633
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "chroma",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0025387679795838064,
+      "mean_touched_fraction": 0.9977777269151475,
+      "mean_q_max": 0.19143191311094496,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 15.719729926333587
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "chroma",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.005077535959167613,
+      "mean_touched_fraction": 0.9977777269151475,
+      "mean_q_max": 0.3828638262218899,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 31.439459859630638
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "chroma",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.010155071918335225,
+      "mean_touched_fraction": 0.9977777269151475,
+      "mean_q_max": 0.7657276524437798,
+      "max_wideband_relative_residual": 7.582087556225965e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 62.878919732992
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "edge",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0017102844689765738,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.21593102481630114,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 14.401216003141688
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "edge",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0034205689379531476,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.4318620496326023,
+      "max_wideband_relative_residual": 7.582087556225965e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 28.802432077833814
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "edge",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.006841137875906295,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.8637240992652045,
+      "max_wideband_relative_residual": 7.582087556225965e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 57.604864078620835
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "stripes",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.004852558667254116,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.20507374736997816,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 23.354886611070103
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "stripes",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.009705117334508233,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.4101474947399563,
+      "max_wideband_relative_residual": 7.582087570597979e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 46.709773236844995
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "stripes",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.019410234669016466,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.8202949894799126,
+      "max_wideband_relative_residual": 7.582087556225965e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 93.41954649553014
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "uniform",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.009729120466444228,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.2194843606816398,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 38.28045611051808
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "uniform",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.019458240932888456,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.4389687213632796,
+      "max_wideband_relative_residual": 7.582087570597979e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 76.56091226947427
+    },
+    {
+      "bands_nm": [
+        490,
+        510
+      ],
+      "mask": "uniform",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.03891648186577691,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.8779374427265592,
+      "max_wideband_relative_residual": 3.791043778112983e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 153.12182446787236
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "block",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0008791793144256291,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.12789644745902884,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 9.586695328584852
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "block",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0021938123002958796,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.2555981603347593,
+      "max_wideband_relative_residual": 6.4417872451407936e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 24.7343780357972
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "block",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0034656332314221393,
+      "mean_touched_fraction": 0.0625,
+      "mean_q_max": 0.5543396510183811,
+      "max_wideband_relative_residual": 3.791043792484996e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 42.3834757027497
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "chroma",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0028412443223512834,
+      "mean_touched_fraction": 0.998999277750651,
+      "mean_q_max": 0.18749050133758122,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 17.70033558811916
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "chroma",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.005682488644702567,
+      "mean_touched_fraction": 0.998999277750651,
+      "mean_q_max": 0.37498100267516243,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 35.40067117476076
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "chroma",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.011364977289405134,
+      "mean_touched_fraction": 0.998999277750651,
+      "mean_q_max": 0.7499620053503249,
+      "max_wideband_relative_residual": 7.582087599342004e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 70.80134234637138
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "edge",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0018861930843235718,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.21873311367299822,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 15.165596354489297
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "edge",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.0037723861686471435,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.43746622734599644,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 30.331192742331716
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "edge",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.007544772337294287,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.8749324546919929,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 60.66238537746488
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "stripes",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.005224312707367871,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.21261607110500336,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 25.03063157107638
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "stripes",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.010448625414735742,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.4252321422100067,
+      "max_wideband_relative_residual": 7.582087570597979e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 50.06126319586069
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "stripes",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.020897250829471484,
+      "mean_touched_fraction": 0.875,
+      "mean_q_max": 0.8504642844200134,
+      "max_wideband_relative_residual": 7.582087613714017e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 100.12252636703282
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "uniform",
+      "strength": 0.25,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.01047026945485009,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.22282600237263572,
+      "max_wideband_relative_residual": 7.582087584969992e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 40.99670987097358
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "uniform",
+      "strength": 0.5,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.02094053890970018,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.44565200474527145,
+      "max_wideband_relative_residual": 7.582087570597979e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 81.99341978621024
+    },
+    {
+      "bands_nm": [
+        530,
+        570
+      ],
+      "mask": "uniform",
+      "strength": 1.0,
+      "cases": 9,
+      "mean_q_fraction_of_wideband": 0.04188107781940036,
+      "mean_touched_fraction": 1.0,
+      "mean_q_max": 0.8913040094905429,
+      "max_wideband_relative_residual": 3.7910438068570085e-09,
+      "min_value": 0.0,
+      "mean_delta_l2": 163.98683947960322
+    }
+  ],
+  "case_count": 675,
+  "note": "per-case records stay in the run workspace; this file is the aggregated protocol"
+}

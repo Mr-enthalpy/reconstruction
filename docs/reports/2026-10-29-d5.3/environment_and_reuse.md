@@ -1,7 +1,7 @@
 # D5.3 S0 — 环境、代码与证据审计
 
 日期：2026-10-29（UTC，对应本地 2026-10-30 凌晨）
-分支：`codex/d5.3-chromatic-mechanism`，起点 `30cd8d4`，代码提交 `1203ac9`
+分支：`codex/d5.3-chromatic-mechanism`，起点 `30cd8d4`；训练代码 `1203ac9`，分析与报告代码 `351dff1`
 设备：`kunqian` 4 × RTX 3090 24 GiB，租约 `3d3e5397eb17409c9a81b1499c66c637`（4 GPU / 32 CPU / 48 GiB / 8 h）
 
 ## 1. 代码复用与改动
@@ -102,3 +102,27 @@ Recorded training kernel: kernels.npz (array 070346a50f89).
 | 显存 | 5.1 GiB/进程，四卡独立物理卡（PCI 18/3B/86/AF） |
 
 4 卡并发比 D5.2 双卡慢约 32%，因此把 6 个 S1 run 分成两波，并在第二波期间完成 S2 冻结网络推理。
+
+## 7. 会话后段的客户端故障
+
+租约内最后约 30 分钟，`job start` 开始连续失败：
+
+```text
+$ citespec-resource job start <id> --name secs3 -- grep -h seconds /workspace/.citespec-logs/s3a21.log
+broker_unavailable: Unix domain sockets are not supported on this platform   (exit 6)
+```
+
+同一时刻 `status` 仍然正常（返回租约、GPU、内存、workspace）。客户端目录显示本会话中发生了自动更新：
+
+| 版本 | 时间 |
+|---|---|
+| 0.1.1 | 2026-10-28 07:30（会话开始时在用） |
+| 0.2.0 | 2026-10-29 22:00 |
+| 0.2.1 | 2026-10-29 22:13 |
+| 0.2.2 | 2026-10-29 22:47（当前 `current.json` 指向） |
+
+**影响**：报告的 6 个 run、S2 的 810 个响应用例、675 个可观测性用例、OTF 与多种子汇总都在
+故障前完成并取回；但 S3 的 550 nm 训练无法在本租约内启动，S4 也因此未进入。
+
+**未做的尝试**：没有改用直连 SSH 或其它旁路继续跑训练——那会绕过作业管理路径，超出本轮授权。
+问题按"说明现象、给出命令与完整错误、停止"的方式处理。

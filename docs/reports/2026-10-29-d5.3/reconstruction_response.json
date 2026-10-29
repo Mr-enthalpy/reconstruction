@@ -1,0 +1,210 @@
+{
+  "protocol": "D5.3-frozen-reconstruction-response",
+  "statement": "The reconstructor is frozen; only its own operator and the two counterfactual cubes vary. A response counts only if it beats the arm's own noise-only floor and follows the true spectral difference.",
+  "arms": [
+    {
+      "arm": "s1c",
+      "run_dir": "s1c_s20261021",
+      "seed": 20261021,
+      "epoch": 271,
+      "best_epoch": 271,
+      "checkpoint_sha256": "b20d2b136316aeda2484295106ee0610c18c0ece6821f7c6ef3502f49b349f9f",
+      "kernel_file": "kernels.npz",
+      "kernel_sha256_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "kernel_sha256_file": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+      "sigma_noise": 0.017329356670379638,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    },
+    {
+      "arm": "s1c",
+      "run_dir": "s1c_s20261022",
+      "seed": 20261022,
+      "epoch": 283,
+      "best_epoch": 283,
+      "checkpoint_sha256": "2854f5773e537e9b7ccc08fc49d8a93814d123dfe1f206d49b8b07250e8792aa",
+      "kernel_file": "kernels.npz",
+      "kernel_sha256_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "kernel_sha256_file": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+      "sigma_noise": 0.017329356670379638,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    },
+    {
+      "arm": "s1c",
+      "run_dir": "s1c_s20261023",
+      "seed": 20261023,
+      "epoch": 264,
+      "best_epoch": 264,
+      "checkpoint_sha256": "aef82b4618146a2e0046aa4186e343862f8780bf6020f5787bbf9f9d8d3bf32c",
+      "kernel_file": "kernels.npz",
+      "kernel_sha256_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "kernel_sha256_file": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+      "sigma_noise": 0.017329356670379638,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    },
+    {
+      "arm": "s3a",
+      "run_dir": "s3a_s20261021",
+      "seed": 20261021,
+      "epoch": 358,
+      "best_epoch": 358,
+      "checkpoint_sha256": "0e3fc5472853f650fbe18912281c7b088e5fac350d9b55184b9ec3a897eb1947",
+      "kernel_file": "kernels_achromatic.npz",
+      "kernel_sha256_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "kernel_sha256_file": "88305f76aea486e592948b0e39eb31edfe0109372e3821d1da7ec8d79cff9341",
+      "sigma_noise": 0.01733642578125,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    },
+    {
+      "arm": "s3a",
+      "run_dir": "s3a_s20261022",
+      "seed": 20261022,
+      "epoch": 264,
+      "best_epoch": 264,
+      "checkpoint_sha256": "40f891bf33ae686a8f8bfc58ca3946e030ed3ef624e9e33c28bd817d29633e8d",
+      "kernel_file": "kernels_achromatic.npz",
+      "kernel_sha256_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "kernel_sha256_file": "88305f76aea486e592948b0e39eb31edfe0109372e3821d1da7ec8d79cff9341",
+      "sigma_noise": 0.01733642578125,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    },
+    {
+      "arm": "s3a",
+      "run_dir": "s3a_s20261023",
+      "seed": 20261023,
+      "epoch": 366,
+      "best_epoch": 366,
+      "checkpoint_sha256": "84ae9a30ecef30e2382dccb2ac2279192fc73197426221186ba3dffd69bc3c4a",
+      "kernel_file": "kernels_achromatic.npz",
+      "kernel_sha256_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "kernel_sha256_file": "88305f76aea486e592948b0e39eb31edfe0109372e3821d1da7ec8d79cff9341",
+      "sigma_noise": 0.01733642578125,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    }
+  ],
+  "summary": {
+    "by_arm": {
+      "s1c": {
+        "cases": 405,
+        "median_response_fraction": 0.018682197043363193,
+        "median_delta_error_relative": 1.0000352219673463,
+        "median_cosine": 0.00505969725587159,
+        "median_direction_accuracy": 0.6473420829005759,
+        "median_band_contrast_gain": 9.275636764974884e-05,
+        "median_high_frequency_fraction": 0.03361877682381079,
+        "median_noise_only_fraction": 0.08524149065845239,
+        "median_response_over_noise": 0.19471261000347936,
+        "max_identity_abs": 0.0,
+        "median_truth_delta_l2": 42.26306477964564
+      },
+      "s3a": {
+        "cases": 405,
+        "median_response_fraction": 3.3063194994767687e-06,
+        "median_delta_error_relative": 1.0000000000426343,
+        "median_cosine": -1.0938033852933607e-05,
+        "median_direction_accuracy": 0.40690073327396403,
+        "median_band_contrast_gain": -1.1204030268600676e-10,
+        "median_high_frequency_fraction": 1.8362819082496196e-05,
+        "median_noise_only_fraction": 0.06176069765246592,
+        "median_response_over_noise": 5.817054977355144e-05,
+        "max_identity_abs": 0.0,
+        "median_truth_delta_l2": 42.26306477964564
+      }
+    },
+    "by_seed": {
+      "s1c:20261021": {
+        "cases": 135,
+        "median_response_fraction": 0.018469008438117853,
+        "median_cosine": 0.00481101440672266,
+        "median_direction_accuracy": 0.6511712256309505,
+        "median_response_over_noise": 0.1907020703967964,
+        "median_noise_only_fraction": 0.08756166061819207
+      },
+      "s1c:20261022": {
+        "cases": 135,
+        "median_response_fraction": 0.018576865489304234,
+        "median_cosine": 0.007987152793506052,
+        "median_direction_accuracy": 0.6690777576853526,
+        "median_response_over_noise": 0.2096664143623798,
+        "median_noise_only_fraction": 0.08487324372717807
+      },
+      "s1c:20261023": {
+        "cases": 135,
+        "median_response_fraction": 0.018888036376559898,
+        "median_cosine": 0.0034576221827505665,
+        "median_direction_accuracy": 0.6237101901946567,
+        "median_response_over_noise": 0.19345752927707752,
+        "median_noise_only_fraction": 0.08758181113195887
+      },
+      "s3a:20261021": {
+        "cases": 135,
+        "median_response_fraction": 3.376616065057797e-06,
+        "median_cosine": 1.1076213739000305e-05,
+        "median_direction_accuracy": 0.40459190816183677,
+        "median_response_over_noise": 5.956934600438515e-05,
+        "median_noise_only_fraction": 0.0628318824538384
+      },
+      "s3a:20261022": {
+        "cases": 135,
+        "median_response_fraction": 2.0672571157995814e-06,
+        "median_cosine": -6.832172563303623e-05,
+        "median_direction_accuracy": 0.39126434767370544,
+        "median_response_over_noise": 4.269282301407031e-05,
+        "median_noise_only_fraction": 0.049174237207911746
+      },
+      "s3a:20261023": {
+        "cases": 135,
+        "median_response_fraction": 4.8558292356550195e-06,
+        "median_cosine": -9.237993414079901e-07,
+        "median_direction_accuracy": 0.41294631256171715,
+        "median_response_over_noise": 7.048759336456392e-05,
+        "median_noise_only_fraction": 0.07364803844054545
+      }
+    },
+    "by_mask": {
+      "s1c|uniform": {
+        "cases": 135,
+        "median_response_fraction": 0.009222301989582639
+      },
+      "s1c|edge": {
+        "cases": 135,
+        "median_response_fraction": 0.0207112049249798
+      },
+      "s1c|stripes": {
+        "cases": 135,
+        "median_response_fraction": 0.02054238114455266
+      },
+      "s3a|uniform": {
+        "cases": 135,
+        "median_response_fraction": 2.1626427457075433e-06
+      },
+      "s3a|edge": {
+        "cases": 135,
+        "median_response_fraction": 5.644126080810957e-06
+      },
+      "s3a|stripes": {
+        "cases": 135,
+        "median_response_fraction": 3.5800191460963905e-06
+      }
+    }
+  },
+  "prior_only": {
+    "response_fraction": 0.0,
+    "reason": "a measurement-independent prior baseline cannot respond to delta_X; its contrast is exactly zero by construction"
+  },
+  "indistinguishability": {
+    "statement": "with one kernel per band the two cubes have the same measurement, so any single estimate has error >= 0.5*||delta_X|| for a symmetric error; the measured achromatic response must be zero",
+    "floor_relative_to_delta": 0.5
+  },
+  "notes": [
+    "validation scenes only; test is never loaded",
+    "no checkpoint is re-selected by this script",
+    "per-case records stay in the run workspace"
+  ],
+  "case_count": 810
+}

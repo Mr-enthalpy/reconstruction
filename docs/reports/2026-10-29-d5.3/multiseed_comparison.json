@@ -1,0 +1,1822 @@
+{
+  "protocol": "D5.3-multiseed-comparison",
+  "selection_rule": "each arm keeps its own minimum-validation-loss checkpoint; no checkpoint or metric is re-selected here",
+  "runs": {
+    "s1c_s20261021": {
+      "arm": "s1c",
+      "seed": 20261021,
+      "epochs_completed": 331,
+      "best_epoch": 271,
+      "best_validation_loss": 0.012836078181862831,
+      "stale": 60,
+      "stopped_by_patience": true,
+      "budget_censored": false,
+      "validation_loss_slope_last_60": -1.318380417766481e-06,
+      "kernel_file": "kernels.npz",
+      "kernel_sha256_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "psf_protocol": "d5.2-psf-v1",
+      "psf_kernel_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "measured_forward_rms": 3.4658713340759277,
+      "train_noise_std_absolute": 0.017329356670379638,
+      "selection_rule": "min_validation_loss",
+      "metrics_recomputed": false,
+      "plateau_std": {
+        "psnr_unit_range_db": 0.06424799092720657,
+        "ssim_band_mean": 0.000880705678851184,
+        "sam_deg": 0.16407497071783395,
+        "cube_relative_l2": 0.0020455551993881875,
+        "global_spectrum_relative_l2": 0.006134192007926586,
+        "high_frequency_relative_l2": 0.011997644041194782,
+        "spatial_gradient_relative_l2": 0.008401388426639756,
+        "measurement_relative_l2": 0.0010688416917034387
+      },
+      "metrics": {
+        "psnr_unit_range_db": 30.731448805885293,
+        "ssim_band_mean": 0.940631122161878,
+        "sam_deg": 9.929118525772449,
+        "cube_relative_l2": 0.24934214305456878,
+        "global_spectrum_relative_l2": 0.10706897709822967,
+        "high_frequency_relative_l2": 0.7337196010321725,
+        "spatial_gradient_relative_l2": 0.5728805209508232,
+        "measurement_relative_l2": 0.011002143397977962
+      }
+    },
+    "s1c_s20261022": {
+      "arm": "s1c",
+      "seed": 20261022,
+      "epochs_completed": 343,
+      "best_epoch": 283,
+      "best_validation_loss": 0.012877547182142735,
+      "stale": 60,
+      "stopped_by_patience": true,
+      "budget_censored": false,
+      "validation_loss_slope_last_60": -4.222675035913748e-07,
+      "kernel_file": "kernels.npz",
+      "kernel_sha256_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "psf_protocol": "d5.2-psf-v1",
+      "psf_kernel_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "measured_forward_rms": 3.4658713340759277,
+      "train_noise_std_absolute": 0.017329356670379638,
+      "selection_rule": "min_validation_loss",
+      "metrics_recomputed": false,
+      "plateau_std": {
+        "psnr_unit_range_db": 0.06697789249016554,
+        "ssim_band_mean": 0.0006988806954949278,
+        "sam_deg": 0.18225091025282109,
+        "cube_relative_l2": 0.002255362862537397,
+        "global_spectrum_relative_l2": 0.006629607651203134,
+        "high_frequency_relative_l2": 0.008647761522549714,
+        "spatial_gradient_relative_l2": 0.005493412019484007,
+        "measurement_relative_l2": 0.0005561974410414289
+      },
+      "metrics": {
+        "psnr_unit_range_db": 30.729266898666836,
+        "ssim_band_mean": 0.9398617621302523,
+        "sam_deg": 9.898799331642632,
+        "cube_relative_l2": 0.2485967400472238,
+        "global_spectrum_relative_l2": 0.10317622232472783,
+        "high_frequency_relative_l2": 0.7500060136710972,
+        "spatial_gradient_relative_l2": 0.5846046531146613,
+        "measurement_relative_l2": 0.012030822253436673
+      }
+    },
+    "s1c_s20261023": {
+      "arm": "s1c",
+      "seed": 20261023,
+      "epochs_completed": 324,
+      "best_epoch": 264,
+      "best_validation_loss": 0.012857986614108086,
+      "stale": 60,
+      "stopped_by_patience": true,
+      "budget_censored": false,
+      "validation_loss_slope_last_60": 2.1796376982905056e-07,
+      "kernel_file": "kernels.npz",
+      "kernel_sha256_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "psf_protocol": "d5.2-psf-v1",
+      "psf_kernel_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "measured_forward_rms": 3.4658713340759277,
+      "train_noise_std_absolute": 0.017329356670379638,
+      "selection_rule": "min_validation_loss",
+      "metrics_recomputed": false,
+      "plateau_std": {
+        "psnr_unit_range_db": 0.06623956254209341,
+        "ssim_band_mean": 0.0009259733595264923,
+        "sam_deg": 0.15974243967654542,
+        "cube_relative_l2": 0.002170296628182249,
+        "global_spectrum_relative_l2": 0.0063325937520875624,
+        "high_frequency_relative_l2": 0.011379779787503496,
+        "spatial_gradient_relative_l2": 0.00866072401942975,
+        "measurement_relative_l2": 0.000796264260458728
+      },
+      "metrics": {
+        "psnr_unit_range_db": 30.7446710080256,
+        "ssim_band_mean": 0.9407067286914715,
+        "sam_deg": 9.995313612631312,
+        "cube_relative_l2": 0.24863597301278575,
+        "global_spectrum_relative_l2": 0.1047493999438213,
+        "high_frequency_relative_l2": 0.7345846199159871,
+        "spatial_gradient_relative_l2": 0.5732061703388452,
+        "measurement_relative_l2": 0.010471030496091115
+      }
+    },
+    "s3a_s20261021": {
+      "arm": "s3a",
+      "seed": 20261021,
+      "epochs_completed": 400,
+      "best_epoch": 358,
+      "best_validation_loss": 0.01322442851960659,
+      "stale": 42,
+      "stopped_by_patience": false,
+      "budget_censored": true,
+      "validation_loss_slope_last_60": -7.360812383215724e-08,
+      "kernel_file": "kernels_achromatic.npz",
+      "kernel_sha256_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "psf_protocol": "d5.2-psf-v1",
+      "psf_kernel_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "measured_forward_rms": 3.46728515625,
+      "train_noise_std_absolute": 0.01733642578125,
+      "selection_rule": "min_validation_loss",
+      "metrics_recomputed": false,
+      "plateau_std": {
+        "psnr_unit_range_db": 0.05699173790358835,
+        "ssim_band_mean": 0.0008057604143528026,
+        "sam_deg": 0.15667042213612167,
+        "cube_relative_l2": 0.0019262051589533375,
+        "global_spectrum_relative_l2": 0.004024823735891096,
+        "high_frequency_relative_l2": 0.012751804858668447,
+        "spatial_gradient_relative_l2": 0.009754563906652478,
+        "measurement_relative_l2": 0.0007641299657373935
+      },
+      "metrics": {
+        "psnr_unit_range_db": 30.47044599319436,
+        "ssim_band_mean": 0.935743844605221,
+        "sam_deg": 9.908343743550523,
+        "cube_relative_l2": 0.2557891641652542,
+        "global_spectrum_relative_l2": 0.10236657046295163,
+        "high_frequency_relative_l2": 0.7805160876630981,
+        "spatial_gradient_relative_l2": 0.6195746117889908,
+        "measurement_relative_l2": 0.015590187366178284
+      }
+    },
+    "s3a_s20261022": {
+      "arm": "s3a",
+      "seed": 20261022,
+      "epochs_completed": 324,
+      "best_epoch": 264,
+      "best_validation_loss": 0.013377022929489613,
+      "stale": 60,
+      "stopped_by_patience": true,
+      "budget_censored": false,
+      "validation_loss_slope_last_60": -2.897911500387697e-07,
+      "kernel_file": "kernels_achromatic.npz",
+      "kernel_sha256_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "psf_protocol": "d5.2-psf-v1",
+      "psf_kernel_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "measured_forward_rms": 3.46728515625,
+      "train_noise_std_absolute": 0.01733642578125,
+      "selection_rule": "min_validation_loss",
+      "metrics_recomputed": false,
+      "plateau_std": {
+        "psnr_unit_range_db": 0.05951187512377604,
+        "ssim_band_mean": 0.000901316934743241,
+        "sam_deg": 0.2526883486639943,
+        "cube_relative_l2": 0.0021310210903746495,
+        "global_spectrum_relative_l2": 0.006287632861575935,
+        "high_frequency_relative_l2": 0.003432088154130738,
+        "spatial_gradient_relative_l2": 0.0030537611523747954,
+        "measurement_relative_l2": 0.0007209285120325998
+      },
+      "metrics": {
+        "psnr_unit_range_db": 30.259304818238693,
+        "ssim_band_mean": 0.9321629243486131,
+        "sam_deg": 9.695932644889073,
+        "cube_relative_l2": 0.26179190299284166,
+        "global_spectrum_relative_l2": 0.10265623632657217,
+        "high_frequency_relative_l2": 0.8352278776358611,
+        "spatial_gradient_relative_l2": 0.6671356038013295,
+        "measurement_relative_l2": 0.01970462704493383
+      }
+    },
+    "s3a_s20261023": {
+      "arm": "s3a",
+      "seed": 20261023,
+      "epochs_completed": 400,
+      "best_epoch": 366,
+      "best_validation_loss": 0.013130550272762775,
+      "stale": 34,
+      "stopped_by_patience": false,
+      "budget_censored": true,
+      "validation_loss_slope_last_60": -1.0968089439065876e-07,
+      "kernel_file": "kernels_achromatic.npz",
+      "kernel_sha256_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "psf_protocol": "d5.2-psf-v1",
+      "psf_kernel_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "measured_forward_rms": 3.46728515625,
+      "train_noise_std_absolute": 0.01733642578125,
+      "selection_rule": "min_validation_loss",
+      "metrics_recomputed": false,
+      "plateau_std": {
+        "psnr_unit_range_db": 0.036478430756689176,
+        "ssim_band_mean": 0.00047249367816995286,
+        "sam_deg": 0.1048384970961564,
+        "cube_relative_l2": 0.0012563159547540695,
+        "global_spectrum_relative_l2": 0.0035469538874482107,
+        "high_frequency_relative_l2": 0.004618941769688822,
+        "spatial_gradient_relative_l2": 0.003920784513751836,
+        "measurement_relative_l2": 0.0004651526398839265
+      },
+      "metrics": {
+        "psnr_unit_range_db": 30.52457025668258,
+        "ssim_band_mean": 0.9374245137733236,
+        "sam_deg": 9.823643451221697,
+        "cube_relative_l2": 0.25460432378540127,
+        "global_spectrum_relative_l2": 0.10434340096098042,
+        "high_frequency_relative_l2": 0.7518961217996953,
+        "spatial_gradient_relative_l2": 0.5990768300394576,
+        "measurement_relative_l2": 0.014672385676500152
+      }
+    }
+  },
+  "seeds": [
+    20261021,
+    20261022,
+    20261023
+  ],
+  "pairs": [
+    {
+      "seed": 20261021,
+      "deltas": {
+        "psnr_unit_range_db": 0.26100281269093273,
+        "ssim_band_mean": 0.004887277556657077,
+        "sam_deg": 0.020774782221925747,
+        "cube_relative_l2": -0.00644702111068543,
+        "global_spectrum_relative_l2": 0.004702406635278045,
+        "high_frequency_relative_l2": -0.046796486630925616,
+        "spatial_gradient_relative_l2": -0.04669409083816756,
+        "measurement_relative_l2": -0.004588043968200322
+      },
+      "dataset_deltas": {
+        "CAVE": {
+          "psnr_unit_range_db": 0.15884739291033156,
+          "ssim_band_mean": 0.0032543779902309833,
+          "sam_deg": -0.04546012476220618,
+          "cube_relative_l2": -0.004444033162960881,
+          "global_spectrum_relative_l2": 0.0012700461312706302,
+          "high_frequency_relative_l2": -0.047382293909684625,
+          "spatial_gradient_relative_l2": -0.04863177009842279,
+          "measurement_relative_l2": -0.004094911915801884
+        },
+        "KAIST": {
+          "psnr_unit_range_db": 0.3886970874166771,
+          "ssim_band_mean": 0.006928402014689583,
+          "sam_deg": 0.10356841595209687,
+          "cube_relative_l2": -0.008950756045341263,
+          "global_spectrum_relative_l2": 0.008992857265287375,
+          "high_frequency_relative_l2": -0.046064227532477076,
+          "spatial_gradient_relative_l2": -0.04427199176284824,
+          "measurement_relative_l2": -0.0052044590336983755
+        }
+      },
+      "scenes": [
+        {
+          "scene_id": "fake_and_real_lemon_slices",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 31.577884217809054,
+              "achromatic": 30.88525536306859,
+              "delta": 0.6926288547404624
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9397621198940594,
+              "achromatic": 0.9330306627571782,
+              "delta": 0.00673145713688128
+            },
+            "sam_deg": {
+              "chromatic": 9.984346042347896,
+              "achromatic": 10.287483124490253,
+              "delta": -0.30313708214235646
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.22776704713280138,
+              "achromatic": 0.24667340811016444,
+              "delta": -0.018906360977363063
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.09216683462748848,
+              "achromatic": 0.11624982600880071,
+              "delta": -0.02408299138131223
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.8085115853544592,
+              "achromatic": 0.8497038181527091,
+              "delta": -0.041192232798249906
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6628245371386815,
+              "achromatic": 0.6998887671549724,
+              "delta": -0.03706423001629089
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.011714158804764499,
+              "achromatic": 0.016806592252162186,
+              "delta": -0.005092433447397687
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_lemons",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 28.89065086988687,
+              "achromatic": 28.961124075357127,
+              "delta": -0.07047320547025748
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9460654298624953,
+              "achromatic": 0.9436144683842759,
+              "delta": 0.0024509614782194378
+            },
+            "sam_deg": {
+              "chromatic": 9.990543021220686,
+              "achromatic": 10.013429002868643,
+              "delta": -0.0228859816479563
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.24948191299229425,
+              "achromatic": 0.24746592405112972,
+              "delta": 0.0020159889411645315
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.13028225116690584,
+              "achromatic": 0.13020529285102844,
+              "delta": 7.695831587739566e-05
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6079835580357339,
+              "achromatic": 0.6446414478801356,
+              "delta": -0.03665788984440166
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.44857933349049983,
+              "achromatic": 0.4952328559401018,
+              "delta": -0.04665352244960197
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.006169964533514522,
+              "achromatic": 0.007230628987559245,
+              "delta": -0.001060664454044723
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_strawberries",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 31.558571209787214,
+              "achromatic": 31.570292678011498,
+              "delta": -0.011721468224283882
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9039324424342557,
+              "achromatic": 0.9008336160031967,
+              "delta": 0.0030988264310590763
+            },
+            "sam_deg": {
+              "chromatic": 13.820875604466496,
+              "achromatic": 13.657963860067856,
+              "delta": 0.16291174439863987
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.19525632048122707,
+              "achromatic": 0.19499300293170993,
+              "delta": 0.00026331754951713915
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.06672078411186436,
+              "achromatic": 0.060281845782360365,
+              "delta": 0.006438938329503992
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6786633511195267,
+              "achromatic": 0.7089324413777056,
+              "delta": -0.03026909025817892
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.5144503860321326,
+              "achromatic": 0.5470880911840983,
+              "delta": -0.032637705151965735
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.007041990822286544,
+              "achromatic": 0.008601577830184124,
+              "delta": -0.0015595870078975796
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_sushi",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 32.84184184012996,
+              "achromatic": 32.614647666096495,
+              "delta": 0.22719417403346398
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9662431882797109,
+              "achromatic": 0.9639235821219154,
+              "delta": 0.002319606157795473
+            },
+            "sam_deg": {
+              "chromatic": 7.377117480280149,
+              "achromatic": 7.388074584646136,
+              "delta": -0.010957104365987291
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.2870384139396327,
+              "achromatic": 0.29464544413212435,
+              "delta": -0.007607030192491648
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.13556387251402802,
+              "achromatic": 0.12409855361731803,
+              "delta": 0.011465318896709986
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.856946021434209,
+              "achromatic": 0.9181483625089997,
+              "delta": -0.06120234107479072
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6223015915945741,
+              "achromatic": 0.6883232259262249,
+              "delta": -0.06602163433165076
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.013832245468679153,
+              "achromatic": 0.020357752174106486,
+              "delta": -0.006525506705427333
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_tomatoes",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 29.01479394976843,
+              "achromatic": 29.05818534029617,
+              "delta": -0.043391390527741436
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9604254927406883,
+              "achromatic": 0.9587544539934891,
+              "delta": 0.001671038747199205
+            },
+            "sam_deg": {
+              "chromatic": 9.769425704022066,
+              "achromatic": 9.82265790407544,
+              "delta": -0.05323220005337426
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.4041448437541507,
+              "achromatic": 0.4021309248897821,
+              "delta": 0.0020139188643686357
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.30052536835637045,
+              "achromatic": 0.2880733618607965,
+              "delta": 0.01245200649557393
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.7733885792916291,
+              "achromatic": 0.840978494864431,
+              "delta": -0.06758991557280192
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6602714388786555,
+              "achromatic": 0.7210531974212598,
+              "delta": -0.06078175854260437
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.0152083331326849,
+              "achromatic": 0.021444701096927005,
+              "delta": -0.006236367964242104
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_25",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 28.432067875000875,
+              "achromatic": 28.109237669599825,
+              "delta": 0.32283020540105056
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9241239632232775,
+              "achromatic": 0.9181087130502497,
+              "delta": 0.006015250173027842
+            },
+            "sam_deg": {
+              "chromatic": 10.884869726059662,
+              "achromatic": 10.850740433079881,
+              "delta": 0.034129292979780956
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.25829219021188804,
+              "achromatic": 0.26807282139698047,
+              "delta": -0.009780631185092425
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.05177787312429246,
+              "achromatic": 0.03882148268649244,
+              "delta": 0.012956390437800024
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6949774208694102,
+              "achromatic": 0.7395277134175544,
+              "delta": -0.044550292548144244
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.5565148128225799,
+              "achromatic": 0.5994918972273591,
+              "delta": -0.04297708440477921
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.012756465002232608,
+              "achromatic": 0.018476495355287486,
+              "delta": -0.005720030353054878
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_26",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 31.619817600533157,
+              "achromatic": 31.521801592859482,
+              "delta": 0.09801600767367447
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9588855298805383,
+              "achromatic": 0.9501562372964438,
+              "delta": 0.008729292584094495
+            },
+            "sam_deg": {
+              "chromatic": 7.249299833726251,
+              "achromatic": 7.041580289051205,
+              "delta": 0.20771954467504639
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.2267000215398924,
+              "achromatic": 0.2292727086349551,
+              "delta": -0.002572687095062698
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.06530194098673263,
+              "achromatic": 0.044505454337097884,
+              "delta": 0.020796486649634745
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6346237238903604,
+              "achromatic": 0.6685709207844207,
+              "delta": -0.03394719689406034
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.48536720819533397,
+              "achromatic": 0.5245118802667676,
+              "delta": -0.039144672071433684
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.012004972840353663,
+              "achromatic": 0.017913135896298317,
+              "delta": -0.005908163055944654
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_28",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 30.54713800862086,
+              "achromatic": 29.60264857518521,
+              "delta": 0.9444894334356491
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9224407429150432,
+              "achromatic": 0.9118980138516348,
+              "delta": 0.010542729063408363
+            },
+            "sam_deg": {
+              "chromatic": 10.63707064251251,
+              "achromatic": 10.574552739218356,
+              "delta": 0.06251790329415385
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.1587028116476397,
+              "achromatic": 0.1769331024050089,
+              "delta": -0.018230290757369205
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.06469908647359113,
+              "achromatic": 0.05735471744833658,
+              "delta": 0.007344369025254545
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.839576440901249,
+              "achromatic": 0.9213140436404228,
+              "delta": -0.08173760273917374
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.5920911881644463,
+              "achromatic": 0.6692164997378157,
+              "delta": -0.07712531157336944
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.011275907058468395,
+              "achromatic": 0.01693939204218622,
+              "delta": -0.005663484983717826
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_29",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 32.1002736814312,
+              "achromatic": 31.910820978274867,
+              "delta": 0.18945270315633067
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9438011902268335,
+              "achromatic": 0.9413748539886061,
+              "delta": 0.002426336238227411
+            },
+            "sam_deg": {
+              "chromatic": 9.64851867731634,
+              "achromatic": 9.538611754456934,
+              "delta": 0.1099069228594054
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.2366957257915925,
+              "achromatic": 0.24191514093543312,
+              "delta": -0.005219415143840611
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.056582782522793744,
+              "achromatic": 0.06170859957433356,
+              "delta": -0.005125817051539819
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.7088057283929738,
+              "achromatic": 0.7328275463415042,
+              "delta": -0.02402181794853031
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6135241922405065,
+              "achromatic": 0.6313650912423172,
+              "delta": -0.01784089900181074
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.00901525291881737,
+              "achromatic": 0.012541410660893508,
+              "delta": -0.003526157742076137
+            }
+          }
+        }
+      ],
+      "censored": [
+        false,
+        true
+      ]
+    },
+    {
+      "seed": 20261022,
+      "deltas": {
+        "psnr_unit_range_db": 0.469962080428143,
+        "ssim_band_mean": 0.007698837781639156,
+        "sam_deg": 0.20286668675355912,
+        "cube_relative_l2": -0.013195162945617872,
+        "global_spectrum_relative_l2": 0.0005199859981556559,
+        "high_frequency_relative_l2": -0.08522186396476394,
+        "spatial_gradient_relative_l2": -0.08253095068666827,
+        "measurement_relative_l2": -0.007673804791497157
+      },
+      "dataset_deltas": {
+        "CAVE": {
+          "psnr_unit_range_db": 0.31439162745012084,
+          "ssim_band_mean": 0.005365625163474941,
+          "sam_deg": 0.40579138748584853,
+          "cube_relative_l2": -0.010844283910325492,
+          "global_spectrum_relative_l2": 0.0009519639553364767,
+          "high_frequency_relative_l2": -0.085021860440473,
+          "spatial_gradient_relative_l2": -0.08437972940964755,
+          "measurement_relative_l2": -0.007239155405528169
+        },
+        "KAIST": {
+          "psnr_unit_range_db": 0.6644251466506645,
+          "ssim_band_mean": 0.010615353554344509,
+          "sam_deg": -0.050789189161799086,
+          "cube_relative_l2": -0.016133761739733465,
+          "global_spectrum_relative_l2": -1.998644832040125e-05,
+          "high_frequency_relative_l2": -0.08547186837012732,
+          "spatial_gradient_relative_l2": -0.0802199772829445,
+          "measurement_relative_l2": -0.008217116523958389
+        }
+      },
+      "scenes": [
+        {
+          "scene_id": "fake_and_real_lemon_slices",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 31.2861615651223,
+              "achromatic": 31.0096943510112,
+              "delta": 0.27646721411110065
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9383947719544095,
+              "achromatic": 0.9290646328575373,
+              "delta": 0.009330139096872192
+            },
+            "sam_deg": {
+              "chromatic": 10.173857536575415,
+              "achromatic": 9.920774437555892,
+              "delta": 0.2530830990195234
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.2355466999582065,
+              "achromatic": 0.24316461923798632,
+              "delta": -0.007617919279779811
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.10389024579950806,
+              "achromatic": 0.1045758575025939,
+              "delta": -0.0006856117030858422
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.8204420858508464,
+              "achromatic": 0.8895211798358899,
+              "delta": -0.06907909398504342
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6723958940751519,
+              "achromatic": 0.7333614032303519,
+              "delta": -0.06096550915520005
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.013027227474784766,
+              "achromatic": 0.01897926044864165,
+              "delta": -0.0059520329738568835
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_lemons",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 29.142201062735037,
+              "achromatic": 28.88608350758244,
+              "delta": 0.2561175551525956
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.946366040648426,
+              "achromatic": 0.9411319178310494,
+              "delta": 0.005234122817376563
+            },
+            "sam_deg": {
+              "chromatic": 9.921187969508978,
+              "achromatic": 9.69458895402515,
+              "delta": 0.22659901548382777
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.24236034154863592,
+              "achromatic": 0.24961313431491403,
+              "delta": -0.007252792766278104
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.11861500284912134,
+              "achromatic": 0.12588314661649955,
+              "delta": -0.007268143767378207
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6254647930119136,
+              "achromatic": 0.7180679393410462,
+              "delta": -0.09260314632913258
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.4590725205800438,
+              "achromatic": 0.5651653699467128,
+              "delta": -0.10609284936666907
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.005997815927714671,
+              "achromatic": 0.010820678486406209,
+              "delta": -0.004822862558691538
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_strawberries",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 31.420281890637575,
+              "achromatic": 31.331793102382303,
+              "delta": 0.08848878825527251
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9026992566707803,
+              "achromatic": 0.8973339830682783,
+              "delta": 0.005365273602502052
+            },
+            "sam_deg": {
+              "chromatic": 13.93316132456504,
+              "achromatic": 13.180382133417273,
+              "delta": 0.7527791911477664
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.19838990384109753,
+              "achromatic": 0.20042136070905978,
+              "delta": -0.0020314568679622447
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.06374798853925608,
+              "achromatic": 0.06450632606407715,
+              "delta": -0.0007583375248210733
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6735316727193896,
+              "achromatic": 0.7620162471907099,
+              "delta": -0.0884845744713203
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.5133985721414189,
+              "achromatic": 0.5992149313758626,
+              "delta": -0.08581635923444364
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.0074840327910617,
+              "achromatic": 0.012826342518369716,
+              "delta": -0.005342309727308016
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_sushi",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 32.91803866300501,
+              "achromatic": 32.38508136553053,
+              "delta": 0.532957297474475
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9659462918721834,
+              "achromatic": 0.9624086682368168,
+              "delta": 0.0035376236353665824
+            },
+            "sam_deg": {
+              "chromatic": 7.380675693837919,
+              "achromatic": 7.280535505712492,
+              "delta": 0.10014018812542691
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.2845313867162386,
+              "achromatic": 0.3025366860381203,
+              "delta": -0.018005299321881663
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.1311364010575827,
+              "achromatic": 0.11989799234323652,
+              "delta": 0.011238408714346185
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.8815443203108098,
+              "achromatic": 0.9681732100216572,
+              "delta": -0.08662888971084748
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6442594116930138,
+              "achromatic": 0.7259894303742024,
+              "delta": -0.08173001868118857
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.016369002280641736,
+              "achromatic": 0.02528396891045339,
+              "delta": -0.008914966629811654
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_tomatoes",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 29.283641957699253,
+              "achromatic": 28.865714675442096,
+              "delta": 0.4179272822571569
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9607681787766149,
+              "achromatic": 0.9574072121113578,
+              "delta": 0.0033609666652570924
+            },
+            "sam_deg": {
+              "chromatic": 9.698035726922253,
+              "achromatic": 9.001680283269561,
+              "delta": 0.696355443652692
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.39182725517228206,
+              "achromatic": 0.4111412064880078,
+              "delta": -0.01931395131572572
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.2889698336688642,
+              "achromatic": 0.2867363296112429,
+              "delta": 0.002233504057621294
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.7918034995418863,
+              "achromatic": 0.8801170972479074,
+              "delta": -0.0883135977060211
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.674081231699396,
+              "achromatic": 0.7613751423101321,
+              "delta": -0.0872939106107361
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.01650866652218731,
+              "achromatic": 0.027672271660160064,
+              "delta": -0.011163605137972755
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_25",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 28.424604818103685,
+              "achromatic": 27.900102320771545,
+              "delta": 0.5245024973321399
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9222792907742513,
+              "achromatic": 0.9139229859588482,
+              "delta": 0.00835630481540306
+            },
+            "sam_deg": {
+              "chromatic": 10.994724021567809,
+              "achromatic": 11.219596485127237,
+              "delta": -0.22487246355942858
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.25851421441009687,
+              "achromatic": 0.27460570315231086,
+              "delta": -0.016091488742214
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.04317210284768783,
+              "achromatic": 0.044044198110254146,
+              "delta": -0.0008720952625663192
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.7180597493798863,
+              "achromatic": 0.8041818562694171,
+              "delta": -0.08612210688953081
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.571884413505536,
+              "achromatic": 0.6477927966797299,
+              "delta": -0.0759083831741939
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.01348247452248711,
+              "achromatic": 0.023109493012091843,
+              "delta": -0.009627018489604733
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_26",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 31.76896350016278,
+              "achromatic": 31.115520928582505,
+              "delta": 0.6534425715802747
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9586856875794315,
+              "achromatic": 0.9448076559532459,
+              "delta": 0.013878031626185616
+            },
+            "sam_deg": {
+              "chromatic": 7.014475592726633,
+              "achromatic": 7.420817018429153,
+              "delta": -0.40634142570251974
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.22284057294854037,
+              "achromatic": 0.24025165884597824,
+              "delta": -0.017411085897437867
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.05392090561274574,
+              "achromatic": 0.049383801338580925,
+              "delta": 0.004537104274164816
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6416496035860921,
+              "achromatic": 0.747395617894965,
+              "delta": -0.10574601430887287
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.4902319048948323,
+              "achromatic": 0.5799263529900834,
+              "delta": -0.08969444809525112
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.01340925217239073,
+              "achromatic": 0.021172855170908098,
+              "delta": -0.007763602998517367
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_28",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 30.429282708524408,
+              "achromatic": 29.12777391244331,
+              "delta": 1.301508796081098
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9211041743445774,
+              "achromatic": 0.9053029995826402,
+              "delta": 0.01580117476193721
+            },
+            "sam_deg": {
+              "chromatic": 10.443189475822322,
+              "achromatic": 9.950463684279807,
+              "delta": 0.49272579154251517
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.16087086091035738,
+              "achromatic": 0.18687569712844426,
+              "delta": -0.026004836218086885
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.06085159914144153,
+              "achromatic": 0.06163626081124284,
+              "delta": -0.0007846616698013106
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.8763099275896028,
+              "achromatic": 0.9591051544586813,
+              "delta": -0.08279522686907848
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6161418540932788,
+              "achromatic": 0.7101381501649473,
+              "delta": -0.09399629607166848
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.012532118355597257,
+              "achromatic": 0.02107387389070844,
+              "delta": -0.008541755535111184
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_29",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 31.890225922011474,
+              "achromatic": 31.711979200402304,
+              "delta": 0.17824672160917032
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9425121665515961,
+              "achromatic": 0.9380862635377438,
+              "delta": 0.0044259030138522615
+            },
+            "sam_deg": {
+              "chromatic": 9.529886643257326,
+              "achromatic": 9.594555302185087,
+              "delta": -0.06466865892776141
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.24248942491955872,
+              "achromatic": 0.24751706102075377,
+              "delta": -0.005027636101195054
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.06428192140634292,
+              "achromatic": 0.0672422145414217,
+              "delta": -0.0029602931350787703
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.7212484710494487,
+              "achromatic": 0.788472596462476,
+              "delta": -0.06722412541302736
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6199760753492797,
+              "achromatic": 0.6812568571399442,
+              "delta": -0.06128078179066454
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.009466810234064767,
+              "achromatic": 0.016402899306665043,
+              "delta": -0.006936089072600276
+            }
+          }
+        }
+      ],
+      "censored": [
+        false,
+        false
+      ]
+    },
+    {
+      "seed": 20261023,
+      "deltas": {
+        "psnr_unit_range_db": 0.22010075134301843,
+        "ssim_band_mean": 0.003282214918147952,
+        "sam_deg": 0.17167016140961522,
+        "cube_relative_l2": -0.0059683507726155105,
+        "global_spectrum_relative_l2": 0.00040599898284088276,
+        "high_frequency_relative_l2": -0.017311501883708225,
+        "spatial_gradient_relative_l2": -0.02587065970061231,
+        "measurement_relative_l2": -0.004201355180409037
+      },
+      "dataset_deltas": {
+        "CAVE": {
+          "psnr_unit_range_db": 0.10719143279334986,
+          "ssim_band_mean": 0.0019459849532313944,
+          "sam_deg": 0.2802955540410519,
+          "cube_relative_l2": -0.004177164310090464,
+          "global_spectrum_relative_l2": 0.00021625131282598797,
+          "high_frequency_relative_l2": -0.02072264367993959,
+          "spatial_gradient_relative_l2": -0.02818471397949196,
+          "measurement_relative_l2": -0.0038365037604032315
+        },
+        "KAIST": {
+          "psnr_unit_range_db": 0.36123739953010414,
+          "ssim_band_mean": 0.004952502374293566,
+          "sam_deg": 0.03588842062031716,
+          "cube_relative_l2": -0.008207333850771797,
+          "global_spectrum_relative_l2": 0.0006431835703595012,
+          "high_frequency_relative_l2": -0.013047574638419213,
+          "spatial_gradient_relative_l2": -0.022978091852012494,
+          "measurement_relative_l2": -0.0046574194554163
+        }
+      },
+      "scenes": [
+        {
+          "scene_id": "fake_and_real_lemon_slices",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 31.400483666976648,
+              "achromatic": 31.20893200666034,
+              "delta": 0.191551660316307
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9397244405783467,
+              "achromatic": 0.9363041091395866,
+              "delta": 0.0034203314387600825
+            },
+            "sam_deg": {
+              "chromatic": 10.250720836614137,
+              "achromatic": 10.015482415095748,
+              "delta": 0.23523842151838892
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.23246679014280608,
+              "achromatic": 0.23765037395415026,
+              "delta": -0.005183583811344178
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.10004021175919406,
+              "achromatic": 0.10346846840502455,
+              "delta": -0.003428256645830491
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.8142156246616619,
+              "achromatic": 0.8129301058981404,
+              "delta": 0.0012855187635214538
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6664285219005875,
+              "achromatic": 0.6744327788382547,
+              "delta": -0.008004256937667154
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.011440685911362034,
+              "achromatic": 0.015935056499304195,
+              "delta": -0.004494370587942161
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_lemons",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 29.06565696091461,
+              "achromatic": 28.999332572519364,
+              "delta": 0.06632438839524468
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9467098162248478,
+              "achromatic": 0.9446942304959128,
+              "delta": 0.00201558572893501
+            },
+            "sam_deg": {
+              "chromatic": 10.126512066829893,
+              "achromatic": 9.900224818580933,
+              "delta": 0.22628724824896018
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.24450557217273897,
+              "achromatic": 0.2463797330708215,
+              "delta": -0.0018741608980825386
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.12487135299712979,
+              "achromatic": 0.1259420297275171,
+              "delta": -0.0010706767303873266
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6026562139267726,
+              "achromatic": 0.6282761500347666,
+              "delta": -0.025619936107993957
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.4443234836348763,
+              "achromatic": 0.48057960263977845,
+              "delta": -0.036256119004902165
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.005399514182624365,
+              "achromatic": 0.0068356661070088425,
+              "delta": -0.001436151924384478
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_strawberries",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 31.38225692521223,
+              "achromatic": 31.555686614757242,
+              "delta": -0.1734296895450136
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9031336090561621,
+              "achromatic": 0.9016970253579004,
+              "delta": 0.0014365836982617175
+            },
+            "sam_deg": {
+              "chromatic": 14.157751428188758,
+              "achromatic": 13.636915897711033,
+              "delta": 0.5208355304777257
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.19926031621970103,
+              "achromatic": 0.1953211761230851,
+              "delta": 0.003939140096615917
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.06449831519148227,
+              "achromatic": 0.06456582470830946,
+              "delta": -6.750951682718553e-05
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6736496574963514,
+              "achromatic": 0.6815735539703968,
+              "delta": -0.007923896474045344
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.5103385173149584,
+              "achromatic": 0.5279220131435959,
+              "delta": -0.017583495828637496
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.006216042953797976,
+              "achromatic": 0.008426093298139488,
+              "delta": -0.0022100503443415118
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_sushi",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 32.85350526893881,
+              "achromatic": 32.60831925905268,
+              "delta": 0.24518600988613315
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9661481243313338,
+              "achromatic": 0.964416374453352,
+              "delta": 0.0017317498779817475
+            },
+            "sam_deg": {
+              "chromatic": 7.576710383271212,
+              "achromatic": 7.306260369169838,
+              "delta": 0.2704500141013746
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.28665323688805466,
+              "achromatic": 0.29486019654317525,
+              "delta": -0.008206959655120583
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.13222562173722963,
+              "achromatic": 0.12584817982363763,
+              "delta": 0.006377441913591991
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.8587662003941314,
+              "achromatic": 0.9139791806549945,
+              "delta": -0.055212980260863076
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6284240259869798,
+              "achromatic": 0.6824569633930386,
+              "delta": -0.054032937406058856
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.013938658111977807,
+              "achromatic": 0.019258402127856875,
+              "delta": -0.005319744015879068
+            }
+          }
+        },
+        {
+          "scene_id": "fake_and_real_tomatoes",
+          "dataset_id": "CAVE",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 29.154252103768474,
+              "achromatic": 28.947927308854386,
+              "delta": 0.20632479491408873
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9606553242724778,
+              "achromatic": 0.959529650250259,
+              "delta": 0.0011256740222187478
+            },
+            "sam_deg": {
+              "chromatic": 9.878302184943434,
+              "achromatic": 9.729635629084624,
+              "delta": 0.14866655585881006
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.3977078237555057,
+              "achromatic": 0.40726808103802664,
+              "delta": -0.009560257282520968
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.295108206258137,
+              "achromatic": 0.29583794871455393,
+              "delta": -0.0007297424564169375
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.7810065824395311,
+              "achromatic": 0.7971485067598473,
+              "delta": -0.016141924320316137
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6647551665406048,
+              "achromatic": 0.6898019272607991,
+              "delta": -0.025046760720194294
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.014634429552474274,
+              "achromatic": 0.02035663148194321,
+              "delta": -0.005722201929468937
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_25",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 28.463606290723757,
+              "achromatic": 28.179753579816122,
+              "delta": 0.28385271090763453
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9242409838522815,
+              "achromatic": 0.9202482498727269,
+              "delta": 0.003992733979554575
+            },
+            "sam_deg": {
+              "chromatic": 10.926513726758348,
+              "achromatic": 10.943765797184167,
+              "delta": -0.017252070425819
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.2573560333614087,
+              "achromatic": 0.2659052975249244,
+              "delta": -0.008549264163515702
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.04701557045400637,
+              "achromatic": 0.045129243467370746,
+              "delta": 0.001886326986635621
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6950459850774149,
+              "achromatic": 0.7016044113603239,
+              "delta": -0.006558426282909036
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.5552392596223623,
+              "achromatic": 0.5756925724384949,
+              "delta": -0.020453312816132607
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.011842275048728469,
+              "achromatic": 0.017247750804332565,
+              "delta": -0.0054054757556040965
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_26",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 31.767501007657877,
+              "achromatic": 31.52907347307741,
+              "delta": 0.23842753458046673
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9597126999060298,
+              "achromatic": 0.9528104157963465,
+              "delta": 0.006902284109683299
+            },
+            "sam_deg": {
+              "chromatic": 7.189841765631275,
+              "achromatic": 7.028940025469328,
+              "delta": 0.1609017401619468
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.22287809703874714,
+              "achromatic": 0.22908084044122093,
+              "delta": -0.006202743402473787
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.05682430160395884,
+              "achromatic": 0.05097135948758607,
+              "delta": 0.005852942116372772
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.6290050009592428,
+              "achromatic": 0.6521627032853549,
+              "delta": -0.02315770232611203
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.4798146365201923,
+              "achromatic": 0.510273524458963,
+              "delta": -0.030458887938770718
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.011084261622036734,
+              "achromatic": 0.016804814705897748,
+              "delta": -0.005720553083861013
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_28",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 30.61266176327299,
+              "achromatic": 29.746245439175706,
+              "delta": 0.8664163240972833
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9222904573917168,
+              "achromatic": 0.9146587254761559,
+              "delta": 0.00763173191556088
+            },
+            "sam_deg": {
+              "chromatic": 10.398393453626381,
+              "achromatic": 10.44304420282969,
+              "delta": -0.04465074920330814
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.15751010943375568,
+              "achromatic": 0.17403205540221672,
+              "delta": -0.016521945968461044
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.063586356964942,
+              "achromatic": 0.06020330762595969,
+              "delta": 0.0033830493389823066
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.8448885875657316,
+              "achromatic": 0.8806639238135081,
+              "delta": -0.03577533624777651
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.5952646038978174,
+              "achromatic": 0.6443427576533804,
+              "delta": -0.049078153755563014
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.011235837878309628,
+              "achromatic": 0.015748241499396055,
+              "delta": -0.004512403621086427
+            }
+          }
+        },
+        {
+          "scene_id": "kaist_29",
+          "dataset_id": "KAIST",
+          "metrics": {
+            "psnr_unit_range_db": {
+              "chromatic": 32.00211508476499,
+              "achromatic": 31.945862056229974,
+              "delta": 0.05625302853501424
+            },
+            "ssim_band_mean": {
+              "chromatic": 0.9437451026100467,
+              "achromatic": 0.942461843117671,
+              "delta": 0.0012832594923757323
+            },
+            "sam_deg": {
+              "chromatic": 9.453076667818365,
+              "achromatic": 9.408521905869918,
+              "delta": 0.04455476194844721
+            },
+            "cube_relative_l2": {
+              "chromatic": 0.239385778102354,
+              "achromatic": 0.24094115997099066,
+              "delta": -0.0015553818686366572
+            },
+            "global_spectrum_relative_l2": {
+              "chromatic": 0.05857466252831175,
+              "achromatic": 0.06712424668886446,
+              "delta": -0.008549584160552716
+            },
+            "high_frequency_relative_l2": {
+              "chromatic": 0.7120277267230457,
+              "achromatic": 0.6987265604199255,
+              "delta": 0.013301166303120171
+            },
+            "spatial_gradient_relative_l2": {
+              "chromatic": 0.6142673176312287,
+              "achromatic": 0.6061893305288125,
+              "delta": 0.00807798710241614
+            },
+            "measurement_relative_l2": {
+              "chromatic": 0.008447569203508736,
+              "achromatic": 0.011438814564622408,
+              "delta": -0.002991245361113672
+            }
+          }
+        }
+      ],
+      "censored": [
+        false,
+        true
+      ]
+    }
+  ],
+  "aggregate": {
+    "psnr_unit_range_db": {
+      "per_seed": [
+        0.26100281269093273,
+        0.469962080428143,
+        0.22010075134301843
+      ],
+      "across_seeds": {
+        "mean": 0.3170218814873647,
+        "sd": 0.13401967390894806,
+        "minimum": 0.22010075134301843,
+        "maximum": 0.469962080428143,
+        "n": 3
+      },
+      "direction": "chromatic",
+      "sign_consistent_across_seeds": true,
+      "scenes_favouring_chromatic": [
+        6,
+        9,
+        8
+      ],
+      "scenes_compared": 9,
+      "exceeds_seed_sd": true,
+      "stable": false
+    },
+    "ssim_band_mean": {
+      "per_seed": [
+        0.004887277556657077,
+        0.007698837781639156,
+        0.003282214918147952
+      ],
+      "across_seeds": {
+        "mean": 0.005289443418814728,
+        "sd": 0.0022356078401839768,
+        "minimum": 0.003282214918147952,
+        "maximum": 0.007698837781639156,
+        "n": 3
+      },
+      "direction": "chromatic",
+      "sign_consistent_across_seeds": true,
+      "scenes_favouring_chromatic": [
+        9,
+        9,
+        9
+      ],
+      "scenes_compared": 9,
+      "exceeds_seed_sd": true,
+      "stable": true
+    },
+    "sam_deg": {
+      "per_seed": [
+        0.020774782221925747,
+        0.20286668675355912,
+        0.17167016140961522
+      ],
+      "across_seeds": {
+        "mean": 0.13177054346170003,
+        "sd": 0.09738249359243975,
+        "minimum": 0.020774782221925747,
+        "maximum": 0.20286668675355912,
+        "n": 3
+      },
+      "direction": "achromatic",
+      "sign_consistent_across_seeds": false,
+      "scenes_favouring_chromatic": [
+        4,
+        3,
+        2
+      ],
+      "scenes_compared": 9,
+      "exceeds_seed_sd": true,
+      "stable": false
+    },
+    "cube_relative_l2": {
+      "per_seed": [
+        -0.00644702111068543,
+        -0.013195162945617872,
+        -0.0059683507726155105
+      ],
+      "across_seeds": {
+        "mean": -0.008536844942972938,
+        "sd": 0.004041314920104768,
+        "minimum": -0.013195162945617872,
+        "maximum": -0.0059683507726155105,
+        "n": 3
+      },
+      "direction": "chromatic",
+      "sign_consistent_across_seeds": true,
+      "scenes_favouring_chromatic": [
+        6,
+        9,
+        8
+      ],
+      "scenes_compared": 9,
+      "exceeds_seed_sd": true,
+      "stable": false
+    },
+    "global_spectrum_relative_l2": {
+      "per_seed": [
+        0.004702406635278045,
+        0.0005199859981556559,
+        0.00040599898284088276
+      ],
+      "across_seeds": {
+        "mean": 0.0018761305387581945,
+        "sd": 0.0024482903606873724,
+        "minimum": 0.00040599898284088276,
+        "maximum": 0.004702406635278045,
+        "n": 3
+      },
+      "direction": "achromatic",
+      "sign_consistent_across_seeds": false,
+      "scenes_favouring_chromatic": [
+        2,
+        6,
+        5
+      ],
+      "scenes_compared": 9,
+      "exceeds_seed_sd": false,
+      "stable": false
+    },
+    "high_frequency_relative_l2": {
+      "per_seed": [
+        -0.046796486630925616,
+        -0.08522186396476394,
+        -0.017311501883708225
+      ],
+      "across_seeds": {
+        "mean": -0.04977661749313259,
+        "sd": 0.03405312327029536,
+        "minimum": -0.08522186396476394,
+        "maximum": -0.017311501883708225,
+        "n": 3
+      },
+      "direction": "chromatic",
+      "sign_consistent_across_seeds": true,
+      "scenes_favouring_chromatic": [
+        9,
+        9,
+        7
+      ],
+      "scenes_compared": 9,
+      "exceeds_seed_sd": true,
+      "stable": false
+    },
+    "spatial_gradient_relative_l2": {
+      "per_seed": [
+        -0.04669409083816756,
+        -0.08253095068666827,
+        -0.02587065970061231
+      ],
+      "across_seeds": {
+        "mean": -0.05169856707514938,
+        "sd": 0.02865974058607336,
+        "minimum": -0.08253095068666827,
+        "maximum": -0.02587065970061231,
+        "n": 3
+      },
+      "direction": "chromatic",
+      "sign_consistent_across_seeds": true,
+      "scenes_favouring_chromatic": [
+        9,
+        9,
+        8
+      ],
+      "scenes_compared": 9,
+      "exceeds_seed_sd": true,
+      "stable": true
+    },
+    "measurement_relative_l2": {
+      "per_seed": [
+        -0.004588043968200322,
+        -0.007673804791497157,
+        -0.004201355180409037
+      ],
+      "across_seeds": {
+        "mean": -0.005487734646702172,
+        "sd": 0.001903039427632504,
+        "minimum": -0.007673804791497157,
+        "maximum": -0.004201355180409037,
+        "n": 3
+      },
+      "direction": "chromatic",
+      "sign_consistent_across_seeds": true,
+      "scenes_favouring_chromatic": [
+        9,
+        9,
+        9
+      ],
+      "scenes_compared": 9,
+      "exceeds_seed_sd": true,
+      "stable": true
+    }
+  },
+  "budget_censored": {
+    "s1c:20261021": false,
+    "s1c:20261022": false,
+    "s1c:20261023": false,
+    "s3a:20261021": true,
+    "s3a:20261022": false,
+    "s3a:20261023": true
+  },
+  "any_censored": true,
+  "notes": [
+    "seed level n = 3 is the primary evidence",
+    "nine scenes inside one seed are not independent experiments",
+    "plateau epoch-to-epoch std is a training-stability diagnostic, not seed variance",
+    "a run whose best epoch lies in its final patience window is budget_censored",
+    "validation loss is not compared across arms: each arm uses its own forward RMS as both the noise scale and the data-loss normaliser"
+  ]
+}
