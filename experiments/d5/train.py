@@ -114,9 +114,14 @@ def main():
     ap.add_argument("--stop-after", type=int)
     ap.add_argument("--overfit", action="store_true")
     ap.add_argument("--overfit-steps", type=int, default=100)
+    ap.add_argument("--seed", type=int)
     ap.add_argument("--device", default="cuda")
     args = ap.parse_args()
     cfg = json.loads(args.config.read_text(encoding="utf-8"))
+    seed_source = "config"
+    if args.seed is not None:
+        cfg["seed"] = int(args.seed)
+        seed_source = "cli"
     if args.epochs is not None:
         cfg["epochs"] = args.epochs
     if args.device == "cuda" and not torch.cuda.is_available():
@@ -150,6 +155,7 @@ def main():
                      kernel_shape=psf_record["kernel_shape"],
                      psf_buffers=psf_record["physics_buffers"],
                      torch_version=torch.__version__, seed=cfg["seed"],
+                     seed_source=seed_source,
                      device=torch.cuda.get_device_name(0) if args.device == "cuda" else "cpu",
                      parameters=sum(p.numel() for p in model.parameters()),
                      tf32=False, cudnn_deterministic=True)
@@ -206,6 +212,16 @@ def main():
         probe = torch.cat([torch.from_numpy(train[r["array_index"]:r["array_index"] + 1])
                            for r in train_records[:min(8, len(train_records))]]).to(args.device)
         scale = model.physics(probe).square().mean().sqrt().clamp_min(1e-8)
+    execution.update(
+        measured_forward_rms=float(scale),
+        noise_probe_scenes=min(8, len(train_records)),
+        train_noise_rms_fraction=float(cfg["train_noise_rms_fraction"]),
+        train_noise_std_absolute=float(scale) * float(cfg["train_noise_rms_fraction"]),
+        cosine_epochs=int(cfg["epochs"]),
+        steps_per_epoch=int(cfg["steps_per_epoch"]),
+        noise_note="noise scale is this arm's own forward RMS; the same scalar also "
+                   "normalises the data loss, so validation loss is not comparable across arms")
+    (args.output / "execution.json").write_text(json.dumps(execution, indent=2), encoding="utf-8")
     opt = torch.optim.AdamW(model.parameters(), lr=cfg["learning_rate"],
                             weight_decay=cfg["weight_decay"])
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(

@@ -6,6 +6,9 @@ import numpy as np
 import torch
 from lcd_reconstruction.unrolling.general_pgd import GeneralSpectralPGD
 from lcd_reconstruction.unrolling.hsfaut import HSFAUReconstructor
+from lcd_reconstruction.operators.psf_provenance import (
+    PSFProvenanceError, array_digest, physics_buffers_from_model,
+    physics_buffers_from_state, resolve_psf_policy)
 from metrics import reconstruction_metrics
 
 BINS = [(0.0, 0.1), (0.1, 0.2), (0.2, 0.3), (0.3, 0.4), (0.4, 0.5)]
@@ -35,7 +38,14 @@ def main():
     checkpoint = torch.load(args.checkpoint, map_location="cuda", weights_only=True)
     cfg = checkpoint["config"]
     model = build_model(cfg, kernels, tuple(checkpoint["hw"])).cuda()
+    policy = resolve_psf_policy(checkpoint.get("psf_provenance"),
+                                physics_buffers_from_model(model),
+                                physics_buffers_from_state(checkpoint["state"]),
+                                allow_mismatch=False, split="val",
+                                requested_array=array_digest(kernels))
     model.load_state_dict(checkpoint["state"])
+    if physics_buffers_from_model(model) != policy["stored"]:
+        raise PSFProvenanceError("--kernel-file does not match the checkpoint operator")
     model.eval().requires_grad_(False)
     rows = []
     with torch.no_grad():
@@ -79,6 +89,10 @@ def main():
                 [r["metrics"]["band_relative_l2"] for r in selected], axis=0).tolist(),
         }
     args.output.write_text(json.dumps(dict(protocol="D5.2-frequency-diagnostics",
+                                           psf=dict(policy=policy["policy"],
+                                                    formal_result=policy["formal_result"],
+                                                    kernel_sha256_array=array_digest(kernels),
+                                                    recorded_kernel_file=policy["recorded_kernel_file"]),
                                            scenes=rows, aggregate=aggregate), indent=2),
                            encoding="utf-8")
     print(json.dumps(aggregate["ALL"]))
