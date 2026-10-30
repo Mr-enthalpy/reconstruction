@@ -58,6 +58,22 @@ def per_band_curve(rows):
     return out
 
 
+def plateau_std(rows, minimum=3):
+    """Epoch-to-epoch spread of each scalar, ignoring metrics that were not measured.
+
+    A cadence evaluation may skip an expensive term (SSIM) and record ``None``
+    instead. ``None`` is not a measured zero, so those rows are dropped; a metric
+    left with fewer than ``minimum`` values reports ``None`` rather than a
+    variance computed from too few points.
+    """
+    out = {}
+    for key in KEYS:
+        present = [row["metrics"]["ALL"].get(key) for row in rows]
+        present = [value for value in present if value is not None]
+        out[key] = float(np.std(present, ddof=1)) if len(present) >= minimum else None
+    return out if len(rows) > 2 else {}
+
+
 def load_run(directory: Path):
     history = json.loads((directory / "history.json").read_text(encoding="utf-8"))
     validation = json.loads((directory / "validation.json").read_text(encoding="utf-8"))
@@ -111,8 +127,7 @@ def load_run(directory: Path):
         metrics_recomputed=recomputed,
         metrics=metrics,
         per_band=per_band_curve(validation["results"]),
-        plateau_std={key: float(np.std([r["metrics"]["ALL"][key] for r in plateau_rows], ddof=1))
-                     for key in KEYS} if len(plateau_rows) > 2 else {},
+        plateau_std=plateau_std(plateau_rows),
         scenes={r["scene_id"]: r["metrics"] for r in validation["results"]},
         scene_datasets={r["scene_id"]: r["dataset_id"] for r in validation["results"]})
 

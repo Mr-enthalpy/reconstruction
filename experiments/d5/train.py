@@ -15,6 +15,21 @@ from lcd_reconstruction.operators.psf_provenance import (
 from metrics import reconstruction_metrics
 
 
+def scene_batch(data, index):
+    """Copy one scene out of the array before handing it to torch.
+
+    ``data`` may be a memmap (``np.load(..., mmap_mode="r")``) or a read-only array
+    inside an npz. ``torch.from_numpy`` keeps the numpy buffer, so augmentation or
+    any in-place write on that tensor reaches the mapping and fails; one explicit
+    copy per accessed scene keeps the mapping read-only and the writes local.
+    """
+    return torch.from_numpy(np.array(data[index:index + 1], copy=True))
+
+
+def scene_item(data, index):
+    return torch.from_numpy(np.array(data[index], copy=True))
+
+
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
@@ -72,7 +87,7 @@ def evaluate_loss(model, data, records, scale):
     values = []
     with torch.no_grad():
         for index, record in enumerate(records):
-            x = torch.from_numpy(data[record["array_index"]:record["array_index"] + 1]).to(
+            x = scene_batch(data, record["array_index"]).to(
                 next(model.parameters()).device)
             y = model.physics(x)
             out = model(y)
@@ -80,18 +95,19 @@ def evaluate_loss(model, data, records, scale):
     return float(torch.stack(values).mean())
 
 
-def evaluate_metrics(model, data, records):
+def evaluate_metrics(model, data, records, include_ssim=True):
     model.eval()
     values = {}
     with torch.no_grad():
         for record in records:
-            x = torch.from_numpy(data[record["array_index"]:record["array_index"] + 1]).to(
+            x = scene_batch(data, record["array_index"]).to(
                 next(model.parameters()).device)
             y = model.physics(x)
             out = model(y)
             values.setdefault(record["dataset_id"], []).append(reconstruction_metrics(
                 out["spectral_cube_hat"][0].cpu().numpy(), x[0].cpu().numpy(),
-                y[0].cpu().numpy(), out["reprojected_measurement"][0].cpu().numpy()))
+                y[0].cpu().numpy(), out["reprojected_measurement"][0].cpu().numpy(),
+                include_ssim=include_ssim))
     keys = ["psnr_unit_range_db", "ssim_band_mean", "sam_deg", "cube_relative_l2",
             "global_spectrum_relative_l2", "high_frequency_relative_l2",
             "spatial_gradient_relative_l2", "measurement_relative_l2"]
@@ -100,13 +116,20 @@ def evaluate_metrics(model, data, records):
     # is NOT comparable to cube_relative_l2 and it weights every band equally
     # regardless of that band's energy.
     per_band = ["band_relative_l2", "band_rmse"]
+
+    def mean_or_none(rows, key):
+        # None means "not measured for this row" (for example SSIM skipped at a
+        # cadence evaluation), so it is dropped instead of averaged in as a number.
+        present = [row[key] for row in rows if row[key] is not None]
+        return float(np.mean(present)) if present else None
+
     grouped = {}
     for source, rows in values.items():
-        grouped[source] = {key: float(np.mean([row[key] for row in rows])) for key in keys}
+        grouped[source] = {key: mean_or_none(rows, key) for key in keys}
         grouped[source].update({f"{key}_mean": np.mean([row[key] for row in rows], axis=0).tolist()
                                 for key in per_band})
     flat = [row for rows in values.values() for row in rows]
-    grouped["ALL"] = {key: float(np.mean([row[key] for row in flat])) for key in keys}
+    grouped["ALL"] = {key: mean_or_none(flat, key) for key in keys}
     grouped["ALL"].update({f"{key}_mean": np.mean([row[key] for row in flat], axis=0).tolist()
                            for key in per_band})
     return grouped
@@ -170,8 +193,18 @@ def main():
     torch.backends.cuda.matmul.allow_tf32 = False
     torch.backends.cudnn.allow_tf32 = False
     records = json.loads((args.prepared / "manifest.json").read_text(encoding="utf-8"))
-    train = np.load(args.prepared / "train.npz")["cube"]
-    val = np.load(args.prepared / "val.npz")["cube"]
+    # A prepared set may carry .npy cubes next to the .npz archive; the .npz
+    # decompresses 630 MB into RAM on every process, which dominates a multi-run
+    # start, so a read-only mapping is preferred when it exists. Access always goes
+    # through scene_batch/scene_item, which copy before torch sees the array.
+    train_npy, val_npy = args.prepared / "train.npy", args.prepared / "val.npy"
+    train = (np.load(train_npy, mmap_mode="r") if train_npy.exists()
+             else np.load(args.prepared / "train.npz")["cube"])
+    val = (np.load(val_npy, mmap_mode="r") if val_npy.exists()
+           else np.load(args.prepared / "val.npz")["cube"])
+    train_source = train_npy if train_npy.exists() else args.prepared / "train.npz"
+    val_source = val_npy if val_npy.exists() else args.prepared / "val.npz"
+    print("D5 stage: data", tuple(train.shape), tuple(val.shape), flush=True)
     train_records = [r for r in records if r["split"] == "train"]
     val_records = [r for r in records if r["split"] == "val"]
     if any(r["split"] == "test" for r in train_records + val_records):
@@ -182,8 +215,10 @@ def main():
     psf_record = build_psf_record(model, kernels, kernel_file, tuple(train.shape[-2:]))
     execution = dict(config=cfg, model=cfg["model"], prepared=str(args.prepared),
                      train_manifest_sha256=sha(args.prepared / "manifest.json"),
-                     train_sha256=sha(args.prepared / "train.npz"),
-                     val_sha256=sha(args.prepared / "val.npz"),
+                     train_data_file=train_source.name,
+                     train_sha256=sha(train_source),
+                     val_data_file=val_source.name,
+                     val_sha256=sha(val_source),
                      kernel_sha256=sha(kernel_file),
                      kernel_sha256_array=psf_record["kernel_sha256_array"],
                      kernel_shape=psf_record["kernel_shape"],
@@ -201,7 +236,7 @@ def main():
         if not picks:
             picks = [0]
         record = train_records[picks[0]]
-        x = torch.from_numpy(train[record["array_index"]:record["array_index"] + 1]).to(args.device)
+        x = scene_batch(train, record["array_index"]).to(args.device)
         y = model.physics(x)
         scale = y.square().mean().sqrt().clamp_min(1e-8)
         opt = torch.optim.AdamW(model.parameters(), lr=cfg["learning_rate"], weight_decay=1e-5)
@@ -243,7 +278,7 @@ def main():
 
     sampler = Sampler(train_records, cfg["seed"])
     with torch.no_grad():
-        probe = torch.cat([torch.from_numpy(train[r["array_index"]:r["array_index"] + 1])
+        probe = torch.cat([scene_batch(train, r["array_index"])
                            for r in train_records[:min(8, len(train_records))]]).to(args.device)
         scale = model.physics(probe).square().mean().sqrt().clamp_min(1e-8)
     execution.update(
@@ -291,7 +326,7 @@ def main():
         losses, parts = [], []
         for step in range(cfg["steps_per_epoch"]):
             indices = sampler.batch(cfg["batch"])
-            x = torch.stack([augment(torch.from_numpy(train[train_records[i]["array_index"]]),
+            x = torch.stack([augment(scene_item(train, train_records[i]["array_index"]),
                                      cfg["seed"] + epoch * 100000 + step * 100 + j,
                                      cfg["brightness_range"])
                              for j, i in enumerate(indices)]).to(args.device)
@@ -363,7 +398,7 @@ def main():
     results = []
     with torch.no_grad():
         for record in val_records:
-            x = torch.from_numpy(val[record["array_index"]:record["array_index"] + 1]).to(args.device)
+            x = scene_batch(val, record["array_index"]).to(args.device)
             y = model.physics(x)
             out = model(y)
             results.append(dict(scene_id=record["scene_id"], dataset_id=record["dataset_id"],
