@@ -27,6 +27,10 @@ import numpy as np
 KEYS = ["psnr_unit_range_db", "ssim_band_mean", "sam_deg", "cube_relative_l2",
         "global_spectrum_relative_l2", "high_frequency_relative_l2",
         "spatial_gradient_relative_l2", "measurement_relative_l2"]
+# Per-band entries are lists of 21 values, so they cannot live in KEYS. They are
+# carried separately below; band_seeds.py is the reducer that applies the
+# pre-registered stability rule band by band.
+PER_BAND = ("band_relative_l2", "band_rmse")
 LOWER_IS_BETTER = {"sam_deg", "cube_relative_l2", "global_spectrum_relative_l2",
                    "high_frequency_relative_l2", "spatial_gradient_relative_l2",
                    "measurement_relative_l2"}
@@ -35,6 +39,23 @@ ARM_PATTERN = re.compile(r"^(?P<arm>[a-z0-9]+)_s(?P<seed>\d+)$")
 
 def better(metric, value, other):
     return value < other if metric in LOWER_IS_BETTER else value > other
+
+
+def per_band_curve(rows):
+    """Band-by-band scene mean and sd from the per-scene rows.
+
+    ``band_relative_l2`` is a mean of per-scene ratios ``||error_b||/||truth_b||``,
+    not a ratio of summed norms, so this curve is not comparable to
+    ``cube_relative_l2``. Keeping it here stops the reducer from discarding a
+    dimension that is already present in every validation.json.
+    """
+    out = {}
+    for metric in PER_BAND:
+        stack = np.stack([np.asarray(row["metrics"][metric], dtype=float) for row in rows])
+        out[metric] = dict(scene_mean=stack.mean(axis=0).tolist(),
+                           scene_sd=(stack.std(axis=0, ddof=1).tolist()
+                                     if stack.shape[0] > 1 else None))
+    return out
 
 
 def load_run(directory: Path):
@@ -89,6 +110,7 @@ def load_run(directory: Path):
         selection_rule=selection.get("rule"),
         metrics_recomputed=recomputed,
         metrics=metrics,
+        per_band=per_band_curve(validation["results"]),
         plateau_std={key: float(np.std([r["metrics"]["ALL"][key] for r in plateau_rows], ddof=1))
                      for key in KEYS} if len(plateau_rows) > 2 else {},
         scenes={r["scene_id"]: r["metrics"] for r in validation["results"]},
@@ -140,6 +162,12 @@ def analyse(runs_root: Path):
                          for key in KEYS}))
         pairs.append(dict(seed=seed, deltas=deltas, dataset_deltas=dataset_deltas,
                           scenes=scene_rows,
+                          per_band={metric: dict(
+                              chromatic=chrom["per_band"][metric]["scene_mean"],
+                              achromatic=achrom["per_band"][metric]["scene_mean"],
+                              delta=[c - a for c, a in zip(chrom["per_band"][metric]["scene_mean"],
+                                                           achrom["per_band"][metric]["scene_mean"])])
+                              for metric in PER_BAND},
                           censored=[chrom["budget_censored"], achrom["budget_censored"]]))
 
     aggregate = {}
@@ -186,6 +214,7 @@ def analyse(runs_root: Path):
                                      selection_rule=run["selection_rule"],
                                      metrics_recomputed=run["metrics_recomputed"],
                                      plateau_std=run["plateau_std"],
+                                     per_band=run["per_band"],
                                      metrics=run["metrics"]["ALL"])
                  for run in runs},
         seeds=seeds,
@@ -197,6 +226,9 @@ def analyse(runs_root: Path):
                "nine scenes inside one seed are not independent experiments",
                "plateau epoch-to-epoch std is a training-stability diagnostic, not seed variance",
                "a run whose best epoch lies in its final patience window is budget_censored",
+               "per_band curves are scene means of ||error_b||/||truth_b||, a mean of "
+               "per-scene ratios and not comparable to cube_relative_l2",
+               "per-band stability is not evaluated here; use band_seeds.py for that",
                "validation loss is not compared across arms: each arm uses its own forward "
                "RMS as both the noise scale and the data-loss normaliser"])
 

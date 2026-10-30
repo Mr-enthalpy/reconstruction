@@ -11,6 +11,7 @@ provenance checks; nothing here is a second training framework.
 | `reconstruction_response.py` | frozen reconstructor response to the same pairs, with identity / noise-only / achromatic controls |
 | `otf_controls.py` | OTF of the chromatic set, the mean kernel and the 550 nm kernel |
 | `band_report.py` | per-band relative L2 and RMSE averaged over validation scenes, with paired deltas; reads `validation.json` only |
+| `band_seeds.py` | the same per band, paired inside each seed and aggregated across seeds with the pre-registered stability rule |
 | `summarize_seeds.py` | paired multi-seed summary from finished run directories |
 
 ## Why the construction works
@@ -61,6 +62,9 @@ python3 experiments/d5_3/reconstruction_response.py --prepared <prepared512> \
 
 python3 experiments/d5_3/summarize_seeds.py --runs <runs/d5_3> \
   --output multiseed_comparison.json
+
+python3 experiments/d5_3/band_seeds.py --runs <runs/d5_3> \
+  --multiseed multiseed_comparison.json --output per_band_d5_3.json
 ```
 
 ## Rules the scripts enforce
@@ -88,3 +92,20 @@ without a second pass; the per-band report can be used to cross-check them.
 Both quantities are a **mean of per-scene ratios** `||error_b|| / ||truth_b||`,
 not `sum||error_b|| / sum||truth_b||`. They weight every band equally regardless
 of band energy, so they are not comparable to `cube_relative_l2`.
+
+`band_seeds.py` is the seed-level reducer. The statistical unit is the seed:
+scenes inside one seed are direction evidence only. A band is called `stable`
+only when
+
+1. every seed has the same sign;
+2. `|delta_mean|` exceeds the cross-seed sd (ddof = 1);
+3. every seed has at least eight of nine scenes moving that direction.
+
+Per-band plateau std is **not available**: at acquisition time the cadence epochs
+recorded only the eight scalar metrics, so `history.json` holds no per-band
+series. The report sets `plateau_available: false` instead of substituting the
+scene spread for training variability.
+
+`summarize_seeds.py` carries the same curves in its `runs` / `pairs` blocks, so a
+future reduction cannot silently drop the band axis again; it deliberately does
+not evaluate stability (that belongs to `band_seeds.py`).

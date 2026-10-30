@@ -26,7 +26,8 @@ def make_run(root, name, seed, psnr, best_epoch, epochs=400, patience=60, stale=
                     stale=stale if e == epochs else 0, best_epoch=best_epoch,
                     metrics={"ALL": metrics(30.0)}) for e in range(max(1, epochs - 3), epochs + 1)]
     scenes = [dict(scene_id=f"s{i}", dataset_id="CAVE" if i < 5 else "KAIST",
-                   metrics=metrics(scene_psnr if scene_psnr is not None else psnr))
+                   metrics=dict(metrics(scene_psnr if scene_psnr is not None else psnr),
+                                band_relative_l2=[0.2] * 21, band_rmse=[0.02] * 21))
               for i in range(9)]
     validation = dict(best_epoch=best_epoch, best_validation_loss=0.012,
                       results=scenes,

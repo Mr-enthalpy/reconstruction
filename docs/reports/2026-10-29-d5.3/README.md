@@ -14,7 +14,7 @@
 | S2 反事实算子级可观测性 | ✅ 已完成 | 675 个反事实对；消色差残差 3.8e-6（float32 噪声），解析式误差 1.4e-7 |
 | S2 冻结网络响应 | ➖ 已完成，结果为负 | 恢复 1.87%、余弦 0.005、低于自身噪声响应 5 倍；3 seed 一致 |
 | S3 平均核 / 550 nm OTF 分析 | ✅ 已完成 | 平均核高频 OTF 是色散波段均值的 0.981 倍 |
-| 逐波段相对 L2 分析 | ✅ 已完成（单 seed） | 21/21 波段色散更低、19/21 波段超过场景 sd、450/460 nm 不满足；D5.3 三 seed 待补 |
+| 逐波段相对 L2 分析 | ✅ 已完成（三 seed） | 21/21 波段更低、3/3 seed 同向、19/21 超过跨 seed sd，但仅 6/21 通过"每 seed ≥8/9 场景"；450/460 与 600–650 不可声称 |
 | S3 Achromatic-550 **训练**对照 | ⛔ 未执行 | 8 h 租约被 S1 占满；随后客户端 `job start` 失效（见下），无法再开新作业 |
 | S4 A-large / C6 | ⛔ 未执行 | 门槛设计：S1–S3 结论清楚且资源允许才做；本轮未进入 |
 | G4 冻结测试 | ⛔ 按设计不执行 | `test.npz` 全程未下载、未上传、未加载 |
@@ -30,6 +30,9 @@
 3. **400 epoch 仍未让消色差臂收敛**：2/3 个消色差 run 跑满 400 且 best 在最后 60 epoch
    （358、366），而 3/3 个色散 run 都被 patience 停止（271/283/264）。所有差值只能按
    "统一 400 epoch 预算"解读，不能读作收敛能力之差。
+4. **逐波段能量误差是独立维度、与 SAM 相反，但只有少数波段稳定**：21/21 波段更低、3/3 seed
+   同向、19/21 超过跨 seed sd，可是只有 6/21 波段（470/480/490/520/530/590）同时满足
+   "每 seed ≥8/9 场景"，450/460 与 600–650 不可声称。详见 `per_band_analysis.md`。
 
 ## 文件索引
 
@@ -43,8 +46,10 @@
 | `encoding_observability.json` | 算子级测量差异、解析校验、单像素/匹配滤波 SNR、按频段与波段分组 |
 | `reconstruction_response.json` | 6 个冻结 checkpoint 的响应、恒等/噪声-only 对照、逐 seed 汇总 |
 | `otf_control.json` | 三核 OTF 径向剖面、波段间散布、零和敏感度 |
-| `per_band_d5_2.json` | 21 波段 × 9 场景的逐波段相对 L2 与配对 Δ（`band_report.py` 输出） |
-| `per_band_analysis.md` | 逐波段维度的定义、完整表、波段结构、与 SAM 相反的解释边界、单 seed 限制 |
+| `per_band_d5_3.json` | 三 seed 逐波段相对 L2 / RMSE：配对 Δ、跨 seed sd、逐 seed 场景方向、预注册稳定判据（`band_seeds.py` 输出） |
+| `runs/<arm>_s<seed>/validation.json` | 上述 6 份原始验证文件，逐字节取回并做过 SHA256 校验 |
+| `per_band_d5_2.json` | 历史参照：D5.2 单 seed（20261021、300 epoch）的逐波段相对 L2（`band_report.py` 输出） |
+| `per_band_analysis.md` | 逐波段维度的定义、三 seed 主表、判据逐条、与 SAM 相反的解释边界、取回过程与边界 |
 | `model_capacity_comparison.md` | S4 未执行的原因与触发条件 |
 | `scientific_conclusions.md` | A/B/C 三类结论分开陈述，含"支持 / 不支持 / 待验证"状态表 |
 
@@ -58,10 +63,12 @@
 | GPU 时间 | 精确值：s1c21 8392.6 s、s3a22 7758.9 s；其余四个同类 run 的精确值只在各自日志结束行，按 epoch 数与同批速率估计，六个 run 合计约 13–14 GPU·h |
 | 代码投递 | 客户端 `push` 被策略关闭（服务端 0.2.0，`file_transfer: false`），改为在容器内 `curl` 公开仓库的**指定 commit tarball**；产物用 `job logs` 取回 |
 | 失败与阻塞 | 06:15 起 `job start` 返回 `broker_unavailable: Unix domain sockets are not supported on this platform`（`status` 仍可用），客户端在本会话中自动从 0.1.1 升到 0.2.2；因此 S3 训练无法在本租约内启动 |
+| 产物补取 | 2026-10-30 服务器恢复后确认 workspace 保留：6 份 `validation.json` 用 `job start ... base64` + `job logs` 逐字节取回，SHA256 全部对上；未重训、未重选 checkpoint |
 
 ## 明确不支持的结论
 
 - 不支持"色散 PSF 提高了光谱角精度"：SAM 三个 seed 全部变差。
+- 不支持"逐波段能量误差在每个 seed、每个场景上都更好"：只有 6/21 波段通过全部三条判据。
 - 不支持"空间收益来自网络利用了色散带来的光谱信息"：反事实响应比噪声响应小 5 倍。
 - 不支持"消色差臂已到其收敛上限"：2/3 run 在预算边界仍在改善。
 - 不支持任何冻结测试集或真实 RAW/硬件层面的结论：PSF 仍是 signed shape-only 数值模型。

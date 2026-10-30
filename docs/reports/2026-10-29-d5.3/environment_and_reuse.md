@@ -13,7 +13,7 @@
 | `experiments/d5/train.py` | 改动 | 新增 `--seed`（默认仍取 config，记录 `seed_source`）；训练开始后把 `measured_forward_rms`、`train_noise_std_absolute`、`cosine_epochs`、`steps_per_epoch` 追加写入 `execution.json`；`evaluate_metrics` 的 `CAVE/KAIST/ALL` 增加 `band_relative_l2_mean`、`band_rmse_mean` 两个 21 元列表（2026-10-30 追加，见 §1a） |
 | `experiments/d5_2/frequency_diagnostics.py` | 改动 | 接入 `resolve_psf_policy`；此前是全仓库最后一个仍会静默覆盖 `kernel_fft` 的脚本 |
 | `experiments/d5_3/*` | 新增 | 反事实构造、算子级可观测性、冻结网络响应、OTF 对照、多种子汇总、逐波段报告、控制核生成、启动脚本 |
-| `tests/test_d5_3_*` | 新增 | 27 + 5 + 12 个测试（见 §4） |
+| `tests/test_d5_3_*` | 新增 | 27 + 5 + 12（逐波段）+ 14（三 seed 逐波段）个测试（见 §4） |
 
 **数值不变性证据**：用 `git show 30cd8d4:experiments/d5/train.py` 与改后版本在同一 tiny 数据集上各跑 3 epoch（CPU），`history.json` 的 SHA256 完全相同：
 
@@ -47,6 +47,28 @@ history_sha256    = e06720c57c66acbdfe6e25d5e32ee32c176e2ce57b8d2f51b8d35494f707
 
 老 checkpoint（D5.2/D5.3 已产出的 6 个 run）的 `selection.metrics` 里没有这两个 key，
 回放时只比对旧 key，行为与之前完全一致。
+
+### 1b. 逐波段归约链的补齐（2026-10-30）
+
+同一件事的第二半：`band_relative_l2` / `band_rmse` 一直是**逐场景**写进 `validation.json`
+`results[]` 的（每个场景 21 个值），但没有任何归约把它汇总。
+
+| 文件 | 改动 |
+|---|---|
+| `experiments/d5_3/band_report.py` | 新增：任意 `validation.json` → 逐波段场景均值/sd/min/max，`CAVE/KAIST/ALL` 分组，双条件时按 `scene_id` 配对；场景集不一致直接报错 |
+| `experiments/d5_3/band_seeds.py` | 新增：三 seed 逐波段归约，落实预注册判据（同号 / 超过跨 seed sd / 每 seed ≥8/9 场景）；逐波段 plateau sd 不可得，显式写 `plateau_available: false` |
+| `experiments/d5_3/summarize_seeds.py` | 修复根因：`runs` 与 `pairs` 现在都带 `per_band` 曲线与配对 Δ，不再只保留 8 个标量 |
+| `tests/test_d5_3_band_report.py` | 新增 12 项（长度/缺失/非有限/负值/重复场景/场景集不一致、mean-of-ratios 与 ratio-of-norms 的区分、ddof=1、符号与配对顺序） |
+| `tests/test_d5_3_band_seeds.py` | 新增 14 项（三条判据各自单独失败、配对顺序无关、波段独立、未配对 seed 不并入、`summarize_seeds` 的 `per_band` 透传） |
+
+取回的 6 份 `validation.json` 存放在 `docs/reports/2026-10-29-d5.3/runs/<arm>_s<seed>/`，
+与服务器端 `sha256sum` 逐字节一致；本轮**没有重训、没有重选 checkpoint**。
+对 seed 20261021，`band_seeds.py` 与 `band_report.py` 独立算出的逐波段 Δ 最大绝对差为 **0**。
+
+已发布的 `multiseed_comparison.json` **没有重跑**：本地只有 `validation.json`，缺 `history.json` /
+`execution.json`（`budget_censored` 与 plateau 统计需要它们）。因此 `per_band` 字段只对下一次
+归约生效，本轮逐波段的权威结果是 `per_band_d5_3.json`，`budget_censored` 沿用已发布的
+`multiseed_comparison.json`。
 
 ## 2. 训练噪声的自参照问题（实测）
 
@@ -98,7 +120,7 @@ Recorded training kernel: kernels.npz (array 070346a50f89).
 本地（`d4_general_20261020` 环境，同一提交 `1203ac9`）：
 
 ```text
-85 passed, 1 skipped        # D5.3 新增 27 + 控制核 5 + 逐波段报告 12 项，其余为既有测试
+99 passed, 1 skipped        # D5.3 新增 27 + 控制核 5 + 逐波段 12 + 三 seed 逐波段 14，其余为既有测试
 ```
 
 容器内**未运行 pytest**（镜像没有 pytest，且未安装）：容器内只做真 GPU 训练与算子级检查，不把本地测试记作容器内通过。
@@ -112,6 +134,11 @@ Recorded training kernel: kernels.npz (array 070346a50f89).
      用 `curl` 在容器内取回；产物通过 `job logs` 读取（训练日志本身每个 epoch 一行紧凑
      JSON，是完整的指标载体）。未使用任何提权或绕过手段。
    - 影响：D5.2 验证过的"释放后 pull"路径本轮无法复核。
+   - **2026-10-30 更正**：当时把"取不回产物"写成了"产物在已释放容器里"，这是错的。容器下线后
+     workspace 保留；恢复后 `--remote <alias> job start ... -- bash -c 'sha256sum; wc -c;
+     base64 -w 76'` + `job logs` 可以把文件**逐字节**取回（6 份 `validation.json` 的 SHA256 全部
+     对上）。本机 `file get` 仍报 `broker_unavailable`，所以走的是 job 日志通道。
+     逐波段数据当时真正丢失的原因是 `summarize_seeds.py` 只保留 8 个标量 key，不是数据没了。
 2. **`git clone` 在容器内挂起**（`.git` 已建、工作树为空），`curl` 正常。改用 tarball。
 
 ## 6. 单步耗时与容量
