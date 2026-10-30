@@ -94,3 +94,25 @@ def test_missing_arm_is_refused(tmp_path):
         assert "s3a" in str(error)
     else:
         raise AssertionError("a missing achromatic arm must not be summarised")
+
+
+def test_reference_arm_can_be_the_550_control(tmp_path):
+    # D5.3 S3 replaces the mean kernel with the 550 nm kernel; the reducer must take
+    # that arm as the reference instead of silently comparing against s3a.
+    for seed in (1, 2, 3):
+        make_run(tmp_path, f"s1c_s{seed}", seed, 30.4, 300)
+        make_run(tmp_path, f"s3a_s{seed}", seed, 30.0, 300)
+        make_run(tmp_path, f"s3a550_s{seed}", seed, 30.1, 300)
+    document = summarize_seeds.analyse(tmp_path, reference_arm="s3a550")
+    assert document["reference_arm"] == "s3a550"
+    assert sorted(document["runs"]) == [f"s1c_s{s}" for s in (1, 2, 3)] + \
+        [f"s3a550_s{s}" for s in (1, 2, 3)] + [f"s3a_s{s}" for s in (1, 2, 3)]
+    assert document["pairs"][0]["deltas"]["psnr_unit_range_db"] == pytest.approx(0.3)
+    assert document["pairs"][0]["censored"] == [False, False]
+
+
+def test_unknown_reference_arm_is_refused(tmp_path):
+    make_run(tmp_path, "s1c_s1", 1, 30.0, 200)
+    make_run(tmp_path, "s3a_s1", 1, 29.0, 200)
+    with pytest.raises(ValueError, match="s3a999"):
+        summarize_seeds.analyse(tmp_path, reference_arm="s3a999")
