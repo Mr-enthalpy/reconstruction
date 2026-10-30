@@ -1,0 +1,620 @@
+{
+  "status": "published_evidence_recomputed_not_artifact_revalidated",
+  "base_commit": "ef07c1b0befbf28d6938c4e67006c8b4f5f8e37d",
+  "sources": {
+    "counterfactual_protocol.json": "902451833bc0208d974b427f662358f79dd8ca23bf87f53a0b596de4ed0da840",
+    "encoding_observability.json": "38153e8d090211bc9f3f399eaab17c25456c855921e8457aad397baf0053dc20",
+    "multiseed_comparison.json": "fe743ea3e048cf5c4bfcaf57d03e3b7d32001963193daf37dcf9394706dd6d21",
+    "otf_control.json": "402c41dd916f4ac03ad31df22cbf8d89232c3d7aa2de759b4f6acc671dbaeae9",
+    "per_band_d5_2.json": "b40c4724011259e0bb04460ee7b19d1702f5b3322ec298bc32d5b92e75c37f21",
+    "per_band_d5_3.json": "35f74d2d4f9bc54bb93c9b046502c09b9e879928c5ace52ed2c1a527376d00e7",
+    "reconstruction_response.json": "16564a7093ba0af7d138dd96ed5acf1618a620066cb97f9f0f935aa35ce01122",
+    "s3_control_protocol.json": "501416246fda6bda16a52770e3e3a8ccb3b39d582718190175550246fffaf5a0",
+    "s3_multiseed.json": "8d2fd04caf33c8036d0a9f9c24a107adfa2dc3b717af24da38e9cffb7cd00f4b",
+    "s3_perband.json": "ceefecb1d446c5924ee65c143c848cb2823a605a6c2a882ae8728a8c7069994d",
+    "s3_perband_secondary.json": "3e23daf522de75936e5cb455b86838a83df718d1422f2aef1f8f5da25517dede",
+    "s3_secondary.json": "7093171da2e38fc775e91aeb684ebe0bfda0068b915bc4893c4d04768338d887",
+    "seed_protocol.json": "b9b7777045070555e72674b03dcbc81191aae6fc5ee5be8d812063d7463f5171",
+    "snr_strata.json": "e5bfe7756fb7185723897e4e4f4291fd52d704ba3909db5dca4262fe664a74c4"
+  },
+  "snr": {
+    "protocol": "D5.3-snr-strata",
+    "source": {
+      "path": null,
+      "sha256": null
+    },
+    "unit": "ranges are of configuration means over nine validation scenes, not of individual cases",
+    "counts": {
+      "configurations": 75,
+      "cases": 675,
+      "band_pairs": 5,
+      "masks": 5,
+      "strengths": 3
+    },
+    "noise": {
+      "sigma_chromatic": 0.017329356670379638,
+      "sigma_achromatic": 0.01733642578125,
+      "convention": "two independent draws: variance 2*sigma^2"
+    },
+    "strata": {
+      "overall": {
+        "configurations": 75,
+        "cases": 675,
+        "per_pixel_snr": {
+          "min": 0.0037530475203457116,
+          "max": 1.4277031527615862
+        },
+        "matched_filter_snr": {
+          "min": 1.9215603304170044,
+          "max": 730.9840142139321
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.07396613226996528
+        }
+      },
+      "by_strength": {
+        "0.25": {
+          "configurations": 25,
+          "cases": 225,
+          "per_pixel_snr": {
+            "min": 0.0037530475203457116,
+            "max": 0.35692579010683706
+          },
+          "matched_filter_snr": {
+            "min": 1.9215603304170044,
+            "max": 182.74600453470057
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.008463117811414931
+          }
+        },
+        "0.5": {
+          "configurations": 25,
+          "cases": 225,
+          "per_pixel_snr": {
+            "min": 0.008887879406103909,
+            "max": 0.7138515629437663
+          },
+          "matched_filter_snr": {
+            "min": 4.550594255925201,
+            "max": 365.49200022720834
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.03731960720486111
+          }
+        },
+        "1": {
+          "configurations": 25,
+          "cases": 225,
+          "per_pixel_snr": {
+            "min": 0.009799964298234853,
+            "max": 1.4277031527615862
+          },
+          "matched_filter_snr": {
+            "min": 5.017581720696245,
+            "max": 730.9840142139321
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.07396613226996528
+          }
+        }
+      },
+      "by_mask": {
+        "block": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.0037530475203457116,
+            "max": 0.16468141262743918
+          },
+          "matched_filter_snr": {
+            "min": 1.9215603304170044,
+            "max": 84.31688326524886
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.001743316650390625
+          }
+        },
+        "chroma": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.011743754798442387,
+            "max": 0.22708745654763873
+          },
+          "matched_filter_snr": {
+            "min": 6.012802456802502,
+            "max": 116.26877775239103
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.002544826931423611
+          }
+        },
+        "edge": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.012410948660795009,
+            "max": 0.47171127839183835
+          },
+          "matched_filter_snr": {
+            "min": 6.3544057143270445,
+            "max": 241.51617453662124
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.013971116807725694
+          }
+        },
+        "stripes": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.0220523751062943,
+            "max": 1.4277031527615862
+          },
+          "matched_filter_snr": {
+            "min": 11.290816054422681,
+            "max": 730.9840142139321
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.07396613226996528
+          }
+        },
+        "uniform": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.018508211193969414,
+            "max": 0.6463034049553111
+          },
+          "matched_filter_snr": {
+            "min": 9.47620413131234,
+            "max": 330.9073433371193
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0257157219780816
+          }
+        }
+      },
+      "by_band_pair": {
+        "450-460": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.0037530475203457116,
+            "max": 0.08820971219939362
+          },
+          "matched_filter_snr": {
+            "min": 1.9215603304170044,
+            "max": 45.163372646089535
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "450-650": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.03402863826324388,
+            "max": 1.4277031527615862
+          },
+          "matched_filter_snr": {
+            "min": 17.422662790780866,
+            "max": 730.9840142139321
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.07396613226996528
+          }
+        },
+        "480-620": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.029695519307642377,
+            "max": 1.0568882991235327
+          },
+          "matched_filter_snr": {
+            "min": 15.204105885512897,
+            "max": 541.1268091512487
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.05707761976453993
+          }
+        },
+        "490-510": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.014419431813687655,
+            "max": 0.13780112272360046
+          },
+          "matched_filter_snr": {
+            "min": 7.3827490886080795,
+            "max": 70.55417483448343
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 6.781684027777777e-06
+          }
+        },
+        "530-570": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.010414537079039915,
+            "max": 0.31848093613932865
+          },
+          "matched_filter_snr": {
+            "min": 5.3322429844684365,
+            "max": 163.06223930333627
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0035188462999131945
+          }
+        }
+      },
+      "by_separation": {
+        "adjacent (10 nm)": {
+          "configurations": 15,
+          "cases": 135,
+          "per_pixel_snr": {
+            "min": 0.0037530475203457116,
+            "max": 0.08820971219939362
+          },
+          "matched_filter_snr": {
+            "min": 1.9215603304170044,
+            "max": 45.163372646089535
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "near (20-40 nm)": {
+          "configurations": 30,
+          "cases": 270,
+          "per_pixel_snr": {
+            "min": 0.010414537079039915,
+            "max": 0.31848093613932865
+          },
+          "matched_filter_snr": {
+            "min": 5.3322429844684365,
+            "max": 163.06223930333627
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0035188462999131945
+          }
+        },
+        "distant (>= 50 nm)": {
+          "configurations": 30,
+          "cases": 270,
+          "per_pixel_snr": {
+            "min": 0.029695519307642377,
+            "max": 1.4277031527615862
+          },
+          "matched_filter_snr": {
+            "min": 15.204105885512897,
+            "max": 730.9840142139321
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.07396613226996528
+          }
+        }
+      },
+      "by_strength_and_separation": {
+        "0.25": {
+          "adjacent (10 nm)": {
+            "configurations": 5,
+            "cases": 45,
+            "per_pixel_snr": {
+              "min": 0.0037530475203457116,
+              "max": 0.0220523751062943
+            },
+            "matched_filter_snr": {
+              "min": 1.9215603304170044,
+              "max": 11.290816054422681
+            },
+            "detectable_fraction": {
+              "min": 0.0,
+              "max": 0.0
+            }
+          },
+          "near (20-40 nm)": {
+            "configurations": 10,
+            "cases": 90,
+            "per_pixel_snr": {
+              "min": 0.010414537079039915,
+              "max": 0.07962025430592806
+            },
+            "matched_filter_snr": {
+              "min": 5.3322429844684365,
+              "max": 40.76557020463517
+            },
+            "detectable_fraction": {
+              "min": 0.0,
+              "max": 0.0
+            }
+          },
+          "distant (>= 50 nm)": {
+            "configurations": 10,
+            "cases": 90,
+            "per_pixel_snr": {
+              "min": 0.03402863826324388,
+              "max": 0.35692579010683706
+            },
+            "matched_filter_snr": {
+              "min": 17.422662790780866,
+              "max": 182.74600453470057
+            },
+            "detectable_fraction": {
+              "min": 0.0,
+              "max": 0.008463117811414931
+            }
+          }
+        },
+        "0.5": {
+          "adjacent (10 nm)": {
+            "configurations": 5,
+            "cases": 45,
+            "per_pixel_snr": {
+              "min": 0.008887879406103909,
+              "max": 0.044104815169607965
+            },
+            "matched_filter_snr": {
+              "min": 4.550594255925201,
+              "max": 22.581665366839278
+            },
+            "detectable_fraction": {
+              "min": 0.0,
+              "max": 0.0
+            }
+          },
+          "near (20-40 nm)": {
+            "configurations": 10,
+            "cases": 90,
+            "per_pixel_snr": {
+              "min": 0.023553364600512616,
+              "max": 0.1592405353938319
+            },
+            "matched_filter_snr": {
+              "min": 12.05932267546246,
+              "max": 81.53115412164193
+            },
+            "detectable_fraction": {
+              "min": 0.0,
+              "max": 0.0
+            }
+          },
+          "distant (>= 50 nm)": {
+            "configurations": 10,
+            "cases": 90,
+            "per_pixel_snr": {
+              "min": 0.029695519307642377,
+              "max": 0.7138515629437663
+            },
+            "matched_filter_snr": {
+              "min": 15.204105885512897,
+              "max": 365.49200022720834
+            },
+            "detectable_fraction": {
+              "min": 5.255805121527778e-05,
+              "max": 0.03731960720486111
+            }
+          }
+        },
+        "1": {
+          "adjacent (10 nm)": {
+            "configurations": 5,
+            "cases": 45,
+            "per_pixel_snr": {
+              "min": 0.009799964298234853,
+              "max": 0.08820971219939362
+            },
+            "matched_filter_snr": {
+              "min": 5.017581720696245,
+              "max": 45.163372646089535
+            },
+            "detectable_fraction": {
+              "min": 0.0,
+              "max": 0.0
+            }
+          },
+          "near (20-40 nm)": {
+            "configurations": 10,
+            "cases": 90,
+            "per_pixel_snr": {
+              "min": 0.03461895373270762,
+              "max": 0.31848093613932865
+            },
+            "matched_filter_snr": {
+              "min": 17.7249043111463,
+              "max": 163.06223930333627
+            },
+            "detectable_fraction": {
+              "min": 0.0,
+              "max": 0.0035188462999131945
+            }
+          },
+          "distant (>= 50 nm)": {
+            "configurations": 10,
+            "cases": 90,
+            "per_pixel_snr": {
+              "min": 0.1346720026993106,
+              "max": 1.4277031527615862
+            },
+            "matched_filter_snr": {
+              "min": 68.95206538204702,
+              "max": 730.9840142139321
+            },
+            "detectable_fraction": {
+              "min": 0.0009659661187065972,
+              "max": 0.07396613226996528
+            }
+          }
+        }
+      }
+    },
+    "notes": [
+      "per-case records were not retained in the committed JSON, so no per-case extreme is quoted",
+      "the matched-filter SNR assumes the exact 21-band difference pattern is known; it is a detectability ceiling, not an achievable blind recovery",
+      "a single-kernel-per-band operator is identically blind to these changes, so every number here is a chromatic-minus-achromatic operator difference"
+    ]
+  },
+  "data_and_kernel_digests": {
+    "data": {
+      "train_npz_sha256": "024d2b4c8956707387289242ddbadce08e3379a51ed6e0752a167666dbb32908",
+      "val_npz_sha256": "e61ac4f102d58a44bdb8f7174a960d13f2e102c5db00cc0bc408ea5583ff9247",
+      "manifest_sha256": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3",
+      "train_scenes": 39,
+      "validation_scenes": 9,
+      "test_policy": "test.npz is never downloaded, uploaded or loaded in D5.3"
+    },
+    "arms": {
+      "s1c": {
+        "role": "chromatic",
+        "kernel_file": "kernels.npz",
+        "kernel_array_sha256": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04"
+      },
+      "s3a": {
+        "role": "achromatic-mean",
+        "kernel_file": "kernels_achromatic.npz",
+        "kernel_array_sha256": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0"
+      },
+      "s3a550": {
+        "role": "achromatic-550",
+        "kernel_file": "kernels_achromatic_550.npz",
+        "kernel_array_sha256": "87073bc41592e69fb7c1f6a295373494d56c8ab11bac607d7ac81c60a205375a",
+        "planned_seeds": [
+          20261021,
+          20261022,
+          20261023
+        ],
+        "lease": "second lease, after the S1 conclusion is read"
+      }
+    }
+  },
+  "recorded_checkpoint_provenance": [
+    {
+      "arm": "s1c",
+      "run_dir": "s1c_s20261021",
+      "seed": 20261021,
+      "epoch": 271,
+      "best_epoch": 271,
+      "checkpoint_sha256": "b20d2b136316aeda2484295106ee0610c18c0ece6821f7c6ef3502f49b349f9f",
+      "kernel_file": "kernels.npz",
+      "kernel_sha256_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "kernel_sha256_file": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+      "sigma_noise": 0.017329356670379638,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    },
+    {
+      "arm": "s1c",
+      "run_dir": "s1c_s20261022",
+      "seed": 20261022,
+      "epoch": 283,
+      "best_epoch": 283,
+      "checkpoint_sha256": "2854f5773e537e9b7ccc08fc49d8a93814d123dfe1f206d49b8b07250e8792aa",
+      "kernel_file": "kernels.npz",
+      "kernel_sha256_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "kernel_sha256_file": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+      "sigma_noise": 0.017329356670379638,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    },
+    {
+      "arm": "s1c",
+      "run_dir": "s1c_s20261023",
+      "seed": 20261023,
+      "epoch": 264,
+      "best_epoch": 264,
+      "checkpoint_sha256": "aef82b4618146a2e0046aa4186e343862f8780bf6020f5787bbf9f9d8d3bf32c",
+      "kernel_file": "kernels.npz",
+      "kernel_sha256_array": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+      "kernel_sha256_file": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+      "sigma_noise": 0.017329356670379638,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    },
+    {
+      "arm": "s3a",
+      "run_dir": "s3a_s20261021",
+      "seed": 20261021,
+      "epoch": 358,
+      "best_epoch": 358,
+      "checkpoint_sha256": "0e3fc5472853f650fbe18912281c7b088e5fac350d9b55184b9ec3a897eb1947",
+      "kernel_file": "kernels_achromatic.npz",
+      "kernel_sha256_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "kernel_sha256_file": "88305f76aea486e592948b0e39eb31edfe0109372e3821d1da7ec8d79cff9341",
+      "sigma_noise": 0.01733642578125,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    },
+    {
+      "arm": "s3a",
+      "run_dir": "s3a_s20261022",
+      "seed": 20261022,
+      "epoch": 264,
+      "best_epoch": 264,
+      "checkpoint_sha256": "40f891bf33ae686a8f8bfc58ca3946e030ed3ef624e9e33c28bd817d29633e8d",
+      "kernel_file": "kernels_achromatic.npz",
+      "kernel_sha256_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "kernel_sha256_file": "88305f76aea486e592948b0e39eb31edfe0109372e3821d1da7ec8d79cff9341",
+      "sigma_noise": 0.01733642578125,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    },
+    {
+      "arm": "s3a",
+      "run_dir": "s3a_s20261023",
+      "seed": 20261023,
+      "epoch": 366,
+      "best_epoch": 366,
+      "checkpoint_sha256": "84ae9a30ecef30e2382dccb2ac2279192fc73197426221186ba3dffd69bc3c4a",
+      "kernel_file": "kernels_achromatic.npz",
+      "kernel_sha256_array": "eadb74005a2ba12237bbe814d8deeb732b4a78ed5dc286f2e456e7f7528d33d0",
+      "kernel_sha256_file": "88305f76aea486e592948b0e39eb31edfe0109372e3821d1da7ec8d79cff9341",
+      "sigma_noise": 0.01733642578125,
+      "selection_rule": "min_validation_loss",
+      "psf_policy": "matched"
+    }
+  ],
+  "achromatic550": {
+    "s3a550_s20261021": {
+      "best_epoch": 309,
+      "validation_present": true,
+      "checkpoint_bytes_checked": false
+    },
+    "s3a550_s20261022": {
+      "best_epoch": 264,
+      "validation_present": true,
+      "checkpoint_bytes_checked": false
+    },
+    "s3a550_s20261023": {
+      "best_epoch": 366,
+      "validation_present": true,
+      "checkpoint_bytes_checked": false
+    }
+  },
+  "limitations": [
+    "No original data or checkpoint bytes checked by this audit.",
+    "675 cases are 75 configuration means across nine scenes.",
+    "Known-template detection is not blind reconstruction."
+  ]
+}

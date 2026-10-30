@@ -1,0 +1,20 @@
+{
+  "status": "implementation_protocol_not_yet_executed_on_research_data",
+  "seed": 20261030,
+  "basis_directions": 3,
+  "pixels_per_scene": 2048,
+  "minimum_band_sum": 0.021,
+  "value_range": [0.0, 1.0],
+  "amplitude_quantiles": [0.25, 0.5, 0.75],
+  "masks": ["smooth", "texture", "local"],
+  "noise_fractions": [0, 0.001, 0.005],
+  "reference_forward_rms": 3.4658713340759277,
+  "reference_rms_source": "D5.3 s1c_s20261021; not calibrated sensor DN",
+  "spectral_weights": "21 ones",
+  "shape": [21, 512, 512],
+  "splits": {"train": 39, "val": 9},
+  "test_access": "forbidden",
+  "inverse": {"lambda_grid": [0.000001, 0.0001, 0.01, 1.0], "mu_grid": [0.00000001, 0.0001], "rtol": 0.000001, "maxiter": 100},
+  "hyperparameter_selection": "First three sorted training scenes, all three directions, local mask, middle amplitude, 0.5% noise. Minimise scene-mean coefficient relative L2 at common 100-iteration cap; report nonconvergence. No val tuning.",
+  "s4": "gated; no training authorized by implementation completion"
+}
