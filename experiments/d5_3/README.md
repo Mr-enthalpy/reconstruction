@@ -12,7 +12,8 @@ provenance checks; nothing here is a second training framework.
 | `otf_controls.py` | OTF of the chromatic set, the mean kernel and the 550 nm kernel |
 | `band_report.py` | per-band relative L2 and RMSE averaged over validation scenes, with paired deltas; reads `validation.json` only |
 | `band_seeds.py` | the same per band, paired inside each seed and aggregated across seeds with the pre-registered stability rule |
-| `summarize_seeds.py` | paired multi-seed summary from finished run directories |
+| `summarize_seeds.py` | paired multi-seed summary from finished run directories; `--primary-arm` / `--reference-arm` select the pair (default `s1c` vs `s3a`) |
+| `make_achromatic_control.py` | writes the mean-kernel and single-band (550 nm) control kernels |
 
 ## Why the construction works
 
@@ -41,6 +42,11 @@ All six S1 arms share the same 400-epoch cap and cosine schedule. A run that
 reaches the cap with its best epoch inside the final `patience` window is
 reported as `budget_censored`; the uniform budget comparison is still valid,
 but "converged capability" is not claimed.
+
+The S3 arms reuse the same config and the same training code commit as S1 and
+change nothing but the kernel file: `s3a` (mean kernel) and `s3a550` (the 550 nm
+band kernel replicated over all 21 bands). Because `s3a550` is band-independent,
+it is a frequency-response control only, never a spectral-information test.
 
 ## Commands
 

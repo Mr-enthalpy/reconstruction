@@ -1,0 +1,1382 @@
+{
+  "protocol": "D5.3-per-band-relative-l2",
+  "arms": {
+    "chromatic": "s1c",
+    "achromatic": "s3a550"
+  },
+  "seeds": [
+    20261021,
+    20261022,
+    20261023
+  ],
+  "bands_nm": [
+    450,
+    460,
+    470,
+    480,
+    490,
+    500,
+    510,
+    520,
+    530,
+    540,
+    550,
+    560,
+    570,
+    580,
+    590,
+    600,
+    610,
+    620,
+    630,
+    640,
+    650
+  ],
+  "definitions": {
+    "scene_mean": "mean over the nine validation scenes of ||error_b|| / ||truth_b||, a mean of per-scene ratios rather than sum||error_b||/sum||truth_b||",
+    "delta": "chromatic minus achromatic, paired by scene_id inside each seed",
+    "sign": "both metrics are errors, so a negative delta means the chromatic arm is better",
+    "unit": "the statistical unit is the seed (n = 3); scenes are direction evidence only",
+    "stable": "all seeds share the sign, |delta_mean| > cross-seed sd (ddof=1), and every seed has at least 8/9 scenes in that direction",
+    "plateau": "per-band plateau std is not available: cadence epochs recorded only the eight scalar metrics, so only the cross-seed sd is used",
+    "comparability": "per-band relative L2 weights every band equally; it is not comparable to cube_relative_l2 and cannot be summed with it"
+  },
+  "runs": {
+    "s1c_s20261021": {
+      "arm": "s1c",
+      "seed": 20261021,
+      "sha256": "9d060220412076152521bd9b422d80878e8fd00a2aac350508a42d4ce33c0c37",
+      "best_epoch": 271,
+      "budget_censored": false
+    },
+    "s1c_s20261022": {
+      "arm": "s1c",
+      "seed": 20261022,
+      "sha256": "1b9570196f4041ac26c2da542484d37076217dc48a73f321f8d7c200fee45186",
+      "best_epoch": 283,
+      "budget_censored": false
+    },
+    "s1c_s20261023": {
+      "arm": "s1c",
+      "seed": 20261023,
+      "sha256": "2f1ba88e4abd64de92cfc99c67a33bde638fb25221ecebb3793f19e442e7b51b",
+      "best_epoch": 264,
+      "budget_censored": false
+    },
+    "s3a550_s20261021": {
+      "arm": "s3a550",
+      "seed": 20261021,
+      "sha256": "76916f532446f668d32e9837f85b0ec5e134f02330cdce933b635905c48a4260",
+      "best_epoch": 309,
+      "budget_censored": false
+    },
+    "s3a550_s20261022": {
+      "arm": "s3a550",
+      "seed": 20261022,
+      "sha256": "44bc2349a456bede9f7bab5c72b69095855b454258d3f0540ee8e12586951299",
+      "best_epoch": 264,
+      "budget_censored": false
+    },
+    "s3a550_s20261023": {
+      "arm": "s3a550",
+      "seed": 20261023,
+      "sha256": "228fa35f2a3ae7b4d3d9815cbf12115ddb0c41bfa826433f7066262e376356ae",
+      "best_epoch": 366,
+      "budget_censored": true
+    },
+    "s3a_s20261021": {
+      "arm": "s3a",
+      "seed": 20261021,
+      "sha256": "a8badd0bd0db70530a87faee90f8d1282dadcf1df710002b020e948e7f20fe6a",
+      "best_epoch": 358,
+      "budget_censored": true
+    },
+    "s3a_s20261022": {
+      "arm": "s3a",
+      "seed": 20261022,
+      "sha256": "a28221aed9869053f4d6cb49018dfc3b885d943cc26ba54dc8d7d930aa38a85c",
+      "best_epoch": 264,
+      "budget_censored": false
+    },
+    "s3a_s20261023": {
+      "arm": "s3a",
+      "seed": 20261023,
+      "sha256": "f7170f44196184c9ccbfc099a333262442cd9eb73ff8399b2ce2a5c9bbb44068",
+      "best_epoch": 366,
+      "budget_censored": true
+    }
+  },
+  "pairs_per_seed": [
+    {
+      "seed": 20261021,
+      "chromatic": "s1c_s20261021",
+      "achromatic": "s3a550_s20261021",
+      "metrics": {
+        "band_relative_l2": {
+          "mean_over_bands": -0.015642768473767808,
+          "scenes_with_negative_mean": 9,
+          "scenes_compared": 9
+        },
+        "band_rmse": {
+          "mean_over_bands": -0.0019129179825342101,
+          "scenes_with_negative_mean": 9,
+          "scenes_compared": 9
+        }
+      }
+    },
+    {
+      "seed": 20261022,
+      "chromatic": "s1c_s20261022",
+      "achromatic": "s3a550_s20261022",
+      "metrics": {
+        "band_relative_l2": {
+          "mean_over_bands": -0.018055494089292388,
+          "scenes_with_negative_mean": 9,
+          "scenes_compared": 9
+        },
+        "band_rmse": {
+          "mean_over_bands": -0.0021136058752529905,
+          "scenes_with_negative_mean": 9,
+          "scenes_compared": 9
+        }
+      }
+    },
+    {
+      "seed": 20261023,
+      "chromatic": "s1c_s20261023",
+      "achromatic": "s3a550_s20261023",
+      "metrics": {
+        "band_relative_l2": {
+          "mean_over_bands": -0.011984261023628484,
+          "scenes_with_negative_mean": 8,
+          "scenes_compared": 9
+        },
+        "band_rmse": {
+          "mean_over_bands": -0.0014433061583406094,
+          "scenes_with_negative_mean": 8,
+          "scenes_compared": 9
+        }
+      }
+    }
+  ],
+  "bands": [
+    {
+      "band_nm": 450,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.2912887803792534,
+          "achromatic_scene_mean_across_seeds": 0.30139298510641827,
+          "chromatic_scene_mean_sd_across_seeds": 0.0017978922926113648,
+          "achromatic_scene_mean_sd_across_seeds": 0.0023039614541925674,
+          "delta_per_seed": [
+            -0.011028556487165898,
+            -0.013495541361617161,
+            -0.005788516332711608
+          ],
+          "delta_mean": -0.01010420472716489,
+          "delta_sd_across_seeds": 0.003935781794155627,
+          "scenes_favouring_chromatic": [
+            8,
+            9,
+            5
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.028987011521423054,
+          "achromatic_scene_mean_across_seeds": 0.03010888984647748,
+          "chromatic_scene_mean_sd_across_seeds": 0.00013311842348156876,
+          "achromatic_scene_mean_sd_across_seeds": 0.0002706629543914198,
+          "delta_per_seed": [
+            -0.001277275461092434,
+            -0.0014192527135582214,
+            -0.0006691068005126179
+          ],
+          "delta_mean": -0.0011218783250544243,
+          "delta_sd_across_seeds": 0.00039848579037572626,
+          "scenes_favouring_chromatic": [
+            8,
+            9,
+            5
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        }
+      }
+    },
+    {
+      "band_nm": 460,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.2909659241596787,
+          "achromatic_scene_mean_across_seeds": 0.30315093778646995,
+          "chromatic_scene_mean_sd_across_seeds": 0.003242407236644212,
+          "achromatic_scene_mean_sd_across_seeds": 0.0030869118280640955,
+          "delta_per_seed": [
+            -0.011757936241548382,
+            -0.017970090750101038,
+            -0.006827013888724269
+          ],
+          "delta_mean": -0.01218501362679123,
+          "delta_sd_across_seeds": 0.005583801286254462,
+          "scenes_favouring_chromatic": [
+            7,
+            9,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.028757892022280407,
+          "achromatic_scene_mean_across_seeds": 0.030133225474000977,
+          "chromatic_scene_mean_sd_across_seeds": 0.00023844045685731167,
+          "achromatic_scene_mean_sd_across_seeds": 0.0003465763868362406,
+          "delta_per_seed": [
+            -0.0014185707083131055,
+            -0.0018803181324473224,
+            -0.0008271115144012858
+          ],
+          "delta_mean": -0.0013753334517205712,
+          "delta_sd_across_seeds": 0.0005279328937869177,
+          "scenes_favouring_chromatic": [
+            7,
+            9,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        }
+      }
+    },
+    {
+      "band_nm": 470,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.27829140522490425,
+          "achromatic_scene_mean_across_seeds": 0.2963951961263564,
+          "chromatic_scene_mean_sd_across_seeds": 0.001757565873521015,
+          "achromatic_scene_mean_sd_across_seeds": 0.0038453784593884483,
+          "delta_per_seed": [
+            -0.01782151265392852,
+            -0.02235459978609276,
+            -0.014135260264335222
+          ],
+          "delta_mean": -0.018103790901452168,
+          "delta_sd_across_seeds": 0.004116934089859846,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.02743684723877404,
+          "achromatic_scene_mean_across_seeds": 0.029424254759337586,
+          "chromatic_scene_mean_sd_across_seeds": 0.0001379602668492007,
+          "achromatic_scene_mean_sd_across_seeds": 0.0004281162235745986,
+          "delta_per_seed": [
+            -0.0020123787835103113,
+            -0.0023632910446854676,
+            -0.001586552733494861
+          ],
+          "delta_mean": -0.0019874075205635468,
+          "delta_sd_across_seeds": 0.00038897078810326655,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 480,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.2672330103836384,
+          "achromatic_scene_mean_across_seeds": 0.28780510279083793,
+          "chromatic_scene_mean_sd_across_seeds": 0.0017345434092265405,
+          "achromatic_scene_mean_sd_across_seeds": 0.003781932958703525,
+          "delta_per_seed": [
+            -0.02021375030055443,
+            -0.02455208094379216,
+            -0.016950445977251788
+          ],
+          "delta_mean": -0.02057209240719946,
+          "delta_sd_across_seeds": 0.003813465660023492,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            9
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.02658220163893088,
+          "achromatic_scene_mean_across_seeds": 0.02882262404360623,
+          "chromatic_scene_mean_sd_across_seeds": 0.00015655349925072413,
+          "achromatic_scene_mean_sd_across_seeds": 0.00043029424489610633,
+          "delta_per_seed": [
+            -0.0022411897131719826,
+            -0.0026126475132611003,
+            -0.0018674299875929548
+          ],
+          "delta_mean": -0.002240422404675346,
+          "delta_sd_across_seeds": 0.00037260935537434517,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            9
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 490,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.2587936057946499,
+          "achromatic_scene_mean_across_seeds": 0.2807039797437241,
+          "chromatic_scene_mean_sd_across_seeds": 0.0016876140981038348,
+          "achromatic_scene_mean_sd_across_seeds": 0.0038829558000473105,
+          "delta_per_seed": [
+            -0.021267534299657557,
+            -0.026726790760799705,
+            -0.01773679678676542
+          ],
+          "delta_mean": -0.02191037394907423,
+          "delta_sd_across_seeds": 0.004529341014368404,
+          "scenes_favouring_chromatic": [
+            9,
+            8,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.025325200743780044,
+          "achromatic_scene_mean_across_seeds": 0.02764804490155427,
+          "chromatic_scene_mean_sd_across_seeds": 0.00011046033463322892,
+          "achromatic_scene_mean_sd_across_seeds": 0.00042026582104680093,
+          "delta_per_seed": [
+            -0.002306537874027615,
+            -0.0027478318088395275,
+            -0.0019141627904555325
+          ],
+          "delta_mean": -0.002322844157774225,
+          "delta_sd_across_seeds": 0.00041707364963583136,
+          "scenes_favouring_chromatic": [
+            9,
+            8,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 500,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.24882221617058378,
+          "achromatic_scene_mean_across_seeds": 0.2686325763100938,
+          "chromatic_scene_mean_sd_across_seeds": 0.002950510666806423,
+          "achromatic_scene_mean_sd_across_seeds": 0.0035871977237505637,
+          "delta_per_seed": [
+            -0.018030524197191963,
+            -0.025960939723967826,
+            -0.015439616497370131
+          ],
+          "delta_mean": -0.019810360139509972,
+          "delta_sd_across_seeds": 0.005481826574766052,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            9
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.024403962867991697,
+          "achromatic_scene_mean_across_seeds": 0.026566975492976052,
+          "chromatic_scene_mean_sd_across_seeds": 0.00022387941019727306,
+          "achromatic_scene_mean_sd_across_seeds": 0.0004129283296762613,
+          "delta_per_seed": [
+            -0.002056527750415364,
+            -0.0027357518877727887,
+            -0.001696758236764882
+          ],
+          "delta_mean": -0.002163012624984345,
+          "delta_sd_across_seeds": 0.0005276184446099886,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            9
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 510,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.22686351670499147,
+          "achromatic_scene_mean_across_seeds": 0.2473995153294372,
+          "chromatic_scene_mean_sd_across_seeds": 0.0019829938124940973,
+          "achromatic_scene_mean_sd_across_seeds": 0.003712574955278094,
+          "delta_per_seed": [
+            -0.019062380647777634,
+            -0.025259099976456822,
+            -0.017286515249102644
+          ],
+          "delta_mean": -0.0205359986244457,
+          "delta_sd_across_seeds": 0.0041855930600787905,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            9
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.02242415951638904,
+          "achromatic_scene_mean_across_seeds": 0.02468675893839782,
+          "chromatic_scene_mean_sd_across_seeds": 0.00014832443812104517,
+          "achromatic_scene_mean_sd_across_seeds": 0.0004249908671539938,
+          "delta_per_seed": [
+            -0.0021769759159429745,
+            -0.002707270227493154,
+            -0.0019035521225901982
+          ],
+          "delta_mean": -0.0022625994220087757,
+          "delta_sd_across_seeds": 0.0004086431654028364,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            9
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 520,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.20633478371656422,
+          "achromatic_scene_mean_across_seeds": 0.22800100475557905,
+          "chromatic_scene_mean_sd_across_seeds": 0.001877575652659901,
+          "achromatic_scene_mean_sd_across_seeds": 0.0029896932627759454,
+          "delta_per_seed": [
+            -0.021094107055150347,
+            -0.02396972136938163,
+            -0.01993483469251255
+          ],
+          "delta_mean": -0.021666221039014843,
+          "delta_sd_across_seeds": 0.002077393422463323,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            9
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.02059927209881666,
+          "achromatic_scene_mean_across_seeds": 0.022968020173662302,
+          "chromatic_scene_mean_sd_across_seeds": 0.00017126217094409779,
+          "achromatic_scene_mean_sd_across_seeds": 0.0003552094966524248,
+          "delta_per_seed": [
+            -0.00235897032606325,
+            -0.0025902497043571006,
+            -0.0021570241941165826
+          ],
+          "delta_mean": -0.0023687480748456444,
+          "delta_sd_across_seeds": 0.00021677820222344314,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            9
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 530,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.1960072842162244,
+          "achromatic_scene_mean_across_seeds": 0.21615211203414528,
+          "chromatic_scene_mean_sd_across_seeds": 0.0007091591004387549,
+          "achromatic_scene_mean_sd_across_seeds": 0.003432170421634789,
+          "delta_per_seed": [
+            -0.02017940118201741,
+            -0.022885422704789514,
+            -0.017369659566955676
+          ],
+          "delta_mean": -0.020144827817920864,
+          "delta_sd_across_seeds": 0.002758044096148639,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            9
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.019956834822797306,
+          "achromatic_scene_mean_across_seeds": 0.02219348280643107,
+          "chromatic_scene_mean_sd_across_seeds": 0.00013729469120862012,
+          "achromatic_scene_mean_sd_across_seeds": 0.00042540007999292395,
+          "delta_per_seed": [
+            -0.002289019945686223,
+            -0.0025078592550668486,
+            -0.0019130647501482243
+          ],
+          "delta_mean": -0.0022366479836337656,
+          "delta_sd_across_seeds": 0.000300835906396271,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            9
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 540,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.20126175730511633,
+          "achromatic_scene_mean_across_seeds": 0.21862993252377935,
+          "chromatic_scene_mean_sd_across_seeds": 0.0005064802949133615,
+          "achromatic_scene_mean_sd_across_seeds": 0.004234688270854595,
+          "delta_per_seed": [
+            -0.017712584375702854,
+            -0.0210245630954532,
+            -0.013367378184832836
+          ],
+          "delta_mean": -0.017368175218662966,
+          "delta_sd_across_seeds": 0.0038401931513203534,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.02090288115676661,
+          "achromatic_scene_mean_across_seeds": 0.022934517546016872,
+          "chromatic_scene_mean_sd_across_seeds": 0.00012869312442529438,
+          "achromatic_scene_mean_sd_across_seeds": 0.0004917788226627608,
+          "delta_per_seed": [
+            -0.0021415773564623284,
+            -0.0024137580925696045,
+            -0.0015395737187188585
+          ],
+          "delta_mean": -0.002031636389250264,
+          "delta_sd_across_seeds": 0.0004473419744164953,
+          "scenes_favouring_chromatic": [
+            9,
+            9,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 550,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.2107270863431465,
+          "achromatic_scene_mean_across_seeds": 0.22597147379330343,
+          "chromatic_scene_mean_sd_across_seeds": 0.0005125318951328441,
+          "achromatic_scene_mean_sd_across_seeds": 0.004337780283037687,
+          "delta_per_seed": [
+            -0.015955265578034988,
+            -0.018917963103192385,
+            -0.010859933669243456
+          ],
+          "delta_mean": -0.015244387450156943,
+          "delta_sd_across_seeds": 0.004075778499148153,
+          "scenes_favouring_chromatic": [
+            8,
+            9,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.02226515697214379,
+          "achromatic_scene_mean_across_seeds": 0.024041709337978705,
+          "chromatic_scene_mean_sd_across_seeds": 6.719095028755424e-05,
+          "achromatic_scene_mean_sd_across_seeds": 0.0004916704976629604,
+          "delta_per_seed": [
+            -0.001874656138357703,
+            -0.0021921897013129593,
+            -0.001262811257834076
+          ],
+          "delta_mean": -0.0017765523658349127,
+          "delta_sd_across_seeds": 0.0004723921415923538,
+          "scenes_favouring_chromatic": [
+            8,
+            9,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        }
+      }
+    },
+    {
+      "band_nm": 560,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.21293906784154057,
+          "achromatic_scene_mean_across_seeds": 0.22814677540472741,
+          "chromatic_scene_mean_sd_across_seeds": 0.000657934427699379,
+          "achromatic_scene_mean_sd_across_seeds": 0.004149254515474761,
+          "delta_per_seed": [
+            -0.016120171248127438,
+            -0.018388840571825674,
+            -0.01111411086960748
+          ],
+          "delta_mean": -0.015207707563186864,
+          "delta_sd_across_seeds": 0.0037222124526060303,
+          "scenes_favouring_chromatic": [
+            8,
+            8,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.022842124807905654,
+          "achromatic_scene_mean_across_seeds": 0.02461121824549231,
+          "chromatic_scene_mean_sd_across_seeds": 7.521200033528024e-05,
+          "achromatic_scene_mean_sd_across_seeds": 0.0004457123352255587,
+          "delta_per_seed": [
+            -0.0018737198606709655,
+            -0.002094594362990922,
+            -0.0013389660890980905
+          ],
+          "delta_mean": -0.0017690934375866592,
+          "delta_sd_across_seeds": 0.0003885273972091636,
+          "scenes_favouring_chromatic": [
+            8,
+            8,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 570,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.20499385824842312,
+          "achromatic_scene_mean_across_seeds": 0.22066173523285526,
+          "chromatic_scene_mean_sd_across_seeds": 0.001402466141618962,
+          "achromatic_scene_mean_sd_across_seeds": 0.004423404813635899,
+          "delta_per_seed": [
+            -0.017223756812252633,
+            -0.01818278797696466,
+            -0.011597086164079125
+          ],
+          "delta_mean": -0.01566787698443214,
+          "delta_sd_across_seeds": 0.0035578699556089743,
+          "scenes_favouring_chromatic": [
+            7,
+            8,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.02275547322632919,
+          "achromatic_scene_mean_across_seeds": 0.02457627107971094,
+          "chromatic_scene_mean_sd_across_seeds": 0.0001268698921514147,
+          "achromatic_scene_mean_sd_across_seeds": 0.0005009420646335431,
+          "delta_per_seed": [
+            -0.0019730260854618,
+            -0.0021433902740753347,
+            -0.001345977200608116
+          ],
+          "delta_mean": -0.0018207978533817503,
+          "delta_sd_across_seeds": 0.00041993687432252496,
+          "scenes_favouring_chromatic": [
+            7,
+            8,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        }
+      }
+    },
+    {
+      "band_nm": 580,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.18328913350213705,
+          "achromatic_scene_mean_across_seeds": 0.20012710475970696,
+          "chromatic_scene_mean_sd_across_seeds": 0.0015642800311888691,
+          "achromatic_scene_mean_sd_across_seeds": 0.0043341535785020105,
+          "delta_per_seed": [
+            -0.018617413550866508,
+            -0.018960688988399324,
+            -0.0129358112334439
+          ],
+          "delta_mean": -0.01683797125756991,
+          "delta_sd_across_seeds": 0.003383725631152542,
+          "scenes_favouring_chromatic": [
+            8,
+            9,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.02173168413740519,
+          "achromatic_scene_mean_across_seeds": 0.023728844264694387,
+          "chromatic_scene_mean_sd_across_seeds": 0.00016588614273271732,
+          "achromatic_scene_mean_sd_across_seeds": 0.0005135449815229132,
+          "delta_per_seed": [
+            -0.002204195456565646,
+            -0.0022704211536686073,
+            -0.001516863771633344
+          ],
+          "delta_mean": -0.001997160127289199,
+          "delta_sd_across_seeds": 0.0004172647872531481,
+          "scenes_favouring_chromatic": [
+            8,
+            9,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        }
+      }
+    },
+    {
+      "band_nm": 590,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.15946203803872136,
+          "achromatic_scene_mean_across_seeds": 0.17710375346149218,
+          "chromatic_scene_mean_sd_across_seeds": 0.001510889032279501,
+          "achromatic_scene_mean_sd_across_seeds": 0.0041575298681118065,
+          "delta_per_seed": [
+            -0.018782153199456215,
+            -0.01953788345734496,
+            -0.014605109611511216
+          ],
+          "delta_mean": -0.017641715422770796,
+          "delta_sd_across_seeds": 0.0026567862532397555,
+          "scenes_favouring_chromatic": [
+            8,
+            9,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.020131704888728143,
+          "achromatic_scene_mean_across_seeds": 0.022334196885599695,
+          "chromatic_scene_mean_sd_across_seeds": 0.00017942730133377438,
+          "achromatic_scene_mean_sd_across_seeds": 0.0005279284049421095,
+          "delta_per_seed": [
+            -0.0023331482869078323,
+            -0.0024667891521478608,
+            -0.0018075385515589656
+          ],
+          "delta_mean": -0.002202491996871553,
+          "delta_sd_across_seeds": 0.00034850557841839205,
+          "scenes_favouring_chromatic": [
+            8,
+            9,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 600,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.18050464350245235,
+          "achromatic_scene_mean_across_seeds": 0.1952958154137122,
+          "chromatic_scene_mean_sd_across_seeds": 0.0008130046005656403,
+          "achromatic_scene_mean_sd_across_seeds": 0.002775757943331589,
+          "delta_per_seed": [
+            -0.016530729983586893,
+            -0.015580824863751033,
+            -0.012261960886441511
+          ],
+          "delta_mean": -0.014791171911259811,
+          "delta_sd_across_seeds": 0.0022412633134505696,
+          "scenes_favouring_chromatic": [
+            7,
+            9,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.023053648039687954,
+          "achromatic_scene_mean_across_seeds": 0.02506754197952089,
+          "chromatic_scene_mean_sd_across_seeds": 0.00010767482244965818,
+          "achromatic_scene_mean_sd_across_seeds": 0.00039370303913316456,
+          "delta_per_seed": [
+            -0.0022484802594337433,
+            -0.0021388290103069637,
+            -0.0016543725497580994
+          ],
+          "delta_mean": -0.0020138939398329355,
+          "delta_sd_across_seeds": 0.00031614485849017476,
+          "scenes_favouring_chromatic": [
+            7,
+            9,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        }
+      }
+    },
+    {
+      "band_nm": 610,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.21961315165792414,
+          "achromatic_scene_mean_across_seeds": 0.2314109739761359,
+          "chromatic_scene_mean_sd_across_seeds": 0.0005674163195929549,
+          "achromatic_scene_mean_sd_across_seeds": 0.0023392209988123986,
+          "delta_per_seed": [
+            -0.01321708577777194,
+            -0.012444583374627251,
+            -0.00973179780223605
+          ],
+          "delta_mean": -0.011797822318211748,
+          "delta_sd_across_seeds": 0.0018304461112459826,
+          "scenes_favouring_chromatic": [
+            8,
+            9,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.02916920057092391,
+          "achromatic_scene_mean_across_seeds": 0.030872124779164123,
+          "chromatic_scene_mean_sd_across_seeds": 9.644761067455307e-05,
+          "achromatic_scene_mean_sd_across_seeds": 0.00035254254638949215,
+          "delta_per_seed": [
+            -0.0019049035627157643,
+            -0.0017957741018716639,
+            -0.0014080949601332216
+          ],
+          "delta_mean": -0.0017029242082402165,
+          "delta_sd_across_seeds": 0.0002610948562506221,
+          "scenes_favouring_chromatic": [
+            8,
+            9,
+            8
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": true,
+          "unstable_reasons": []
+        }
+      }
+    },
+    {
+      "band_nm": 620,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.2589822623029165,
+          "achromatic_scene_mean_across_seeds": 0.268518536038756,
+          "chromatic_scene_mean_sd_across_seeds": 0.0007146363097176652,
+          "achromatic_scene_mean_sd_across_seeds": 0.002166262883672977,
+          "delta_per_seed": [
+            -0.011100394037711077,
+            -0.010018100428691695,
+            -0.007490326741115744
+          ],
+          "delta_mean": -0.009536273735839505,
+          "delta_sd_across_seeds": 0.0018526370915388267,
+          "scenes_favouring_chromatic": [
+            8,
+            7,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.03580895846263164,
+          "achromatic_scene_mean_across_seeds": 0.03729751245930384,
+          "chromatic_scene_mean_sd_across_seeds": 0.00010669597938714375,
+          "achromatic_scene_mean_sd_across_seeds": 0.00034290732626249276,
+          "delta_per_seed": [
+            -0.0017287687810470108,
+            -0.001553378779733998,
+            -0.0011835144292355905
+          ],
+          "delta_mean": -0.0014885539966721997,
+          "delta_sd_across_seeds": 0.0002783473844256129,
+          "scenes_favouring_chromatic": [
+            8,
+            7,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        }
+      }
+    },
+    {
+      "band_nm": 630,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.2907224783374114,
+          "achromatic_scene_mean_across_seeds": 0.2983809204345758,
+          "chromatic_scene_mean_sd_across_seeds": 0.00043284362289862914,
+          "achromatic_scene_mean_sd_across_seeds": 0.0019630810360651628,
+          "delta_per_seed": [
+            -0.00882171725245733,
+            -0.008581955069315333,
+            -0.005571653969720718
+          ],
+          "delta_mean": -0.007658442097164461,
+          "delta_sd_across_seeds": 0.001811183312850021,
+          "scenes_favouring_chromatic": [
+            8,
+            7,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.04153842171583853,
+          "achromatic_scene_mean_across_seeds": 0.042774898584568934,
+          "chromatic_scene_mean_sd_across_seeds": 5.758982632321273e-05,
+          "achromatic_scene_mean_sd_across_seeds": 0.0003175178283627924,
+          "delta_per_seed": [
+            -0.0014249520082680596,
+            -0.0013720199423888435,
+            -0.0009124586555343127
+          ],
+          "delta_mean": -0.0012364768687304053,
+          "delta_sd_across_seeds": 0.0002818533355517578,
+          "scenes_favouring_chromatic": [
+            8,
+            7,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        }
+      }
+    },
+    {
+      "band_nm": 640,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.3141255816942636,
+          "achromatic_scene_mean_across_seeds": 0.32062262906274136,
+          "chromatic_scene_mean_sd_across_seeds": 0.0001402633696024921,
+          "achromatic_scene_mean_sd_across_seeds": 0.0015459547179806545,
+          "delta_per_seed": [
+            -0.0068798099301701126,
+            -0.007676331930041574,
+            -0.004935000245221557
+          ],
+          "delta_mean": -0.006497047368477747,
+          "delta_sd_across_seeds": 0.0014101791501523891,
+          "scenes_favouring_chromatic": [
+            5,
+            7,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.04639016204968537,
+          "achromatic_scene_mean_across_seeds": 0.04745688608823163,
+          "chromatic_scene_mean_sd_across_seeds": 4.003457307444207e-05,
+          "achromatic_scene_mean_sd_across_seeds": 0.00025168588959437475,
+          "delta_per_seed": [
+            -0.0011284770150349452,
+            -0.0012462865995906789,
+            -0.0008254085010131651
+          ],
+          "delta_mean": -0.001066724038546263,
+          "delta_sd_across_seeds": 0.00021712822489134074,
+          "scenes_favouring_chromatic": [
+            5,
+            7,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        }
+      }
+    },
+    {
+      "band_nm": 650,
+      "metrics": {
+        "band_relative_l2": {
+          "chromatic_scene_mean_across_seeds": 0.32914012706051515,
+          "achromatic_scene_mean_across_seeds": 0.33563631760702967,
+          "chromatic_scene_mean_sd_across_seeds": 0.0007190006307795985,
+          "achromatic_scene_mean_sd_across_seeds": 0.0010838302667364535,
+          "delta_per_seed": [
+            -0.007081353137993869,
+            -0.006676565638534403,
+            -0.005730652863015277
+          ],
+          "delta_mean": -0.006496190546514517,
+          "delta_sd_across_seeds": 0.0006931804877322344,
+          "scenes_favouring_chromatic": [
+            5,
+            7,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        },
+        "band_rmse": {
+          "chromatic_scene_mean_across_seeds": 0.050071259059377614,
+          "achromatic_scene_mean_across_seeds": 0.051174869984775294,
+          "chromatic_scene_mean_sd_across_seeds": 0.00010672853847067023,
+          "achromatic_scene_mean_sd_across_seeds": 0.0001870616883450549,
+          "delta_per_seed": [
+            -0.0011979263440693591,
+            -0.0011338199221738285,
+            -0.0009790865099498225
+          ],
+          "delta_mean": -0.00110361092539767,
+          "delta_sd_across_seeds": 0.00011250402599033086,
+          "scenes_favouring_chromatic": [
+            5,
+            7,
+            7
+          ],
+          "scenes_compared": 9,
+          "seeds_with_negative_delta": 3,
+          "exceeds_cross_seed_sd": true,
+          "plateau_available": false,
+          "stable": false,
+          "unstable_reasons": [
+            "a seed has fewer than 8/9 scenes in that direction"
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "band_relative_l2": {
+      "bands_chromatic_lower": 21,
+      "bands_with_all_seeds_negative": 21,
+      "bands_exceeding_cross_seed_sd": 21,
+      "bands_stable": 11,
+      "bands_unstable": [
+        450,
+        460,
+        550,
+        570,
+        580,
+        600,
+        620,
+        630,
+        640,
+        650
+      ],
+      "mean_over_bands_across_seeds": -0.01522750786222956,
+      "across_band_sd": 0.004995562488747677,
+      "largest_improvement_band": 490,
+      "smallest_improvement_band": 650
+    },
+    "band_rmse": {
+      "bands_chromatic_lower": 21,
+      "bands_with_all_seeds_negative": 21,
+      "bands_exceeding_cross_seed_sd": 21,
+      "bands_stable": 11,
+      "bands_unstable": [
+        450,
+        460,
+        550,
+        570,
+        580,
+        600,
+        620,
+        630,
+        640,
+        650
+      ],
+      "mean_over_bands_across_seeds": -0.0018232766720426038,
+      "across_band_sd": 0.00043243681959222863,
+      "largest_improvement_band": 520,
+      "smallest_improvement_band": 640
+    }
+  },
+  "notes": [
+    "only the validation split is read; no data, kernel or checkpoint file is opened",
+    "unpaired seeds are reported, never pooled: only_chromatic=[] only_achromatic=[]",
+    "budget_censored is copied from multiseed_comparison.json when given, otherwise null"
+  ],
+  "source": {
+    "runs": "/workspace/runs/d5_3",
+    "sha256": {
+      "s1c_s20261021": "9d060220412076152521bd9b422d80878e8fd00a2aac350508a42d4ce33c0c37",
+      "s1c_s20261022": "1b9570196f4041ac26c2da542484d37076217dc48a73f321f8d7c200fee45186",
+      "s1c_s20261023": "2f1ba88e4abd64de92cfc99c67a33bde638fb25221ecebb3793f19e442e7b51b",
+      "s3a550_s20261021": "76916f532446f668d32e9837f85b0ec5e134f02330cdce933b635905c48a4260",
+      "s3a550_s20261022": "44bc2349a456bede9f7bab5c72b69095855b454258d3f0540ee8e12586951299",
+      "s3a550_s20261023": "228fa35f2a3ae7b4d3d9815cbf12115ddb0c41bfa826433f7066262e376356ae",
+      "s3a_s20261021": "a8badd0bd0db70530a87faee90f8d1282dadcf1df710002b020e948e7f20fe6a",
+      "s3a_s20261022": "a28221aed9869053f4d6cb49018dfc3b885d943cc26ba54dc8d7d930aa38a85c",
+      "s3a_s20261023": "f7170f44196184c9ccbfc099a333262442cd9eb73ff8399b2ce2a5c9bbb44068"
+    }
+  }
+}

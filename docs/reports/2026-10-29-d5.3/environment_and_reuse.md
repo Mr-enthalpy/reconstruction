@@ -177,3 +177,23 @@ broker_unavailable: Unix domain sockets are not supported on this platform   (ex
 
 **未做的尝试**：没有改用直连 SSH 或其它旁路继续跑训练——那会绕过作业管理路径，超出本轮授权。
 问题按"说明现象、给出命令与完整错误、停止"的方式处理。
+
+## 8. S3 第二个租约（2026-10-30）
+
+| 项 | 值 |
+|---|---|
+| 租约 | `c81e44f042b54dac94d60dcf96f20041`，3 × RTX 3090（0,1,2）/ 16 CPU / 24 GiB / 6 h |
+| 唯一变量 | `--kernel-file /workspace/data/prepared512/kernels_achromatic_550.npz` |
+| 代码 | `/workspace/code/reconstruction-1203ac9`（与 S1 相同），归约用 `reconstruction-653155f` / `-42db6d4` |
+| 门禁 | `train.npz 024d2b4c…`、`val.npz e61ac4f1…`、`kernels.npz f07d9bbb…` 与 S1 相同；550 核文件 `5c8e350d…`、数组 `87073bc4…`、band sum 1.0 |
+| 稳态速度 | 20–26 s/epoch（比 S1 的 30 s 略快）；启动阶段约 10 min（630 MB 数据 + CUDA 初始化） |
+| 完成 | 324 / 369 / 400 epoch，best 264 / 309 / 366，1/3 `budget_censored` |
+| 归约 | 容器内跑 `summarize_seeds.py` 与 `band_seeds.py`，只回传 112 KB + 47 KB + 47 KB 三个 JSON |
+
+**通道仍然只有 job 日志**：本机 `file get` 依旧 `broker_unavailable`，`--remote` 明确拒绝对
+`file` 子命令生效。因此产物一律 `base64 -w 76` + `job logs` 取回，并在本地复核 SHA256
+（`s3_multiseed.json`、`s3_secondary.json`、三份 `validation.json` 全部逐字节一致）。
+
+**一个客户端限制**：`job start` 的 `--shell`/`bash -c` 参数过长（约 500 字符以上）会被
+`bad_request` 拒绝，需拆成多条短命令或直接用 argv 形式，例如
+`job start <id> --name x -- python3 -X utf8 <abs script> <args>`。

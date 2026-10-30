@@ -15,7 +15,7 @@
 | S2 冻结网络响应 | ➖ 已完成，结果为负 | 恢复 1.87%、余弦 0.005、低于自身噪声响应 5 倍；3 seed 一致 |
 | S3 平均核 / 550 nm OTF 分析 | ✅ 已完成 | 平均核高频 OTF 是色散波段均值的 0.981 倍 |
 | 逐波段相对 L2 分析 | ✅ 已完成（三 seed） | 21/21 波段更低、3/3 seed 同向、19/21 超过跨 seed sd，但仅 6/21 通过"每 seed ≥8/9 场景"；450/460 与 600–650 不可声称 |
-| S3 Achromatic-550 **训练**对照 | ⛔ 未执行 | 8 h 租约被 S1 占满；随后客户端 `job start` 失效（见下），无法再开新作业 |
+| S3 Achromatic-550 **训练**对照 | ✅ 已完成 | 第二租约 3 seed / 400 epoch；换核后方向不翻转，落在预注册 A 支（见 `s3_control_analysis.md`） |
 | S4 A-large / C6 | ⛔ 未执行 | 门槛设计：S1–S3 结论清楚且资源允许才做；本轮未进入 |
 | G4 冻结测试 | ⛔ 按设计不执行 | `test.npz` 全程未下载、未上传、未加载 |
 
@@ -33,6 +33,10 @@
 4. **逐波段能量误差是独立维度、与 SAM 相反，但只有少数波段稳定**：21/21 波段更低、3/3 seed
    同向、19/21 超过跨 seed sd，可是只有 6/21 波段（470/480/490/520/530/590）同时满足
    "每 seed ≥8/9 场景"，450/460 与 600–650 不可声称。详见 `per_band_analysis.md`。
+5. **S3 换核对照：A 节结论不依赖平均核那个模糊核**。换成 550 nm 真实波段核后，色散臂通过
+   判据的指标从 3/8 变成 6/8（PSNR +0.444 dB、cube −0.0122、HF −0.0621 转稳），方向不翻转。
+   但增量来自参考臂更弱（550 臂比平均核臂差 0.127 dB），所以 **S1 的 +0.32 dB 才是保守值**，
+   不能说"色散好 0.44 dB"。
 
 ## 文件索引
 
@@ -46,6 +50,10 @@
 | `encoding_observability.json` | 算子级测量差异、解析校验、单像素/匹配滤波 SNR、按频段与波段分组 |
 | `reconstruction_response.json` | 6 个冻结 checkpoint 的响应、恒等/噪声-only 对照、逐 seed 汇总 |
 | `otf_control.json` | 三核 OTF 径向剖面、波段间散布、零和敏感度 |
+| `s3_control_protocol.json` | S3（550 nm 训练对照）在第一个 epoch 之前冻结的判据与三种预注册结局 |
+| `s3_control_analysis.md` | S3 主/次比较、分解恒等式、逐波段维度、判定与不可声称项 |
+| `s3_multiseed.json` / `s3_secondary.json` | `s1c−s3a550` 与 `s3a550−s3a` 的逐 seed 配对汇总 |
+| `s3_perband.json` / `s3_perband_secondary.json` | 上述两个比较的逐波段维度 |
 | `per_band_d5_3.json` | 三 seed 逐波段相对 L2 / RMSE：配对 Δ、跨 seed sd、逐 seed 场景方向、预注册稳定判据（`band_seeds.py` 输出） |
 | `runs/<arm>_s<seed>/validation.json` | 上述 6 份原始验证文件，逐字节取回并做过 SHA256 校验 |
 | `per_band_d5_2.json` | 历史参照：D5.2 单 seed（20261021、300 epoch）的逐波段相对 L2（`band_report.py` 输出） |
@@ -64,11 +72,16 @@
 | 代码投递 | 客户端 `push` 被策略关闭（服务端 0.2.0，`file_transfer: false`），改为在容器内 `curl` 公开仓库的**指定 commit tarball**；产物用 `job logs` 取回 |
 | 失败与阻塞 | 06:15 起 `job start` 返回 `broker_unavailable: Unix domain sockets are not supported on this platform`（`status` 仍可用），客户端在本会话中自动从 0.1.1 升到 0.2.2；因此 S3 训练无法在本租约内启动 |
 | 产物补取 | 2026-10-30 服务器恢复后确认 workspace 保留：6 份 `validation.json` 用 `job start ... base64` + `job logs` 逐字节取回，SHA256 全部对上；未重训、未重选 checkpoint |
+| S3 租约 | `c81e44f042b54dac94d60dcf96f20041`，3 × RTX 3090 / 16 CPU / 24 GiB / 6 h，`created_at 2026-10-30T04:18Z` |
+| S3 运行 | 3 个 seed 并行，04:20Z 启动；06:16Z / 06:34Z / 06:44Z 结束；GPU 时间 seed 21/22/23 = 8023.2 / 6904.8 / 8615.1 s；完成 369 / 324 / 400 epoch |
+| S3 归约 | 在容器内跑 `summarize_seeds.py --reference-arm s3a550` 与 `band_seeds.py`，只回传紧凑 JSON（112 KB / 47 KB），本地复核 SHA256 |
 
 ## 明确不支持的结论
 
 - 不支持"色散 PSF 提高了光谱角精度"：SAM 三个 seed 全部变差。
 - 不支持"逐波段能量误差在每个 seed、每个场景上都更好"：只有 6/21 波段通过全部三条判据。
+- 不支持"色散比消色差好 0.44 dB"：S3 的增量全部来自 550 nm 参考臂更弱；S1 的 +0.32 dB 才是保守值。
+- 不支持"550 nm 与平均核在训练上完全等价"：PSNR/SSIM/cube 上有小而方向一致的差别。
 - 不支持"空间收益来自网络利用了色散带来的光谱信息"：反事实响应比噪声响应小 5 倍。
 - 不支持"消色差臂已到其收敛上限"：2/3 run 在预算边界仍在改善。
 - 不支持任何冻结测试集或真实 RAW/硬件层面的结论：PSF 仍是 signed shape-only 数值模型。
