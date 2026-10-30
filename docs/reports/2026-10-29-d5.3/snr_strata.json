@@ -1,0 +1,459 @@
+{
+  "protocol": "D5.3-snr-strata",
+  "source": {
+    "path": "docs/reports/2026-10-29-d5.3/encoding_observability.json",
+    "sha256": "38153e8d090211bc9f3f399eaab17c25456c855921e8457aad397baf0053dc20"
+  },
+  "unit": "ranges are of configuration means over nine validation scenes, not of individual cases",
+  "counts": {
+    "configurations": 75,
+    "cases": 675,
+    "band_pairs": 5,
+    "masks": 5,
+    "strengths": 3
+  },
+  "noise": {
+    "sigma_chromatic": 0.017329356670379638,
+    "sigma_achromatic": 0.01733642578125,
+    "convention": "two independent draws: variance 2*sigma^2"
+  },
+  "strata": {
+    "overall": {
+      "configurations": 75,
+      "cases": 675,
+      "per_pixel_snr": {
+        "min": 0.0037530475203457116,
+        "max": 1.4277031527615862
+      },
+      "matched_filter_snr": {
+        "min": 1.9215603304170044,
+        "max": 730.9840142139321
+      },
+      "detectable_fraction": {
+        "min": 0.0,
+        "max": 0.07396613226996528
+      }
+    },
+    "by_strength": {
+      "0.25": {
+        "configurations": 25,
+        "cases": 225,
+        "per_pixel_snr": {
+          "min": 0.0037530475203457116,
+          "max": 0.35692579010683706
+        },
+        "matched_filter_snr": {
+          "min": 1.9215603304170044,
+          "max": 182.74600453470057
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.008463117811414931
+        }
+      },
+      "0.5": {
+        "configurations": 25,
+        "cases": 225,
+        "per_pixel_snr": {
+          "min": 0.008887879406103909,
+          "max": 0.7138515629437663
+        },
+        "matched_filter_snr": {
+          "min": 4.550594255925201,
+          "max": 365.49200022720834
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.03731960720486111
+        }
+      },
+      "1": {
+        "configurations": 25,
+        "cases": 225,
+        "per_pixel_snr": {
+          "min": 0.009799964298234853,
+          "max": 1.4277031527615862
+        },
+        "matched_filter_snr": {
+          "min": 5.017581720696245,
+          "max": 730.9840142139321
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.07396613226996528
+        }
+      }
+    },
+    "by_mask": {
+      "block": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.0037530475203457116,
+          "max": 0.16468141262743918
+        },
+        "matched_filter_snr": {
+          "min": 1.9215603304170044,
+          "max": 84.31688326524886
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.001743316650390625
+        }
+      },
+      "chroma": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.011743754798442387,
+          "max": 0.22708745654763873
+        },
+        "matched_filter_snr": {
+          "min": 6.012802456802502,
+          "max": 116.26877775239103
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.002544826931423611
+        }
+      },
+      "edge": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.012410948660795009,
+          "max": 0.47171127839183835
+        },
+        "matched_filter_snr": {
+          "min": 6.3544057143270445,
+          "max": 241.51617453662124
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.013971116807725694
+        }
+      },
+      "stripes": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.0220523751062943,
+          "max": 1.4277031527615862
+        },
+        "matched_filter_snr": {
+          "min": 11.290816054422681,
+          "max": 730.9840142139321
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.07396613226996528
+        }
+      },
+      "uniform": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.018508211193969414,
+          "max": 0.6463034049553111
+        },
+        "matched_filter_snr": {
+          "min": 9.47620413131234,
+          "max": 330.9073433371193
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.0257157219780816
+        }
+      }
+    },
+    "by_band_pair": {
+      "450-460": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.0037530475203457116,
+          "max": 0.08820971219939362
+        },
+        "matched_filter_snr": {
+          "min": 1.9215603304170044,
+          "max": 45.163372646089535
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "450-650": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.03402863826324388,
+          "max": 1.4277031527615862
+        },
+        "matched_filter_snr": {
+          "min": 17.422662790780866,
+          "max": 730.9840142139321
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.07396613226996528
+        }
+      },
+      "480-620": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.029695519307642377,
+          "max": 1.0568882991235327
+        },
+        "matched_filter_snr": {
+          "min": 15.204105885512897,
+          "max": 541.1268091512487
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.05707761976453993
+        }
+      },
+      "490-510": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.014419431813687655,
+          "max": 0.13780112272360046
+        },
+        "matched_filter_snr": {
+          "min": 7.3827490886080795,
+          "max": 70.55417483448343
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 6.781684027777777e-06
+        }
+      },
+      "530-570": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.010414537079039915,
+          "max": 0.31848093613932865
+        },
+        "matched_filter_snr": {
+          "min": 5.3322429844684365,
+          "max": 163.06223930333627
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.0035188462999131945
+        }
+      }
+    },
+    "by_separation": {
+      "adjacent (10 nm)": {
+        "configurations": 15,
+        "cases": 135,
+        "per_pixel_snr": {
+          "min": 0.0037530475203457116,
+          "max": 0.08820971219939362
+        },
+        "matched_filter_snr": {
+          "min": 1.9215603304170044,
+          "max": 45.163372646089535
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.0
+        }
+      },
+      "near (20-40 nm)": {
+        "configurations": 30,
+        "cases": 270,
+        "per_pixel_snr": {
+          "min": 0.010414537079039915,
+          "max": 0.31848093613932865
+        },
+        "matched_filter_snr": {
+          "min": 5.3322429844684365,
+          "max": 163.06223930333627
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.0035188462999131945
+        }
+      },
+      "distant (>= 50 nm)": {
+        "configurations": 30,
+        "cases": 270,
+        "per_pixel_snr": {
+          "min": 0.029695519307642377,
+          "max": 1.4277031527615862
+        },
+        "matched_filter_snr": {
+          "min": 15.204105885512897,
+          "max": 730.9840142139321
+        },
+        "detectable_fraction": {
+          "min": 0.0,
+          "max": 0.07396613226996528
+        }
+      }
+    },
+    "by_strength_and_separation": {
+      "0.25": {
+        "adjacent (10 nm)": {
+          "configurations": 5,
+          "cases": 45,
+          "per_pixel_snr": {
+            "min": 0.0037530475203457116,
+            "max": 0.0220523751062943
+          },
+          "matched_filter_snr": {
+            "min": 1.9215603304170044,
+            "max": 11.290816054422681
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "near (20-40 nm)": {
+          "configurations": 10,
+          "cases": 90,
+          "per_pixel_snr": {
+            "min": 0.010414537079039915,
+            "max": 0.07962025430592806
+          },
+          "matched_filter_snr": {
+            "min": 5.3322429844684365,
+            "max": 40.76557020463517
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "distant (>= 50 nm)": {
+          "configurations": 10,
+          "cases": 90,
+          "per_pixel_snr": {
+            "min": 0.03402863826324388,
+            "max": 0.35692579010683706
+          },
+          "matched_filter_snr": {
+            "min": 17.422662790780866,
+            "max": 182.74600453470057
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.008463117811414931
+          }
+        }
+      },
+      "0.5": {
+        "adjacent (10 nm)": {
+          "configurations": 5,
+          "cases": 45,
+          "per_pixel_snr": {
+            "min": 0.008887879406103909,
+            "max": 0.044104815169607965
+          },
+          "matched_filter_snr": {
+            "min": 4.550594255925201,
+            "max": 22.581665366839278
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "near (20-40 nm)": {
+          "configurations": 10,
+          "cases": 90,
+          "per_pixel_snr": {
+            "min": 0.023553364600512616,
+            "max": 0.1592405353938319
+          },
+          "matched_filter_snr": {
+            "min": 12.05932267546246,
+            "max": 81.53115412164193
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "distant (>= 50 nm)": {
+          "configurations": 10,
+          "cases": 90,
+          "per_pixel_snr": {
+            "min": 0.029695519307642377,
+            "max": 0.7138515629437663
+          },
+          "matched_filter_snr": {
+            "min": 15.204105885512897,
+            "max": 365.49200022720834
+          },
+          "detectable_fraction": {
+            "min": 5.255805121527778e-05,
+            "max": 0.03731960720486111
+          }
+        }
+      },
+      "1": {
+        "adjacent (10 nm)": {
+          "configurations": 5,
+          "cases": 45,
+          "per_pixel_snr": {
+            "min": 0.009799964298234853,
+            "max": 0.08820971219939362
+          },
+          "matched_filter_snr": {
+            "min": 5.017581720696245,
+            "max": 45.163372646089535
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0
+          }
+        },
+        "near (20-40 nm)": {
+          "configurations": 10,
+          "cases": 90,
+          "per_pixel_snr": {
+            "min": 0.03461895373270762,
+            "max": 0.31848093613932865
+          },
+          "matched_filter_snr": {
+            "min": 17.7249043111463,
+            "max": 163.06223930333627
+          },
+          "detectable_fraction": {
+            "min": 0.0,
+            "max": 0.0035188462999131945
+          }
+        },
+        "distant (>= 50 nm)": {
+          "configurations": 10,
+          "cases": 90,
+          "per_pixel_snr": {
+            "min": 0.1346720026993106,
+            "max": 1.4277031527615862
+          },
+          "matched_filter_snr": {
+            "min": 68.95206538204702,
+            "max": 730.9840142139321
+          },
+          "detectable_fraction": {
+            "min": 0.0009659661187065972,
+            "max": 0.07396613226996528
+          }
+        }
+      }
+    }
+  },
+  "notes": [
+    "per-case records were not retained in the committed JSON, so no per-case extreme is quoted",
+    "the matched-filter SNR assumes the exact 21-band difference pattern is known; it is a detectability ceiling, not an achievable blind recovery",
+    "a single-kernel-per-band operator is identically blind to these changes, so every number here is a chromatic-minus-achromatic operator difference"
+  ]
+}

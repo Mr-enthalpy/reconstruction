@@ -12,6 +12,7 @@ provenance checks; nothing here is a second training framework.
 | `otf_controls.py` | OTF of the chromatic set, the mean kernel and the 550 nm kernel |
 | `band_report.py` | per-band relative L2 and RMSE averaged over validation scenes, with paired deltas; reads `validation.json` only |
 | `band_seeds.py` | the same per band, paired inside each seed and aggregated across seeds with the pre-registered stability rule |
+| `snr_strata.py` | stratified SNR summary of `encoding_observability.json` (strength x band separation x mask); ranges are configuration means, not per-case extremes |
 | `summarize_seeds.py` | paired multi-seed summary from finished run directories; `--primary-arm` / `--reference-arm` select the pair (default `s1c` vs `s3a`) |
 | `make_achromatic_control.py` | writes the mean-kernel and single-band (550 nm) control kernels |
 
@@ -115,3 +116,18 @@ scene spread for training variability.
 `summarize_seeds.py` carries the same curves in its `runs` / `pairs` blocks, so a
 future reduction cannot silently drop the band axis again; it deliberately does
 not evaluate stability (that belongs to `band_seeds.py`).
+
+## Observability SNR
+
+`snr_strata.py` reads `encoding_observability.json` and reports the SNR ranges
+**per perturbation strength, per band separation and per mask** instead of one
+min-max over all 675 cases. Two conventions are fixed in its output:
+
+- every range is a range of **configuration means over the nine validation
+  scenes**; the per-case records were not retained, so no per-case extreme is
+  quoted;
+- the matched-filter SNR assumes the exact 21-band difference pattern is known,
+  so it is a detectability ceiling, not an achievable blind recovery.
+
+Collapsing the strata once produced a range that only covered the weak/adjacent
+configurations; the stratified table is the one to cite.
