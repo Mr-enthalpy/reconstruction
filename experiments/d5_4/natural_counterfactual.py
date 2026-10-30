@@ -26,7 +26,7 @@ def construct(cube, direction, scale, mask_name, basis, seed=20261030):
     mask /= max(np.max(abs(mask)), 1e-30)
     # scale refers to relative spectral shape, not an arbitrary raw alpha.
     proposed = scale * x.sum(0) * mask
-    active = abs(v) > 1e-14
+    active = abs(v) > 0
     bound = (np.minimum(x[active], 1-x[active])/abs(v[active,None,None])).min(0)
     z = np.sign(proposed) * np.minimum(abs(proposed), bound*(1-1e-12))
     delta = v[:,None,None] * z

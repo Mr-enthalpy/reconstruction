@@ -31,6 +31,13 @@ def test_weighted_null_projection():
     with pytest.raises(ValueError): zero_sum(np.ones(21))
 
 
+def test_neumann_preconditioner_is_exact_for_regularizer():
+    from experiments.d5_4.restricted_inverse_operator import regularizer_inverse
+    rng=np.random.default_rng(22); z=rng.normal(size=(17,23))
+    rhs=.7*grad_normal(z)+.003*z
+    np.testing.assert_allclose(regularizer_inverse(rhs,.7,.003),z,atol=2e-12)
+
+
 @pytest.mark.parametrize('mask',['smooth','texture','local'])
 def test_counterfactual_bounds_and_sum(mask):
     x,r,c = fixture()
@@ -88,3 +95,26 @@ def test_full_forward_difference_and_direction_metrics():
     assert m['cosine']==pytest.approx(-1)
     assert m['correct_direction_fraction']==0
     assert m['local_relative_l2']==pytest.approx(2)
+
+
+def test_loader_opens_only_requested_train_archive(tmp_path,monkeypatch):
+    import json
+    import experiments.d5_4.natural_spectral_basis as module
+    records=[dict(split='train',scene_id=str(i),array_index=i) for i in range(39)]
+    records += [dict(split='test',scene_id='frozen',array_index=0)]
+    (tmp_path/'manifest.json').write_text(json.dumps(records))
+    opened=[]
+    class Cubes:
+        shape=(39,21,512,512)
+        def __len__(self): return 39
+    class Archive:
+        def __enter__(self): return {'cube':Cubes()}
+        def __exit__(self,*args): pass
+    def fake_load(path,**kwargs):
+        opened.append(path.name)
+        assert path.name=='train.npz'
+        return Archive()
+    monkeypatch.setattr(module,'digest',lambda path:'expected')
+    monkeypatch.setattr(module.np,'load',fake_load)
+    _,selected=load_split(tmp_path,'train',dict(train_npz_sha256='expected',manifest_sha256='expected'))
+    assert opened==['train.npz'] and len(selected)==39

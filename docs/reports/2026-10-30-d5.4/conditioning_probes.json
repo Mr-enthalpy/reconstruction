@@ -1,0 +1,387 @@
+{
+  "status": "completed_descriptive_probes",
+  "rows": [
+    {
+      "arm": "chromatic",
+      "direction": 0,
+      "probe": "constant",
+      "amplitude_gain": 0.023437874151865254,
+      "interior_energy_fraction": 5.744426865587598e-15
+    },
+    {
+      "arm": "chromatic",
+      "direction": 0,
+      "probe": "local_smooth",
+      "amplitude_gain": 0.0056774405694188105,
+      "interior_energy_fraction": 0.9984030855400758
+    },
+    {
+      "arm": "chromatic",
+      "direction": 0,
+      "probe": "cosine_x_0.01",
+      "amplitude_gain": 0.0614777770593783,
+      "interior_energy_fraction": 0.4232563854590615
+    },
+    {
+      "arm": "chromatic",
+      "direction": 0,
+      "probe": "cosine_x_0.05",
+      "amplitude_gain": 0.2851678208169759,
+      "interior_energy_fraction": 0.5726040155634512
+    },
+    {
+      "arm": "chromatic",
+      "direction": 0,
+      "probe": "cosine_x_0.2",
+      "amplitude_gain": 0.6181572161500175,
+      "interior_energy_fraction": 0.5733880035712979
+    },
+    {
+      "arm": "chromatic",
+      "direction": 0,
+      "probe": "cosine_x_0.45",
+      "amplitude_gain": 0.039281570839488064,
+      "interior_energy_fraction": 0.49214749781156003
+    },
+    {
+      "arm": "chromatic",
+      "direction": 1,
+      "probe": "constant",
+      "amplitude_gain": 0.015992350847598667,
+      "interior_energy_fraction": 9.277644101651072e-15
+    },
+    {
+      "arm": "chromatic",
+      "direction": 1,
+      "probe": "local_smooth",
+      "amplitude_gain": 0.006547622424850042,
+      "interior_energy_fraction": 0.9987483777395454
+    },
+    {
+      "arm": "chromatic",
+      "direction": 1,
+      "probe": "cosine_x_0.01",
+      "amplitude_gain": 0.05889676997950952,
+      "interior_energy_fraction": 0.4677895792010579
+    },
+    {
+      "arm": "chromatic",
+      "direction": 1,
+      "probe": "cosine_x_0.05",
+      "amplitude_gain": 0.15183478903400666,
+      "interior_energy_fraction": 0.5747296310142371
+    },
+    {
+      "arm": "chromatic",
+      "direction": 1,
+      "probe": "cosine_x_0.2",
+      "amplitude_gain": 0.3279000238271184,
+      "interior_energy_fraction": 0.5771141085728657
+    },
+    {
+      "arm": "chromatic",
+      "direction": 1,
+      "probe": "cosine_x_0.45",
+      "amplitude_gain": 0.08346373816054174,
+      "interior_energy_fraction": 0.5731554946268312
+    },
+    {
+      "arm": "chromatic",
+      "direction": 2,
+      "probe": "constant",
+      "amplitude_gain": 0.0033720372187329875,
+      "interior_energy_fraction": 7.171712218185308e-14
+    },
+    {
+      "arm": "chromatic",
+      "direction": 2,
+      "probe": "local_smooth",
+      "amplitude_gain": 0.0006275949652194658,
+      "interior_energy_fraction": 0.9978900357565214
+    },
+    {
+      "arm": "chromatic",
+      "direction": 2,
+      "probe": "cosine_x_0.01",
+      "amplitude_gain": 0.008540076431231775,
+      "interior_energy_fraction": 0.4202139324859455
+    },
+    {
+      "arm": "chromatic",
+      "direction": 2,
+      "probe": "cosine_x_0.05",
+      "amplitude_gain": 0.025907439339274852,
+      "interior_energy_fraction": 0.594681248889481
+    },
+    {
+      "arm": "chromatic",
+      "direction": 2,
+      "probe": "cosine_x_0.2",
+      "amplitude_gain": 0.013533543085568221,
+      "interior_energy_fraction": 0.35012452744643724
+    },
+    {
+      "arm": "chromatic",
+      "direction": 2,
+      "probe": "cosine_x_0.45",
+      "amplitude_gain": 0.05132168368998035,
+      "interior_energy_fraction": 0.5664809684750785
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 0,
+      "probe": "constant",
+      "amplitude_gain": 9.542949462204944e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 0,
+      "probe": "local_smooth",
+      "amplitude_gain": 8.142141088783527e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 0,
+      "probe": "cosine_x_0.01",
+      "amplitude_gain": 8.823239560370478e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 0,
+      "probe": "cosine_x_0.05",
+      "amplitude_gain": 5.0091386746417276e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 0,
+      "probe": "cosine_x_0.2",
+      "amplitude_gain": 3.6685518601886525e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 0,
+      "probe": "cosine_x_0.45",
+      "amplitude_gain": 3.222352630576784e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 1,
+      "probe": "constant",
+      "amplitude_gain": 2.3119769132505953e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 1,
+      "probe": "local_smooth",
+      "amplitude_gain": 1.695219634605529e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 1,
+      "probe": "cosine_x_0.01",
+      "amplitude_gain": 2.198119480748787e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 1,
+      "probe": "cosine_x_0.05",
+      "amplitude_gain": 6.151053393722316e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 1,
+      "probe": "cosine_x_0.2",
+      "amplitude_gain": 5.4644101778492143e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 1,
+      "probe": "cosine_x_0.45",
+      "amplitude_gain": 3.557818276812718e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 2,
+      "probe": "constant",
+      "amplitude_gain": 1.5918828678803624e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 2,
+      "probe": "local_smooth",
+      "amplitude_gain": 1.8618448033724798e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 2,
+      "probe": "cosine_x_0.01",
+      "amplitude_gain": 1.014849730708972e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 2,
+      "probe": "cosine_x_0.05",
+      "amplitude_gain": 6.698486465664327e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 2,
+      "probe": "cosine_x_0.2",
+      "amplitude_gain": 5.4327097665439957e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_mean",
+      "direction": 2,
+      "probe": "cosine_x_0.45",
+      "amplitude_gain": 3.290666915590468e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 0,
+      "probe": "constant",
+      "amplitude_gain": 1.313759393360411e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 0,
+      "probe": "local_smooth",
+      "amplitude_gain": 8.706666851371403e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 0,
+      "probe": "cosine_x_0.01",
+      "amplitude_gain": 1.0403460081306594e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 0,
+      "probe": "cosine_x_0.05",
+      "amplitude_gain": 4.4844112760867905e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 0,
+      "probe": "cosine_x_0.2",
+      "amplitude_gain": 3.8018029478235315e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 0,
+      "probe": "cosine_x_0.45",
+      "amplitude_gain": 3.220420333991867e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 1,
+      "probe": "constant",
+      "amplitude_gain": 2.289190861269625e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 1,
+      "probe": "local_smooth",
+      "amplitude_gain": 1.604959994862995e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 1,
+      "probe": "cosine_x_0.01",
+      "amplitude_gain": 1.3898899812691649e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 1,
+      "probe": "cosine_x_0.05",
+      "amplitude_gain": 6.303636329877282e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 1,
+      "probe": "cosine_x_0.2",
+      "amplitude_gain": 5.419651282616842e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 1,
+      "probe": "cosine_x_0.45",
+      "amplitude_gain": 3.62892800040177e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 2,
+      "probe": "constant",
+      "amplitude_gain": 1.5104325121897244e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 2,
+      "probe": "local_smooth",
+      "amplitude_gain": 1.9145479780203227e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 2,
+      "probe": "cosine_x_0.01",
+      "amplitude_gain": 1.189653201089035e-16,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 2,
+      "probe": "cosine_x_0.05",
+      "amplitude_gain": 6.426120638331275e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 2,
+      "probe": "cosine_x_0.2",
+      "amplitude_gain": 5.310656655677453e-17,
+      "interior_energy_fraction": null
+    },
+    {
+      "arm": "achromatic_550",
+      "direction": 2,
+      "probe": "cosine_x_0.45",
+      "amplitude_gain": 3.417011052482829e-17,
+      "interior_energy_fraction": null
+    }
+  ],
+  "kernel_sha256": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+  "basis_sha256": "a2a45de3900017f41cdbd02594ee8ef0ecc281cdbad8049c02453f3cd8e91fb9",
+  "boundary": "existing full zero-padded convolution and centre crop",
+  "limitation": "Probe gains are not singular values or a condition-number estimate; no circulant inverse used."
+}

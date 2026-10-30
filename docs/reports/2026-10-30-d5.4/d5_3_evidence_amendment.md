@@ -5,6 +5,15 @@ Machine-readable audit: `evidence_audit.json`; source hashes and historically re
 data/kernel/checkpoint SHA256 values are retained there. A recorded hash is not a fresh
 verification of the original bytes.
 
+Subsequent byte verification is recorded in `checkpoint_registry.json` (SHA256
+`900be1d9991b2e7cbdb033d68ff44819dbfb141069044f837fc15442c6356aa7`).
+All nine best checkpoints were found and loaded through the existing strict PSF
+provenance gate. All best epochs match the published validation files. The six
+S1 checkpoint hashes match D5.3's response registry; the three 550 nm hashes are
+newly recorded byte observations, not a claim that an earlier weight hash existed.
+The earlier audit's `checkpoint_bytes_checked: false` describes its earlier read-only
+report audit, superseded by this explicitly separate original-byte check.
+
 The current D5.3 main report already contains the corrected SNR strata. The older
 0.03–0.32 / 1.9–73 shorthand is explicitly identified as covering only a subset;
 it cannot summarise all 675 cases. There are 75 configuration records, each a mean

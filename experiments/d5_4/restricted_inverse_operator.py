@@ -2,6 +2,7 @@
 import numpy as np
 import torch
 from scipy.sparse.linalg import LinearOperator, cg
+from scipy.fft import dctn, idctn
 from lcd_reconstruction.unrolling.full_spectral import SinglePlanePhysics
 
 
@@ -11,6 +12,7 @@ class RestrictedOperator:
         self.device = device
         effective = np.einsum('b,bhw->hw', np.asarray(direction), np.asarray(kernels))
         self.unobservable = np.linalg.norm(effective) <= 1e-12 * np.linalg.norm(kernels)
+        self.diagonal_scale = float(np.sum(effective**2))
         self.v = torch.as_tensor(direction, dtype=torch.float64, device=device)
         if self.v.shape != (21,) or not torch.isfinite(self.v).all():
             raise ValueError('finite 21-band direction required')
@@ -40,6 +42,14 @@ def grad_normal(z):
     return result
 
 
+def regularizer_inverse(rhs, lam, ridge):
+    """Exact inverse of Neumann D*D + positive ridge via orthonormal DCT-II."""
+    h,w=rhs.shape
+    eigen=4*np.sin(np.pi*np.arange(h)/(2*h))[:,None]**2
+    eigen=eigen+4*np.sin(np.pi*np.arange(w)/(2*w))[None,:]**2
+    return idctn(dctn(rhs,type=2,norm='ortho')/(lam*eigen+ridge),type=2,norm='ortho')
+
+
 def solve(operator, residual, lam, mu, rtol=1e-6, maxiter=300):
     if lam < 0 or mu <= 0:
         raise ValueError('nonnegative gradient and positive ridge regularisation required')
@@ -54,11 +64,16 @@ def solve(operator, residual, lam, mu, rtol=1e-6, maxiter=300):
     rhs = operator.adjoint(residual).ravel()
     history = []
     matrix = LinearOperator((size,size), matvec=normal, dtype=np.float64)
+    preconditioner=LinearOperator((size,size),dtype=np.float64,matvec=lambda r:
+        regularizer_inverse(r.reshape(operator.hw),lam,mu+operator.diagonal_scale).ravel())
     z, info = cg(matrix, rhs, x0=np.zeros(size), rtol=rtol, atol=0., maxiter=maxiter,
+                 M=preconditioner,
                  callback=lambda x: history.append(float(np.linalg.norm(normal(x)-rhs))))
     z = z.reshape(operator.hw)
     return z, dict(converged=info == 0, cg_info=int(info), iterations=len(history),
                    normal_residual_history=history, lambda_grad=lam, mu=mu,
+                   preconditioner='Neumann regularizer inverse with kernel-energy diagonal; original B/B* unchanged',
+                   normal_residual_relative=float(np.linalg.norm(normal(z.ravel())-rhs)/max(np.linalg.norm(rhs),1e-30)),
                    measurement_residual=float(np.linalg.norm(operator.forward(z)-residual)),
                    initialization='zero; no GT coefficients supplied')
 

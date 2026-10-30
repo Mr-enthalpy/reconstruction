@@ -96,6 +96,20 @@ def run(args):
                 template=delta_y/2
                 row['single_oracle']=detect(template,template+n1,sigma)
                 row['paired_oracle']=detect(template,delta_y+n1-n2,sigma,2)
+                for name,truth_amplitude in (('single_oracle',1.),('paired_oracle',2.)):
+                    oracle=row[name]
+                    oracle['true_amplitude']=truth_amplitude
+                    if oracle['alpha_hat'] is not None:
+                        oracle['amplitude_relative_error']=abs(oracle['alpha_hat']-truth_amplitude)/truth_amplitude
+                        oracle['expected_amplitude_snr']=truth_amplitude/oracle['alpha_standard_error'] if sigma else None
+                if sigma:
+                    fy=np.fft.fftfreq(z.shape[0])[:,None]; fx=np.fft.fftfreq(z.shape[1])[None,:]
+                    high=np.hypot(fy,fx)>=.5
+                    spectrum=np.fft.fft2(delta_y)
+                    energy=float(np.sum(abs(spectrum[high])**2))
+                    noise_energy=float(2*sigma*sigma*z.size*high.sum())
+                    row['snr']['radial']['0.5-corners']=dict(coefficient_count=int(high.sum()),
+                        signal_energy=energy,expected_noise_energy=noise_energy,snr=float(np.sqrt(energy/noise_energy)))
                 if args.mode=='inverse':
                     if args.lam is None or args.mu is None:
                         raise ValueError('inverse requires explicit training-selected lambda and mu')

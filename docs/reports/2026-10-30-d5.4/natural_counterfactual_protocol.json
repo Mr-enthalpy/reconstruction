@@ -8,6 +8,7 @@
   "noise": "0, 0.001, 0.005 times one fixed chromatic reference RMS; independent plus/minus noise, variance 2 sigma squared",
   "inverse_prior": "true baseline and true training-derived direction, no spatial mask or truth initialisation",
   "regularisation": "finite training-only grid in diagnostics.json; 100 iterations for every candidate and evaluation",
+  "solver_amendment_before_validation_inversion": "The initial unpreconditioned training grid selected a candidate with 0/9 converged cases. Preserve it as training_regularisation.json. Add a standard SPD Neumann-regularizer DCT preconditioner to the same B*B objective and repeat the identical training grid at 100 iterations. No validation inversion outcomes were used for this correction. The originally started combined operator/inverse job was stopped before inverse evaluation; its partial log is not a result.",
   "diagnostic_recovery_threshold": "relative L2 below 0.5 and cosine above 0.8; inverse also requires solver convergence",
   "gate": "At least 8/9 validation scenes in a complete direction/mask/scale/noise stratum must meet the inverse threshold before removing Oracle information or considering S4. Report every stratum and all failures. This is a diagnostic gate, not statistical significance.",
   "network_comparison": "Three model seeds separately; no checkpoint selection; response magnitude alone never counts as recovery",
