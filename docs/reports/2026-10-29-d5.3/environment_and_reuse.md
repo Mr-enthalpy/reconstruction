@@ -10,10 +10,10 @@
 
 | 文件 | 状态 | 说明 |
 |---|---|---|
-| `experiments/d5/train.py` | 改动 | 新增 `--seed`（默认仍取 config，记录 `seed_source`）；训练开始后把 `measured_forward_rms`、`train_noise_std_absolute`、`cosine_epochs`、`steps_per_epoch` 追加写入 `execution.json` |
+| `experiments/d5/train.py` | 改动 | 新增 `--seed`（默认仍取 config，记录 `seed_source`）；训练开始后把 `measured_forward_rms`、`train_noise_std_absolute`、`cosine_epochs`、`steps_per_epoch` 追加写入 `execution.json`；`evaluate_metrics` 的 `CAVE/KAIST/ALL` 增加 `band_relative_l2_mean`、`band_rmse_mean` 两个 21 元列表（2026-10-30 追加，见 §1a） |
 | `experiments/d5_2/frequency_diagnostics.py` | 改动 | 接入 `resolve_psf_policy`；此前是全仓库最后一个仍会静默覆盖 `kernel_fft` 的脚本 |
-| `experiments/d5_3/*` | 新增 | 反事实构造、算子级可观测性、冻结网络响应、OTF 对照、多种子汇总、控制核生成、启动脚本 |
-| `tests/test_d5_3_*` | 新增 | 27 + 5 个测试（见 §4） |
+| `experiments/d5_3/*` | 新增 | 反事实构造、算子级可观测性、冻结网络响应、OTF 对照、多种子汇总、逐波段报告、控制核生成、启动脚本 |
+| `tests/test_d5_3_*` | 新增 | 27 + 5 + 12 个测试（见 §4） |
 
 **数值不变性证据**：用 `git show 30cd8d4:experiments/d5/train.py` 与改后版本在同一 tiny 数据集上各跑 3 epoch（CPU），`history.json` 的 SHA256 完全相同：
 
@@ -23,6 +23,30 @@ history_sha256    = e06720c57c66acbdfe6e25d5e32ee32c176e2ce57b8d2f51b8d35494f707
 ```
 
 `resume_equivalence.py` 仍为 `passed=true, differences=[]`。
+
+### 1a. 逐波段聚合的加入（2026-10-30，不改任何旧数字）
+
+`evaluate_metrics` 现在额外写 `band_relative_l2_mean` / `band_rmse_mean`。这会改变
+`history.json` 与 `validation.json` 的**字节**（cadence epoch 的 `metrics` 行多了两个数组），
+所以上一节的"字节相同"只对加入它们之前的版本成立。对加入之后的版本，重跑了同一 tiny 数据集：
+
+| 检查 | 结果 |
+|---|---|
+| 去掉两个新 key 后 `history.json` 逐字节相同 | ✅ |
+| `history.json` 原始字节 | ❌ 不同（预期，仅因新增数组） |
+| `best.pt` 权重、`best_epoch`、`validation_loss` | ✅ 全等 |
+| 8 个旧聚合指标 | ✅ 全等 |
+| 9 个场景的全部旧逐场景指标 | ✅ 全等 |
+| `consistency` 块 | `compared_keys` 10 个（含两个新列表）、`unresolved_keys=[]`、`max_abs_difference=0.0`、`consistent=true` |
+
+顺带修掉一个会被新 key 触发的真实崩溃：原 `consistency` 计算对每个 key 做
+`float(np.mean(...))` 再 `float(recorded[key])`，遇到列表会 `TypeError`。现改为
+`compare_recorded_metrics`，标量比绝对差、列表逐元素比并取最大差；
+`band_relative_l2_mean` → 逐场景 `band_relative_l2` 的命名映射也做了显式查找，
+避免把本来就叫 `ssim_band_mean` 的**标量**误当聚合 key 去掉后缀。
+
+老 checkpoint（D5.2/D5.3 已产出的 6 个 run）的 `selection.metrics` 里没有这两个 key，
+回放时只比对旧 key，行为与之前完全一致。
 
 ## 2. 训练噪声的自参照问题（实测）
 
@@ -74,7 +98,7 @@ Recorded training kernel: kernels.npz (array 070346a50f89).
 本地（`d4_general_20261020` 环境，同一提交 `1203ac9`）：
 
 ```text
-68 passed, 1 skipped        # D5.3 新增 27 项 + 控制核 5 项，其余为既有测试
+85 passed, 1 skipped        # D5.3 新增 27 + 控制核 5 + 逐波段报告 12 项，其余为既有测试
 ```
 
 容器内**未运行 pytest**（镜像没有 pytest，且未安装）：容器内只做真 GPU 训练与算子级检查，不把本地测试记作容器内通过。

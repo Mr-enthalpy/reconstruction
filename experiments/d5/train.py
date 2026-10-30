@@ -95,12 +95,46 @@ def evaluate_metrics(model, data, records):
     keys = ["psnr_unit_range_db", "ssim_band_mean", "sam_deg", "cube_relative_l2",
             "global_spectrum_relative_l2", "high_frequency_relative_l2",
             "spatial_gradient_relative_l2", "measurement_relative_l2"]
+    # Per-band entries are averaged over scenes band by band. That is a mean of the
+    # per-scene ratios ||error_b|| / ||truth_b||, not a ratio of summed norms, so it
+    # is NOT comparable to cube_relative_l2 and it weights every band equally
+    # regardless of that band's energy.
+    per_band = ["band_relative_l2", "band_rmse"]
     grouped = {}
     for source, rows in values.items():
         grouped[source] = {key: float(np.mean([row[key] for row in rows])) for key in keys}
-    grouped["ALL"] = {key: float(np.mean([row[key] for rows in values.values() for row in rows]))
-                      for key in keys}
+        grouped[source].update({f"{key}_mean": np.mean([row[key] for row in rows], axis=0).tolist()
+                                for key in per_band})
+    flat = [row for rows in values.values() for row in rows]
+    grouped["ALL"] = {key: float(np.mean([row[key] for row in flat])) for key in keys}
+    grouped["ALL"].update({f"{key}_mean": np.mean([row[key] for row in flat], axis=0).tolist()
+                           for key in per_band})
     return grouped
+
+
+def compare_recorded_metrics(recorded, recomputed):
+    """Compare a checkpoint's recorded metrics with the values recomputed at the end.
+
+    Scalars are compared directly; per-band lists (which are 21-element arrays) are
+    compared elementwise and reduced to their largest absolute difference. Without
+    this dispatch ``float(list)`` raises and the final validation step of every run
+    would crash.
+    """
+    differences = {}
+    for key, value in recomputed.items():
+        reference = (recorded or {}).get(key)
+        if reference is None:
+            continue
+        if isinstance(reference, (list, tuple)):
+            a = np.asarray(reference, dtype=np.float64).ravel()
+            b = np.asarray(value, dtype=np.float64).ravel()
+            if a.shape != b.shape:
+                differences[key] = float("inf")
+            else:
+                differences[key] = float(np.abs(a - b).max()) if a.size else 0.0
+        else:
+            differences[key] = abs(float(value) - float(reference))
+    return differences
 
 
 def main():
@@ -340,16 +374,39 @@ def main():
     recorded_metrics = (checkpoint.get("selection") or {}).get("metrics")
     consistency = None
     if recorded_metrics:
-        recomputed = {key: float(np.mean([r["metrics"][key] for r in results]))
-                      for key in recorded_metrics.get("ALL", {})}
-        differences = {key: abs(recomputed[key] - float(recorded_metrics["ALL"][key]))
-                       for key in recomputed if recorded_metrics["ALL"].get(key) is not None}
+        recorded_all = recorded_metrics.get("ALL", {})
+        per_scene = results[0]["metrics"] if results else {}
+        recomputed, unresolved = {}, []
+        for key, value in recorded_all.items():
+            if value is None:
+                continue
+            # Aggregate per-band keys are suffixed "_mean" while the per-scene rows
+            # carry the bare name (band_relative_l2 -> band_relative_l2_mean). Look
+            # the name up first, because scalars such as ssim_band_mean already end
+            # in "_mean" and must not be stripped.
+            source = key if key in per_scene else None
+            if source is None and key.endswith("_mean") and key[:-5] in per_scene:
+                source = key[:-5]
+            if source is None:
+                unresolved.append(key)
+                continue
+            if isinstance(value, (list, tuple)):
+                recomputed[key] = np.mean([r["metrics"][source] for r in results], axis=0)
+            else:
+                recomputed[key] = float(np.mean([r["metrics"][source] for r in results]))
+        differences = compare_recorded_metrics(recorded_all, recomputed)
+        scales = {key: (float(np.abs(np.asarray(recorded_all[key], dtype=np.float64)).max())
+                        if isinstance(recorded_all[key], (list, tuple))
+                        else abs(float(recorded_all[key])))
+                  for key in differences}
         consistency = dict(
             recorded_epoch=checkpoint.get("selection", {}).get("epoch"),
             rule=checkpoint.get("selection", {}).get("rule"),
+            compared_keys=sorted(differences),
+            unresolved_keys=sorted(unresolved),
             max_abs_difference=max(differences.values()) if differences else None,
-            consistent=all(value <= max(1e-9, 1e-6 * abs(float(recorded_metrics["ALL"][key])))
-                           for key, value in differences.items()))
+            consistent=all(value <= max(1e-9, 1e-6 * scales[key])
+                           for key, value in differences.items()) and not unresolved)
     summary = dict(status="training completed; validation only",
                    best_epoch=checkpoint["epoch"], best_validation_loss=checkpoint["validation_loss"],
                    results=results, seconds=time.perf_counter() - started,

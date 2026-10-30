@@ -14,6 +14,7 @@
 | S2 反事实算子级可观测性 | ✅ 已完成 | 675 个反事实对；消色差残差 3.8e-6（float32 噪声），解析式误差 1.4e-7 |
 | S2 冻结网络响应 | ➖ 已完成，结果为负 | 恢复 1.87%、余弦 0.005、低于自身噪声响应 5 倍；3 seed 一致 |
 | S3 平均核 / 550 nm OTF 分析 | ✅ 已完成 | 平均核高频 OTF 是色散波段均值的 0.981 倍 |
+| 逐波段相对 L2 分析 | ✅ 已完成（单 seed） | 21/21 波段色散更低、19/21 波段超过场景 sd、450/460 nm 不满足；D5.3 三 seed 待补 |
 | S3 Achromatic-550 **训练**对照 | ⛔ 未执行 | 8 h 租约被 S1 占满；随后客户端 `job start` 失效（见下），无法再开新作业 |
 | S4 A-large / C6 | ⛔ 未执行 | 门槛设计：S1–S3 结论清楚且资源允许才做；本轮未进入 |
 | G4 冻结测试 | ⛔ 按设计不执行 | `test.npz` 全程未下载、未上传、未加载 |
@@ -42,6 +43,8 @@
 | `encoding_observability.json` | 算子级测量差异、解析校验、单像素/匹配滤波 SNR、按频段与波段分组 |
 | `reconstruction_response.json` | 6 个冻结 checkpoint 的响应、恒等/噪声-only 对照、逐 seed 汇总 |
 | `otf_control.json` | 三核 OTF 径向剖面、波段间散布、零和敏感度 |
+| `per_band_d5_2.json` | 21 波段 × 9 场景的逐波段相对 L2 与配对 Δ（`band_report.py` 输出） |
+| `per_band_analysis.md` | 逐波段维度的定义、完整表、波段结构、与 SAM 相反的解释边界、单 seed 限制 |
 | `model_capacity_comparison.md` | S4 未执行的原因与触发条件 |
 | `scientific_conclusions.md` | A/B/C 三类结论分开陈述，含"支持 / 不支持 / 待验证"状态表 |
 

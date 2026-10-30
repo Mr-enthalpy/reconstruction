@@ -10,6 +10,7 @@ provenance checks; nothing here is a second training framework.
 | `encoding_observability.py` | operator-level (no network) measurement difference, analytic check and noise comparison |
 | `reconstruction_response.py` | frozen reconstructor response to the same pairs, with identity / noise-only / achromatic controls |
 | `otf_controls.py` | OTF of the chromatic set, the mean kernel and the 550 nm kernel |
+| `band_report.py` | per-band relative L2 and RMSE averaged over validation scenes, with paired deltas; reads `validation.json` only |
 | `summarize_seeds.py` | paired multi-seed summary from finished run directories |
 
 ## Why the construction works
@@ -72,3 +73,18 @@ python3 experiments/d5_3/summarize_seeds.py --runs <runs/d5_3> \
   seed are direction evidence only;
 - validation loss is not compared across arms (each arm's own forward RMS is
   both the noise scale and the data-loss normaliser).
+
+## Per-band errors
+
+`band_report.py` turns the per-scene `band_relative_l2` / `band_rmse` lists that
+`reconstruction_metrics` already returns into a band-by-band scene average, with
+paired deltas when two conditions are given. It reads `validation.json` only, so
+it also works on runs written before the aggregate carried per-band means.
+
+`train.py` now writes `band_relative_l2_mean` and `band_rmse_mean` into the
+`CAVE` / `KAIST` / `ALL` aggregate blocks, so new runs carry the same numbers
+without a second pass; the per-band report can be used to cross-check them.
+
+Both quantities are a **mean of per-scene ratios** `||error_b|| / ||truth_b||`,
+not `sum||error_b|| / sum||truth_b||`. They weight every band equally regardless
+of band energy, so they are not comparable to `cube_relative_l2`.
