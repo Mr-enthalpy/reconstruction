@@ -4,6 +4,7 @@ import torch
 from scipy.sparse.linalg import LinearOperator, cg
 from scipy.fft import dctn, idctn
 from lcd_reconstruction.unrolling.full_spectral import SinglePlanePhysics
+from lcd_reconstruction.unrolling.spatial_pgd import FFTMeasuredOperator
 
 
 class RestrictedOperator:
@@ -12,23 +13,27 @@ class RestrictedOperator:
         self.device = device
         effective = np.einsum('b,bhw->hw', np.asarray(direction), np.asarray(kernels))
         self.unobservable = np.linalg.norm(effective) <= 1e-12 * np.linalg.norm(kernels)
-        self.diagonal_scale = float(np.sum(effective**2))
+        self.diagonal_scale = 0.0
         self.v = torch.as_tensor(direction, dtype=torch.float64, device=device)
         if self.v.shape != (21,) or not torch.isfinite(self.v).all():
             raise ValueError('finite 21-band direction required')
         self.physics = SinglePlanePhysics(torch.as_tensor(kernels, dtype=torch.float64,
                                                          device=device), self.hw)
+        # Exact distributivity under the same zero padding and crop, not a new
+        # physical kernel or a circulant approximation. Full physics stays above
+        # for independent difference/adjoint checks.
+        self.restricted = FFTMeasuredOperator(torch.as_tensor(effective[None],
+                                               dtype=torch.float64,device=device),self.hw)
 
     def forward(self, z):
         with torch.no_grad():
             z = torch.as_tensor(np.asarray(z).reshape(self.hw), dtype=torch.float64, device=self.device)
-            return self.physics((self.v[:,None,None]*z)[None])[0,0].cpu().numpy()
+            return self.restricted(z[None]).cpu().numpy()
 
     def adjoint(self, residual):
         with torch.no_grad():
             r = torch.as_tensor(np.asarray(residual).reshape(self.hw), dtype=torch.float64, device=self.device)
-            back = self.physics.adjoint(r[None,None])[0]
-            return (back*self.v[:,None,None]).sum(0).cpu().numpy()
+            return self.restricted.adjoint(r)[0].cpu().numpy()
 
 
 def grad_normal(z):
@@ -72,7 +77,7 @@ def solve(operator, residual, lam, mu, rtol=1e-6, maxiter=300):
     z = z.reshape(operator.hw)
     return z, dict(converged=info == 0, cg_info=int(info), iterations=len(history),
                    normal_residual_history=history, lambda_grad=lam, mu=mu,
-                   preconditioner='Neumann regularizer inverse with kernel-energy diagonal; original B/B* unchanged',
+                   preconditioner='exact Neumann regularizer inverse; original zero-boundary B/B* unchanged',
                    normal_residual_relative=float(np.linalg.norm(normal(z.ravel())-rhs)/max(np.linalg.norm(rhs),1e-30)),
                    measurement_residual=float(np.linalg.norm(operator.forward(z)-residual)),
                    initialization='zero; no GT coefficients supplied')

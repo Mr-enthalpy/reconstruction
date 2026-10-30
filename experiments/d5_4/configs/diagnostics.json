@@ -14,7 +14,7 @@
   "shape": [21, 512, 512],
   "splits": {"train": 39, "val": 9},
   "test_access": "forbidden",
-  "inverse": {"lambda_grid": [0.000001, 0.0001, 0.01, 1.0], "mu_grid": [0.00000001, 0.0001], "rtol": 0.000001, "maxiter": 100},
-  "hyperparameter_selection": "First three sorted training scenes, all three directions, local mask, middle amplitude, 0.5% noise. Minimise scene-mean coefficient relative L2 at common 100-iteration cap; report nonconvergence. No val tuning.",
+  "inverse": {"lambda_grid": [0.000001, 0.0001, 0.01, 1.0], "mu_grid": [0.00000001, 0.0001], "rtol": 0.000001, "maxiter": 1000},
+  "hyperparameter_selection": "First three sorted training scenes, all three directions, local mask, middle amplitude; separate grid for each noise fraction. Minimise scene-mean coefficient relative L2 at common 1000-iteration cap; report nonconvergence. No val tuning. Earlier 100-iteration grids remain numerical pilot evidence.",
   "s4": "gated; no training authorized by implementation completion"
 }

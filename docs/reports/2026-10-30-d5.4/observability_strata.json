@@ -1,0 +1,1088 @@
+{
+  "source_sha256": "1cbfc46e89f26684dd5af9702ff337a3405064ab06572c3ccc2572e20f3736e4",
+  "strata": [
+    {
+      "noise": 0.001,
+      "mask": "local",
+      "level": 0,
+      "direction": 0,
+      "mean_single_template_snr": 38.4184220583011,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 29.883340684219608,
+        "fake_and_real_lemons": 13.302704983785482,
+        "fake_and_real_strawberries": 11.673597457019218,
+        "fake_and_real_sushi": 24.498352721204913,
+        "fake_and_real_tomatoes": 42.398077915045086,
+        "kaist_25": 60.49948003907338,
+        "kaist_26": 49.09681992934771,
+        "kaist_28": 104.17361962005528,
+        "kaist_29": 10.239805174959123
+      },
+      "mean_paired_pixel_rms_snr": 0.10611690140590445
+    },
+    {
+      "noise": 0.001,
+      "mask": "local",
+      "level": 0,
+      "direction": 1,
+      "mean_single_template_snr": 23.51014007892747,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 22.614228615205203,
+        "fake_and_real_lemons": 10.72706161836585,
+        "fake_and_real_strawberries": 6.144883794818358,
+        "fake_and_real_sushi": 17.972960356230434,
+        "fake_and_real_tomatoes": 23.993713578851402,
+        "kaist_25": 34.96732648838905,
+        "kaist_26": 31.882972532174566,
+        "kaist_28": 54.68650219038262,
+        "kaist_29": 8.601611535929761
+      },
+      "mean_paired_pixel_rms_snr": 0.06493820107990331
+    },
+    {
+      "noise": 0.001,
+      "mask": "local",
+      "level": 0,
+      "direction": 2,
+      "mean_single_template_snr": 5.1904239054473695,
+      "scenes_snr_ge_3": 6,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 3.9035706408779416,
+        "fake_and_real_lemons": 1.833711191599645,
+        "fake_and_real_strawberries": 1.7353451582244217,
+        "fake_and_real_sushi": 3.28790507902692,
+        "fake_and_real_tomatoes": 6.159211315839375,
+        "kaist_25": 8.73386142736634,
+        "kaist_26": 5.816675859352474,
+        "kaist_28": 13.622959732663867,
+        "kaist_29": 1.6205747440753362
+      },
+      "mean_paired_pixel_rms_snr": 0.014336656018650772
+    },
+    {
+      "noise": 0.001,
+      "mask": "local",
+      "level": 1,
+      "direction": 0,
+      "mean_single_template_snr": 61.315327069188825,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 47.79285305348919,
+        "fake_and_real_lemons": 21.275205848712528,
+        "fake_and_real_strawberries": 18.669750941316966,
+        "fake_and_real_sushi": 39.18056498533908,
+        "fake_and_real_tomatoes": 66.6800500751743,
+        "kaist_25": 96.73724357427855,
+        "kaist_26": 78.51925271871667,
+        "kaist_28": 166.606355934646,
+        "kaist_29": 16.376666491026203
+      },
+      "mean_paired_pixel_rms_snr": 0.16936126391130665
+    },
+    {
+      "noise": 0.001,
+      "mask": "local",
+      "level": 1,
+      "direction": 1,
+      "mean_single_template_snr": 37.59699264601504,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 36.16725842486701,
+        "fake_and_real_lemons": 17.155942671865017,
+        "fake_and_real_strawberries": 9.827600312156676,
+        "fake_and_real_sushi": 28.74438229475204,
+        "fake_and_real_tomatoes": 38.369075525723524,
+        "kaist_25": 55.90798362341379,
+        "kaist_26": 50.983107849860936,
+        "kaist_28": 87.46090307682496,
+        "kaist_29": 13.756680034671437
+      },
+      "mean_paired_pixel_rms_snr": 0.10384800176647654
+    },
+    {
+      "noise": 0.001,
+      "mask": "local",
+      "level": 1,
+      "direction": 2,
+      "mean_single_template_snr": 8.290955429305747,
+      "scenes_snr_ge_3": 6,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 6.243036211875454,
+        "fake_and_real_lemons": 2.9326804673126525,
+        "fake_and_real_strawberries": 2.7753622669067926,
+        "fake_and_real_sushi": 5.258393496103798,
+        "fake_and_real_tomatoes": 9.762687685420019,
+        "kaist_25": 13.96479630481712,
+        "kaist_26": 9.302440287851843,
+        "kaist_28": 21.787393837149473,
+        "kaist_29": 2.5918083063145665
+      },
+      "mean_paired_pixel_rms_snr": 0.022900745338193425
+    },
+    {
+      "noise": 0.001,
+      "mask": "local",
+      "level": 2,
+      "direction": 0,
+      "mean_single_template_snr": 114.81584695644091,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 92.23974081377267,
+        "fake_and_real_lemons": 41.06094003320093,
+        "fake_and_real_strawberries": 36.03243744325996,
+        "fake_and_real_sushi": 75.59952016191001,
+        "fake_and_real_tomatoes": 97.14803430369848,
+        "kaist_25": 186.6208950634321,
+        "kaist_26": 151.48560405687124,
+        "kaist_28": 321.54864393928364,
+        "kaist_29": 31.60680679253927
+      },
+      "mean_paired_pixel_rms_snr": 0.3171369686350633
+    },
+    {
+      "noise": 0.001,
+      "mask": "local",
+      "level": 2,
+      "direction": 1,
+      "mean_single_template_snr": 71.6778724601224,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 69.80245643257145,
+        "fake_and_real_lemons": 32.74248333687861,
+        "fake_and_real_strawberries": 18.967172865786946,
+        "fake_and_real_sushi": 55.44118481535821,
+        "fake_and_real_tomatoes": 66.62079336323814,
+        "kaist_25": 107.82970505875016,
+        "kaist_26": 98.34810688581723,
+        "kaist_28": 168.79869092803312,
+        "kaist_29": 26.550258454667745
+      },
+      "mean_paired_pixel_rms_snr": 0.1979840221780353
+    },
+    {
+      "noise": 0.001,
+      "mask": "local",
+      "level": 2,
+      "direction": 2,
+      "mean_single_template_snr": 15.558401858293912,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 12.048999071679146,
+        "fake_and_real_lemons": 5.6600447328763055,
+        "fake_and_real_strawberries": 5.356422138625965,
+        "fake_and_real_sushi": 10.140667938331474,
+        "fake_and_real_tomatoes": 14.87891768849402,
+        "kaist_25": 26.940214546594216,
+        "kaist_26": 17.948727963902265,
+        "kaist_28": 42.049457861347264,
+        "kaist_29": 5.002164782794551
+      },
+      "mean_paired_pixel_rms_snr": 0.042974419759472686
+    },
+    {
+      "noise": 0.001,
+      "mask": "smooth",
+      "level": 0,
+      "direction": 0,
+      "mean_single_template_snr": 43.94371655017878,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 35.213760139194044,
+        "fake_and_real_lemons": 42.19660996539296,
+        "fake_and_real_strawberries": 40.03643802763236,
+        "fake_and_real_sushi": 36.764714974125354,
+        "fake_and_real_tomatoes": 47.75987848885113,
+        "kaist_25": 50.046556510227106,
+        "kaist_26": 52.74560142547776,
+        "kaist_28": 61.813449943470154,
+        "kaist_29": 28.916439477238082
+      },
+      "mean_paired_pixel_rms_snr": 0.12137851548113643
+    },
+    {
+      "noise": 0.001,
+      "mask": "smooth",
+      "level": 0,
+      "direction": 1,
+      "mean_single_template_snr": 31.223107203110374,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 26.666945001763928,
+        "fake_and_real_lemons": 34.45104562368994,
+        "fake_and_real_strawberries": 30.229843658891795,
+        "fake_and_real_sushi": 26.957808770959442,
+        "fake_and_real_tomatoes": 30.388755385685393,
+        "kaist_25": 33.28179575944927,
+        "kaist_26": 33.10218117941636,
+        "kaist_28": 43.51286809065105,
+        "kaist_29": 22.416721357486228
+      },
+      "mean_paired_pixel_rms_snr": 0.08624246419153861
+    },
+    {
+      "noise": 0.001,
+      "mask": "smooth",
+      "level": 0,
+      "direction": 2,
+      "mean_single_template_snr": 5.878099419058724,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 4.7025222396772755,
+        "fake_and_real_lemons": 5.639315319955877,
+        "fake_and_real_strawberries": 5.848984284170219,
+        "fake_and_real_sushi": 5.014108242295532,
+        "fake_and_real_tomatoes": 6.340009536185305,
+        "kaist_25": 6.943721333731307,
+        "kaist_26": 6.124940156964987,
+        "kaist_28": 8.027828601316887,
+        "kaist_29": 4.261465057231129
+      },
+      "mean_paired_pixel_rms_snr": 0.01623610921759816
+    },
+    {
+      "noise": 0.001,
+      "mask": "smooth",
+      "level": 1,
+      "direction": 0,
+      "mean_single_template_snr": 70.18818509259647,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 56.31820868407067,
+        "fake_and_real_lemons": 67.48608512298185,
+        "fake_and_real_strawberries": 64.03394770924137,
+        "fake_and_real_sushi": 58.798867796427444,
+        "fake_and_real_tomatoes": 75.63669339736806,
+        "kaist_25": 80.00781173013942,
+        "kaist_26": 84.30644494623176,
+        "kaist_28": 98.85913228695729,
+        "kaist_29": 46.246474159950296
+      },
+      "mean_paired_pixel_rms_snr": 0.1938693032740293
+    },
+    {
+      "noise": 0.001,
+      "mask": "smooth",
+      "level": 1,
+      "direction": 1,
+      "mean_single_template_snr": 49.92571251471857,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 42.64891083221078,
+        "fake_and_real_lemons": 55.09812392671844,
+        "fake_and_real_strawberries": 48.34792567354589,
+        "fake_and_real_sushi": 43.11414101246848,
+        "fake_and_real_tomatoes": 48.60121381443195,
+        "kaist_25": 53.19910831432266,
+        "kaist_26": 52.8798561437025,
+        "kaist_28": 69.59075066498549,
+        "kaist_29": 35.85138225008092
+      },
+      "mean_paired_pixel_rms_snr": 0.13790160107315458
+    },
+    {
+      "noise": 0.001,
+      "mask": "smooth",
+      "level": 1,
+      "direction": 2,
+      "mean_single_template_snr": 9.394257059101369,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 7.520829449348074,
+        "fake_and_real_lemons": 9.019079510188915,
+        "fake_and_real_strawberries": 9.354526448789898,
+        "fake_and_real_sushi": 8.019173481040891,
+        "fake_and_real_tomatoes": 10.084812121077045,
+        "kaist_25": 11.103340597654393,
+        "kaist_26": 9.792109264250708,
+        "kaist_28": 12.839020802113344,
+        "kaist_29": 6.815421857449034
+      },
+      "mean_paired_pixel_rms_snr": 0.02594821433867254
+    },
+    {
+      "noise": 0.001,
+      "mask": "smooth",
+      "level": 2,
+      "direction": 0,
+      "mean_single_template_snr": 133.1948657402695,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 108.66548725043961,
+        "fake_and_real_lemons": 129.61161176951856,
+        "fake_and_real_strawberries": 123.59255281366104,
+        "fake_and_real_sushi": 110.99646292546804,
+        "fake_and_real_tomatoes": 129.40557366600635,
+        "kaist_25": 154.1881124779033,
+        "kaist_26": 162.24158387950715,
+        "kaist_28": 190.79716226645476,
+        "kaist_29": 89.25524461346677
+      },
+      "mean_paired_pixel_rms_snr": 0.36790231556318875
+    },
+    {
+      "noise": 0.001,
+      "mask": "smooth",
+      "level": 2,
+      "direction": 1,
+      "mean_single_template_snr": 95.87609059822405,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 82.29774978605076,
+        "fake_and_real_lemons": 105.65664469180685,
+        "fake_and_real_strawberries": 93.31316639975103,
+        "fake_and_real_sushi": 83.00909614949457,
+        "fake_and_real_tomatoes": 91.05514504276032,
+        "kaist_25": 102.4134075083143,
+        "kaist_26": 101.63731645617547,
+        "kaist_28": 134.30947085728562,
+        "kaist_29": 69.19281849237764
+      },
+      "mean_paired_pixel_rms_snr": 0.26482278834242196
+    },
+    {
+      "noise": 0.001,
+      "mask": "smooth",
+      "level": 2,
+      "direction": 2,
+      "mean_single_template_snr": 17.91590325943953,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 14.510557988336192,
+        "fake_and_real_lemons": 17.387053370547996,
+        "fake_and_real_strawberries": 18.054479294740673,
+        "fake_and_real_sushi": 15.39840648003159,
+        "fake_and_real_tomatoes": 17.69249089507252,
+        "kaist_25": 21.42012001250018,
+        "kaist_26": 18.847138426738304,
+        "kaist_28": 24.779185075311403,
+        "kaist_29": 13.15369779167691
+      },
+      "mean_paired_pixel_rms_snr": 0.04948615892903071
+    },
+    {
+      "noise": 0.001,
+      "mask": "texture",
+      "level": 0,
+      "direction": 0,
+      "mean_single_template_snr": 94.9552431013562,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 92.024299943324,
+        "fake_and_real_lemons": 71.78651168910437,
+        "fake_and_real_strawberries": 83.77180278770092,
+        "fake_and_real_sushi": 71.54483352240247,
+        "fake_and_real_tomatoes": 65.94334689508302,
+        "kaist_25": 122.5441391599839,
+        "kaist_26": 122.27246358264898,
+        "kaist_28": 148.02401848998568,
+        "kaist_29": 76.68577184197247
+      },
+      "mean_paired_pixel_rms_snr": 0.2622792824460395
+    },
+    {
+      "noise": 0.001,
+      "mask": "texture",
+      "level": 0,
+      "direction": 1,
+      "mean_single_template_snr": 65.14202744824907,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 63.81541260620525,
+        "fake_and_real_lemons": 52.78819005804113,
+        "fake_and_real_strawberries": 65.91625129900054,
+        "fake_and_real_sushi": 51.72712553530231,
+        "fake_and_real_tomatoes": 39.514504638849765,
+        "kaist_25": 81.31487486160862,
+        "kaist_26": 74.77601312303709,
+        "kaist_28": 96.51065065696703,
+        "kaist_29": 59.91522425522995
+      },
+      "mean_paired_pixel_rms_snr": 0.17993113026912944
+    },
+    {
+      "noise": 0.001,
+      "mask": "texture",
+      "level": 0,
+      "direction": 2,
+      "mean_single_template_snr": 11.99581719255804,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 10.742030194381922,
+        "fake_and_real_lemons": 8.81688469764157,
+        "fake_and_real_strawberries": 11.144828898450067,
+        "fake_and_real_sushi": 9.932880627903947,
+        "fake_and_real_tomatoes": 8.534872453195302,
+        "kaist_25": 16.539495058288797,
+        "kaist_26": 14.623939204407089,
+        "kaist_28": 18.146429608752033,
+        "kaist_29": 9.480993990001629
+      },
+      "mean_paired_pixel_rms_snr": 0.03313407688567172
+    },
+    {
+      "noise": 0.001,
+      "mask": "texture",
+      "level": 1,
+      "direction": 0,
+      "mean_single_template_snr": 150.54137593747996,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 145.73602015100127,
+        "fake_and_real_lemons": 113.3935549072464,
+        "fake_and_real_strawberries": 133.9781111924359,
+        "fake_and_real_sushi": 113.47934518576602,
+        "fake_and_real_tomatoes": 99.40774108818516,
+        "kaist_25": 195.30261683624596,
+        "kaist_26": 194.19342082794248,
+        "kaist_28": 236.73692438993797,
+        "kaist_29": 122.64464885855847
+      },
+      "mean_paired_pixel_rms_snr": 0.415815733494318
+    },
+    {
+      "noise": 0.001,
+      "mask": "texture",
+      "level": 1,
+      "direction": 1,
+      "mean_single_template_snr": 103.91447763891568,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 101.76181058487225,
+        "fake_and_real_lemons": 84.42492401317516,
+        "fake_and_real_strawberries": 105.42096062084934,
+        "fake_and_real_sushi": 82.70558878650355,
+        "fake_and_real_tomatoes": 62.5228394596591,
+        "kaist_25": 129.46705573053882,
+        "kaist_26": 118.75298633298624,
+        "kaist_28": 154.35086035681317,
+        "kaist_29": 95.82327286484356
+      },
+      "mean_paired_pixel_rms_snr": 0.28702590547630913
+    },
+    {
+      "noise": 0.001,
+      "mask": "texture",
+      "level": 1,
+      "direction": 2,
+      "mean_single_template_snr": 19.07507764333639,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 17.11571007578707,
+        "fake_and_real_lemons": 14.036814167841877,
+        "fake_and_real_strawberries": 17.824103295261153,
+        "fake_and_real_sushi": 15.8647638531442,
+        "fake_and_real_tomatoes": 13.056772340789546,
+        "kaist_25": 26.369628844849277,
+        "kaist_26": 23.22297353516581,
+        "kaist_28": 29.021843738994924,
+        "kaist_29": 15.163088938193622
+      },
+      "mean_paired_pixel_rms_snr": 0.05268795606743386
+    },
+    {
+      "noise": 0.001,
+      "mask": "texture",
+      "level": 2,
+      "direction": 0,
+      "mean_single_template_snr": 280.92821860606546,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 272.27209938045337,
+        "fake_and_real_lemons": 215.46562637931214,
+        "fake_and_real_strawberries": 258.50111605209185,
+        "fake_and_real_sushi": 189.0814057068125,
+        "fake_and_real_tomatoes": 155.8085173380723,
+        "kaist_25": 374.73331675006546,
+        "kaist_26": 368.88895043426055,
+        "kaist_28": 456.8999578731649,
+        "kaist_29": 236.7029775403562
+      },
+      "mean_paired_pixel_rms_snr": 0.775961907824241
+    },
+    {
+      "noise": 0.001,
+      "mask": "texture",
+      "level": 2,
+      "direction": 1,
+      "mean_single_template_snr": 197.03738379549694,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 191.8649932214107,
+        "fake_and_real_lemons": 161.50334358832043,
+        "fake_and_real_strawberries": 203.45071062964743,
+        "fake_and_real_sushi": 150.61983008692536,
+        "fake_and_real_tomatoes": 109.88084402621276,
+        "kaist_25": 247.53716495792253,
+        "kaist_26": 225.64592763073452,
+        "kaist_28": 297.895656862357,
+        "kaist_29": 184.93798315594177
+      },
+      "mean_paired_pixel_rms_snr": 0.5442440243322353
+    },
+    {
+      "noise": 0.001,
+      "mask": "texture",
+      "level": 2,
+      "direction": 2,
+      "mean_single_template_snr": 35.664852609318444,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 31.77724190473578,
+        "fake_and_real_lemons": 26.798538728776055,
+        "fake_and_real_strawberries": 34.38635751462569,
+        "fake_and_real_sushi": 27.45076667972368,
+        "fake_and_real_tomatoes": 20.65417657238934,
+        "kaist_25": 50.54742535495493,
+        "kaist_26": 44.092677094185355,
+        "kaist_28": 56.01187569670038,
+        "kaist_29": 29.264613937774808
+      },
+      "mean_paired_pixel_rms_snr": 0.09851116847682735
+    },
+    {
+      "noise": 0.005,
+      "mask": "local",
+      "level": 0,
+      "direction": 0,
+      "mean_single_template_snr": 7.683684411660217,
+      "scenes_snr_ge_3": 6,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 5.976668136843922,
+        "fake_and_real_lemons": 2.660540996757096,
+        "fake_and_real_strawberries": 2.334719491403844,
+        "fake_and_real_sushi": 4.8996705442409825,
+        "fake_and_real_tomatoes": 8.479615583009018,
+        "kaist_25": 12.099896007814676,
+        "kaist_26": 9.819363985869542,
+        "kaist_28": 20.834723924011055,
+        "kaist_29": 2.0479610349918245
+      },
+      "mean_paired_pixel_rms_snr": 0.021223380281180884
+    },
+    {
+      "noise": 0.005,
+      "mask": "local",
+      "level": 0,
+      "direction": 1,
+      "mean_single_template_snr": 4.702028015785495,
+      "scenes_snr_ge_3": 6,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 4.522845723041041,
+        "fake_and_real_lemons": 2.14541232367317,
+        "fake_and_real_strawberries": 1.2289767589636718,
+        "fake_and_real_sushi": 3.594592071246087,
+        "fake_and_real_tomatoes": 4.79874271577028,
+        "kaist_25": 6.99346529767781,
+        "kaist_26": 6.3765945064349125,
+        "kaist_28": 10.937300438076525,
+        "kaist_29": 1.7203223071859521
+      },
+      "mean_paired_pixel_rms_snr": 0.012987640215980662
+    },
+    {
+      "noise": 0.005,
+      "mask": "local",
+      "level": 0,
+      "direction": 2,
+      "mean_single_template_snr": 1.0380847810894738,
+      "scenes_snr_ge_3": 0,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 0.7807141281755883,
+        "fake_and_real_lemons": 0.36674223831992897,
+        "fake_and_real_strawberries": 0.34706903164488434,
+        "fake_and_real_sushi": 0.6575810158053841,
+        "fake_and_real_tomatoes": 1.231842263167875,
+        "kaist_25": 1.7467722854732683,
+        "kaist_26": 1.1633351718704947,
+        "kaist_28": 2.7245919465327733,
+        "kaist_29": 0.32411494881506725
+      },
+      "mean_paired_pixel_rms_snr": 0.0028673312037301546
+    },
+    {
+      "noise": 0.005,
+      "mask": "local",
+      "level": 1,
+      "direction": 0,
+      "mean_single_template_snr": 12.263065413837765,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 9.558570610697839,
+        "fake_and_real_lemons": 4.255041169742505,
+        "fake_and_real_strawberries": 3.733950188263393,
+        "fake_and_real_sushi": 7.836112997067817,
+        "fake_and_real_tomatoes": 13.33601001503486,
+        "kaist_25": 19.347448714855712,
+        "kaist_26": 15.703850543743334,
+        "kaist_28": 33.321271186929195,
+        "kaist_29": 3.275333298205241
+      },
+      "mean_paired_pixel_rms_snr": 0.03387225278226133
+    },
+    {
+      "noise": 0.005,
+      "mask": "local",
+      "level": 1,
+      "direction": 1,
+      "mean_single_template_snr": 7.519398529203008,
+      "scenes_snr_ge_3": 7,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 7.233451684973402,
+        "fake_and_real_lemons": 3.4311885343730038,
+        "fake_and_real_strawberries": 1.965520062431335,
+        "fake_and_real_sushi": 5.748876458950408,
+        "fake_and_real_tomatoes": 7.673815105144705,
+        "kaist_25": 11.181596724682759,
+        "kaist_26": 10.196621569972187,
+        "kaist_28": 17.492180615364994,
+        "kaist_29": 2.751336006934287
+      },
+      "mean_paired_pixel_rms_snr": 0.02076960035329531
+    },
+    {
+      "noise": 0.005,
+      "mask": "local",
+      "level": 1,
+      "direction": 2,
+      "mean_single_template_snr": 1.6581910858611493,
+      "scenes_snr_ge_3": 1,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 1.2486072423750907,
+        "fake_and_real_lemons": 0.5865360934625306,
+        "fake_and_real_strawberries": 0.5550724533813586,
+        "fake_and_real_sushi": 1.0516786992207596,
+        "fake_and_real_tomatoes": 1.9525375370840037,
+        "kaist_25": 2.7929592609634244,
+        "kaist_26": 1.8604880575703686,
+        "kaist_28": 4.357478767429894,
+        "kaist_29": 0.5183616612629133
+      },
+      "mean_paired_pixel_rms_snr": 0.004580149067638685
+    },
+    {
+      "noise": 0.005,
+      "mask": "local",
+      "level": 2,
+      "direction": 0,
+      "mean_single_template_snr": 22.963169391288186,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 18.447948162754535,
+        "fake_and_real_lemons": 8.212188006640185,
+        "fake_and_real_strawberries": 7.206487488651992,
+        "fake_and_real_sushi": 15.119904032382001,
+        "fake_and_real_tomatoes": 19.4296068607397,
+        "kaist_25": 37.32417901268642,
+        "kaist_26": 30.297120811374246,
+        "kaist_28": 64.30972878785673,
+        "kaist_29": 6.321361358507855
+      },
+      "mean_paired_pixel_rms_snr": 0.06342739372701264
+    },
+    {
+      "noise": 0.005,
+      "mask": "local",
+      "level": 2,
+      "direction": 1,
+      "mean_single_template_snr": 14.335574492024485,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 13.96049128651429,
+        "fake_and_real_lemons": 6.548496667375721,
+        "fake_and_real_strawberries": 3.793434573157389,
+        "fake_and_real_sushi": 11.088236963071642,
+        "fake_and_real_tomatoes": 13.324158672647629,
+        "kaist_25": 21.565941011750034,
+        "kaist_26": 19.66962137716345,
+        "kaist_28": 33.75973818560663,
+        "kaist_29": 5.310051690933548
+      },
+      "mean_paired_pixel_rms_snr": 0.03959680443560706
+    },
+    {
+      "noise": 0.005,
+      "mask": "local",
+      "level": 2,
+      "direction": 2,
+      "mean_single_template_snr": 3.111680371658783,
+      "scenes_snr_ge_3": 3,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 2.4097998143358295,
+        "fake_and_real_lemons": 1.1320089465752612,
+        "fake_and_real_strawberries": 1.0712844277251932,
+        "fake_and_real_sushi": 2.028133587666295,
+        "fake_and_real_tomatoes": 2.975783537698804,
+        "kaist_25": 5.388042909318844,
+        "kaist_26": 3.589745592780453,
+        "kaist_28": 8.409891572269453,
+        "kaist_29": 1.00043295655891
+      },
+      "mean_paired_pixel_rms_snr": 0.008594883951894536
+    },
+    {
+      "noise": 0.005,
+      "mask": "smooth",
+      "level": 0,
+      "direction": 0,
+      "mean_single_template_snr": 8.788743310035755,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 7.042752027838809,
+        "fake_and_real_lemons": 8.439321993078591,
+        "fake_and_real_strawberries": 8.007287605526471,
+        "fake_and_real_sushi": 7.35294299482507,
+        "fake_and_real_tomatoes": 9.551975697770226,
+        "kaist_25": 10.00931130204542,
+        "kaist_26": 10.549120285095553,
+        "kaist_28": 12.362689988694031,
+        "kaist_29": 5.783287895447617
+      },
+      "mean_paired_pixel_rms_snr": 0.024275703096227286
+    },
+    {
+      "noise": 0.005,
+      "mask": "smooth",
+      "level": 0,
+      "direction": 1,
+      "mean_single_template_snr": 6.244621440622076,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 5.333389000352785,
+        "fake_and_real_lemons": 6.890209124737989,
+        "fake_and_real_strawberries": 6.045968731778359,
+        "fake_and_real_sushi": 5.391561754191889,
+        "fake_and_real_tomatoes": 6.077751077137079,
+        "kaist_25": 6.656359151889855,
+        "kaist_26": 6.620436235883273,
+        "kaist_28": 8.70257361813021,
+        "kaist_29": 4.483344271497245
+      },
+      "mean_paired_pixel_rms_snr": 0.01724849283830772
+    },
+    {
+      "noise": 0.005,
+      "mask": "smooth",
+      "level": 0,
+      "direction": 2,
+      "mean_single_template_snr": 1.1756198838117449,
+      "scenes_snr_ge_3": 0,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 0.9405044479354551,
+        "fake_and_real_lemons": 1.1278630639911753,
+        "fake_and_real_strawberries": 1.1697968568340436,
+        "fake_and_real_sushi": 1.0028216484591064,
+        "fake_and_real_tomatoes": 1.268001907237061,
+        "kaist_25": 1.388744266746261,
+        "kaist_26": 1.2249880313929975,
+        "kaist_28": 1.6055657202633773,
+        "kaist_29": 0.8522930114462257
+      },
+      "mean_paired_pixel_rms_snr": 0.003247221843519632
+    },
+    {
+      "noise": 0.005,
+      "mask": "smooth",
+      "level": 1,
+      "direction": 0,
+      "mean_single_template_snr": 14.037637018519295,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 11.263641736814133,
+        "fake_and_real_lemons": 13.497217024596369,
+        "fake_and_real_strawberries": 12.806789541848275,
+        "fake_and_real_sushi": 11.75977355928549,
+        "fake_and_real_tomatoes": 15.127338679473615,
+        "kaist_25": 16.001562346027885,
+        "kaist_26": 16.861288989246354,
+        "kaist_28": 19.77182645739146,
+        "kaist_29": 9.24929483199006
+      },
+      "mean_paired_pixel_rms_snr": 0.038773860654805856
+    },
+    {
+      "noise": 0.005,
+      "mask": "smooth",
+      "level": 1,
+      "direction": 1,
+      "mean_single_template_snr": 9.985142502943713,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 8.529782166442155,
+        "fake_and_real_lemons": 11.019624785343689,
+        "fake_and_real_strawberries": 9.669585134709175,
+        "fake_and_real_sushi": 8.622828202493697,
+        "fake_and_real_tomatoes": 9.720242762886391,
+        "kaist_25": 10.63982166286453,
+        "kaist_26": 10.5759712287405,
+        "kaist_28": 13.9181501329971,
+        "kaist_29": 7.170276450016184
+      },
+      "mean_paired_pixel_rms_snr": 0.027580320214630923
+    },
+    {
+      "noise": 0.005,
+      "mask": "smooth",
+      "level": 1,
+      "direction": 2,
+      "mean_single_template_snr": 1.8788514118202733,
+      "scenes_snr_ge_3": 0,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 1.5041658898696149,
+        "fake_and_real_lemons": 1.8038159020377829,
+        "fake_and_real_strawberries": 1.8709052897579794,
+        "fake_and_real_sushi": 1.603834696208178,
+        "fake_and_real_tomatoes": 2.016962424215409,
+        "kaist_25": 2.220668119530879,
+        "kaist_26": 1.9584218528501416,
+        "kaist_28": 2.5678041604226687,
+        "kaist_29": 1.3630843714898067
+      },
+      "mean_paired_pixel_rms_snr": 0.005189642867734507
+    },
+    {
+      "noise": 0.005,
+      "mask": "smooth",
+      "level": 2,
+      "direction": 0,
+      "mean_single_template_snr": 26.638973148053903,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 21.73309745008792,
+        "fake_and_real_lemons": 25.922322353903713,
+        "fake_and_real_strawberries": 24.718510562732213,
+        "fake_and_real_sushi": 22.19929258509361,
+        "fake_and_real_tomatoes": 25.88111473320127,
+        "kaist_25": 30.837622495580664,
+        "kaist_26": 32.448316775901425,
+        "kaist_28": 38.159432453290954,
+        "kaist_29": 17.851048922693355
+      },
+      "mean_paired_pixel_rms_snr": 0.07358046311263775
+    },
+    {
+      "noise": 0.005,
+      "mask": "smooth",
+      "level": 2,
+      "direction": 1,
+      "mean_single_template_snr": 19.17521811964481,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 16.459549957210154,
+        "fake_and_real_lemons": 21.13132893836137,
+        "fake_and_real_strawberries": 18.662633279950207,
+        "fake_and_real_sushi": 16.601819229898915,
+        "fake_and_real_tomatoes": 18.211029008552064,
+        "kaist_25": 20.48268150166286,
+        "kaist_26": 20.327463291235095,
+        "kaist_28": 26.861894171457124,
+        "kaist_29": 13.838563698475529
+      },
+      "mean_paired_pixel_rms_snr": 0.05296455766848439
+    },
+    {
+      "noise": 0.005,
+      "mask": "smooth",
+      "level": 2,
+      "direction": 2,
+      "mean_single_template_snr": 3.583180651887906,
+      "scenes_snr_ge_3": 7,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 2.902111597667238,
+        "fake_and_real_lemons": 3.4774106741095996,
+        "fake_and_real_strawberries": 3.610895858948135,
+        "fake_and_real_sushi": 3.079681296006318,
+        "fake_and_real_tomatoes": 3.538498179014504,
+        "kaist_25": 4.284024002500036,
+        "kaist_26": 3.7694276853476607,
+        "kaist_28": 4.955837015062281,
+        "kaist_29": 2.630739558335382
+      },
+      "mean_paired_pixel_rms_snr": 0.009897231785806142
+    },
+    {
+      "noise": 0.005,
+      "mask": "texture",
+      "level": 0,
+      "direction": 0,
+      "mean_single_template_snr": 18.99104862027124,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 18.4048599886648,
+        "fake_and_real_lemons": 14.357302337820878,
+        "fake_and_real_strawberries": 16.754360557540185,
+        "fake_and_real_sushi": 14.308966704480497,
+        "fake_and_real_tomatoes": 13.188669379016604,
+        "kaist_25": 24.508827831996783,
+        "kaist_26": 24.454492716529792,
+        "kaist_28": 29.604803697997134,
+        "kaist_29": 15.337154368394492
+      },
+      "mean_paired_pixel_rms_snr": 0.05245585648920789
+    },
+    {
+      "noise": 0.005,
+      "mask": "texture",
+      "level": 0,
+      "direction": 1,
+      "mean_single_template_snr": 13.028405489649815,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 12.76308252124105,
+        "fake_and_real_lemons": 10.557638011608224,
+        "fake_and_real_strawberries": 13.18325025980011,
+        "fake_and_real_sushi": 10.345425107060462,
+        "fake_and_real_tomatoes": 7.902900927769952,
+        "kaist_25": 16.262974972321725,
+        "kaist_26": 14.955202624607416,
+        "kaist_28": 19.302130131393405,
+        "kaist_29": 11.983044851045989
+      },
+      "mean_paired_pixel_rms_snr": 0.03598622605382588
+    },
+    {
+      "noise": 0.005,
+      "mask": "texture",
+      "level": 0,
+      "direction": 2,
+      "mean_single_template_snr": 2.399163438511608,
+      "scenes_snr_ge_3": 2,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 2.1484060388763844,
+        "fake_and_real_lemons": 1.763376939528314,
+        "fake_and_real_strawberries": 2.228965779690013,
+        "fake_and_real_sushi": 1.9865761255807897,
+        "fake_and_real_tomatoes": 1.7069744906390603,
+        "kaist_25": 3.307899011657759,
+        "kaist_26": 2.924787840881418,
+        "kaist_28": 3.6292859217504074,
+        "kaist_29": 1.8961987980003256
+      },
+      "mean_paired_pixel_rms_snr": 0.006626815377134345
+    },
+    {
+      "noise": 0.005,
+      "mask": "texture",
+      "level": 1,
+      "direction": 0,
+      "mean_single_template_snr": 30.108275187495995,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 29.14720403020025,
+        "fake_and_real_lemons": 22.67871098144928,
+        "fake_and_real_strawberries": 26.795622238487184,
+        "fake_and_real_sushi": 22.695869037153205,
+        "fake_and_real_tomatoes": 19.881548217637032,
+        "kaist_25": 39.060523367249196,
+        "kaist_26": 38.838684165588504,
+        "kaist_28": 47.347384877987594,
+        "kaist_29": 24.528929771711695
+      },
+      "mean_paired_pixel_rms_snr": 0.08316314669886361
+    },
+    {
+      "noise": 0.005,
+      "mask": "texture",
+      "level": 1,
+      "direction": 1,
+      "mean_single_template_snr": 20.78289552778314,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 20.352362116974454,
+        "fake_and_real_lemons": 16.88498480263503,
+        "fake_and_real_strawberries": 21.084192124169867,
+        "fake_and_real_sushi": 16.54111775730071,
+        "fake_and_real_tomatoes": 12.504567891931822,
+        "kaist_25": 25.89341114610776,
+        "kaist_26": 23.75059726659725,
+        "kaist_28": 30.870172071362635,
+        "kaist_29": 19.16465457296871
+      },
+      "mean_paired_pixel_rms_snr": 0.057405181095261826
+    },
+    {
+      "noise": 0.005,
+      "mask": "texture",
+      "level": 1,
+      "direction": 2,
+      "mean_single_template_snr": 3.8150155286672773,
+      "scenes_snr_ge_3": 7,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 3.423142015157414,
+        "fake_and_real_lemons": 2.8073628335683756,
+        "fake_and_real_strawberries": 3.5648206590522316,
+        "fake_and_real_sushi": 3.17295277062884,
+        "fake_and_real_tomatoes": 2.6113544681579093,
+        "kaist_25": 5.273925768969856,
+        "kaist_26": 4.644594707033162,
+        "kaist_28": 5.804368747798985,
+        "kaist_29": 3.032617787638724
+      },
+      "mean_paired_pixel_rms_snr": 0.010537591213486772
+    },
+    {
+      "noise": 0.005,
+      "mask": "texture",
+      "level": 2,
+      "direction": 0,
+      "mean_single_template_snr": 56.1856437212131,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 54.45441987609068,
+        "fake_and_real_lemons": 43.09312527586243,
+        "fake_and_real_strawberries": 51.700223210418365,
+        "fake_and_real_sushi": 37.816281141362495,
+        "fake_and_real_tomatoes": 31.161703467614462,
+        "kaist_25": 74.9466633500131,
+        "kaist_26": 73.77779008685211,
+        "kaist_28": 91.37999157463298,
+        "kaist_29": 47.34059550807124
+      },
+      "mean_paired_pixel_rms_snr": 0.15519238156484821
+    },
+    {
+      "noise": 0.005,
+      "mask": "texture",
+      "level": 2,
+      "direction": 1,
+      "mean_single_template_snr": 39.407476759099396,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 38.37299864428214,
+        "fake_and_real_lemons": 32.30066871766409,
+        "fake_and_real_strawberries": 40.69014212592949,
+        "fake_and_real_sushi": 30.123966017385072,
+        "fake_and_real_tomatoes": 21.976168805242548,
+        "kaist_25": 49.50743299158451,
+        "kaist_26": 45.129185526146905,
+        "kaist_28": 59.579131372471394,
+        "kaist_29": 36.98759663118835
+      },
+      "mean_paired_pixel_rms_snr": 0.10884880486644705
+    },
+    {
+      "noise": 0.005,
+      "mask": "texture",
+      "level": 2,
+      "direction": 2,
+      "mean_single_template_snr": 7.132970521863689,
+      "scenes_snr_ge_3": 9,
+      "scene_values": {
+        "fake_and_real_lemon_slices": 6.3554483809471565,
+        "fake_and_real_lemons": 5.359707745755211,
+        "fake_and_real_strawberries": 6.87727150292514,
+        "fake_and_real_sushi": 5.490153335944737,
+        "fake_and_real_tomatoes": 4.130835314477868,
+        "kaist_25": 10.109485070990985,
+        "kaist_26": 8.81853541883707,
+        "kaist_28": 11.202375139340074,
+        "kaist_29": 5.852922787554962
+      },
+      "mean_paired_pixel_rms_snr": 0.019702233695365473
+    }
+  ],
+  "max_forward_difference_identity_error": 4.742878455792262e-13,
+  "max_achromatic_difference_norm": 7.486793018410177e-15,
+  "interpretation": "Each row fixes noise, mask, amplitude quantile and spectral direction; means use nine scenes. The known-template single-observation SNR uses the half-pair template. Paired pixel SNR uses the full pair and sqrt(2) noise."
+}

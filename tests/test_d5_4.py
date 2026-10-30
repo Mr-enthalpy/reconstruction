@@ -91,6 +91,9 @@ def test_full_forward_difference_and_direction_metrics():
     yp=b.physics(torch.tensor((x+delta)[None]))
     ym=b.physics(torch.tensor((x-delta)[None]))
     np.testing.assert_allclose((yp-ym)[0,0].numpy(),b.forward(2*z),atol=1e-12)
+    residual=torch.tensor(rng.normal(size=(1,1,8,9)))
+    full_adjoint=(b.physics.adjoint(residual)[0]*torch.tensor(v[:,None,None])).sum(0).numpy()
+    np.testing.assert_allclose(b.adjoint(residual[0,0].numpy()),full_adjoint,atol=1e-12)
     m=differential_metrics(-delta,delta,v)
     assert m['cosine']==pytest.approx(-1)
     assert m['correct_direction_fraction']==0
@@ -118,3 +121,17 @@ def test_loader_opens_only_requested_train_archive(tmp_path,monkeypatch):
     monkeypatch.setattr(module.np,'load',fake_load)
     _,selected=load_split(tmp_path,'train',dict(train_npz_sha256='expected',manifest_sha256='expected'))
     assert opened==['train.npz'] and len(selected)==39
+
+
+def test_scientific_gate_rejects_nonconvergence_and_incomplete_scenes():
+    from experiments.d5_4.decision_summary import group
+    rows=[dict(scene_id=str(i),dataset_id='CAVE',direction=0,mask='local',level=1,
+        noise_fraction=.005,arm='chromatic',inverse=dict(metrics=dict(relative_l2=.2,cosine=.95),
+        convergence=dict(converged=True))) for i in range(9)]
+    assert group(rows,'inverse')[0]['gate_passed']
+    rows[0]['inverse']['convergence']['converged']=False
+    rows[1]['inverse']['convergence']['converged']=False
+    assert not group(rows,'inverse')[0]['gate_passed']
+    with pytest.raises(ValueError): group(rows[:-1],'inverse')
+    rows[0]['scene_id']=rows[1]['scene_id']
+    with pytest.raises(ValueError): group(rows,'inverse')
