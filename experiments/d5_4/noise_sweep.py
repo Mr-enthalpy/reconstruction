@@ -6,6 +6,7 @@ Inverse uses a known baseline and direction, but a zero initial coefficient map.
 import argparse
 import itertools
 import json
+import os
 import subprocess
 import time
 from pathlib import Path
@@ -118,7 +119,7 @@ def run(args):
     return dict(status='benchmark_only' if args.max_cases else 'completed',mode=args.mode,split=args.split,
         elapsed_seconds=time.perf_counter()-started,
         peak_cuda_bytes=torch.cuda.max_memory_allocated() if args.device.startswith('cuda') else None,
-        provenance=dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
+        provenance=dict(code_commit=os.environ.get('D54_CODE_COMMIT') or subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
             source_files={p.name:digest(p) for p in Path(__file__).parent.glob('*.py')},
             config=cfg,config_sha256=digest(args.config),basis_sha256=digest(args.basis),
             inputs=protocol['data'],kernel_file_sha256=digest(args.kernel_file),
