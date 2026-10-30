@@ -111,9 +111,14 @@ def run(args):
                     row['snr']['radial']['0.5-corners']=dict(coefficient_count=int(high.sum()),
                         signal_energy=energy,expected_noise_energy=noise_energy,snr=float(np.sqrt(energy/noise_energy)))
                 if args.mode=='inverse':
-                    if args.lam is None or args.mu is None:
+                    lam,mu=args.lam,args.mu
+                    if args.regularisation_policy:
+                        policy=json.loads(args.regularisation_policy.read_text())
+                        selected=policy['by_noise_fraction'][str(fraction)]
+                        lam,mu=selected['lam'],selected['mu']
+                    if lam is None or mu is None:
                         raise ValueError('inverse requires explicit training-selected lambda and mu')
-                    estimate,convergence=solve(op,template+n1,args.lam,args.mu,
+                    estimate,convergence=solve(op,template+n1,lam,mu,
                         cfg['inverse']['rtol'],args.maxiter or cfg['inverse']['maxiter'])
                     row['inverse']=dict(metrics=metrics(estimate,z),convergence=convergence,
                         prior='known true baseline and known spectral direction; unknown spatial map',
@@ -143,6 +148,7 @@ def run(args):
         provenance=dict(code_commit=os.environ.get('D54_CODE_COMMIT') or subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
             source_files={p.name:digest(p) for p in Path(__file__).parent.glob('*.py')},
             config=cfg,config_sha256=digest(args.config),basis_sha256=digest(args.basis),
+            regularisation_policy=None if not args.regularisation_policy else json.loads(args.regularisation_policy.read_text()),
             inputs=protocol['data'],kernel_file_sha256=digest(args.kernel_file),
             kernel_array_sha256=array_digest(kernels)),rows=rows)
 
@@ -158,6 +164,7 @@ def main():
     p.add_argument('--maxiter',type=int)
     p.add_argument('--lam',type=float)
     p.add_argument('--mu',type=float)
+    p.add_argument('--regularisation-policy',type=Path)
     p.add_argument('--run-dirs',type=Path,nargs='+')
     p.add_argument('--checkpoint-provenance',type=Path)
     a=p.parse_args()

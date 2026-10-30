@@ -17,6 +17,7 @@ def main():
     for name in ('prepared','kernel-file','basis','config','protocol','output'):
         p.add_argument('--'+name,type=Path,required=True)
     p.add_argument('--device',default='cpu')
+    p.add_argument('--noise-fraction',type=float,choices=[0.,.001,.005],default=.005)
     a=p.parse_args()
     if a.output.exists(): raise FileExistsError(a.output)
     torch.set_num_threads(4)
@@ -33,7 +34,7 @@ def main():
             _,_,z,_=construct(x,v,basis['natural_shape_change_quantiles'][1],'local',basis,cfg['seed'])
             b=RestrictedOperator(kernels,v,x.shape[-2:],a.device)
             rng=np.random.default_rng(cfg['seed']+index)
-            residual=b.forward(z)+rng.normal(0,.005*cfg['reference_forward_rms'],z.shape)
+            residual=b.forward(z)+rng.normal(0,a.noise_fraction*cfg['reference_forward_rms'],z.shape)
             for lam,mu in itertools.product(cfg['inverse']['lambda_grid'],cfg['inverse']['mu_grid']):
                 estimate,report=solve(b,residual,lam,mu,cfg['inverse']['rtol'],cfg['inverse']['maxiter'])
                 rows.append(dict(scene_id=record['scene_id'],direction=index,lam=lam,mu=mu,
@@ -44,7 +45,7 @@ def main():
         subset=[r for r in rows if r['lam']==lam and r['mu']==mu]
         candidates.append(dict(lam=lam,mu=mu,mean_error=float(np.mean([r['metrics']['relative_l2'] for r in subset])),
             converged_cases=sum(r['solver']['converged'] for r in subset)))
-    result=dict(status='completed',selection=min(candidates,key=lambda r:r['mean_error']),
+    result=dict(status='completed',noise_fraction=a.noise_fraction,selection=min(candidates,key=lambda r:r['mean_error']),
         candidates=candidates,rows=rows,config_sha256=digest(a.config),basis_sha256=digest(a.basis),
         inputs=protocol['data'],kernel_sha256=digest(a.kernel_file),
         caveat='Fixed-iteration estimator selected on training only; nonconvergence is retained.')
