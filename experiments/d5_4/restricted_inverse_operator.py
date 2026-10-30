@@ -70,7 +70,21 @@ def metrics(estimate, truth):
         return dict(status='zero_truth_unidentifiable')
     en = np.linalg.norm(e)
     return dict(relative_l2=float(np.linalg.norm(e-t)/norm),
+                improvement_over_zero=float(1-np.linalg.norm(e-t)/norm),
                 response_fraction=float(en/norm),
                 cosine=float(e@t/(en*norm)) if en>1e-14 else None,
                 projection_gain=float(e@t/(norm*norm)),
                 correlation=float(np.corrcoef(e,t)[0,1]) if e.std()>1e-14 and t.std()>1e-14 else None)
+
+
+def differential_metrics(estimate, truth, direction):
+    result=metrics(estimate,truth)
+    v=np.asarray(direction)
+    ep=np.einsum('b,bhw->hw',v,estimate)
+    tp=np.einsum('b,bhw->hw',v,truth)
+    affected=abs(tp)>.1*np.max(abs(tp))
+    result['direction_projection']=metrics(ep,tp)
+    result['correct_direction_fraction']=float((np.sign(ep[affected])==np.sign(tp[affected])).mean()) if affected.any() else None
+    result['local_relative_l2']=float(np.linalg.norm((estimate-truth)[:,affected])/
+        np.linalg.norm(truth[:,affected])) if affected.any() else None
+    return result

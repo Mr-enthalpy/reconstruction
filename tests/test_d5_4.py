@@ -72,3 +72,19 @@ def test_adjoint_inverse_and_achromatic():
     # Nontrivial even support exercises asymmetric crop and its true adjoint.
     b=RestrictedOperator(rng.normal(size=(21,4,4)),v,(8,9))
     assert np.vdot(b.forward(z),r)==pytest.approx(np.vdot(z,b.adjoint(r)),abs=1e-10)
+
+
+def test_full_forward_difference_and_direction_metrics():
+    import torch
+    from experiments.d5_4.restricted_inverse_operator import differential_metrics
+    rng=np.random.default_rng(4)
+    v=zero_sum(rng.normal(size=21)); z=rng.normal(size=(8,9))
+    x=rng.normal(size=(21,8,9)); delta=v[:,None,None]*z
+    b=RestrictedOperator(rng.normal(size=(21,4,4)),v,(8,9))
+    yp=b.physics(torch.tensor((x+delta)[None]))
+    ym=b.physics(torch.tensor((x-delta)[None]))
+    np.testing.assert_allclose((yp-ym)[0,0].numpy(),b.forward(2*z),atol=1e-12)
+    m=differential_metrics(-delta,delta,v)
+    assert m['cosine']==pytest.approx(-1)
+    assert m['correct_direction_fraction']==0
+    assert m['local_relative_l2']==pytest.approx(2)

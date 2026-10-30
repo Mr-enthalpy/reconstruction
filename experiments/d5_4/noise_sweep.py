@@ -15,7 +15,7 @@ import torch
 from experiments.d5_4.evidence_audit import digest
 from experiments.d5_4.natural_spectral_basis import load_split
 from experiments.d5_4.natural_counterfactual import construct
-from experiments.d5_4.restricted_inverse_operator import RestrictedOperator, solve, metrics
+from experiments.d5_4.restricted_inverse_operator import RestrictedOperator, solve, metrics, differential_metrics
 from experiments.d5_4.oracle_detection import detect
 from experiments.d5_3.encoding_observability import noise_statistics
 from lcd_reconstruction.operators.psf_provenance import array_digest
@@ -76,6 +76,11 @@ def run(args):
                 break
             op=RestrictedOperator(k,v,x.shape[-2:],args.device)
             delta_y=op.forward(2*z)
+            with torch.no_grad():
+                px=op.physics(torch.as_tensor(plus[None],dtype=torch.float64,device=args.device))[0,0].cpu().numpy()
+                mx=op.physics(torch.as_tensor(minus[None],dtype=torch.float64,device=args.device))[0,0].cpu().numpy()
+            identity_error=float(np.linalg.norm((px-mx)-delta_y))
+            relative_norm=float(np.linalg.norm(delta_y)/max(np.linalg.norm((px+mx)/2),1e-30))
             for fraction in cfg['noise_fractions']:
                 sigma=fraction*cfg['reference_forward_rms']
                 rng=np.random.default_rng(np.random.SeedSequence([cfg['seed'],case_index,int(fraction*1e6)]))
@@ -83,6 +88,8 @@ def run(args):
                 n1=rng.normal(0,sigma,z.shape); n2=rng.normal(0,sigma,z.shape)
                 row=dict(**label,arm=arm,noise_fraction=fraction,sigma=sigma,
                          delta_measurement_norm=float(np.linalg.norm(delta_y)),
+                         forward_difference_identity_error=identity_error,
+                         relative_measurement_difference=relative_norm,
                          frequency_diagnostic='FFT of cropped output; not circular-operator singular values')
                 row['snr']=noise_statistics(delta_y,sigma,z.shape) if sigma else dict(
                     per_pixel_snr=None,matched_filter_snr=None,reason='noiseless; SNR undefined')
@@ -112,8 +119,8 @@ def run(args):
                     null=[model(measurements[2]+n)['spectral_cube_hat'][0].cpu().numpy() for n in noise]
                     delta=plus-minus
                     rows.append(dict(**label,model=provenance,noise_fraction=fraction,
-                        response=metrics(outputs[0]-outputs[1],delta),
-                        noise_only=metrics(null[0]-null[1],delta),
+                        response=differential_metrics(outputs[0]-outputs[1],delta,v),
+                        noise_only=differential_metrics(null[0]-null[1],delta,v),
                         inference_noise_shift=fraction!=.005))
         print(json.dumps(dict(case=case_index+1,elapsed_seconds=time.perf_counter()-started)),flush=True)
     return dict(status='benchmark_only' if args.max_cases else 'completed',mode=args.mode,split=args.split,
