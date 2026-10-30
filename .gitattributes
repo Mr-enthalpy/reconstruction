@@ -1,0 +1,6 @@
+# Recorded measurement artifacts are compared by SHA256 against the file that was
+# produced on the acquisition host. Keep them byte-exact: no line-ending rewrite on
+# checkout, so `git show HEAD:<path> | sha256sum` matches the recorded digest on any
+# platform.
+docs/reports/*/runs/**/validation.json -text
+docs/reports/*/*_validation.json -text

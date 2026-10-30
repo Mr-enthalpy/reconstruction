@@ -39,6 +39,8 @@
 | `s3a_s20261023` | `f7170f44196184c9…` | 366 | **是** |
 
 完整哈希见 `per_band_d5_3.json` 的 `runs`。**没有重训、没有重选 checkpoint**，`test.npz` 未被打开。
+哈希可用 `git show HEAD:docs/reports/2026-10-29-d5.3/runs/<run>/validation.json | sha256sum`
+复核；`.gitattributes` 已把这类文件标记为 `-text`，避免检出时被改行尾而破坏字节一致性。
 
 ## 2. 定义，以及为什么它不能和 `cube_relative_l2` 混用
 
