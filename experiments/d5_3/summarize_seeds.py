@@ -125,7 +125,7 @@ def cross_seed(values):
                 minimum=float(values.min()), maximum=float(values.max()), n=int(values.size))
 
 
-def analyse(runs_root: Path, reference_arm: str = "s3a"):
+def analyse(runs_root: Path, reference_arm: str = "s3a", primary_arm: str = "s1c"):
     runs = []
     for directory in sorted(runs_root.iterdir()):
         if not directory.is_dir() or not (directory / "validation.json").exists():
@@ -139,14 +139,15 @@ def analyse(runs_root: Path, reference_arm: str = "s3a"):
     by_arm = {}
     for run in runs:
         by_arm.setdefault(run["arm"], {})[run["seed"]] = run
-    if "s1c" not in by_arm or reference_arm not in by_arm:
-        raise ValueError(f"both s1c (chromatic) and {reference_arm} (reference) runs are "
-                         f"required; found arms {sorted(by_arm)}")
-    seeds = sorted(set(by_arm["s1c"]) & set(by_arm[reference_arm]))
+    for arm in (primary_arm, reference_arm):
+        if arm not in by_arm:
+            raise ValueError(f"both {primary_arm} (primary) and {reference_arm} (reference) "
+                             f"runs are required; found arms {sorted(by_arm)}")
+    seeds = sorted(set(by_arm[primary_arm]) & set(by_arm[reference_arm]))
 
     pairs = []
     for seed in seeds:
-        chrom, achrom = by_arm["s1c"][seed], by_arm[reference_arm][seed]
+        chrom, achrom = by_arm[primary_arm][seed], by_arm[reference_arm][seed]
         deltas = {key: chrom["metrics"]["ALL"][key] - achrom["metrics"]["ALL"][key] for key in KEYS}
         dataset_deltas = {}
         for source in ("CAVE", "KAIST"):
@@ -196,6 +197,7 @@ def analyse(runs_root: Path, reference_arm: str = "s3a"):
     censored = {f"{run['arm']}:{run['seed']}": run["budget_censored"] for run in runs}
     return dict(
         protocol="D5.3-multiseed-comparison",
+        primary_arm=primary_arm,
         reference_arm=reference_arm,
         selection_rule="each arm keeps its own minimum-validation-loss checkpoint; "
                        "no checkpoint or metric is re-selected here",
@@ -240,11 +242,13 @@ def main():
     ap.add_argument("--runs", type=Path, required=True)
     ap.add_argument("--output", type=Path, required=True)
     ap.add_argument("--reference-arm", default="s3a",
-                    help="arm compared against s1c; default s3a (achromatic mean kernel)")
+                    help="arm compared against the primary arm; default s3a (mean kernel)")
+    ap.add_argument("--primary-arm", default="s1c",
+                    help="arm whose deltas are reported; default s1c (chromatic)")
     args = ap.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
-    document = analyse(args.runs, args.reference_arm)
+    document = analyse(args.runs, args.reference_arm, args.primary_arm)
     args.output.write_text(json.dumps(document, indent=2), encoding="utf-8")
     print(json.dumps({key: dict(mean=round(value["across_seeds"]["mean"], 4),
                                 sd=None if value["across_seeds"]["sd"] is None

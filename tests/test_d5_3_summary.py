@@ -116,3 +116,17 @@ def test_unknown_reference_arm_is_refused(tmp_path):
     make_run(tmp_path, "s3a_s1", 1, 29.0, 200)
     with pytest.raises(ValueError, match="s3a999"):
         summarize_seeds.analyse(tmp_path, reference_arm="s3a999")
+
+
+def test_primary_arm_can_be_the_550_control(tmp_path):
+    # The secondary S3 comparison is s3a550 vs s3a: the 550 arm is the primary side.
+    for seed in (1, 2, 3):
+        make_run(tmp_path, f"s1c_s{seed}", seed, 30.4, 300)
+        make_run(tmp_path, f"s3a_s{seed}", seed, 30.0, 300)
+        make_run(tmp_path, f"s3a550_s{seed}", seed, 30.2, 300)
+    document = summarize_seeds.analyse(tmp_path, reference_arm="s3a", primary_arm="s3a550")
+    assert document["primary_arm"] == "s3a550"
+    assert document["reference_arm"] == "s3a"
+    assert document["pairs"][0]["deltas"]["psnr_unit_range_db"] == pytest.approx(0.2)
+    with pytest.raises(ValueError, match="s3a777"):
+        summarize_seeds.analyse(tmp_path, primary_arm="s3a777")
