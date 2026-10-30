@@ -1,0 +1,254 @@
+[
+  {
+    "wavelength_nm": 450,
+    "roi_source_sha256": "75b34de9079c4fb113f19d55765870b6378a7c34336b69897ca4220e6668e0b2",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 460,
+    "roi_source_sha256": "864e7c5e1bfbb538bdb8554c8f494dc82c683287733743c91f411361a045dc03",
+    "dark_sha256": [
+      "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+      "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 470,
+    "roi_source_sha256": "6a3f9a7bc4e159e32bf8e217c9b55b351fbd217738fa4f0df809dca35aeb3e86",
+    "dark_sha256": [
+      "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+      "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 480,
+    "roi_source_sha256": "98d49f7a07d3f8f43c4eb5ac9153e7dae2d2d288547c1d9bc6d1beb7d4ce865c",
+    "dark_sha256": [
+      "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+      "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 490,
+    "roi_source_sha256": "cc6956cf9f4609e6e07aa1f1ca6d04a3b26bc59519cdb8506eea61ce8265e04f",
+    "dark_sha256": [
+      "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+      "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 500,
+    "roi_source_sha256": "52264826dbb1d575cac716425af97b6f558d8ceedccd0e5af23354ccbb630031",
+    "dark_sha256": [
+      "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+      "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 510,
+    "roi_source_sha256": "313cb679156d52fa65c123265b7cf0dfdbd5290e56d6588bfb53b7dacbb28f9b",
+    "dark_sha256": [
+      "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+      "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 520,
+    "roi_source_sha256": "e79553719519073e62fb8149e586b280bff40b4d2ee3c69c01053baeac10ca81",
+    "dark_sha256": [
+      "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+      "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 530,
+    "roi_source_sha256": "986b29d24b34171bed912413603eb4dbc9cea6a5930a576599c1bd2490e059e7",
+    "dark_sha256": [
+      "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+      "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 540,
+    "roi_source_sha256": "f34ea62a52c918020eff0d984ccdd4add1c0989a7df4b19df9bd935d60251f95",
+    "dark_sha256": [
+      "01c1784fa902a022f218854a993d0ca16e6ffedcddbfc295fa1431e73329557d",
+      "d53078c33a30ac774245d103cea8306e1be8ae13b4c1e9ab47eebfcff3264011"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 550,
+    "roi_source_sha256": "eae6a468176128a6ccf2d5e2849ac5d75e68805e0dd97c2f7b53d905fdae923a",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 560,
+    "roi_source_sha256": "6968df8d1b10ea5133e5ccfe227584be9fd10c6f72494138f6ae974a4d1f62b2",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 570,
+    "roi_source_sha256": "6a176a4d86ee294af9a02da14bc074966f524691779055def17391bef1806988",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 580,
+    "roi_source_sha256": "5129028117f3338b2c236eb3f3d74dba6dff06dbad80d2a1590fe17706062ac1",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 590,
+    "roi_source_sha256": "7fd8b78f815254d31d90d7a95baaa39f735a482a8d4f1275120d0b30899464bb",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 600,
+    "roi_source_sha256": "5f3d1a37decd661073a8b5915d6188ca6553c6f4bb441282dca7dc2d18faaa63",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 610,
+    "roi_source_sha256": "be35687e04317160b2e45ff3c02fe952b7c573666b80526d5492200bfa699109",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 620,
+    "roi_source_sha256": "9df4f6be87f2f96f753aa08f6982da906e55cd6f008f009ebab3846f7210438d",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 630,
+    "roi_source_sha256": "48c387da3487af88508e694fc29adfccf51ff4c911180d77052ea1252f516a63",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 640,
+    "roi_source_sha256": "53be44c15fed9329b5582dc1b724a17016974d00ea07bcf2f5e3b0c9ae346942",
+    "dark_sha256": [
+      "673125e8eded5290e2ff7dffdf1ca9c67c5fd3c940dec8291d53a1c4b0247197",
+      "9283183c456c3431ea99c1621c81d90ea00fe4232c61f47a7ef3fa0d61fef3ee"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  },
+  {
+    "wavelength_nm": 650,
+    "roi_source_sha256": "817cd0e995a6d2ae2b784da9b0da711188dbc9b7616d45e809face06ceb25953",
+    "dark_sha256": [
+      "1012c9e3b6038a6b01b36077926a4513c27b732b9e693b7fc4fb8097e2905b3a",
+      "8f0f3a037af0ededdd046eef697415b772f6600a33e7591d0f3aab14f197fa27"
+    ],
+    "errors": {
+      "k512": 0.0,
+      "k1024": 0.0
+    }
+  }
+]

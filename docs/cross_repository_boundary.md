@@ -1,54 +1,11 @@
-# Cross-Repository Boundary
+# Repository boundaries
 
-`reconstruction` consumes published outputs from upstream repositories. It does not generate those products.
+`optic_system` owns hardware, calibrations and immutable real measurements.
+`reconstruction` reads explicit local copies of PSF/metadata and public datasets;
+it neither imports sibling internals nor changes acquisition code or data.
+The Meta Repository coordinates research and records approved version pins.
 
-## Inputs
-
-From `LCD_forward`:
-
-```text
-OperatorHandoff
-  -> forward operator A
-  -> adjoint operator A*
-  -> operator metadata
-  -> sparse peak-cluster / shift-patch operator package
-  -> OTF / H-matrix diagnostics
-  -> mask sequence identity
-  -> operator provenance
-```
-
-From `optic_system`:
-
-```text
-MeasuredResponseHandoff
-  -> target measurements
-  -> calibration metadata
-  -> exposure/frame metadata
-  -> wavelength metadata when available
-  -> acquisition provenance
-```
-
-From `lcd_mask_families`:
-
-```text
-MaskInstanceSpec / MaskSequenceSpec identity
-  -> only when needed for provenance, conditioning analysis, or reporting
-```
-
-`reconstruction` may reference mask identity, but it must not render LCD masks as a primary responsibility.
-
-## Outputs
-
-Conceptual output categories:
-
-```text
-ReconstructionResult
-EvaluationReport
-ReconstructionDrivenProposal
-```
-
-These are conceptual handoff categories only. Final external schemas should not be defined before producer and consumer contracts stabilize.
-
-## Non-Ownership
-
-This repository must not own hardware acquisition, mask-family generation, mask rendering, LCD mask-to-operator modelling, peak-cluster extraction from raw PSF surveys, H-matrix computation as an `LCD_forward` source product, or final external handoff schemas before contracts exist.
+Current outputs are local numerical arrays, model checkpoints and audit reports.
+Raw/derived face data and checkpoints remain private. Only source and aggregate
+reports belong in Git. There is no dependency on an unadmitted modelling repository,
+operator registry, handoff schema or remote service.

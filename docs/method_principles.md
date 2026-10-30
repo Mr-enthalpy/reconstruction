@@ -1,40 +1,21 @@
-# Method Principles
+# Method principles
 
-The preferred learned method family is physics-guided deep unrolling.
+Use explicit forward and adjoint operators inside a spatial-spectral Deep Unrolling
+reconstructor. The first baseline exposes X_hat [B,21,H,W], its spatial mean and
+measurement reprojection. Declare the spatial resolution and valid domain.
+Do not impose a single global spectral output or a low-rank bottleneck before
+establishing the scene reconstruction baseline.
 
-A reconstruction stage should preserve this structure:
+Train N1 without task labels or classification loss. Freeze it for downstream
+classification. This separates reconstruction fidelity from evidence of spectral
+task gain. Later compression or joint learning requires an explicit comparison.
+Keep model capacity proportional to independent samples; do not tune on test data.
 
-```text
-data consistency:
-  uses A and A*
+Preserve source, subject, acquisition and scene isolation. Both labels should be
+reviewed within each source where possible; report remaining source/label imbalance.
+Use shared band geometry and physically stated brightness assumptions. Source
+normalization is not radiometric calibration. Preserve achromatic PSF controls.
 
-learned prior / proximal:
-  uses a learned spatial-spectral prior
-
-diagnostics:
-  reports residual and reconstruction quality
-```
-
-Conceptual form:
-
-```text
-x^0 = A*(y) or classical warm start
-
-for k = 1..K:
-    z^k = data_consistency_update(x^k, y, A, A*)
-    x^{k+1} = learned_or_variational_prior(z^k, metadata)
-```
-
-The repository should avoid black-box `frames -> spectra` networks as the mainline. Such models may appear only as explicit baselines.
-
-## Multi-Band Principle
-
-The repository must not be hard-coded to three spectral bands. Mainline modules should support arbitrary `L` and should use terms such as `spectral`, `multi_band`, `wavelength_grid`, and `band_index` instead of RGB-specific names.
-
-## Multi-Frame Principle
-
-The repository should support multiple coded exposures of the same static target. `T` is the number of coded observations, exposures, or measurement frames. It is not video time by default.
-
-Allowed future concepts include frame-index conditioning, mask-sequence conditioning, multi-exposure fusion, and operator-aware frame weighting.
-
-Motion compensation, optical flow, temporal consistency losses for moving scenes, video restoration priors, and dynamic-scene assumptions are not mainline concepts.
+The existing D2 low-rank pilot and its scores are retained as historical results.
+They do not validate the revised baseline, absolute radiometry, general face
+recognition or information gain beyond RGB.

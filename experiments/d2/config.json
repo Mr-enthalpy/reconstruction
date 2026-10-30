@@ -1,0 +1,22 @@
+{
+  "seed": 20261019,
+  "spatial_hw": [32, 32],
+  "spectral_rank": 4,
+  "unrolled_stages": 3,
+  "prox_hidden_channels": 8,
+  "epochs": 30,
+  "batch_size": 16,
+  "optimizer": "Adam",
+  "learning_rate": 0.002,
+  "checkpoint_selection": "fixed final epoch; no test selection",
+  "loss": "map MSE + global mean MSE + 0.1 * measurement MSE",
+  "input_policy": "UWA /255, CAVE /65535 then each cube rescaled to grand mean 0.2; dimensionless pseudo-scene, not radiometric harmonization",
+  "illumination": "flat 21-bin spectrum; all weights one; no measured absolute efficiency",
+  "noise": "noiseless main; additive Gaussian at 1 percent train measurement RMS sensitivity only",
+  "sensor_pixels_per_simulation_pixel": 16,
+  "main_psf_support_sensor_pixels": 512,
+  "augmentation": {"views_per_train_parent":1,"rotation_deg":3,"scale_range":[0.88,0.94],"translation_pixels":0.5,"flip_probability":0.5,"brightness_range":[0.95,1.05],"border":"zero; transformed source corners must remain inside canvas"},
+  "protocols":["A","B","C"],
+  "controls":["measured_aug","achromatic_aug","measured_noaug"],
+  "test_policy":"frozen UWA groups; CAVE scene-disjoint; no test augmentation, fitting or tuning"
+}

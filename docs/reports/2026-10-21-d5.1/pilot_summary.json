@@ -1,0 +1,281 @@
+{
+  "protocol": "D5-G2-validation-summary",
+  "runs": [
+    {
+      "name": "baseline",
+      "model": "A",
+      "parameters": 98139,
+      "best_epoch": 10,
+      "best_validation_loss": 0.01611163467168808,
+      "seconds": 342.3696906999685,
+      "metrics": {
+        "CAVE": {
+          "psnr_unit_range_db": 29.638035702085187,
+          "ssim_band_mean": 0.9187395630260617,
+          "sam_deg": 11.41755133786126,
+          "cube_relative_l2": 0.31043285856678804,
+          "global_spectrum_relative_l2": 0.14597072271109943,
+          "high_frequency_relative_l2": 0.9704870776631157,
+          "spatial_gradient_relative_l2": 0.7953228396780996,
+          "measurement_relative_l2": 0.03446101649252551,
+          "negative_fraction": 0.0018210638137090775
+        },
+        "KAIST": {
+          "psnr_unit_range_db": 28.473647371680215,
+          "ssim_band_mean": 0.8894267482143333,
+          "sam_deg": 11.487007725471635,
+          "cube_relative_l2": 0.28117405937482437,
+          "global_spectrum_relative_l2": 0.0543040248506997,
+          "high_frequency_relative_l2": 0.9683660633025457,
+          "spatial_gradient_relative_l2": 0.8015509969644696,
+          "measurement_relative_l2": 0.03699868757209977,
+          "negative_fraction": 0.004878498259044828
+        },
+        "ALL": {
+          "psnr_unit_range_db": 29.120529777460757,
+          "ssim_band_mean": 0.9057116453319602,
+          "sam_deg": 11.448420843465872,
+          "cube_relative_l2": 0.2974289478148042,
+          "global_spectrum_relative_l2": 0.10522996810647732,
+          "high_frequency_relative_l2": 0.9695444046139734,
+          "spatial_gradient_relative_l2": 0.7980909095831529,
+          "measurement_relative_l2": 0.03558887030566962,
+          "negative_fraction": 0.0031799235671916334
+        }
+      },
+      "config": {
+        "seed": 20261021,
+        "model": "A",
+        "stages": 6,
+        "width": 64,
+        "depth": 4,
+        "sfat_width": 32,
+        "sfat_levels": 3,
+        "batch": 1,
+        "steps_per_epoch": 100,
+        "epochs": 10,
+        "patience": 4,
+        "learning_rate": 0.0002,
+        "weight_decay": 1e-05,
+        "grad_clip": 1.0,
+        "train_noise_rms_fraction": 0.005,
+        "brightness_range": [
+          0.9,
+          1.1
+        ],
+        "lambda_grad": 0.2,
+        "lambda_spectral": 0.05,
+        "lambda_data": 0.02,
+        "selection": "minimum validation reconstruction objective",
+        "test_policy": "test.npz not loaded; frozen D5 test only in G4"
+      }
+    },
+    {
+      "name": "S1",
+      "model": "A",
+      "parameters": 98139,
+      "best_epoch": 10,
+      "best_validation_loss": 0.018887456506490707,
+      "seconds": 346.55508009996265,
+      "metrics": {
+        "CAVE": {
+          "psnr_unit_range_db": 28.642024869170434,
+          "ssim_band_mean": 0.8915922064191584,
+          "sam_deg": 12.042405088818075,
+          "cube_relative_l2": 0.3463590441842578,
+          "global_spectrum_relative_l2": 0.1464831839743663,
+          "high_frequency_relative_l2": 0.9933450188930231,
+          "spatial_gradient_relative_l2": 0.8998789426949987,
+          "measurement_relative_l2": 0.044384487185016495,
+          "negative_fraction": 0.00223236083984375
+        },
+        "KAIST": {
+          "psnr_unit_range_db": 27.18220304958317,
+          "ssim_band_mean": 0.8459579185071944,
+          "sam_deg": 12.142305657466585,
+          "cube_relative_l2": 0.3258362844159046,
+          "global_spectrum_relative_l2": 0.051332638347074536,
+          "high_frequency_relative_l2": 0.9957176885248765,
+          "spatial_gradient_relative_l2": 0.9108316471662345,
+          "measurement_relative_l2": 0.04936510012806591,
+          "negative_fraction": 0.005652427673339844
+        },
+        "ALL": {
+          "psnr_unit_range_db": 27.993215171576097,
+          "ssim_band_mean": 0.8713103006805077,
+          "sam_deg": 12.086805341550749,
+          "cube_relative_l2": 0.3372378176205453,
+          "global_spectrum_relative_l2": 0.10419405258445885,
+          "high_frequency_relative_l2": 0.9943995387294022,
+          "spatial_gradient_relative_l2": 0.9047468113488812,
+          "measurement_relative_l2": 0.046598092937482904,
+          "negative_fraction": 0.0037523905436197915
+        }
+      },
+      "config": {
+        "seed": 20261021,
+        "model": "A",
+        "stages": 6,
+        "width": 64,
+        "depth": 4,
+        "sfat_width": 32,
+        "sfat_levels": 3,
+        "batch": 1,
+        "steps_per_epoch": 100,
+        "epochs": 10,
+        "patience": 4,
+        "learning_rate": 0.0002,
+        "weight_decay": 1e-05,
+        "grad_clip": 1.0,
+        "train_noise_rms_fraction": 0.005,
+        "brightness_range": [
+          0.9,
+          1.1
+        ],
+        "lambda_grad": 0.2,
+        "lambda_spectral": 0.05,
+        "lambda_data": 0.02,
+        "selection": "minimum validation reconstruction objective",
+        "test_policy": "test.npz not loaded; frozen D5 test only in G4"
+      }
+    },
+    {
+      "name": "S2",
+      "model": "A",
+      "parameters": 98139,
+      "best_epoch": 10,
+      "best_validation_loss": 0.022608952596783638,
+      "seconds": 342.99200319999363,
+      "metrics": {
+        "CAVE": {
+          "psnr_unit_range_db": 27.375107779626877,
+          "ssim_band_mean": 0.859988355115276,
+          "sam_deg": 12.928092922326465,
+          "cube_relative_l2": 0.4005806854397558,
+          "global_spectrum_relative_l2": 0.14600951184167937,
+          "high_frequency_relative_l2": 0.9954253575328977,
+          "spatial_gradient_relative_l2": 0.9467495326773496,
+          "measurement_relative_l2": 0.0640254194846708,
+          "negative_fraction": 0.0022916158040364584
+        },
+        "KAIST": {
+          "psnr_unit_range_db": 25.64187580989207,
+          "ssim_band_mean": 0.7962539327526778,
+          "sam_deg": 13.19860807854193,
+          "cube_relative_l2": 0.38898524997483863,
+          "global_spectrum_relative_l2": 0.050219288389856946,
+          "high_frequency_relative_l2": 0.9989948350213915,
+          "spatial_gradient_relative_l2": 0.9649906348007641,
+          "measurement_relative_l2": 0.0664510643731202,
+          "negative_fraction": 0.006639253525506882
+        },
+        "ALL": {
+          "psnr_unit_range_db": 26.60478245974474,
+          "ssim_band_mean": 0.8316619451763435,
+          "sam_deg": 13.04832188064445,
+          "cube_relative_l2": 0.39542715856645927,
+          "global_spectrum_relative_l2": 0.10343607919642495,
+          "high_frequency_relative_l2": 0.9970117919722283,
+          "spatial_gradient_relative_l2": 0.9548566891766449,
+          "measurement_relative_l2": 0.06510348387953718,
+          "negative_fraction": 0.004223899235801092
+        }
+      },
+      "config": {
+        "seed": 20261021,
+        "model": "A",
+        "stages": 6,
+        "width": 64,
+        "depth": 4,
+        "sfat_width": 32,
+        "sfat_levels": 3,
+        "batch": 1,
+        "steps_per_epoch": 100,
+        "epochs": 10,
+        "patience": 4,
+        "learning_rate": 0.0002,
+        "weight_decay": 1e-05,
+        "grad_clip": 1.0,
+        "train_noise_rms_fraction": 0.005,
+        "brightness_range": [
+          0.9,
+          1.1
+        ],
+        "lambda_grad": 0.2,
+        "lambda_spectral": 0.05,
+        "lambda_data": 0.02,
+        "selection": "minimum validation reconstruction objective",
+        "test_policy": "test.npz not loaded; frozen D5 test only in G4"
+      }
+    },
+    {
+      "name": "S3",
+      "model": "A",
+      "parameters": 98139,
+      "best_epoch": 10,
+      "best_validation_loss": 0.02279682643711567,
+      "seconds": 341.35083299997495,
+      "metrics": {
+        "CAVE": {
+          "psnr_unit_range_db": 27.30122526894766,
+          "ssim_band_mean": 0.8585461370235528,
+          "sam_deg": 12.904351312069924,
+          "cube_relative_l2": 0.4039329987828886,
+          "global_spectrum_relative_l2": 0.1466824288897821,
+          "high_frequency_relative_l2": 0.9954749083463075,
+          "spatial_gradient_relative_l2": 0.9481169903456225,
+          "measurement_relative_l2": 0.0678048303836987,
+          "negative_fraction": 0.0021736871628534227
+        },
+        "KAIST": {
+          "psnr_unit_range_db": 25.554028909825703,
+          "ssim_band_mean": 0.7942329964216519,
+          "sam_deg": 13.12523237390785,
+          "cube_relative_l2": 0.39294286346103735,
+          "global_spectrum_relative_l2": 0.0505476616763714,
+          "high_frequency_relative_l2": 0.9989905561977397,
+          "spatial_gradient_relative_l2": 0.9662830681170362,
+          "measurement_relative_l2": 0.06989137360199434,
+          "negative_fraction": 0.00595651354108538
+        },
+        "ALL": {
+          "psnr_unit_range_db": 26.524693553782345,
+          "ssim_band_mean": 0.8299625189782636,
+          "sam_deg": 13.002520672886781,
+          "cube_relative_l2": 0.3990484941953991,
+          "global_spectrum_relative_l2": 0.1039558656838218,
+          "high_frequency_relative_l2": 0.9970374185024995,
+          "spatial_gradient_relative_l2": 0.9561908026884729,
+          "measurement_relative_l2": 0.06873218292516342,
+          "negative_fraction": 0.003854943330956514
+        }
+      },
+      "config": {
+        "seed": 20261021,
+        "model": "A",
+        "stages": 6,
+        "width": 64,
+        "depth": 4,
+        "sfat_width": 32,
+        "sfat_levels": 3,
+        "batch": 1,
+        "steps_per_epoch": 100,
+        "epochs": 10,
+        "patience": 4,
+        "learning_rate": 0.0002,
+        "weight_decay": 1e-05,
+        "grad_clip": 1.0,
+        "train_noise_rms_fraction": 0.005,
+        "brightness_range": [
+          0.9,
+          1.1
+        ],
+        "lambda_grad": 0.2,
+        "lambda_spectral": 0.05,
+        "lambda_data": 0.02,
+        "selection": "minimum validation reconstruction objective",
+        "test_policy": "test.npz not loaded; frozen D5 test only in G4"
+      }
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+"""Evaluate a frozen D5.2 checkpoint; test loading requires an explicit flag.
+
+The operator used for evaluation is never substituted silently: the requested
+kernel file must match the operator stored in the checkpoint, otherwise the run
+aborts unless the explicit ``--allow-psf-mismatch`` diagnostic path is chosen.
+"""
+import argparse
+import json
+from pathlib import Path
+import numpy as np
+import torch
+from lcd_reconstruction.unrolling.general_pgd import GeneralSpectralPGD
+from lcd_reconstruction.unrolling.hsfaut import HSFAUReconstructor
+from lcd_reconstruction.operators.psf_provenance import (
+    PSFProvenanceError, array_digest, file_digest, is_physics_key,
+    physics_buffers_from_model, physics_buffers_from_state, resolve_psf_policy)
+from metrics import reconstruction_metrics
+
+
+def build_model(cfg, kernels, hw):
+    if cfg["model"] == "A":
+        return GeneralSpectralPGD(kernels, hw, cfg["stages"], cfg["width"], cfg["depth"])
+    return HSFAUReconstructor(kernels, hw, stages=cfg["stages"], width=cfg["width"],
+                              depth=cfg["depth"],
+                              prior="cnn" if cfg["model"] == "B" else "sfat",
+                              sfat_width=cfg["sfat_width"], sfat_levels=cfg["sfat_levels"])
+
+
+def aggregate(rows):
+    keys = ["psnr_unit_range_db", "ssim_band_mean", "sam_deg", "cube_relative_l2",
+            "global_spectrum_relative_l2", "high_frequency_relative_l2",
+            "spatial_gradient_relative_l2", "measurement_relative_l2"]
+    out = {}
+    for source in ("CAVE", "KAIST", "ALL"):
+        selected = rows if source == "ALL" else [r for r in rows if r["dataset_id"] == source]
+        out[source] = {key: float(np.mean([r["metrics"][key] for r in selected])) for key in keys}
+    return out
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--prepared", type=Path, required=True)
+    ap.add_argument("--checkpoint", type=Path, required=True)
+    ap.add_argument("--kernel-file", type=Path, required=True)
+    ap.add_argument("--split", choices=["val", "test"], required=True)
+    ap.add_argument("--allow-test", action="store_true")
+    ap.add_argument("--allow-psf-mismatch", action="store_true")
+    ap.add_argument("--output", type=Path, required=True)
+    ap.add_argument("--device", default="cuda")
+    args = ap.parse_args()
+    if args.split == "test" and not args.allow_test:
+        raise ValueError("frozen test requires --allow-test")
+    if args.split == "test" and args.allow_psf_mismatch:
+        raise ValueError("declared PSF mismatch is not allowed on the frozen test split")
+    if args.output.exists():
+        raise FileExistsError(args.output)
+    records = json.loads((args.prepared / "manifest.json").read_text(encoding="utf-8"))
+    data = np.load(args.prepared / f"{args.split}.npz")["cube"]
+    kernels = np.load(args.kernel_file)["kernels"]
+    checkpoint = torch.load(args.checkpoint, map_location=args.device, weights_only=True)
+    cfg = checkpoint["config"]
+    model = build_model(cfg, kernels, tuple(checkpoint["hw"])).to(args.device)
+    requested = physics_buffers_from_model(model)
+    stored = physics_buffers_from_state(checkpoint["state"])
+    policy = resolve_psf_policy(checkpoint.get("psf_provenance"), requested, stored,
+                                allow_mismatch=args.allow_psf_mismatch, split=args.split,
+                                requested_array=array_digest(kernels))
+    if policy["use_checkpoint_operator"]:
+        model.load_state_dict(checkpoint["state"])
+    else:
+        kept = {k: v for k, v in checkpoint["state"].items() if not is_physics_key(k)}
+        missing = model.load_state_dict(kept, strict=False)
+        if missing.unexpected_keys:
+            raise PSFProvenanceError(f"unexpected state keys: {missing.unexpected_keys}")
+        missing_parameters = [k for k in missing.missing_keys if not is_physics_key(k)]
+        if missing_parameters:
+            raise PSFProvenanceError(f"missing state keys: {missing_parameters}")
+    expected = stored if policy["use_checkpoint_operator"] else requested
+    if physics_buffers_from_model(model) != expected:
+        raise PSFProvenanceError("operator after loading does not match the declared policy")
+    model.eval().requires_grad_(False)
+    psf_record = dict(policy=policy["policy"], formal_result=policy["formal_result"],
+                      reason=policy["reason"],
+                      requested_kernel_file=str(args.kernel_file),
+                      requested_kernel_file_sha256=file_digest(args.kernel_file),
+                      requested_kernel_array_sha256=array_digest(kernels),
+                      operator_requested=policy["requested"],
+                      operator_checkpoint=policy["stored"],
+                      operator_used="checkpoint" if policy["use_checkpoint_operator"] else "kernel-file",
+                      recorded_kernel_file=policy["recorded_kernel_file"],
+                      recorded_kernel_array_sha256=policy["recorded_array"])
+    rows = []
+    with torch.no_grad():
+        for record in records:
+            if record["split"] != args.split:
+                continue
+            x = torch.from_numpy(data[record["array_index"]:record["array_index"] + 1]).to(args.device)
+            y = model.physics(x)
+            out = model(y)
+            rows.append(dict(scene_id=record["scene_id"], dataset_id=record["dataset_id"],
+                             metrics=reconstruction_metrics(
+                                 out["spectral_cube_hat"][0].cpu().numpy(),
+                                 x[0].cpu().numpy(), y[0].numpy(),
+                                 out["reprojected_measurement"][0].cpu().numpy())))
+    result = dict(protocol="D5.2-frozen-evaluation", split=args.split,
+                  allow_test=args.allow_test, checkpoint=str(args.checkpoint),
+                  checkpoint_epoch=checkpoint.get("epoch"),
+                  selection=checkpoint.get("selection"),
+                  psf=psf_record, formal_result=policy["formal_result"],
+                  scenes=rows, aggregate=aggregate(rows),
+                  watercolors=next((r for r in rows if r["scene_id"] == "watercolors"), None),
+                  note="metrics are fixed-range; no test-dependent rescaling")
+    args.output.write_text(json.dumps(result, indent=2), encoding="utf-8")
+    print(json.dumps(dict(psf=policy["policy"], formal_result=policy["formal_result"],
+                          aggregate=result["aggregate"]["ALL"])))

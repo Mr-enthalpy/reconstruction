@@ -1,0 +1,16 @@
+{
+  "seed": 20261020,
+  "stages": 8,
+  "hidden": 96,
+  "depth": 5,
+  "batch": 2,
+  "epochs": 400,
+  "patience": 60,
+  "learning_rate": 0.0003,
+  "train_noise_rms_fraction": 0.005,
+  "brightness_range": [0.9, 1.1],
+  "spatial_augmentation": "common full-scene horizontal/vertical flips and quarter rotations; no crops",
+  "selection": "minimum validation reconstruction objective",
+  "test_policy": "development_test only after checkpoint selection; reserved_final never loaded",
+  "comparison_reason": "single larger-capacity comparison fixed during gpu01 training, before examining development-test results; compare validation objective only"
+}

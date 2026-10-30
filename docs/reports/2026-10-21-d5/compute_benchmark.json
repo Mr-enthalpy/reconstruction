@@ -1,0 +1,107 @@
+{
+  "protocol": "D5-G1-compute-benchmark",
+  "git_commit": "9bee8b1c47ab8e4b8e71ccc602b418017d769601",
+  "preflight_sha256": "80a8314bf8f383706cd7c568ce9ca43c4c29887ad3404f47957378b6d4848ca6",
+  "prepared_checks_sha256": "c16ca39da8280c0604e0f19dca3f921b42b83a4e1836b72fc494a77b937cc916",
+  "device": "NVIDIA GeForce RTX 3060 Ti",
+  "torch_version": "2.7.1+cu128",
+  "benchmark": [
+    {
+      "support_sensor_pixels": 512,
+      "size": 128,
+      "batch": 1,
+      "forward_adjoint_ms": 0.39137279987335205,
+      "peak_cuda_allocated_bytes": 29444096,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 512,
+      "size": 128,
+      "batch": 2,
+      "forward_adjoint_ms": 0.6559423923492431,
+      "peak_cuda_allocated_bytes": 53254144,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 512,
+      "size": 256,
+      "batch": 1,
+      "forward_adjoint_ms": 1.322988796234131,
+      "peak_cuda_allocated_bytes": 122159104,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 512,
+      "size": 256,
+      "batch": 2,
+      "forward_adjoint_ms": 2.5581567764282225,
+      "peak_cuda_allocated_bytes": 213377024,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 512,
+      "size": 512,
+      "batch": 1,
+      "forward_adjoint_ms": 5.288345718383789,
+      "peak_cuda_allocated_bytes": 469401600,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 512,
+      "size": 512,
+      "batch": 2,
+      "forward_adjoint_ms": 10.046054077148437,
+      "peak_cuda_allocated_bytes": 848453632,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 128,
+      "batch": 1,
+      "forward_adjoint_ms": 0.38236160278320314,
+      "peak_cuda_allocated_bytes": 139937792,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 128,
+      "batch": 2,
+      "forward_adjoint_ms": 0.6631423950195312,
+      "peak_cuda_allocated_bytes": 53254144,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 256,
+      "batch": 1,
+      "forward_adjoint_ms": 1.3256319999694823,
+      "peak_cuda_allocated_bytes": 122159104,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 256,
+      "batch": 2,
+      "forward_adjoint_ms": 2.531942367553711,
+      "peak_cuda_allocated_bytes": 213377024,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 512,
+      "batch": 1,
+      "forward_adjoint_ms": 5.279129409790039,
+      "peak_cuda_allocated_bytes": 469401600,
+      "status": "ok"
+    },
+    {
+      "support_sensor_pixels": 1024,
+      "size": 512,
+      "batch": 2,
+      "forward_adjoint_ms": 10.058118438720703,
+      "peak_cuda_allocated_bytes": 848453632,
+      "status": "ok"
+    }
+  ],
+  "note": "Forward+adjoint operator only; not end-to-end model throughput."
+}

@@ -1,0 +1,382 @@
+{
+  "protocol": "D5.1-reference-repeatability",
+  "source": "matched pre-dark plus residual 40px border; raw reference ROI",
+  "reference_pairs": {
+    "450": [
+      "R21RefPre32",
+      "R21RefRepeat32",
+      "R21RefPost32"
+    ],
+    "550": [
+      "R21RefPre32",
+      "R21RefRepeat32",
+      "R21RefPost32"
+    ],
+    "650": [
+      "R21RefPre650",
+      "R21RefRepeat650",
+      "R21RefPost650"
+    ]
+  },
+  "limitations": [
+    "only 450/550/650 have independent repeats",
+    "post references are not a third independent pre/repeat pair",
+    "reference ROI is 512x512; 1024 native support is not available for these repeats"
+  ],
+  "same_wavelength": {
+    "1": {
+      "450": {
+        "pre_repeat_relative_l2": 0.01794130766237793,
+        "pre_post_relative_l2": 0.018507015486095887,
+        "pre_repeat_high_frequency_relative_l2": 0.01911083396708016,
+        "pre_post_high_frequency_relative_l2": 0.019608890016307185
+      },
+      "550": {
+        "pre_repeat_relative_l2": 0.012591276660234962,
+        "pre_post_relative_l2": 0.013388939304607673,
+        "pre_repeat_high_frequency_relative_l2": 0.017678568120374355,
+        "pre_post_high_frequency_relative_l2": 0.018168754814128565
+      },
+      "650": {
+        "pre_repeat_relative_l2": 0.007710044053601329,
+        "pre_post_relative_l2": 0.010318226370785345,
+        "pre_repeat_high_frequency_relative_l2": 0.008861585620369474,
+        "pre_post_high_frequency_relative_l2": 0.011235685791386282
+      }
+    },
+    "2": {
+      "450": {
+        "pre_repeat_relative_l2": 0.016520116586652457,
+        "pre_post_relative_l2": 0.01707025751425846,
+        "pre_repeat_high_frequency_relative_l2": 0.2646671029088749,
+        "pre_post_high_frequency_relative_l2": 0.2579786339026275
+      },
+      "550": {
+        "pre_repeat_relative_l2": 0.00887989989496107,
+        "pre_post_relative_l2": 0.010051980401397436,
+        "pre_repeat_high_frequency_relative_l2": 0.12220683705658708,
+        "pre_post_high_frequency_relative_l2": 0.12164265404663466
+      },
+      "650": {
+        "pre_repeat_relative_l2": 0.006258530356058196,
+        "pre_post_relative_l2": 0.009247810213919351,
+        "pre_repeat_high_frequency_relative_l2": 0.06462989468575374,
+        "pre_post_high_frequency_relative_l2": 0.06848968504459502
+      }
+    },
+    "4": {
+      "450": {
+        "pre_repeat_relative_l2": 0.009104671075610122,
+        "pre_post_relative_l2": 0.010405839146487768,
+        "pre_repeat_high_frequency_relative_l2": 0.06446169197461106,
+        "pre_post_high_frequency_relative_l2": 0.06000771395220341
+      },
+      "550": {
+        "pre_repeat_relative_l2": 0.006290939851761273,
+        "pre_post_relative_l2": 0.00773517244360197,
+        "pre_repeat_high_frequency_relative_l2": 0.02858102682774792,
+        "pre_post_high_frequency_relative_l2": 0.031018533224528713
+      },
+      "650": {
+        "pre_repeat_relative_l2": 0.004239995177836755,
+        "pre_post_relative_l2": 0.007517333619873768,
+        "pre_repeat_high_frequency_relative_l2": 0.016944867082140314,
+        "pre_post_high_frequency_relative_l2": 0.028844664577670636
+      }
+    },
+    "8": {
+      "450": {
+        "pre_repeat_relative_l2": 0.005737395393295297,
+        "pre_post_relative_l2": 0.007634807714067053,
+        "pre_repeat_high_frequency_relative_l2": 0.018417311929341863,
+        "pre_post_high_frequency_relative_l2": 0.017068049461186383
+      },
+      "550": {
+        "pre_repeat_relative_l2": 0.004983266075513329,
+        "pre_post_relative_l2": 0.006509466271074116,
+        "pre_repeat_high_frequency_relative_l2": 0.012060769007796183,
+        "pre_post_high_frequency_relative_l2": 0.01600554949784165
+      },
+      "650": {
+        "pre_repeat_relative_l2": 0.00323920791791907,
+        "pre_post_relative_l2": 0.005747562881355691,
+        "pre_repeat_high_frequency_relative_l2": 0.00839548857630251,
+        "pre_post_high_frequency_relative_l2": 0.013375108243052873
+      }
+    }
+  },
+  "cross_wavelength": {
+    "1": {
+      "450_550": 1.2936597673371932,
+      "450_650": 1.3623525240254493,
+      "550_650": 1.2718389708520832
+    },
+    "2": {
+      "450_550": 0.4896125286495626,
+      "450_650": 0.7816538885165519,
+      "550_650": 0.5915685328357659
+    },
+    "4": {
+      "450_550": 0.48313421311700777,
+      "450_650": 0.7706200315091459,
+      "550_650": 0.5704618516807015
+    },
+    "8": {
+      "450_550": 0.4626584922097237,
+      "450_650": 0.7637149557633865,
+      "550_650": 0.5502398885328394
+    }
+  },
+  "bayer_native_phase": {
+    "450": {
+      "phase_means": [
+        0.0011300927501613793,
+        0.4060892945629054,
+        -0.006414901604086665,
+        0.0012488252025539591
+      ],
+      "phase_std_over_mean": [
+        115.5711339121892,
+        8.614290928783802,
+        10.707676858874153,
+        105.46064480028663
+      ],
+      "phase_relative_l2_to_2x_mean": [
+        1.2971163942841715,
+        0.09799747929704264,
+        1.9582403994868043,
+        1.2851844895767204
+      ],
+      "two_x_phase_identity_error": 1.0586775525953765e-16,
+      "phase_pairwise_correlation": [
+        [
+          1.0,
+          0.9684656402594487,
+          0.9227490154802275,
+          0.973521998387344
+        ],
+        [
+          0.9684656402594487,
+          1.0,
+          0.9403725008049145,
+          0.9710958052553994
+        ],
+        [
+          0.9227490154802274,
+          0.9403725008049145,
+          1.0,
+          0.9161848434652676
+        ],
+        [
+          0.9735219983873439,
+          0.9710958052553995,
+          0.9161848434652675,
+          1.0
+        ]
+      ]
+    },
+    "550": {
+      "phase_means": [
+        0.5611627594899323,
+        0.09077148599139714,
+        0.014272977538028007,
+        0.5601823822926668
+      ],
+      "phase_std_over_mean": [
+        8.63083066756071,
+        11.65746497141263,
+        19.70179499845399,
+        8.60708983696878
+      ],
+      "phase_relative_l2_to_2x_mean": [
+        0.09428240579421444,
+        0.2767958506724158,
+        0.7135848798230839,
+        0.09175963123812918
+      ],
+      "two_x_phase_identity_error": 5.698895759593246e-18,
+      "phase_pairwise_correlation": [
+        [
+          1.0,
+          0.988055684312862,
+          0.9889968900230943,
+          0.9853103524173032
+        ],
+        [
+          0.9880556843128618,
+          1.0,
+          0.9804354822194912,
+          0.9937698066617009
+        ],
+        [
+          0.9889968900230942,
+          0.9804354822194911,
+          1.0,
+          0.9817723986845972
+        ],
+        [
+          0.9853103524173031,
+          0.9937698066617009,
+          0.9817723986845972,
+          1.0
+        ]
+      ]
+    },
+    "650": {
+      "phase_means": [
+        0.04259870941356076,
+        0.020026668855699443,
+        0.36065231258586306,
+        0.044917866537126434
+      ],
+      "phase_std_over_mean": [
+        9.369229501830224,
+        12.339377172889995,
+        8.516883376829343,
+        9.241584496359673
+      ],
+      "phase_relative_l2_to_2x_mean": [
+        0.13280020902456105,
+        0.38297550585920265,
+        0.047333420158762254,
+        0.1571462348238974
+      ],
+      "two_x_phase_identity_error": 8.390940672555019e-17,
+      "phase_pairwise_correlation": [
+        [
+          1.0,
+          0.9735227305225558,
+          0.9902186560619824,
+          0.9844572009258734
+        ],
+        [
+          0.9735227305225557,
+          1.0,
+          0.9742922437035669,
+          0.978212237285231
+        ],
+        [
+          0.9902186560619824,
+          0.9742922437035668,
+          0.9999999999999999,
+          0.9839369316633533
+        ],
+        [
+          0.9844572009258734,
+          0.978212237285231,
+          0.9839369316633534,
+          1.0
+        ]
+      ]
+    }
+  },
+  "bayer_2x_origin_shift": {
+    "450": 0.1639917164114222,
+    "550": 0.16054696163685497,
+    "650": 0.24195192039422964
+  },
+  "reference_metrics": [
+    {
+      "wavelength_nm": 450,
+      "averaging_frames": 32,
+      "pre_repeat_shape_relative_l2": 0.01652011658665245,
+      "raw_mean_peak_difference_sensor_px": 0.0,
+      "energy_change_percent": -0.14542911517242407,
+      "local_centroid_difference_sensor_px": 0.1183831575407495,
+      "pre_repeat_half_shape_relative_l2": [
+        0.022834207344636495,
+        0.022782987036877707
+      ],
+      "pre_repeat_half_energy_change_percent": [
+        1.3310244617762867,
+        0.8602891155637282
+      ],
+      "pre_repeat_block_energies": [
+        [
+          26291.63093220339,
+          26057.908050847458,
+          26536.911440677963,
+          26509.412711864403
+        ],
+        [
+          26180.921186440675,
+          26214.994067796608,
+          26291.684745762715,
+          26554.986864406783
+        ]
+      ]
+    },
+    {
+      "wavelength_nm": 550,
+      "averaging_frames": 32,
+      "pre_repeat_shape_relative_l2": 0.008879899894961067,
+      "raw_mean_peak_difference_sensor_px": 0.0,
+      "energy_change_percent": -1.313116999912134,
+      "local_centroid_difference_sensor_px": 0.06415136722712568,
+      "pre_repeat_half_shape_relative_l2": [
+        0.01229270454596816,
+        0.011073833343212377
+      ],
+      "pre_repeat_half_energy_change_percent": [
+        1.3111663413442498,
+        -0.8856741179491423
+      ],
+      "pre_repeat_block_energies": [
+        [
+          79472.3059322034,
+          80226.07669491526,
+          80334.05254237288,
+          81458.24152542373
+        ],
+        [
+          79685.35508474577,
+          79654.82627118644,
+          78614.8529661017,
+          79314.09364406779
+        ]
+      ]
+    },
+    {
+      "wavelength_nm": 650,
+      "averaging_frames": 256,
+      "pre_repeat_shape_relative_l2": 0.006258530356058196,
+      "raw_mean_peak_difference_sensor_px": 0.0,
+      "energy_change_percent": 0.4191476765290414,
+      "local_centroid_difference_sensor_px": 0.012046661733514485,
+      "pre_repeat_half_shape_relative_l2": [
+        0.008781168937513486,
+        0.01073884777592908
+      ],
+      "pre_repeat_half_energy_change_percent": [
+        -0.10197469586867847,
+        -1.4706078608718531
+      ],
+      "pre_repeat_block_energies": [
+        [
+          29695.173199152545,
+          30955.72870762712,
+          31251.35911016949,
+          30895.00625,
+          30516.447987288135,
+          30626.14247881356,
+          29753.53771186441,
+          31775.916949152543
+        ],
+        [
+          31918.62722457627,
+          30516.185593220336,
+          30321.98877118644,
+          31405.262605932206,
+          30718.65042372881,
+          31793.050211864404,
+          29971.37129237288,
+          29853.055190677966
+        ]
+      ]
+    }
+  ],
+  "gate": {
+    "native_1x_phase_fails_if": "phase_relative_l2_to_2x_mean exceeds same-wavelength repeat envelope",
+    "two_x_origin_shift_fails_if": "relative_l2 exceeds the same-wavelength repeat envelope"
+  }
+}

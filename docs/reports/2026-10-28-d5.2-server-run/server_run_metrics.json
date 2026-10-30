@@ -1,0 +1,323 @@
+{
+  "run": "server_a6_24800",
+  "server": "kunqian (C-4 acceptance test server)",
+  "device": "NVIDIA GeForce RTX 3090",
+  "torch_version": "2.7.1+cu128",
+  "seed": 20261021,
+  "config": {
+    "seed": 20261021,
+    "model": "A",
+    "stages": 6,
+    "width": 64,
+    "depth": 4,
+    "sfat_width": 32,
+    "sfat_levels": 3,
+    "batch": 1,
+    "steps_per_epoch": 100,
+    "epochs": 300,
+    "patience": 40,
+    "eval_every": 5,
+    "learning_rate": 0.0002,
+    "weight_decay": 1e-05,
+    "grad_clip": 1.0,
+    "train_noise_rms_fraction": 0.005,
+    "brightness_range": [
+      0.9,
+      1.1
+    ],
+    "lambda_grad": 0.2,
+    "lambda_spectral": 0.05,
+    "lambda_data": 0.02,
+    "selection": "minimum validation reconstruction objective",
+    "test_policy": "test.npz not loaded; frozen D5 test only after freeze"
+  },
+  "provenance": {
+    "train_sha256": "024d2b4c8956707387289242ddbadce08e3379a51ed6e0752a167666dbb32908",
+    "val_sha256": "e61ac4f102d58a44bdb8f7174a960d13f2e102c5db00cc0bc408ea5583ff9247",
+    "kernel_sha256": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+    "train_manifest_sha256": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3"
+  },
+  "progress": {
+    "epochs_completed": 248,
+    "global_steps": 24800,
+    "stopped_by": "patience=40 early stop",
+    "best_epoch": 208,
+    "best_validation_loss": 0.012923688627779484,
+    "compute_seconds_first_segment": 861.5737904139969,
+    "compute_seconds_second_segment": 4624.77827117499
+  },
+  "checkpoint_sha256": {
+    "best.pt": "d92b8ed9891f03d6da47735a104dc02bae38f0096e69abe54f3818d47f339e0f",
+    "last.pt": "40de8e5f07145545bfd9e799f8a138919715a3c62cf44155f38cd28642843ca0",
+    "history.json": "0c5446018887ba21683fe2cb2cbb14f1f36de95e75178a66291cde2882e2b3a9",
+    "validation.json": "87bc4e314f834dd559945795c2d127f19d0c65c3d5854421f1c643052b3669d1"
+  },
+  "validation_best_checkpoint_mean": {
+    "psnr_unit_range_db": 30.724775,
+    "ssim_band_mean": 0.940028,
+    "sam_deg": 9.899128,
+    "cube_relative_l2": 0.249254,
+    "global_spectrum_relative_l2": 0.100925,
+    "high_frequency_relative_l2": 0.76193,
+    "measurement_relative_l2": 0.010975
+  },
+  "validation_best_checkpoint_per_scene": [
+    {
+      "scene_id": "fake_and_real_lemon_slices",
+      "dataset_id": "CAVE",
+      "psnr_unit_range_db": 31.4742,
+      "ssim_band_mean": 0.9391,
+      "sam_deg": 10.0186
+    },
+    {
+      "scene_id": "fake_and_real_lemons",
+      "dataset_id": "CAVE",
+      "psnr_unit_range_db": 28.9565,
+      "ssim_band_mean": 0.9454,
+      "sam_deg": 10.0642
+    },
+    {
+      "scene_id": "fake_and_real_strawberries",
+      "dataset_id": "CAVE",
+      "psnr_unit_range_db": 31.613,
+      "ssim_band_mean": 0.9051,
+      "sam_deg": 13.3533
+    },
+    {
+      "scene_id": "fake_and_real_sushi",
+      "dataset_id": "CAVE",
+      "psnr_unit_range_db": 32.9163,
+      "ssim_band_mean": 0.967,
+      "sam_deg": 7.0321
+    },
+    {
+      "scene_id": "fake_and_real_tomatoes",
+      "dataset_id": "CAVE",
+      "psnr_unit_range_db": 29.0921,
+      "ssim_band_mean": 0.9607,
+      "sam_deg": 9.285
+    },
+    {
+      "scene_id": "kaist_25",
+      "dataset_id": "KAIST",
+      "psnr_unit_range_db": 28.3848,
+      "ssim_band_mean": 0.9223,
+      "sam_deg": 11.2349
+    },
+    {
+      "scene_id": "kaist_26",
+      "dataset_id": "KAIST",
+      "psnr_unit_range_db": 31.5765,
+      "ssim_band_mean": 0.9571,
+      "sam_deg": 7.6914
+    },
+    {
+      "scene_id": "kaist_28",
+      "dataset_id": "KAIST",
+      "psnr_unit_range_db": 30.4684,
+      "ssim_band_mean": 0.921,
+      "sam_deg": 10.4834
+    },
+    {
+      "scene_id": "kaist_29",
+      "dataset_id": "KAIST",
+      "psnr_unit_range_db": 32.0411,
+      "ssim_band_mean": 0.9426,
+      "sam_deg": 9.9292
+    }
+  ],
+  "progress_every_20_epochs": [
+    {
+      "epoch": 20,
+      "global_step": 2000,
+      "train_loss": 0.026572801158763468,
+      "validation_loss": 0.01562446728348732,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 29.3098022765734,
+        "ssim_band_mean": 0.9127464282703835,
+        "sam_deg": 11.448380436791643,
+        "cube_relative_l2": 0.29273060533676154,
+        "global_spectrum_relative_l2": 0.118683914945303,
+        "high_frequency_relative_l2": 0.9546734623349491,
+        "spatial_gradient_relative_l2": 0.768723909574765,
+        "measurement_relative_l2": 0.03377744571180298
+      }
+    },
+    {
+      "epoch": 40,
+      "global_step": 4000,
+      "train_loss": 0.025786046809516846,
+      "validation_loss": 0.014809144660830498,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 29.777389322096823,
+        "ssim_band_mean": 0.920244486546944,
+        "sam_deg": 11.000104111601315,
+        "cube_relative_l2": 0.2753830495191815,
+        "global_spectrum_relative_l2": 0.09413510923678936,
+        "high_frequency_relative_l2": 0.9424139034653645,
+        "spatial_gradient_relative_l2": 0.7440397132852801,
+        "measurement_relative_l2": 0.026880293626278726
+      }
+    },
+    {
+      "epoch": 60,
+      "global_step": 6000,
+      "train_loss": 0.02745594973908737,
+      "validation_loss": 0.014375267550349236,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 29.96633478218029,
+        "ssim_band_mean": 0.9253901133831983,
+        "sam_deg": 10.84475308800221,
+        "cube_relative_l2": 0.27018521291559683,
+        "global_spectrum_relative_l2": 0.11040928171974099,
+        "high_frequency_relative_l2": 0.9100646462059855,
+        "spatial_gradient_relative_l2": 0.7107251771306542,
+        "measurement_relative_l2": 0.0181254800467698
+      }
+    },
+    {
+      "epoch": 80,
+      "global_step": 8000,
+      "train_loss": 0.026812229598872365,
+      "validation_loss": 0.013768108561635017,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 30.262432818994753,
+        "ssim_band_mean": 0.9320117825954054,
+        "sam_deg": 10.345499043807585,
+        "cube_relative_l2": 0.2618316703835983,
+        "global_spectrum_relative_l2": 0.09870598146872087,
+        "high_frequency_relative_l2": 0.8721711309106192,
+        "spatial_gradient_relative_l2": 0.6710092029520078,
+        "measurement_relative_l2": 0.014502226732097664
+      }
+    },
+    {
+      "epoch": 100,
+      "global_step": 10000,
+      "train_loss": 0.02680356641765684,
+      "validation_loss": 0.01380816102027893,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 30.325885923475507,
+        "ssim_band_mean": 0.9320710145620943,
+        "sam_deg": 10.994471301190597,
+        "cube_relative_l2": 0.26020869765612953,
+        "global_spectrum_relative_l2": 0.12245412497720617,
+        "high_frequency_relative_l2": 0.8456570794831738,
+        "spatial_gradient_relative_l2": 0.6467932350381277,
+        "measurement_relative_l2": 0.013144670600833836
+      }
+    },
+    {
+      "epoch": 120,
+      "global_step": 12000,
+      "train_loss": 0.02487263240851462,
+      "validation_loss": 0.013765920884907246,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 30.359188410737588,
+        "ssim_band_mean": 0.9331348518101501,
+        "sam_deg": 11.077939068909394,
+        "cube_relative_l2": 0.25887705160633767,
+        "global_spectrum_relative_l2": 0.11760356867874378,
+        "high_frequency_relative_l2": 0.8333820163110417,
+        "spatial_gradient_relative_l2": 0.6420431600084939,
+        "measurement_relative_l2": 0.01717595195068735
+      }
+    },
+    {
+      "epoch": 140,
+      "global_step": 14000,
+      "train_loss": 0.026720425055827945,
+      "validation_loss": 0.013267074711620808,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 30.535329769804214,
+        "ssim_band_mean": 0.9373428758802235,
+        "sam_deg": 10.115468443056972,
+        "cube_relative_l2": 0.2545523101354459,
+        "global_spectrum_relative_l2": 0.09999919249596546,
+        "high_frequency_relative_l2": 0.8058459336741306,
+        "spatial_gradient_relative_l2": 0.620475894868826,
+        "measurement_relative_l2": 0.013354009772077922
+      }
+    },
+    {
+      "epoch": 160,
+      "global_step": 16000,
+      "train_loss": 0.026377693875692786,
+      "validation_loss": 0.013274464756250381,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 30.515148197552282,
+        "ssim_band_mean": 0.9377082116231313,
+        "sam_deg": 10.167919249442077,
+        "cube_relative_l2": 0.25516280974093764,
+        "global_spectrum_relative_l2": 0.10484527249061908,
+        "high_frequency_relative_l2": 0.7851083792399776,
+        "spatial_gradient_relative_l2": 0.6061012934308363,
+        "measurement_relative_l2": 0.011796325897089212
+      }
+    },
+    {
+      "epoch": 180,
+      "global_step": 18000,
+      "train_loss": 0.026144667249172925,
+      "validation_loss": 0.01323696132749319,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 30.607590595633685,
+        "ssim_band_mean": 0.9383407082270122,
+        "sam_deg": 10.210510822447029,
+        "cube_relative_l2": 0.25251960852871447,
+        "global_spectrum_relative_l2": 0.09931029099684166,
+        "high_frequency_relative_l2": 0.770772045104568,
+        "spatial_gradient_relative_l2": 0.5973720749425843,
+        "measurement_relative_l2": 0.012602139954755153
+      }
+    },
+    {
+      "epoch": 200,
+      "global_step": 20000,
+      "train_loss": 0.023048867366742342,
+      "validation_loss": 0.01306859590113163,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 30.605559031918006,
+        "ssim_band_mean": 0.9391164819985048,
+        "sam_deg": 10.116431999024043,
+        "cube_relative_l2": 0.25291001164091725,
+        "global_spectrum_relative_l2": 0.10879856263696198,
+        "high_frequency_relative_l2": 0.767577610857257,
+        "spatial_gradient_relative_l2": 0.5940596286116343,
+        "measurement_relative_l2": 0.010805587749004222
+      }
+    },
+    {
+      "epoch": 220,
+      "global_step": 22000,
+      "train_loss": 0.020964784319512545,
+      "validation_loss": 0.013158968649804592,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 30.60220371666894,
+        "ssim_band_mean": 0.9387498855316083,
+        "sam_deg": 10.350756055746544,
+        "cube_relative_l2": 0.25282487388292485,
+        "global_spectrum_relative_l2": 0.10959735912228309,
+        "high_frequency_relative_l2": 0.7581410892863747,
+        "spatial_gradient_relative_l2": 0.5900247299923136,
+        "measurement_relative_l2": 0.01165105586231457
+      }
+    },
+    {
+      "epoch": 240,
+      "global_step": 24000,
+      "train_loss": 0.023127195658162236,
+      "validation_loss": 0.013021131977438927,
+      "metrics_ALL": {
+        "psnr_unit_range_db": 30.66315170658538,
+        "ssim_band_mean": 0.939305132807552,
+        "sam_deg": 10.11336835004833,
+        "cube_relative_l2": 0.250925243710643,
+        "global_spectrum_relative_l2": 0.10967050991691324,
+        "high_frequency_relative_l2": 0.7512770127369168,
+        "spatial_gradient_relative_l2": 0.5846684397967787,
+        "measurement_relative_l2": 0.011915049015829116
+      }
+    }
+  ]
+}

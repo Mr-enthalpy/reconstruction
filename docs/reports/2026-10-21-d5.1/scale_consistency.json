@@ -1,0 +1,87 @@
+{
+  "protocol": "D5.1-scene-scale-consistency",
+  "reference": "1024 sensor-support kernel, unit sum, 512x512 scene",
+  "scenes": [
+    "beads",
+    "cloth",
+    "feathers"
+  ],
+  "note": "high-resolution simulation then measurement downsample versus scene/kernel resize",
+  "cases": [
+    {
+      "factor": 1,
+      "scenes": {
+        "beads": {
+          "relative_l2": 0.0,
+          "high_frequency_relative_l2": 0.0,
+          "high_res_rms": 2.5672848224639893,
+          "low_res_rms": 2.5672848224639893
+        },
+        "cloth": {
+          "relative_l2": 0.0,
+          "high_frequency_relative_l2": 0.0,
+          "high_res_rms": 2.0730245113372803,
+          "low_res_rms": 2.0730245113372803
+        },
+        "feathers": {
+          "relative_l2": 0.0,
+          "high_frequency_relative_l2": 0.0,
+          "high_res_rms": 2.716435670852661,
+          "low_res_rms": 2.716435670852661
+        }
+      },
+      "mean_relative_l2": 0.0,
+      "mean_high_frequency_relative_l2": 0.0
+    },
+    {
+      "factor": 2,
+      "scenes": {
+        "beads": {
+          "relative_l2": 0.009498883038759232,
+          "high_frequency_relative_l2": 0.08375491201877594,
+          "high_res_rms": 2.5671751499176025,
+          "low_res_rms": 2.567384719848633
+        },
+        "cloth": {
+          "relative_l2": 0.007353717461228371,
+          "high_frequency_relative_l2": 0.0764264389872551,
+          "high_res_rms": 2.0729687213897705,
+          "low_res_rms": 2.0725960731506348
+        },
+        "feathers": {
+          "relative_l2": 0.010278034955263138,
+          "high_frequency_relative_l2": 0.027410373091697693,
+          "high_res_rms": 2.7162773609161377,
+          "low_res_rms": 2.7130885124206543
+        }
+      },
+      "mean_relative_l2": 0.009043545151750246,
+      "mean_high_frequency_relative_l2": 0.0625305746992429
+    },
+    {
+      "factor": 4,
+      "scenes": {
+        "beads": {
+          "relative_l2": 0.025837616994976997,
+          "high_frequency_relative_l2": 0.3542841374874115,
+          "high_res_rms": 2.5667433738708496,
+          "low_res_rms": 2.5667059421539307
+        },
+        "cloth": {
+          "relative_l2": 0.021371174603700638,
+          "high_frequency_relative_l2": 0.2521650195121765,
+          "high_res_rms": 2.072749614715576,
+          "low_res_rms": 2.0715954303741455
+        },
+        "feathers": {
+          "relative_l2": 0.030495021492242813,
+          "high_frequency_relative_l2": 0.10810385644435883,
+          "high_res_rms": 2.715658187866211,
+          "low_res_rms": 2.7065768241882324
+        }
+      },
+      "mean_relative_l2": 0.025901271030306816,
+      "mean_high_frequency_relative_l2": 0.23818433781464896
+    }
+  ]
+}

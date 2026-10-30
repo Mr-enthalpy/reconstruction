@@ -1,51 +1,51 @@
 # reconstruction
 
-`reconstruction` is a bounded operator-consuming reconstruction platform for static-scene, multi-exposure, multi-band coded spectral reconstruction under published LCD-forward operators.
+Offline research for measured-PSF spectral sensing in a UDC-like laboratory system.
+D4 prioritizes general spatial-spectral reconstruction independent of face tasks.
+R (RGB recovery/proposals) and N1 consume the same raw observation in the intended
+integrated system; C independently consumes their aligned outputs. Reconstruction
+quality is a necessary explanatory foundation, not an expendable intermediate.
+No hardware is operated and
+no Meta checkout or sibling Python package is required.
 
-The repository consumes `OperatorHandoff` outputs from `LCD_forward` and `MeasuredResponseHandoff` outputs from `optic_system`. It does not own hardware control, LCD mask families, operator modelling, or raw capture generation.
+The initial multi-exposure operator-handoff architecture was a proposal. D2 uses
+existing dense measured ROI PSFs through explicit operators without a new handoff
+framework. See [current architecture](docs/architecture.md) and [rules](AGENTS.md).
 
-The mainline inverse problem is:
+Keep datasets and outputs outside Git. UWA restrictions apply to raw and derived
+faces. CAVE positive and negative candidates require content review; cross-source classification is not
+general face recognition evidence. Optional experiment dependencies belong in an
+independent research environment, never in the acquisition environment.
 
-```text
-Given:
-  y = multi-frame coded measurements of one static scene
-  A = published forward operator from LCD_forward
-  A* = matching adjoint operator
-  metadata = wavelengths, mask sequence identity, exposure/frame identity, calibration provenance
+See the [D2 evidence report](docs/reports/2026-10-20-d2/README.md) and
+[reproduction commands](experiments/d2/README.md). The bounded pilot runs, but
+source confounding and achromatic controls do not establish a spectral task gain.
 
-Recover:
-  x = multi-band spectral scene
-```
+The approved next baseline separates **scene reconstruction** from **spectral task
+gain**: N1 exports a spatial-spectral matrix and is trained without classification
+loss; a frozen N1 feeds an independent classifier. See [architecture](docs/architecture.md).
+This architecture was adopted after D2; D3 execution is documented below. D2 results remain the earlier low-rank pilot.
 
-Preferred tensor convention:
+## D3 execution status
 
-```text
-x: [B, L, H, W]
-y: [B, T, 1, H, W]
-```
+The [D3 report](docs/reports/2026-10-20-d3/README.md) records an actually trained
+full 21-channel spatial-state PGD model and independent Oracle / Reconstruction /
+Frozen-head classification. [Commands](experiments/d3/README.md) reproduce the
+bounded pilot with authorized local inputs. Source bias remains and the task score
+matches achromatic/intensity controls; general recovery and spectral task gain
+are not established. Historical D2 results remain unchanged.
 
-`T` is a coded measurement index, not video time.
+## D4 active work
 
-Deep unrolling is the preferred learned method route. Classical and variational baselines are included as first-class diagnostic references because they diagnose the operator and establish reconstruction reference levels.
+See the [D4 status](docs/reports/2026-10-20-d4/README.md) and
+[run instructions](experiments/d4/README.md). The general scene loader, full-state
+PGD and training entry do not consume classification labels or face ROIs. Two CUDA
+training runs and independent diagnostics are complete. The selected model still
+has substantial local spectral/high-frequency error; general quality acceptance
+and downstream C training remain deferred.
+Scalar physics does not establish calibrated same-RAW RGB+spectral recovery.
 
-This repository is currently architecture-only. It contains no solver implementation, network implementation, dataset loader, or final external handoff schema.
-
-## Scope
-
-This repository owns inverse-problem formulation, reconstruction baselines, physics-guided deep unrolling designs, learned or variational priors, evaluation protocols, metrics, diagnostics, ablation runners, and comparison reports.
-
-It must not own camera control, LCD display control, TLS control, synchronized acquisition, raw capture generation, mask-family definitions, mask rendering, LCD mask-to-operator surrogate modelling, peak-cluster extraction, operator package generation, or canonical operator diagnostics.
-
-## Initial Phase
-
-Phase 0 initializes the repository shape only:
-
-```text
-- architecture documentation
-- placeholder source package
-- placeholder handoff directories
-- import-only test
-- no reconstruction algorithms
-- no final schemas
-- no external repository imports
-```
+The [D4 research and pipeline review](docs/reports/2026-10-21-d4-review/README.md)
+summarizes the decoupling decision, executed GPU evidence, ADIS/SDI implementation
+review and anonymized compute-readiness assessment. External pipeline adaptation
+and shared-server training have not yet been executed.

@@ -1,0 +1,226 @@
+{
+  "balloons": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "beads": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "cd": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "chart_and_stuffed_toy": {
+    "decision": "rejected",
+    "reason": "humanoid toy face; ambiguous negative semantics",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "clay": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "cloth": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "egyptian_statue": {
+    "decision": "rejected",
+    "reason": "face-shaped sculpture; ambiguous negative semantics",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "face": {
+    "decision": "rejected",
+    "reason": "real face",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "fake_and_real_beers": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "fake_and_real_food": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "fake_and_real_lemon_slices": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "fake_and_real_lemons": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "fake_and_real_peppers": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "fake_and_real_strawberries": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "fake_and_real_sushi": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "fake_and_real_tomatoes": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "feathers": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "flowers": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "glass_tiles": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "hairs": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "jelly_beans": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "oil_painting": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "paints": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "photo_and_face": {
+    "decision": "rejected",
+    "reason": "real face and face photograph",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "pompoms": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "real_and_fake_apples": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "real_and_fake_peppers": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "sponges": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "stuffed_toys": {
+    "decision": "rejected",
+    "reason": "animal/cartoon faces; conservative exclusion",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "superballs": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "thread_spools": {
+    "decision": "accepted_non_face",
+    "reason": "No human face or face photograph visible in full-scene review",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  },
+  "watercolors": {
+    "decision": "rejected",
+    "reason": "31 bands decode uint8 RGBA, not documented uint16 grayscale",
+    "reviewer": "Agent visual review; not official CAVE labels or independent human adjudication",
+    "review_date": "2026-10-20",
+    "view": "650/550/450 nm joint-scale pseudo RGB, gamma 0.6; full scene"
+  }
+}

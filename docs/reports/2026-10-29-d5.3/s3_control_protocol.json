@@ -1,0 +1,84 @@
+{
+  "protocol": "D5.3-S3-achromatic-550-control",
+  "frozen_before_first_epoch": true,
+  "frozen_at_utc": "2026-10-30T04:25:00Z",
+  "question": "In S1 the achromatic arm used the arithmetic mean of the 21 measured kernels. Its high-frequency OTF is 0.981x the chromatic band average (otf_control.json), so a reader can ask whether the S1 difference reflects band-independence or an unusually weak/strong mean-kernel blur. The 550 nm arm answers only that: it is band-independent like the mean arm, but carries a real measured band's frequency response instead of the average.",
+  "arm": {
+    "name": "s3a550",
+    "role": "achromatic-550 frequency-response control",
+    "kernel_file": "data/prepared512/kernels_achromatic_550.npz",
+    "kernel_file_sha256": "5c8e350d0f3fc0a13c41e7f18c755e49b92d7e1e7062ba970c046572211bf08b",
+    "kernel_array_sha256": "87073bc41592e69fb7c1f6a295373494d56c8ab11bac607d7ac81c60a205375a",
+    "construction": "the 550 nm measured kernel replicated over all 21 bands (kind=band, make_achromatic_control.py)",
+    "verified_in_lease": {
+      "shape": [21, 64, 64],
+      "all_bands_identical": true,
+      "band_sums": {"minimum": 1.0, "maximum": 1.0},
+      "kernels_npz_sha256": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b"
+    }
+  },
+  "held_fixed_with_s1": {
+    "training_code_commit": "1203ac9",
+    "config_file": "experiments/d5_3/configs/d5_3_a6.json",
+    "config_sha256": "ceed995b35fb96dcea8d898a26666ed25303219d32897b5978a076555df20a34",
+    "data": {
+      "prepared": "/workspace/data/prepared512",
+      "train_npz_sha256": "024d2b4c8956707387289242ddbadce08e3379a51ed6e0752a167666dbb32908",
+      "val_npz_sha256": "e61ac4f102d58a44bdb8f7174a960d13f2e102c5db00cc0bc408ea5583ff9247",
+      "manifest_sha256": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3",
+      "split": "39 train / 9 val, frozen 14-scene test never opened"
+    },
+    "seeds": [20261021, 20261022, 20261023],
+    "budget": {
+      "epochs": 400,
+      "steps_per_epoch": 100,
+      "patience": 60,
+      "eval_every": 5,
+      "batch": 1,
+      "cosine_reinitialised_over": 400,
+      "selection": "minimum validation reconstruction objective"
+    },
+    "model": "A6 (model A, 6 stages, width 64, depth 4, 98139 parameters)",
+    "noise_and_augmentation": "unchanged from S1; noise std is this arm's own forward RMS x 0.005",
+    "only_difference": "the PSF kernel file"
+  },
+  "comparisons": {
+    "primary": {
+      "pair": "s1c vs s3a550",
+      "meaning": "does the S1 chromatic-vs-achromatic result survive replacing the mean kernel with a real band's frequency response?"
+    },
+    "secondary": {
+      "pair": "s3a vs s3a550",
+      "meaning": "are the mean kernel and the 550 nm kernel distinguishable in training at all? quantified, not asserted"
+    }
+  },
+  "decision_rule": {
+    "statistical_unit": "seed (n = 3); the nine validation scenes inside a seed are direction evidence only",
+    "stable": "all three seeds share the direction AND |mean delta| > max(cross-seed sd, plateau epoch-to-epoch std) AND every seed has at least 8 of 9 scenes in that direction",
+    "lower_is_better": ["sam_deg", "cube_relative_l2", "global_spectrum_relative_l2",
+                        "high_frequency_relative_l2", "spatial_gradient_relative_l2",
+                        "measurement_relative_l2"],
+    "per_band": "band_relative_l2 and band_rmse are reported as a separate dimension with the same three clauses; per-band plateau std is not available for these runs and is not substituted",
+    "budget_censored": "a run that reaches the 400-epoch cap with its best epoch inside the final 60-epoch patience window"
+  },
+  "pre_registered_outcomes": {
+    "A": "s1c vs s3a550 reproduces the S1 direction and passes the rule: the S1 conclusion does not depend on the mean kernel's frequency response, and the mean-kernel OTF is ruled out as the explanation.",
+    "B": "s3a550 behaves like s3a within the rule and s1c vs s3a550 does not pass: the S1 achromatic disadvantage was a property of that particular averaged blur, and S1 must be restated as 'chromatic vs this mean-kernel blur' rather than 'chromatic vs achromatic'.",
+    "C": "neither: the 550 nm arm differs from both, so OTF shape cannot be excluded and no claim about the source of the S1 difference is made.",
+    "note": "all three outcomes are acceptable results; none is to be reframed after the fact"
+  },
+  "explicit_non_claims": [
+    "this arm cannot test spectral information: a band-independent operator has identically zero response to a zero-sum spectral change (analytic identity, B1), and the 550 nm kernel is band-independent by construction",
+    "no frozen-test, hardware, material-recognition or end-to-end task claim follows from this arm",
+    "the 550 nm kernel is a derived control from the same measured set, not new PSF acquisition"
+  ],
+  "environment": {
+    "host": "kunqian",
+    "gpus": "3 x RTX 3090 24 GiB (0,1,2)",
+    "cpus": 16,
+    "memory_gib": 24,
+    "hours": 6,
+    "allocation": "c81e44f042b54dac94d60dcf96f20041",
+    "note": "OMP/MKL/OPENBLAS threads pinned to 4 per process; run_arm.sh sets them"
+  }
+}

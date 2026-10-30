@@ -1,0 +1,76 @@
+{
+  "protocol": "D5-G2-model-benchmark",
+  "results": [
+    {
+      "model": "A",
+      "stages": 6,
+      "size": 256,
+      "batch": 1,
+      "parameters": 98139,
+      "step_ms": 64.63754272460938,
+      "peak_cuda_allocated_bytes": 1101145600,
+      "status": "ok"
+    },
+    {
+      "model": "A",
+      "stages": 6,
+      "size": 256,
+      "batch": 2,
+      "parameters": 98139,
+      "step_ms": 118.92408447265625,
+      "peak_cuda_allocated_bytes": 2140459520,
+      "status": "ok"
+    },
+    {
+      "model": "B",
+      "stages": 6,
+      "size": 256,
+      "batch": 1,
+      "parameters": 98139,
+      "step_ms": 75.16630859375,
+      "peak_cuda_allocated_bytes": 1234489344,
+      "status": "ok"
+    },
+    {
+      "model": "B",
+      "stages": 6,
+      "size": 256,
+      "batch": 2,
+      "parameters": 98139,
+      "step_ms": 152.43837890625,
+      "peak_cuda_allocated_bytes": 2391412736,
+      "status": "ok"
+    },
+    {
+      "model": "C",
+      "stages": 6,
+      "size": 256,
+      "batch": 1,
+      "parameters": 60699,
+      "step_ms": 93.1852294921875,
+      "peak_cuda_allocated_bytes": 1224983040,
+      "status": "ok"
+    },
+    {
+      "model": "C",
+      "stages": 6,
+      "size": 256,
+      "batch": 2,
+      "parameters": 60699,
+      "step_ms": 165.5666748046875,
+      "peak_cuda_allocated_bytes": 2340048384,
+      "status": "ok"
+    },
+    {
+      "model": "C",
+      "stages": 6,
+      "size": 512,
+      "batch": 1,
+      "parameters": 60699,
+      "step_ms": 302.4110514322917,
+      "peak_cuda_allocated_bytes": 4750614016,
+      "status": "ok"
+    }
+  ],
+  "note": "Synthetic input, forward+backward+optimizer step; not data-loader throughput."
+}

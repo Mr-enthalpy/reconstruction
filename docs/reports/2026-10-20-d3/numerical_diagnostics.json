@@ -1,0 +1,11 @@
+{
+  "cg_info": 500,
+  "measurement_relative_change": 1.575077087780095e-07,
+  "cube_relative_change": 0.023152181988215167,
+  "both_nonnegative": true,
+  "measurement_dimensions": 1024,
+  "scene_dimensions": 21504,
+  "directional_absolute_error": 5.023105842383302e-08,
+  "directional_relative_error": 9.484175036159495e-10,
+  "inference_seconds_per_scene_cpu4": 0.004250278000254184
+}

@@ -1,0 +1,24 @@
+{
+  "protocol": "D5.2-resume-equivalence",
+  "passed": true,
+  "compared_fields": [
+    "state",
+    "optimizer",
+    "scheduler",
+    "epoch",
+    "next_epoch",
+    "global_step",
+    "best",
+    "best_epoch",
+    "stale",
+    "torch_rng",
+    "numpy_rng"
+  ],
+  "differences": [],
+  "full_epoch": 4,
+  "resumed_epoch": 4,
+  "full_global_step": 8,
+  "resumed_global_step": 8,
+  "full_best_epoch": 4,
+  "resumed_best_epoch": 4
+}
