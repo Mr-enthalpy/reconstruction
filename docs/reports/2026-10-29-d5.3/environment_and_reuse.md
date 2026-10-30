@@ -1,7 +1,7 @@
 # D5.3 S0 — 环境、代码与证据审计
 
 日期：2026-10-29（UTC，对应本地 2026-10-30 凌晨）
-分支：`codex/d5.3-chromatic-mechanism`，起点 `30cd8d4`；训练代码 `1203ac9`，分析与报告代码 `351dff1`
+分支：`codex/d5.3-chromatic-mechanism`，起点 `30cd8d4`；训练代码 `1203ac9`，分析与报告代码 `351dff1` —— 该分支已合并进 `main` 并删除
 设备：`kunqian` 4 × RTX 3090 24 GiB，租约 `3d3e5397eb17409c9a81b1499c66c637`（4 GPU / 32 CPU / 48 GiB / 8 h）
 
 ## 1. 代码复用与改动
