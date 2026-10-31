@@ -47,7 +47,8 @@ def summarize(source):
 def main():
     p=argparse.ArgumentParser(); p.add_argument('--input',type=Path,required=True)
     p.add_argument('--output',type=Path,required=True); a=p.parse_args()
-    with a.output.open('x',encoding='utf-8') as f: json.dump(summarize(a.input),f,separators=(',',':'),allow_nan=False)
+    result=summarize(a.input)
+    with a.output.open('x',encoding='utf-8') as f: json.dump(result,f,separators=(',',':'),allow_nan=False)
 
 
 if __name__=='__main__': main()

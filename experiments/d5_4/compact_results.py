@@ -45,8 +45,9 @@ def main():
     p.add_argument('--input',type=Path,required=True); p.add_argument('--output',type=Path,required=True)
     p.add_argument('--kind',choices=['operator','oracle','inverse','frozen'],required=True)
     a=p.parse_args()
+    result=compact(a.input,a.kind)
     with a.output.open('x',encoding='utf-8') as f:
-        json.dump(compact(a.input,a.kind),f,separators=(',',':'),allow_nan=False)
+        json.dump(result,f,separators=(',',':'),allow_nan=False)
 
 
 if __name__=='__main__': main()
