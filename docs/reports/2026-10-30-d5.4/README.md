@@ -19,7 +19,7 @@ Meta pins and the acquisition member are outside this change.
 - S4: not executed; no demonstrated capability gap yet.
 - G4: not opened; no test-loading interface exists in D5.4.
 
-The local no-hardware suite passed 124 tests using the designated research environment.
+The local no-hardware suite passed 126 tests using the designated research environment.
 Earlier sandbox runs failed on temporary-directory ACLs; those are not scientific failures.
 
 The protocol is `experiments/d5_4/configs/diagnostics.json`. Use module entry points

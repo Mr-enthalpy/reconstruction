@@ -135,3 +135,31 @@ def test_scientific_gate_rejects_nonconvergence_and_incomplete_scenes():
     with pytest.raises(ValueError): group(rows[:-1],'inverse')
     rows[0]['scene_id']=rows[1]['scene_id']
     with pytest.raises(ValueError): group(rows,'inverse')
+
+
+def test_reduced_oracle_requires_completed_chromatic_gate():
+    from experiments.d5_4.reduced_oracle import passing_strata
+    rows=[dict(scene_id=str(i),dataset_id='CAVE',direction=0,mask='local',level=1,
+        noise_fraction=0,arm=arm,inverse=dict(metrics=dict(relative_l2=.2,cosine=.95),
+        convergence=dict(converged=True))) for arm in ('chromatic','achromatic_mean') for i in range(9)]
+    assert passing_strata(dict(status='completed',rows=rows))=={(0,'local',1,0)}
+    with pytest.raises(ValueError): passing_strata(dict(status='completed_shard',rows=rows))
+    for row in rows:
+        if row['arm']=='chromatic': row['inverse']['metrics']['relative_l2']=1.1
+    assert not passing_strata(dict(status='completed',rows=rows))
+
+
+def test_partition_merge_rejects_missing_and_incompatible_sources(tmp_path):
+    import json
+    from experiments.d5_4.merge_inverse import merge
+    paths=[tmp_path/f'{i}.json' for i in range(2)]
+    docs=[dict(status='completed_shard',shard=dict(index=i,count=2),
+        provenance=dict(kernel='same'),rows=[]) for i in range(2)]
+    for path,doc in zip(paths,docs): path.write_text(json.dumps(doc))
+    with pytest.raises(ValueError,match='missing or duplicate'): merge([paths[1]])
+    docs[1]['provenance']['kernel']='different'
+    paths[1].write_text(json.dumps(docs[1]))
+    with pytest.raises(ValueError,match='provenance'): merge(paths)
+    docs[1]['provenance']['kernel']='same'
+    paths[1].write_text(json.dumps(docs[1]))
+    with pytest.raises(ValueError,match='unique'): merge(paths)
