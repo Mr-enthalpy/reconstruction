@@ -96,6 +96,18 @@ cover a limited construction family, and the distribution labels are heuristic.
 Lower-noise inputs shift the inference distribution relative to 0.5%-noise
 training, so noiseless failure alone cannot identify prior capacity as the cause.
 
+The shared target sigma exactly matches Chromatic training. Achromatic-mean
+trained at sigma 0.017336426 and Achromatic-550 at 0.017294910; the common target
+is respectively about 0.041% lower and 0.199% higher. These small absolute-noise
+mismatches are retained. The raw frozen run's `inference_noise_shift` flag tracked
+the nominal fraction only; the checkpoint `sigma_noise` values are authoritative
+for absolute alignment. This metadata qualification does not change any measured
+response or require recomputation.
+
+The roughly 3.7% noiseless response magnitude here must not be called an
+improvement over D5.3's roughly 1.9%: the perturbation families and truth norms
+differ, and directional recovery remains poor in both constructions.
+
 Known-template detection supplies much stronger priors than A6 receives. The
 restricted coefficient-map inverse must finish before assigning a recoverability
 gap. Neither PSNR nor these detection statistics justify a spectral/material

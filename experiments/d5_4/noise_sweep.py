@@ -144,7 +144,8 @@ def run(args):
                     rows.append(dict(**label,model=provenance,noise_fraction=fraction,
                         response=differential_metrics(outputs[0]-outputs[1],delta,v),
                         noise_only=differential_metrics(null[0]-null[1],delta,v),
-                        inference_noise_shift=fraction!=.005))
+                        inference_noise_shift=not bool(np.isclose(sigma,provenance['sigma_noise'],rtol=1e-10,atol=0)),
+                        nominal_training_fraction_match=fraction==.005))
         print(json.dumps(dict(case=case_index+1,elapsed_seconds=time.perf_counter()-started)),flush=True)
     return dict(status='benchmark_only' if args.max_cases else ('completed_shard' if args.shard_count>1 else 'completed'),mode=args.mode,split=args.split,
         shard=dict(index=args.shard_index,count=args.shard_count),
