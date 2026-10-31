@@ -1,0 +1,72 @@
+{
+  "status": "completed_numerical_reproduction_check",
+  "code_commit": "fde1c23d30270d11ea05ede5bbd071d4aadb88de",
+  "basis_source_sha256": "212cb9bb57553d74fa8b9a95c7656c91877bc5d41543ebdde8229568077c7ee5",
+  "original_basis_sha256": "a2a45de3900017f41cdbd02594ee8ef0ecc281cdbad8049c02453f3cd8e91fb9",
+  "reproduction_sha256": "8ab15edb4db6f6cd7cc8673e3922af41c86162b5554336517819890c3af044b1",
+  "basis_max_abs_errors": {
+    "directions": 1.3877787807814457e-16,
+    "score_std": 1.3877787807814457e-17,
+    "score_radius_quantiles": 8.881784197001252e-16,
+    "singular_values": 7.105427357601002e-15,
+    "natural_shape_change_quantiles": 0.0,
+    "mean_shape": 0.0,
+    "shape_bounds": 0.0
+  },
+  "construction_checks": {
+    "d54_frozen_full.json": {
+      "numeric_max_abs_by_field": {
+        "relative_perturbation": 1.3322676295501878e-15,
+        "nonzero_area": 0,
+        "shrunk_fraction": 0,
+        "broadband_error": 3.552713678800501e-15,
+        "pixel_relative_perturbation_quantiles": 2.7755575615628914e-17,
+        "pair_sam_degrees_quantiles": 8.537736462515939e-07,
+        "natural_shape_percentile_quantiles": 0,
+        "natural_pair_sam_percentile_quantiles": 0,
+        "valid_pixel_fraction": 0,
+        "boundary_pixel_fraction": 0,
+        "shape_outside_fraction": 0,
+        "pca_outside_99_fraction": 0
+      },
+      "label_mismatches": 0
+    },
+    "d54_operator_complete.json": {
+      "numeric_max_abs_by_field": {
+        "relative_perturbation": 0,
+        "nonzero_area": 0,
+        "shrunk_fraction": 0,
+        "broadband_error": 0,
+        "pixel_relative_perturbation_quantiles": 0,
+        "pair_sam_degrees_quantiles": 0,
+        "natural_shape_percentile_quantiles": 0,
+        "natural_pair_sam_percentile_quantiles": 0,
+        "valid_pixel_fraction": 0,
+        "boundary_pixel_fraction": 0,
+        "shape_outside_fraction": 0,
+        "pca_outside_99_fraction": 0
+      },
+      "label_mismatches": 0
+    }
+  },
+  "inputs": {
+    "train_npz_sha256": "024d2b4c8956707387289242ddbadce08e3379a51ed6e0752a167666dbb32908",
+    "val_npz_sha256": "e61ac4f102d58a44bdb8f7174a960d13f2e102c5db00cc0bc408ea5583ff9247",
+    "manifest_sha256": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3",
+    "train_scenes": 39,
+    "validation_scenes": 9,
+    "test_policy": "test.npz is never downloaded, uploaded or loaded in D5.3"
+  },
+  "fitting_parameters": {
+    "seed": 20261030,
+    "pixels_per_scene": 2048,
+    "basis_directions": 3,
+    "minimum_band_sum": 0.021,
+    "amplitude_quantiles": [
+      0.25,
+      0.5,
+      0.75
+    ]
+  },
+  "note": "Original basis is preserved. Reproduction uses the committed algorithm and current research environment; differences reflect floating-point SVD/reduction ordering. Checkpoints/PSFs are not inputs to fitting. Original and all sweep construction summaries have identical categorical labels."
+}

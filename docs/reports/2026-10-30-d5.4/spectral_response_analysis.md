@@ -127,3 +127,10 @@ identities. Frozen inference ran source `aba3c10`; the operator sweep records
 its own source identity. Earlier construction ran with uncommitted D5.4 source
 on base `ef07c1b`; its source-file hashes, rather than that base alone, identify
 the executed implementation.
+
+`basis_reproduction_check.json` additionally verifies the original basis against
+the committed fitting algorithm. Maximum direction difference is 1.388e-16;
+amplitude quantiles, mean shape and spectral bounds reproduce exactly. The
+original basis remains the input to every sweep. Cross-platform construction
+summaries retain identical categorical labels; the largest SAM-summary rounding
+difference is 8.538e-7 degrees, with relative-norm differences at 1.333e-15.
