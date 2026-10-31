@@ -15,5 +15,7 @@
   "gate": "At least 8/9 validation scenes in a complete direction/mask/scale/noise stratum must meet the inverse threshold before removing Oracle information or considering S4. Report every stratum and all failures. This is a diagnostic gate, not statistical significance.",
   "network_comparison": "Three model seeds separately; no checkpoint selection; response magnitude alone never counts as recovery",
   "test_policy": "No test archive access. No G4 decision by automatic script.",
-  "limitations": "The matched-frequency control remains outside this differential experiment; spatial reconstruction benefits cannot be attributed to spectral recovery."
+  "limitations": "The matched-frequency control remains outside this differential experiment; spatial reconstruction benefits cannot be attributed to spectral recovery.",
+  "selection_reliability_rule": "Before reading the completed final training-grid outcomes or running validation inversion, choose the lowest mean-error candidate among candidates converged in all 9 training cases. Preserve the unconstrained minimum and every candidate. If no candidate converges in all cases, do not interpret solver failure as physical impossibility.",
+  "reduced_oracle_plan": "If a full 9-scene inverse stratum passes the declared gate, evaluate every passing stratum using the frozen Chromatic seed 20261021 estimate in place of true baseline X0, keeping the selected regularization and zero initialization. No true spatial mask is supplied; retain the training-derived spectral direction. No validation selection of model seed."
 }

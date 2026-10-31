@@ -1,0 +1,45 @@
+{
+  "status": "frozen_before_validation_inverse",
+  "selection": "minimum training mean relative L2 among all-nine-converged candidates; finite grid unchanged",
+  "by_noise_fraction": {
+    "0": {
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "mean_error": 0.09997090962453273,
+      "converged_cases": 9,
+      "unconstrained_minimum": {
+        "lam": 1e-06,
+        "mu": 1e-08,
+        "mean_error": 0.06764578794562963,
+        "converged_cases": 3
+      },
+      "source_sha256": "c9319c4666fe2d0877978ef29c28cc4e1e4224f420888e2e9ec3773185f85d77"
+    },
+    "0.001": {
+      "lam": 1.0,
+      "mu": 1e-08,
+      "mean_error": 0.9164007346636995,
+      "converged_cases": 9,
+      "unconstrained_minimum": {
+        "lam": 1.0,
+        "mu": 1e-08,
+        "mean_error": 0.9164007346636995,
+        "converged_cases": 9
+      },
+      "source_sha256": "85d0d3120b76d69f040b074f5b92392c63828d8bce7e4475c4ba5083cdedf53a"
+    },
+    "0.005": {
+      "lam": 1.0,
+      "mu": 0.0001,
+      "mean_error": 1.2493584745344903,
+      "converged_cases": 9,
+      "unconstrained_minimum": {
+        "lam": 1.0,
+        "mu": 0.0001,
+        "mean_error": 1.2493584745344903,
+        "converged_cases": 9
+      },
+      "source_sha256": "7a2688601ecf4259bfc2c6e1a907d5fcfe9a401c5a2907d91372e9b44fa7e916"
+    }
+  }
+}

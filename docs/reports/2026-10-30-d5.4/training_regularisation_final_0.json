@@ -1,0 +1,1953 @@
+{
+  "status": "completed",
+  "noise_fraction": 0.0,
+  "selection": {
+    "lam": 1e-06,
+    "mu": 1e-08,
+    "mean_error": 0.06764578794562963,
+    "converged_cases": 3
+  },
+  "candidates": [
+    {
+      "lam": 1e-06,
+      "mu": 1e-08,
+      "mean_error": 0.06764578794562963,
+      "converged_cases": 3
+    },
+    {
+      "lam": 1e-06,
+      "mu": 0.0001,
+      "mean_error": 0.7466591790596423,
+      "converged_cases": 9
+    },
+    {
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "mean_error": 0.09997090962453273,
+      "converged_cases": 9
+    },
+    {
+      "lam": 0.0001,
+      "mu": 0.0001,
+      "mean_error": 0.7476810563370034,
+      "converged_cases": 9
+    },
+    {
+      "lam": 0.01,
+      "mu": 1e-08,
+      "mean_error": 0.38444687596285726,
+      "converged_cases": 9
+    },
+    {
+      "lam": 0.01,
+      "mu": 0.0001,
+      "mean_error": 0.7686540361171308,
+      "converged_cases": 9
+    },
+    {
+      "lam": 1.0,
+      "mu": 1e-08,
+      "mean_error": 0.9057798724762348,
+      "converged_cases": 9
+    },
+    {
+      "lam": 1.0,
+      "mu": 0.0001,
+      "mean_error": 0.924763373712699,
+      "converged_cases": 9
+    }
+  ],
+  "rows": [
+    {
+      "scene_id": "balloons",
+      "direction": 0,
+      "lam": 1e-06,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.014029827132814669,
+        "improvement_over_zero": 0.9859701728671854,
+        "response_fraction": 0.9950835644260042,
+        "cosine": 0.9999132411001471,
+        "projection_gain": 0.994997232070693,
+        "correlation": 0.9999030714335807
+      },
+      "solver": {
+        "converged": false,
+        "cg_info": 1000,
+        "iterations": 1000,
+        "lambda_grad": 1e-06,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.790277984671663e-06,
+        "measurement_residual": 3.0764067903904415e-05,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 0,
+      "lam": 1e-06,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.7597526344900413,
+        "improvement_over_zero": 0.24024736550995873,
+        "response_fraction": 0.4303585133681624,
+        "cosine": 0.7063696494064465,
+        "projection_gain": 0.3039921922069484,
+        "correlation": 0.7683730611982829
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 422,
+        "lambda_grad": 1e-06,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.697854057887453e-07,
+        "measurement_residual": 0.013909702159312485,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 0,
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.013030530510455251,
+        "improvement_over_zero": 0.9869694694895448,
+        "response_fraction": 0.993684183613872,
+        "cosine": 0.9999346345695629,
+        "projection_gain": 0.9936192310194916,
+        "correlation": 0.9999304248627204
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 839,
+        "lambda_grad": 0.0001,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.924780033486101e-07,
+        "measurement_residual": 0.0003433245033089556,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 0,
+      "lam": 0.0001,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.7597787755349776,
+        "improvement_over_zero": 0.24022122446502236,
+        "response_fraction": 0.43006426465691866,
+        "cosine": 0.7065124144483952,
+        "projection_gain": 0.3038457419907332,
+        "correlation": 0.7686571690376548
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 322,
+        "lambda_grad": 0.0001,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.908753080372632e-07,
+        "measurement_residual": 0.01392771976186346,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 0,
+      "lam": 0.01,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.16833215503374527,
+        "improvement_over_zero": 0.8316678449662547,
+        "response_fraction": 0.8732092846203048,
+        "cosine": 0.9929800168597954,
+        "projection_gain": 0.8670793701644002,
+        "correlation": 0.9920271036450018
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 165,
+        "lambda_grad": 0.01,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.154022963626267e-07,
+        "measurement_residual": 0.007967589315357248,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 0,
+      "lam": 0.01,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.7655135056950881,
+        "improvement_over_zero": 0.23448649430491186,
+        "response_fraction": 0.4115537613016483,
+        "cosine": 0.7087355600819958,
+        "projection_gain": 0.2916827855199757,
+        "correlation": 0.7710138151594588
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 72,
+        "lambda_grad": 0.01,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.09109497767059e-07,
+        "measurement_residual": 0.0165194349877363,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 0,
+      "lam": 1.0,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.8893611613945988,
+        "improvement_over_zero": 0.11063883860540125,
+        "response_fraction": 0.1432159014894047,
+        "cosine": 0.8014037430726775,
+        "projection_gain": 0.11477375952113678,
+        "correlation": 0.7930431649292775
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 27,
+        "lambda_grad": 1.0,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 7.082465762856498e-07,
+        "measurement_residual": 0.08267785284989278,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 0,
+      "lam": 1.0,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.918786390209681,
+        "improvement_over_zero": 0.081213609790319,
+        "response_fraction": 0.12413272466998654,
+        "cosine": 0.6897476187472352,
+        "projection_gain": 0.0856202512497294,
+        "correlation": 0.7226038313168494
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 19,
+        "lambda_grad": 1.0,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 7.821813019558612e-07,
+        "measurement_residual": 0.08292243048563276,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 1,
+      "lam": 1e-06,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.002314313071227401,
+        "improvement_over_zero": 0.9976856869287726,
+        "response_fraction": 0.9991132758687886,
+        "cosine": 0.9999977130894881,
+        "projection_gain": 0.9991109909861355,
+        "correlation": 0.9999977974201048
+      },
+      "solver": {
+        "converged": false,
+        "cg_info": 1000,
+        "iterations": 1000,
+        "lambda_grad": 1e-06,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.082418846271789e-06,
+        "measurement_residual": 2.167686732500118e-05,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 1,
+      "lam": 1e-06,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.7172836631170799,
+        "improvement_over_zero": 0.2827163368829201,
+        "response_fraction": 0.46595114533610943,
+        "cosine": 0.7539573874837795,
+        "projection_gain": 0.3513073082326879,
+        "correlation": 0.81498436671759
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 225,
+        "lambda_grad": 1e-06,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.687383559100294e-07,
+        "measurement_residual": 0.014784621753062447,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 1,
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.009526372002447265,
+        "improvement_over_zero": 0.9904736279975528,
+        "response_fraction": 0.9981992990923519,
+        "cosine": 0.9999561664489993,
+        "projection_gain": 0.9981555444724662,
+        "correlation": 0.999948885756624
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 702,
+        "lambda_grad": 0.0001,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.854667839424739e-07,
+        "measurement_residual": 0.0004689946140083582,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 1,
+      "lam": 0.0001,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.7173399741104965,
+        "improvement_over_zero": 0.28266002588950345,
+        "response_fraction": 0.46562997245883886,
+        "cosine": 0.7540694052477993,
+        "projection_gain": 0.3511173163975858,
+        "correlation": 0.81506386434494
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 170,
+        "lambda_grad": 0.0001,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.689321181179188e-07,
+        "measurement_residual": 0.014805543891706012,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 1,
+      "lam": 0.01,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.08587793579958895,
+        "improvement_over_zero": 0.9141220642004111,
+        "response_fraction": 0.9266640834608553,
+        "cosine": 0.9989225528224296,
+        "projection_gain": 0.9256656518595745,
+        "correlation": 0.9987491953189099
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 131,
+        "lambda_grad": 0.01,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.897715878396748e-07,
+        "measurement_residual": 0.008103360547941885,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 1,
+      "lam": 0.01,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.7225743680759499,
+        "improvement_over_zero": 0.2774256319240501,
+        "response_fraction": 0.4489253201735135,
+        "cosine": 0.7567185399900498,
+        "projection_gain": 0.3397101128462668,
+        "correlation": 0.81691851265273
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 61,
+        "lambda_grad": 0.01,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 8.134681096512416e-07,
+        "measurement_residual": 0.0174175979275483,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 1,
+      "lam": 1.0,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.8626519296255145,
+        "improvement_over_zero": 0.1373480703744855,
+        "response_fraction": 0.16544845984536422,
+        "cosine": 0.8558702856565594,
+        "projection_gain": 0.14160242058928968,
+        "correlation": 0.8517029688548143
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 22,
+        "lambda_grad": 1.0,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 5.713214025539283e-07,
+        "measurement_residual": 0.07410474275043757,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 1,
+      "lam": 1.0,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.8990951038224002,
+        "improvement_over_zero": 0.10090489617759979,
+        "response_fraction": 0.142111941262059,
+        "cosine": 0.7452709330782006,
+        "projection_gain": 0.10591189906592914,
+        "correlation": 0.7836266216014807
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 16,
+        "lambda_grad": 1.0,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 5.521026457245477e-07,
+        "measurement_residual": 0.07446245302250194,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 2,
+      "lam": 1e-06,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.20139941281723414,
+        "improvement_over_zero": 0.7986005871827658,
+        "response_fraction": 0.8731446524464516,
+        "cosine": 0.9859877488732051,
+        "projection_gain": 0.8609099303063538,
+        "correlation": 0.9943261659423874
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 543,
+        "lambda_grad": 1e-06,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.59803904813184e-07,
+        "measurement_residual": 0.00012737424096433844,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 2,
+      "lam": 1e-06,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.9520548166358977,
+        "improvement_over_zero": 0.04794518336410225,
+        "response_fraction": 0.16664041157459222,
+        "cosine": 0.36413932173893043,
+        "projection_gain": 0.060680326445068225,
+        "correlation": 0.39514165906270277
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 104,
+        "lambda_grad": 1e-06,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 8.992601585128864e-07,
+        "measurement_residual": 0.007322304629102936,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 2,
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.258567678778382,
+        "improvement_over_zero": 0.7414323212216181,
+        "response_fraction": 0.8163685812827246,
+        "cosine": 0.9797047881750572,
+        "projection_gain": 0.7998002079983637,
+        "correlation": 0.9894591631119499
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 179,
+        "lambda_grad": 0.0001,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.051536025623047e-07,
+        "measurement_residual": 0.0007447137502199885,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 2,
+      "lam": 0.0001,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.9522787975676672,
+        "improvement_over_zero": 0.0477212024323328,
+        "response_fraction": 0.16475369050549687,
+        "cosine": 0.365117375729575,
+        "projection_gain": 0.06015443511912961,
+        "correlation": 0.39619848362552906
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 75,
+        "lambda_grad": 0.0001,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 8.005701482268416e-07,
+        "measurement_residual": 0.0074058502345919555,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 2,
+      "lam": 0.01,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.8625462822824438,
+        "improvement_over_zero": 0.1374537177175562,
+        "response_fraction": 0.21711453341528553,
+        "cosine": 0.698139886750504,
+        "projection_gain": 0.15157631577043593,
+        "correlation": 0.753195435266927
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 33,
+        "lambda_grad": 0.01,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 8.159856684004262e-07,
+        "measurement_residual": 0.00978585733507111,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 2,
+      "lam": 0.01,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.9637329005257155,
+        "improvement_over_zero": 0.036267099474284525,
+        "response_fraction": 0.10264024294600066,
+        "cosine": 0.39825468826743093,
+        "projection_gain": 0.04087695795815287,
+        "correlation": 0.4322014956930769
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 12,
+        "lambda_grad": 0.01,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 3.604577305635098e-07,
+        "measurement_residual": 0.011494922714107396,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 2,
+      "lam": 1.0,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.9977784825168039,
+        "improvement_over_zero": 0.0022215174831961004,
+        "response_fraction": 0.00395836245008248,
+        "cosine": 0.5625771409157125,
+        "projection_gain": 0.002226884229875516,
+        "correlation": 0.6412889280841809
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 7,
+        "lambda_grad": 1.0,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 2.2118234975207674e-07,
+        "measurement_residual": 0.016717070831674417,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "balloons",
+      "direction": 2,
+      "lam": 1.0,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.997901484830185,
+        "improvement_over_zero": 0.002098515169814963,
+        "response_fraction": 0.0037937515919316276,
+        "cosine": 0.5544668678097577,
+        "projection_gain": 0.0021035095624266117,
+        "correlation": 0.6051710594862677
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 4,
+        "lambda_grad": 1.0,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 1.258890242232938e-07,
+        "measurement_residual": 0.016718513900841524,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 0,
+      "lam": 1e-06,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.012499914117999184,
+        "improvement_over_zero": 0.9875000858820008,
+        "response_fraction": 0.9967333176477803,
+        "cosine": 0.9999269731247118,
+        "projection_gain": 0.9966605293280969,
+        "correlation": 0.9999214857771977
+      },
+      "solver": {
+        "converged": false,
+        "cg_info": 1000,
+        "iterations": 1000,
+        "lambda_grad": 1e-06,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 7.985129375098244e-06,
+        "measurement_residual": 9.207179732687765e-05,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 0,
+      "lam": 1e-06,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.6791757711704859,
+        "improvement_over_zero": 0.3208242288295141,
+        "response_fraction": 0.58881050406975,
+        "cosine": 0.7518701478981796,
+        "projection_gain": 0.4427090407789247,
+        "correlation": 0.8016980935777053
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 363,
+        "lambda_grad": 1e-06,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.94073882917642e-07,
+        "measurement_residual": 0.013662748438490876,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 0,
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.030986635550064826,
+        "improvement_over_zero": 0.9690133644499351,
+        "response_fraction": 0.9943420317852417,
+        "cosine": 0.9995332798228758,
+        "projection_gain": 0.993877952296045,
+        "correlation": 0.9994748846196572
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 866,
+        "lambda_grad": 0.0001,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.909357245964822e-07,
+        "measurement_residual": 0.002549523865063916,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 0,
+      "lam": 0.0001,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.6796832363353784,
+        "improvement_over_zero": 0.3203167636646216,
+        "response_fraction": 0.5869048630430862,
+        "cosine": 0.7518152191929484,
+        "projection_gain": 0.44124400825414517,
+        "correlation": 0.8016864589761215
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 280,
+        "lambda_grad": 0.0001,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.980145645376145e-07,
+        "measurement_residual": 0.013997143178389009,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 0,
+      "lam": 0.01,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.18128060151656727,
+        "improvement_over_zero": 0.8187193984834327,
+        "response_fraction": 0.8893469025218167,
+        "cosine": 0.9884080394015956,
+        "projection_gain": 0.8790376282694708,
+        "correlation": 0.9870509096259151
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 166,
+        "lambda_grad": 0.01,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.67615569433164e-07,
+        "measurement_residual": 0.04053128686801549,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 0,
+      "lam": 0.01,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.6922611307111065,
+        "improvement_over_zero": 0.3077388692888935,
+        "response_fraction": 0.5514333218498713,
+        "cosine": 0.7479174749413604,
+        "projection_gain": 0.4124266176764823,
+        "correlation": 0.7970609489365047
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 70,
+        "lambda_grad": 0.01,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.189787291975788e-07,
+        "measurement_residual": 0.04325446053109638,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 0,
+      "lam": 1.0,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.8559445560512872,
+        "improvement_over_zero": 0.14405544394871284,
+        "response_fraction": 0.1995273404602948,
+        "cosine": 0.7697443263883166,
+        "projection_gain": 0.15358503827866193,
+        "correlation": 0.7734018741767179
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 26,
+        "lambda_grad": 1.0,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 7.995777956713643e-07,
+        "measurement_residual": 0.3455016051462898,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 0,
+      "lam": 1.0,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.8815601467471286,
+        "improvement_over_zero": 0.11843985325287143,
+        "response_fraction": 0.18801018070225664,
+        "cosine": 0.6866637081844393,
+        "projection_gain": 0.12909976785743807,
+        "correlation": 0.7175631393944117
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 19,
+        "lambda_grad": 1.0,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 6.395997410455899e-07,
+        "measurement_residual": 0.3456342331199136,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 1,
+      "lam": 1e-06,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.012206359725379543,
+        "improvement_over_zero": 0.9877936402746205,
+        "response_fraction": 0.9989697708901681,
+        "cosine": 0.9999259567956723,
+        "projection_gain": 0.9988958039673049,
+        "correlation": 0.9999165673009054
+      },
+      "solver": {
+        "converged": false,
+        "cg_info": 1000,
+        "iterations": 1000,
+        "lambda_grad": 1e-06,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 2.0058264791407296e-05,
+        "measurement_residual": 0.00013888588460597945,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 1,
+      "lam": 1e-06,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.6318019590272229,
+        "improvement_over_zero": 0.3681980409727771,
+        "response_fraction": 0.6128221590618236,
+        "cosine": 0.7966236768439522,
+        "projection_gain": 0.48818864160327924,
+        "correlation": 0.8476704016198151
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 204,
+        "lambda_grad": 1e-06,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.92222089051625e-07,
+        "measurement_residual": 0.014812033689460642,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 1,
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.0552031106025965,
+        "improvement_over_zero": 0.9447968893974035,
+        "response_fraction": 0.9939164707629287,
+        "cosine": 0.9984856000575622,
+        "projection_gain": 0.9924112837168171,
+        "correlation": 0.9982858574255357
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 765,
+        "lambda_grad": 0.0001,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.958303321210912e-07,
+        "measurement_residual": 0.0032749469797034377,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 1,
+      "lam": 0.0001,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.6333418263517203,
+        "improvement_over_zero": 0.3666581736482797,
+        "response_fraction": 0.6092747786040328,
+        "cosine": 0.7961054034266236,
+        "projection_gain": 0.4850469434182303,
+        "correlation": 0.8470918028517711
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 157,
+        "lambda_grad": 0.0001,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.481715188226572e-07,
+        "measurement_residual": 0.015314431689152037,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 1,
+      "lam": 0.01,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.18254844650096344,
+        "improvement_over_zero": 0.8174515534990365,
+        "response_fraction": 0.911212991366237,
+        "cosine": 0.986040145027104,
+        "projection_gain": 0.8984925901573456,
+        "correlation": 0.9841960275272852
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 137,
+        "lambda_grad": 0.01,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.681437947698235e-07,
+        "measurement_residual": 0.04474921018500186,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 1,
+      "lam": 0.01,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.6562104278511657,
+        "improvement_over_zero": 0.3437895721488343,
+        "response_fraction": 0.5544501703904394,
+        "cosine": 0.790695821418848,
+        "projection_gain": 0.4384014329126886,
+        "correlation": 0.8405983569538967
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 61,
+        "lambda_grad": 0.01,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.230481902802978e-07,
+        "measurement_residual": 0.047778062479440955,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 1,
+      "lam": 1.0,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.8589175438084687,
+        "improvement_over_zero": 0.14108245619153126,
+        "response_fraction": 0.1713743800982725,
+        "cosine": 0.8508559766193257,
+        "projection_gain": 0.14581491554604717,
+        "correlation": 0.8498852297484242
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 21,
+        "lambda_grad": 1.0,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.902275365764512e-07,
+        "measurement_residual": 0.23137857240017762,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 1,
+      "lam": 1.0,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.8893726337311997,
+        "improvement_over_zero": 0.11062736626880032,
+        "response_fraction": 0.15150095971096234,
+        "cosine": 0.7655689429490369,
+        "projection_gain": 0.11598442958168606,
+        "correlation": 0.7987522272589704
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 15,
+        "lambda_grad": 1.0,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 8.22010663682388e-07,
+        "measurement_residual": 0.23153322676199917,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 2,
+      "lam": 1e-06,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.18174201897411904,
+        "improvement_over_zero": 0.818257981025881,
+        "response_fraction": 0.8963372672543058,
+        "cosine": 0.9875693000198772,
+        "projection_gain": 0.8851951676040644,
+        "correlation": 0.9949153374581504
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 549,
+        "lambda_grad": 1e-06,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.995130904210548e-07,
+        "measurement_residual": 0.0002048290436285622,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 2,
+      "lam": 1e-06,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.8546875802377941,
+        "improvement_over_zero": 0.14531241976220588,
+        "response_fraction": 0.39805355041721197,
+        "cosine": 0.5375605477434621,
+        "projection_gain": 0.21397788459350625,
+        "correlation": 0.5720193820124545
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 95,
+        "lambda_grad": 1e-06,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.897560231433602e-07,
+        "measurement_residual": 0.010421509746639584,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 2,
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.2480223175479487,
+        "improvement_over_zero": 0.7519776824520513,
+        "response_fraction": 0.83037016566736,
+        "cosine": 0.9802854253079878,
+        "projection_gain": 0.8139997710142922,
+        "correlation": 0.9875017430468945
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 182,
+        "lambda_grad": 0.0001,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 8.539643801950898e-07,
+        "measurement_residual": 0.004479264053553189,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 2,
+      "lam": 0.0001,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.858376801652541,
+        "improvement_over_zero": 0.14162319834745896,
+        "response_fraction": 0.3839123604297312,
+        "cosine": 0.5347287678051088,
+        "projection_gain": 0.20528898343774096,
+        "correlation": 0.5690044357323962
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 69,
+        "lambda_grad": 0.0001,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.292580489242698e-07,
+        "measurement_residual": 0.011832805321923044,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 2,
+      "lam": 0.01,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.8548247227398614,
+        "improvement_over_zero": 0.14517527726013857,
+        "response_fraction": 0.23501830846602284,
+        "cosine": 0.6903894016279692,
+        "projection_gain": 0.162254149353475,
+        "correlation": 0.7310498400523158
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 31,
+        "lambda_grad": 0.01,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.64066813621882e-07,
+        "measurement_residual": 0.03637997121452557,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 2,
+      "lam": 0.01,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.925106277671351,
+        "improvement_over_zero": 0.07489372232864899,
+        "response_fraction": 0.1757450947111428,
+        "cosine": 0.4980642948123957,
+        "projection_gain": 0.08753235666404303,
+        "correlation": 0.5300569686480281
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 12,
+        "lambda_grad": 0.01,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 4.228173506879319e-07,
+        "measurement_residual": 0.037507671826894295,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 2,
+      "lam": 1.0,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.9975489885331246,
+        "improvement_over_zero": 0.00245101146687543,
+        "response_fraction": 0.004443908303006795,
+        "cosine": 0.5530901474969389,
+        "projection_gain": 0.0024578818987728993,
+        "correlation": 0.6287070473085217
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 7,
+        "lambda_grad": 1.0,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 6.29538796005055e-08,
+        "measurement_residual": 0.05314459993218965,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "beads",
+      "direction": 2,
+      "lam": 1.0,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.9975488069045471,
+        "improvement_over_zero": 0.0024511930954529415,
+        "response_fraction": 0.004341463242828628,
+        "cosine": 0.5660794381390806,
+        "projection_gain": 0.0024576130732019007,
+        "correlation": 0.6064017219661627
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 4,
+        "lambda_grad": 1.0,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 5.2146830252171485e-08,
+        "measurement_residual": 0.05314529712254222,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 0,
+      "lam": 1e-06,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.010099259750278124,
+        "improvement_over_zero": 0.9899007402497219,
+        "response_fraction": 0.9974002667370573,
+        "cosine": 0.9999522576654325,
+        "projection_gain": 0.997352648519825,
+        "correlation": 0.9999497587919666
+      },
+      "solver": {
+        "converged": false,
+        "cg_info": 1000,
+        "iterations": 1000,
+        "lambda_grad": 1e-06,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 6.0721871148296465e-06,
+        "measurement_residual": 2.5641772592541687e-05,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 0,
+      "lam": 1e-06,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.6524153545570338,
+        "improvement_over_zero": 0.3475846454429662,
+        "response_fraction": 0.5956691622782048,
+        "cosine": 0.7799429741114161,
+        "projection_gain": 0.4645879780137188,
+        "correlation": 0.830936496412358
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 379,
+        "lambda_grad": 1e-06,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.906796250800497e-07,
+        "measurement_residual": 0.0063352119316776164,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 0,
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.022187390654897873,
+        "improvement_over_zero": 0.9778126093451022,
+        "response_fraction": 0.9951918806334055,
+        "cosine": 0.9997642855104824,
+        "projection_gain": 0.99495729948729,
+        "correlation": 0.9997399174866882
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 864,
+        "lambda_grad": 0.0001,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.884995265719051e-07,
+        "measurement_residual": 0.0008955403687201121,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 0,
+      "lam": 0.0001,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.6526602606170698,
+        "improvement_over_zero": 0.34733973938293017,
+        "response_fraction": 0.594434908931672,
+        "cosine": 0.7800580275766273,
+        "projection_gain": 0.46369372258393204,
+        "correlation": 0.8311221021920638
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 290,
+        "lambda_grad": 0.0001,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.755686684753776e-07,
+        "measurement_residual": 0.006428161637159239,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 0,
+      "lam": 0.01,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.16539635526493632,
+        "improvement_over_zero": 0.8346036447350637,
+        "response_fraction": 0.890001788943154,
+        "cosine": 0.9914290352622024,
+        "projection_gain": 0.8823736149935455,
+        "correlation": 0.9906353489339718
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 166,
+        "lambda_grad": 0.01,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.36067013747684e-07,
+        "measurement_residual": 0.013208152713930226,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 0,
+      "lam": 0.01,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.6632793189668672,
+        "improvement_over_zero": 0.3367206810331328,
+        "response_fraction": 0.5655834563853936,
+        "cosine": 0.7779092380029726,
+        "projection_gain": 0.4399725955838491,
+        "correlation": 0.8281853569807903
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 71,
+        "lambda_grad": 0.01,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 8.436166727127296e-07,
+        "measurement_residual": 0.014902425105219934,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 0,
+      "lam": 1.0,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.8607920482350974,
+        "improvement_over_zero": 0.13920795176490264,
+        "response_fraction": 0.19271868862008576,
+        "cosine": 0.7684193597397762,
+        "projection_gain": 0.1480887713193356,
+        "correlation": 0.7738094466375924
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 26,
+        "lambda_grad": 1.0,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.568724589636945e-07,
+        "measurement_residual": 0.11012730258720618,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 0,
+      "lam": 1.0,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.8819637391628271,
+        "improvement_over_zero": 0.11803626083717289,
+        "response_fraction": 0.18286681797877263,
+        "cosine": 0.6988152327046945,
+        "projection_gain": 0.12779011795980302,
+        "correlation": 0.7296372079814376
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 19,
+        "lambda_grad": 1.0,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.785623547124793e-07,
+        "measurement_residual": 0.11020179745204307,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 1,
+      "lam": 1e-06,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.006700992660805524,
+        "improvement_over_zero": 0.9932990073391945,
+        "response_fraction": 0.9992324388110202,
+        "cosine": 0.9999778259037936,
+        "projection_gain": 0.9992102817347895,
+        "correlation": 0.9999753454252923
+      },
+      "solver": {
+        "converged": false,
+        "cg_info": 1000,
+        "iterations": 1000,
+        "lambda_grad": 1e-06,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 1.7973655683117612e-05,
+        "measurement_residual": 3.919580516437456e-05,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 1,
+      "lam": 1e-06,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.5859978643957767,
+        "improvement_over_zero": 0.4140021356042233,
+        "response_fraction": 0.6396502177320663,
+        "cosine": 0.8330794506308518,
+        "projection_gain": 0.5328794519841346,
+        "correlation": 0.8884180730805211
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 211,
+        "lambda_grad": 1e-06,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.842734253775883e-07,
+        "measurement_residual": 0.006726266511035669,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 1,
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.039613105858924094,
+        "improvement_over_zero": 0.9603868941410759,
+        "response_fraction": 0.9961864663900944,
+        "cosine": 0.9992196967286499,
+        "projection_gain": 0.9954091388314955,
+        "correlation": 0.9991194852656553
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 766,
+        "lambda_grad": 0.0001,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.866174867635777e-07,
+        "measurement_residual": 0.001094558234005011,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 1,
+      "lam": 0.0001,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.5867115683964438,
+        "improvement_over_zero": 0.4132884316035562,
+        "response_fraction": 0.6377374772259207,
+        "cosine": 0.8330062630080307,
+        "projection_gain": 0.5312393126841333,
+        "correlation": 0.8882926052184916
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 162,
+        "lambda_grad": 0.0001,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 8.977660847961247e-07,
+        "measurement_residual": 0.006851785556678685,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 1,
+      "lam": 0.01,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.13894271396696053,
+        "improvement_over_zero": 0.8610572860330394,
+        "response_fraction": 0.9290250488676016,
+        "cosine": 0.9923211790179128,
+        "projection_gain": 0.9218912318294725,
+        "correlation": 0.9913986690400375
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 138,
+        "lambda_grad": 0.01,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.452428225825342e-07,
+        "measurement_residual": 0.014640470598541766,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 1,
+      "lam": 0.01,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.6020943335108372,
+        "improvement_over_zero": 0.3979056664891628,
+        "response_fraction": 0.6024401180929668,
+        "cosine": 0.8303036927627273,
+        "projection_gain": 0.5002082547210039,
+        "correlation": 0.8843347583265738
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 61,
+        "lambda_grad": 0.01,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.988572209007544e-07,
+        "measurement_residual": 0.016404781706001795,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 1,
+      "lam": 1.0,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.8323199641190718,
+        "improvement_over_zero": 0.16768003588092817,
+        "response_fraction": 0.20768600489386324,
+        "cosine": 0.8435256726534346,
+        "projection_gain": 0.1751884769788005,
+        "correlation": 0.8542617015910282
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 22,
+        "lambda_grad": 1.0,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 4.8954213687738e-07,
+        "measurement_residual": 0.0729694201907401,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 1,
+      "lam": 1.0,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.8599366953623399,
+        "improvement_over_zero": 0.14006330463766015,
+        "response_fraction": 0.1925795643358156,
+        "cosine": 0.7726566668572644,
+        "projection_gain": 0.14879788428453541,
+        "correlation": 0.8116718378527267
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 16,
+        "lambda_grad": 1.0,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 6.692468982102216e-07,
+        "measurement_residual": 0.07310127705134345,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 2,
+      "lam": 1e-06,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.16781999326080896,
+        "improvement_over_zero": 0.832180006739191,
+        "response_fraction": 0.9110698071439409,
+        "cosine": 0.9888839632387008,
+        "projection_gain": 0.900942321675619,
+        "correlation": 0.9952976641614141
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 556,
+        "lambda_grad": 1e-06,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.827260533914348e-07,
+        "measurement_residual": 7.295533309383484e-05,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 2,
+      "lam": 1e-06,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.8867629679054478,
+        "improvement_over_zero": 0.11323703209455216,
+        "response_fraction": 0.30038499410081265,
+        "cosine": 0.505821844300384,
+        "projection_gain": 0.15194129171623305,
+        "correlation": 0.5375628003465176
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 99,
+        "lambda_grad": 1e-06,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.236739431456606e-07,
+        "measurement_residual": 0.004752494745524505,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 2,
+      "lam": 0.0001,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.222601045115078,
+        "improvement_over_zero": 0.777398954884922,
+        "response_fraction": 0.8597343911910457,
+        "cosine": 0.9826244101795274,
+        "projection_gain": 0.8447959990551563,
+        "correlation": 0.9884347446600633
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 183,
+        "lambda_grad": 0.0001,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.907515798047615e-07,
+        "measurement_residual": 0.0015813099800126896,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 2,
+      "lam": 0.0001,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.8889582664667367,
+        "improvement_over_zero": 0.1110417335332633,
+        "response_fraction": 0.29044750170394046,
+        "cosine": 0.506310004391621,
+        "projection_gain": 0.14705647586325743,
+        "correlation": 0.5380901712463044
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 71,
+        "lambda_grad": 0.0001,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 9.832233079260886e-07,
+        "measurement_residual": 0.0050941422606003844,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 2,
+      "lam": 0.01,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.8202726705606486,
+        "improvement_over_zero": 0.17972732943935144,
+        "response_fraction": 0.2777159826834574,
+        "cosine": 0.727863965665129,
+        "projection_gain": 0.20213945648456957,
+        "correlation": 0.7691667750635595
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 33,
+        "lambda_grad": 0.01,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 6.645722720035594e-07,
+        "measurement_residual": 0.010659624296142263,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 2,
+      "lam": 0.01,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.9271140620460959,
+        "improvement_over_zero": 0.07288593795390408,
+        "response_fraction": 0.16104503826209465,
+        "cosine": 0.5166102045144207,
+        "projection_gain": 0.08319751015261344,
+        "correlation": 0.549227903910971
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 12,
+        "lambda_grad": 0.01,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 4.3985661487228805e-07,
+        "measurement_residual": 0.011401654843832156,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 2,
+      "lam": 1.0,
+      "mu": 1e-08,
+      "metrics": {
+        "relative_l2": 0.9967041780021461,
+        "improvement_over_zero": 0.0032958219978539427,
+        "response_fraction": 0.005560503046117258,
+        "cosine": 0.5945236152518263,
+        "projection_gain": 0.0033058503735964246,
+        "correlation": 0.6661327966762317
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 7,
+        "lambda_grad": 1.0,
+        "mu": 1e-08,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 1.56116681198998e-07,
+        "measurement_residual": 0.016205201217004406,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    },
+    {
+      "scene_id": "cd",
+      "direction": 2,
+      "lam": 1.0,
+      "mu": 0.0001,
+      "metrics": {
+        "relative_l2": 0.9967053626439812,
+        "improvement_over_zero": 0.003294637356018759,
+        "response_fraction": 0.0054013311802717226,
+        "cosine": 0.611663517262425,
+        "projection_gain": 0.003303797227624207,
+        "correlation": 0.6533448821543768
+      },
+      "solver": {
+        "converged": true,
+        "cg_info": 0,
+        "iterations": 4,
+        "lambda_grad": 1.0,
+        "mu": 0.0001,
+        "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+        "normal_residual_relative": 5.206333131369285e-08,
+        "measurement_residual": 0.01620586820275993,
+        "initialization": "zero; no GT coefficients supplied"
+      }
+    }
+  ],
+  "config_sha256": "bf50bbdc5ae36439890684ba89cf2447725b0527e75867c419ed7090a4a78400",
+  "config": {
+    "status": "implementation_protocol_not_yet_executed_on_research_data",
+    "seed": 20261030,
+    "basis_directions": 3,
+    "pixels_per_scene": 2048,
+    "minimum_band_sum": 0.021,
+    "value_range": [
+      0.0,
+      1.0
+    ],
+    "amplitude_quantiles": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "masks": [
+      "smooth",
+      "texture",
+      "local"
+    ],
+    "noise_fractions": [
+      0,
+      0.001,
+      0.005
+    ],
+    "reference_forward_rms": 3.4658713340759277,
+    "reference_rms_source": "D5.3 s1c_s20261021; not calibrated sensor DN",
+    "spectral_weights": "21 ones",
+    "shape": [
+      21,
+      512,
+      512
+    ],
+    "splits": {
+      "train": 39,
+      "val": 9
+    },
+    "test_access": "forbidden",
+    "inverse": {
+      "lambda_grid": [
+        1e-06,
+        0.0001,
+        0.01,
+        1.0
+      ],
+      "mu_grid": [
+        1e-08,
+        0.0001
+      ],
+      "rtol": 1e-06,
+      "maxiter": 1000
+    },
+    "hyperparameter_selection": "First three sorted training scenes, all three directions, local mask, middle amplitude; separate grid for each noise fraction. Minimise scene-mean coefficient relative L2 at common 1000-iteration cap; report nonconvergence. No val tuning. Earlier 100-iteration grids remain numerical pilot evidence.",
+    "s4": "gated; no training authorized by implementation completion"
+  },
+  "execution_source": {
+    "compact_results.py": "554012dee3dc2177646c05529900ca6bef0e8405615addb4e9f0b5bc62567227",
+    "conditioning_probe.py": "e8ae619a3f83333c0664816c5f238986913f4d89a8baf49ff9d5047f1b2ee6e2",
+    "decision_summary.py": "aed2ad45ba0d808c8f284640f8f5c5fb2f0b965881e7a519ddb1221b8554e12b",
+    "evidence_audit.py": "65215654268968e0a044c07be3b93fb45905245acf9da49a82f4a6d7a55897f0",
+    "inverse_conditioning.py": "fe6e54f3b6bb9eb4d9a7a7df3c8a7bca48b4ee3d652a80c80ce040960ca444b7",
+    "natural_counterfactual.py": "e974cd70dcbbda89fb0190eb9ea8e7cd839f824ad4c4d1f9f7ec29cbe50cf177",
+    "natural_spectral_basis.py": "212cb9bb57553d74fa8b9a95c7656c91877bc5d41543ebdde8229568077c7ee5",
+    "noise_sweep.py": "bc58a58ad028b915ad9fff04a29c2479fa832f700f2362f790036ba411691214",
+    "oracle_detection.py": "294a0de5d17cdf3f313a8462b406a577471aecd204baf819b9979f9bb3b0ba8f",
+    "restricted_inverse_operator.py": "6c045c5db6be3485f91b0e1f02c8174a13cd8912c3e7959cfb7adcbe5471c56d",
+    "run_sequence.py": "a44428e001d8239afe913ca33b5e9c7173f219bb2fd90c6ea93cb4533e994da7",
+    "summarize_d5_4.py": "bb29b318fc5a003430a8a3a273379299049b56e91f39d49b7f95200f72f05f95",
+    "write_observability_analysis.py": "300545ebbe584211f9d9edc18b20350cd5af4a13f520af2c7c7e15dd36f07d78",
+    "__init__.py": "a7c3f334920709fd3673a711d2f6acdaa28150d3acaa2729b3b6d1c046d490b8"
+  },
+  "code_commit": "14e8a1cf52643b805c19710e457ef1cf5765094c",
+  "basis_sha256": "a2a45de3900017f41cdbd02594ee8ef0ecc281cdbad8049c02453f3cd8e91fb9",
+  "inputs": {
+    "train_npz_sha256": "024d2b4c8956707387289242ddbadce08e3379a51ed6e0752a167666dbb32908",
+    "val_npz_sha256": "e61ac4f102d58a44bdb8f7174a960d13f2e102c5db00cc0bc408ea5583ff9247",
+    "manifest_sha256": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3",
+    "train_scenes": 39,
+    "validation_scenes": 9,
+    "test_policy": "test.npz is never downloaded, uploaded or loaded in D5.3"
+  },
+  "kernel_sha256": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+  "caveat": "Fixed-iteration estimator selected on training only; nonconvergence is retained.",
+  "source_sha256": "c9319c4666fe2d0877978ef29c28cc4e1e4224f420888e2e9ec3773185f85d77",
+  "reliable_selection": {
+    "lam": 0.0001,
+    "mu": 1e-08,
+    "mean_error": 0.09997090962453273,
+    "converged_cases": 9
+  }
+}
