@@ -1,8 +1,12 @@
 # S4 — not executed
 
-S2 is complete and negative for frozen-network differential recovery. S3 validation
-coefficient-map inversion is still running. A recoverability gap has not yet been
-assigned. A-large and C6-SFAT remain unexecuted; no A6 was retrained.
+S2 is complete and negative for frozen-network differential recovery. S3 establishes
+a gap only under a true-baseline, known-direction, noiseless Oracle. At target
+0.5% noise the restricted inverse also fails the recovery gate. The noiseless A6
+input shifts its training noise distribution, and the Oracle has stronger priors.
+These results do not isolate network capacity as the bottleneck. A-large and
+C6-SFAT remain unexecuted; no A6 was retrained. A matched-noise/controlled-prior
+diagnostic would be a separate experiment, not an architecture-only comparison.
 
 Source inspection: A6 retains 21 channels, applies physical forward/adjoint updates,
 and a shared CNN proximal; the D5.3 loss configuration uses spatial-gradient 0.2,

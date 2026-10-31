@@ -4,3 +4,5 @@
 # platform.
 docs/reports/*/runs/**/validation.json -text
 docs/reports/*/*_validation.json -text
+# D5.4 evidence/provenance JSONs retain the bytes used by their recorded hashes.
+docs/reports/2026-10-30-d5.4/*.json -text

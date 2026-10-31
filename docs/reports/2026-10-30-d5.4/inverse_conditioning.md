@@ -1,9 +1,36 @@
-# Restricted coefficient-map inversion — execution in progress
+# Restricted coefficient-map inversion
 
-The full validation inverse is running under committed policy `04b5804` and
-runner `34e65eb65dc055d029b72456c22299ab48a51e62`. No final validation
-recoverability category is assigned yet. This document separates completed
-training/numerical diagnostics from the pending scientific result.
+The full validation inverse completed under committed policy `04b5804` and
+runner `34e65eb65dc055d029b72456c22299ab48a51e62`: 2,187 arm/noise/case records,
+5,347.03 seconds, peak CUDA allocation 0.706 GiB. The conditional baseline
+substitution diagnostic is running separately. No model was trained.
+
+## Validation result with true baseline and direction
+
+| Noise fraction | Scene-balanced relative L2 | Direction cosine | Correlation | Converged Chromatic cases | Passing complete strata |
+|---|---:|---:|---:|---:|---:|
+| 0 | 0.074716 | 0.996265 | 0.997223 | 243/243 | 27/27, each 9/9 scenes |
+| 0.001 | 0.951518 | 0.396527 | 0.407341 | 243/243 | 0/27 |
+| 0.005 | 1.445389 | 0.153774 | 0.157111 | 243/243 | 0/27 |
+
+These are descriptive means: average the 27 fixed conditions within each original
+scene, then the nine scenes. They are not 243 independent samples. CAVE and KAIST
+remain separate in `restricted_inverse_summary.json`, along with worst cases;
+every scalar case is in `restricted_inverse_results.json` and every complete
+stratum in `diagnostic_gates.json`.
+
+At zero noise, the known-direction coefficient map is recoverable by this
+regularized estimator throughout the tested construction family. Frozen A6 fails
+the same perturbation-family response gate. This supports a limited noiseless
+recoverability gap, with the Oracle's true baseline/direction and float64
+computation explicitly privileged. A6's noiseless input is outside its training
+noise distribution, so the gap does not isolate neural capacity as the cause.
+
+At both nonzero noise levels, numerical convergence is complete but the recovery
+gate fails. At the target 0.5%, the mean error is worse than returning zero. Thus
+the result is a detection-to-map-recovery gap for this fixed estimator and prior,
+not a proof of information-theoretic impossibility. The finite regularization
+grid and three-scene CAVE-only development selection remain material limitations.
 
 ## Operator and numerical meaning
 
@@ -67,6 +94,15 @@ These changes address numerical termination. They do not justify interpreting
 an earlier censored estimate as a converged physical limit. No promising
 validation arm was selectively extended.
 
+`numerical_budget_audit.json` explicitly marks every training-grid case with
+`budget_censored`. The initial unpreconditioned grid has 69/72 censored cases;
+the final grids have 6/72, 12/72 and 12/72 at zero, 0.1% and 0.5% noise. Only
+fully converged candidates were selected, and all 729 Chromatic validation solves
+converged. The audit also records an earlier pilot metadata limitation: a config
+digest taken at completion can reflect a subsequent edit rather than the loaded
+100-iteration configuration. Original pilot bytes remain unchanged; they are
+not used as final validation evidence.
+
 ## Frequency and boundary diagnostics
 
 `conditioning_probes.json` evaluates finite, cropped B on constants, a local
@@ -82,12 +118,21 @@ must remain explicit. The results cannot be used to claim that every spatial
 frequency is identifiable or that frequency-response confounding in D5.3 is
 eliminated.
 
-## Pending comparison
+## Conditional baseline-substitution diagnostic
 
 The first-level scalar Oracle knows the complete true template and baseline;
 the second level knows only the true baseline and the chosen spectral direction,
-with no mask or true coefficient initialization. If a complete second-level
-condition passes the registered gate, the third level will replace the true
-cube baseline by a fixed A6 estimate from an additional clean reference exposure.
-That third level is explicitly a privileged two-observation diagnostic. It will
-not be described as deployable single-shot spectral reconstruction.
+with no mask or true coefficient initialization. All 27 zero-noise strata passed,
+so the predeclared third level evaluates all of them with the fixed Chromatic
+seed 20261021 estimate from an additional clean reference exposure in place of
+the true cube baseline. It keeps the direction, regularization and solver budget.
+
+This is a baseline-substitution sensitivity test with two privileged observations,
+not deployable single-shot reconstruction. In particular, because the clean
+reference measurement is granted, directly subtracting it in measurement space
+would already supply the same residual as the true-baseline Oracle (apart from
+floating-point rounding). Therefore any failure after inserting the A6 baseline
+would identify avoidable baseline-estimation bias in this diagnostic pipeline;
+it would not establish a fundamental failure caused by removing cube ground truth.
+This qualification follows from the design before the third-level scientific
+results are inspected. No favourable conditions or alternate baselines are selected.

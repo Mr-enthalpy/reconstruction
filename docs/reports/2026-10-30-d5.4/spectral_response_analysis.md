@@ -1,7 +1,8 @@
 # S1/S2 — observable differences and frozen-network response
 
 Status on 2026-10-31: construction, operator, scalar Oracle and frozen-network
-sweeps completed. Coefficient-map inversion is still running; this document does
+sweeps completed. Coefficient-map inversion also completed; see
+`inverse_conditioning.md` for its noise-dependent outcomes. This document does
 not substitute detection for recovery. All results are validation-only simulation
 with the measured signed, shape-only PSFs from the single laboratory prototype.
 
@@ -109,8 +110,9 @@ improvement over D5.3's roughly 1.9%: the perturbation families and truth norms
 differ, and directional recovery remains poor in both constructions.
 
 Known-template detection supplies much stronger priors than A6 receives. The
-restricted coefficient-map inverse must finish before assigning a recoverability
-gap. Neither PSNR nor these detection statistics justify a spectral/material
+restricted coefficient-map inverse now establishes a privileged noiseless gap,
+but not stable map recovery at either nonzero noise level. Neither PSNR nor these
+detection statistics justify a spectral/material
 task claim. The unmatched frequency-response control remains an open issue for
 interpreting D5.3 spatial reconstruction advantages.
 

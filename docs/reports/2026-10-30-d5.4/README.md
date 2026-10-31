@@ -14,19 +14,23 @@ Meta pins and the acquisition member are outside this change.
   sweeps completed. No frozen-model condition group passes the recovery gate.
   See `spectral_response_analysis.md` and the scalar case/stratum JSONs.
 - S3: training-only noise-specific regularisation selection completed and committed
-  before validation inversion. The full validation coefficient-map inverse is running.
-  Conditional removal of the true baseline prior is specified but not yet executed.
-- S4: not executed; no demonstrated capability gap yet.
+  before validation inversion. Full true-baseline inversion completed: all 27
+  noiseless strata pass in 9/9 scenes; no noisy stratum passes. The predeclared
+  baseline-substitution sensitivity diagnostic is running on all 243 noiseless cases.
+- S4: not executed; a noiseless privileged gap exists, but target-noise recovery
+  and a causal neural-capacity bottleneck have not been demonstrated.
 - G4: not opened; no test-loading interface exists in D5.4.
 
-The local no-hardware suite passed 126 tests using the designated research environment.
+The local no-hardware suite passed 128 tests using the designated research environment.
 Earlier sandbox runs failed on temporary-directory ACLs; those are not scientific failures.
 
 The protocol is `experiments/d5_4/configs/diagnostics.json`. Use module entry points
 with repository `src` on PYTHONPATH. All data and output locations are explicit CLI
 arguments. Original data, checkpoints, machine configuration and run logs remain outside Git.
 
-Known-template detection succeeds for some conditions, while frozen A6 largely
-produces incorrectly directed or noise-driven differences. Whether a spatial
-coefficient map is recoverable remains unresolved until S3 completes. No D5.4
-recovery claim is established by implementation, synthetic tests, or the benchmark.
+Known-template detection succeeds for some conditions. A true-baseline,
+known-direction coefficient map is recoverable without noise, but fails the
+registered gate at 0.1% and 0.5% noise with the fixed estimator. Frozen A6 largely
+produces incorrectly directed or noise-driven differences at all three levels.
+This establishes a conditional distinction between detection and recovery; it
+does not establish task-level spectral benefit or a neural-capacity cause.

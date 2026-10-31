@@ -1,0 +1,5110 @@
+{
+  "status": "completed_numerical_budget_audit",
+  "records": [
+    {
+      "label": "initial_unpreconditioned_100",
+      "source_sha256": "f8ae098a79f292521922333daea5612e0025878ee29ab67df561443399112936",
+      "executed_iteration_cap": 100,
+      "budget_censored_cases": 69,
+      "total_cases": 72,
+      "cases": [
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 93,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 93,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 93,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        }
+      ]
+    },
+    {
+      "label": "pcg_100_target",
+      "source_sha256": "625a1fa1145e42db314f55f6b0a2fdb041ff840343c7483ca2769e1fd5b0d4ec",
+      "executed_iteration_cap": 100,
+      "budget_censored_cases": 48,
+      "total_cases": 72,
+      "cases": [
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 88,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 65,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 46,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 36,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 89,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 30,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 23,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 14,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 88,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 65,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 48,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 36,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 89,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 30,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 23,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 14,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 87,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 65,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 48,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 36,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 89,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 30,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 23,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 14,
+          "cg_info": 0,
+          "budget_censored": false
+        }
+      ]
+    },
+    {
+      "label": "pcg_100_zero",
+      "source_sha256": "a1a4503ae860a1fe17bc3aecb9f90968698b5738160e75ed4e3883bdbff8fcb2",
+      "executed_iteration_cap": 100,
+      "budget_censored_cases": 47,
+      "total_cases": 72,
+      "cases": [
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 91,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 70,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 55,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 40,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 35,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 22,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 14,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 86,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 65,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 48,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 38,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 96,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 91,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 32,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 19,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 12,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 88,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 66,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 51,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 38,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 99,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 95,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 33,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 21,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 13,
+          "cg_info": 0,
+          "budget_censored": false
+        }
+      ]
+    },
+    {
+      "label": "pcg_100_low",
+      "source_sha256": "518476fbbdd23a366f5518f58295b91c6cbc43739397b2fead651166c0e1d0c9",
+      "executed_iteration_cap": 100,
+      "budget_censored_cases": 48,
+      "total_cases": 72,
+      "cases": [
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 88,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 67,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 47,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 36,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 89,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 30,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 23,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 14,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 87,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 65,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 48,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 36,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 89,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 30,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 23,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 14,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 88,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 65,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 48,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 36,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 89,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 100,
+          "cg_info": 100,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 30,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 23,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 14,
+          "cg_info": 0,
+          "budget_censored": false
+        }
+      ]
+    },
+    {
+      "label": "final_1000_0",
+      "source_sha256": "c9319c4666fe2d0877978ef29c28cc4e1e4224f420888e2e9ec3773185f85d77",
+      "executed_iteration_cap": 1000,
+      "budget_censored_cases": 6,
+      "total_cases": 72,
+      "cases": [
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 422,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 839,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 322,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 165,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 72,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 27,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 19,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 225,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 702,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 170,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 131,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 61,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 22,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 16,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 543,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 104,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 179,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 75,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 33,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 12,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 7,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 4,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 363,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 866,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 280,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 166,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 70,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 26,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 19,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 204,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 765,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 157,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 137,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 61,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 21,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 15,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 549,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 95,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 182,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 69,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 31,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 12,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 7,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 4,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 379,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 864,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 290,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 166,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 71,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 26,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 19,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 211,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 766,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 162,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 138,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 61,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 22,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 16,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 556,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 99,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 183,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 71,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 33,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 12,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 7,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 4,
+          "cg_info": 0,
+          "budget_censored": false
+        }
+      ]
+    },
+    {
+      "label": "final_1000_0.001",
+      "source_sha256": "85d0d3120b76d69f040b074f5b92392c63828d8bce7e4475c4ba5083cdedf53a",
+      "executed_iteration_cap": 1000,
+      "budget_censored_cases": 12,
+      "total_cases": 72,
+      "cases": [
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 476,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 378,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 201,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 83,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 31,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 21,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 251,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 195,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 153,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 67,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 22,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 16,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 892,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 104,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 216,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 76,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 35,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 12,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 8,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 4,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 470,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 373,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 199,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 82,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 31,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 21,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 250,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 194,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 153,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 67,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 23,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 17,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 889,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 104,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 215,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 75,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 35,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 12,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 8,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 4,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 476,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 378,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 201,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 83,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 31,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 21,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 251,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 195,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 154,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 67,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 22,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 16,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 891,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 104,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 217,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 76,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 35,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 12,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 8,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 4,
+          "cg_info": 0,
+          "budget_censored": false
+        }
+      ]
+    },
+    {
+      "label": "final_1000_0.005",
+      "source_sha256": "7a2688601ecf4259bfc2c6e1a907d5fcfe9a401c5a2907d91372e9b44fa7e916",
+      "executed_iteration_cap": 1000,
+      "budget_censored_cases": 12,
+      "total_cases": 72,
+      "cases": [
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 477,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 378,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 203,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 83,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 29,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 21,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 251,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 195,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 154,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 67,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 23,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 16,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 889,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 104,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 216,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 76,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 35,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 12,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 8,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "balloons",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 4,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 476,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 378,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 201,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 83,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 31,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 21,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 251,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 195,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 153,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 67,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 23,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 16,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 891,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 104,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 216,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 76,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 35,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 12,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 8,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "beads",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 4,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 477,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 378,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 201,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 83,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 31,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 0,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 21,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 251,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": false,
+          "iterations": 1000,
+          "cg_info": 1000,
+          "budget_censored": true
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 195,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 154,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 67,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 23,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 1,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 16,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 891,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1e-06,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 104,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 216,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.0001,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 76,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 35,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 0.01,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 12,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 1e-08,
+          "converged": true,
+          "iterations": 8,
+          "cg_info": 0,
+          "budget_censored": false
+        },
+        {
+          "scene_id": "cd",
+          "direction": 2,
+          "lam": 1.0,
+          "mu": 0.0001,
+          "converged": true,
+          "iterations": 4,
+          "cg_info": 0,
+          "budget_censored": false
+        }
+      ]
+    }
+  ],
+  "interpretation": "CG budget censoring is distinct from optimizer convergence and physical recoverability. Original result files remain unchanged. Final validation uses only training candidates converged in all cases.",
+  "historical_metadata_caveat": "Earlier 100-iteration pilot scripts hashed config at completion; a concurrent subsequent config edit can make that digest describe the later file. Executed caps here follow the loaded configuration/iteration records and archived source. Final grids capture execution identity at start."
+}

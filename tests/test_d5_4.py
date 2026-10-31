@@ -172,3 +172,28 @@ def test_basis_transport_proof_accepts_only_line_endings(tmp_path):
     hashes=[hashlib.sha256(x).hexdigest() for x in (raw,raw.replace(b'\n',b'\r\n'))]
     assert len(verify_basis(path,hashes)['accepted_byte_sha256'])==2
     with pytest.raises(ValueError): verify_basis(path,[hashlib.sha256(raw.replace(b'-1',b'-2')).hexdigest()])
+
+
+def test_reduced_summary_preserves_full_gate_and_rejects_duplicate_case(tmp_path):
+    import json
+    from experiments.d5_4.evidence_audit import digest
+    from experiments.d5_4.summarize_reduced import merge
+    columns=['scene_id','dataset_id','direction','mask','level','noise_fraction','arm',
+             'inverse.metrics.relative_l2','inverse.metrics.cosine','inverse.convergence.converged']
+    inverse=tmp_path/'inverse.json'
+    inverse.write_text(json.dumps(dict(status='completed',columns=columns,
+        rows=[[str(i),'CAVE',0,'local',1,0,'chromatic',.2,.95,True] for i in range(9)])))
+    rows=[dict(scene_id=str(i),dataset_id='CAVE',direction=0,mask='local',level=1,noise_fraction=0,
+        correction_metrics=dict(relative_l2=.2,cosine=.95,correlation=.9,projection_gain=.8,response_fraction=.9),
+        convergence=dict(converged=True,cg_info=0,normal_residual_history=[.01]),
+        baseline_measurement_bias_norm=1.,true_perturbation_measurement_norm=.1) for i in range(9)]
+    paths=[tmp_path/f'part{i}.json' for i in range(2)]
+    docs=[dict(status='completed_shard',shard=dict(index=i,count=2),rows=rows[i::2],
+        provenance=dict(inverse_sha256=digest(inverse)),elapsed_seconds=1,peak_cuda_bytes=1,
+        prior='test',limitation='test') for i in range(2)]
+    for path,doc in zip(paths,docs): path.write_text(json.dumps(doc))
+    result=merge(paths,inverse)
+    assert result['converged_cases']==9 and result['strata'][0]['gate_passed']
+    assert result['budget_censored_cases']==0
+    docs[0]['rows'][-1]['scene_id']='0';paths[0].write_text(json.dumps(docs[0]))
+    with pytest.raises(ValueError,match='cases differ'): merge(paths,inverse)
