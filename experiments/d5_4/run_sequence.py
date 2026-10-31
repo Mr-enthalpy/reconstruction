@@ -14,6 +14,8 @@ def main():
         p.add_argument('--'+name,type=Path,required=True)
     p.add_argument('--code-commit',required=True)
     p.add_argument('--device',default='cuda')
+    p.add_argument('--shard-index',type=int,default=0)
+    p.add_argument('--shard-count',type=int,default=1)
     p.add_argument('--stage',choices=['benchmark','operator','tune','inverse','frozen'],required=True)
     a=p.parse_args()
     root=Path(__file__).resolve().parents[2]
@@ -63,8 +65,8 @@ def main():
     else:
         options=[]
         if a.stage=='inverse':
-            selection=json.loads((a.output/'training_regularisation.json').read_text())['selection']
-            options=['--lam',str(selection['lam']),'--mu',str(selection['mu'])]
+            options=['--regularisation-policy',str(report/'regularisation_policy.json'),
+                '--shard-index',str(a.shard_index),'--shard-count',str(a.shard_count)]
         launch('noise_sweep',['--mode',a.stage,'--output',str(a.output/f'{a.stage}.json'),*options])
 
 

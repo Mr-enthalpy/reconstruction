@@ -66,6 +66,8 @@ def run(args):
     if args.device.startswith('cuda'):
         torch.cuda.reset_peak_memory_stats()
     for case_index,(label,x,plus,minus,z,v) in enumerate(cases(cubes,records,basis,cfg)):
+        if case_index % args.shard_count != args.shard_index:
+            continue
         if args.max_cases is not None and case_index>=args.max_cases:
             break
         if args.mode == 'natural':
@@ -142,7 +144,8 @@ def run(args):
                         noise_only=differential_metrics(null[0]-null[1],delta,v),
                         inference_noise_shift=fraction!=.005))
         print(json.dumps(dict(case=case_index+1,elapsed_seconds=time.perf_counter()-started)),flush=True)
-    return dict(status='benchmark_only' if args.max_cases else 'completed',mode=args.mode,split=args.split,
+    return dict(status='benchmark_only' if args.max_cases else ('completed_shard' if args.shard_count>1 else 'completed'),mode=args.mode,split=args.split,
+        shard=dict(index=args.shard_index,count=args.shard_count),
         elapsed_seconds=time.perf_counter()-started,
         peak_cuda_bytes=torch.cuda.max_memory_allocated() if args.device.startswith('cuda') else None,
         provenance=dict(code_commit=os.environ.get('D54_CODE_COMMIT') or subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
@@ -162,12 +165,16 @@ def main():
     p.add_argument('--device',default='cpu')
     p.add_argument('--max-cases',type=int)
     p.add_argument('--maxiter',type=int)
+    p.add_argument('--shard-index',type=int,default=0)
+    p.add_argument('--shard-count',type=int,default=1)
     p.add_argument('--lam',type=float)
     p.add_argument('--mu',type=float)
     p.add_argument('--regularisation-policy',type=Path)
     p.add_argument('--run-dirs',type=Path,nargs='+')
     p.add_argument('--checkpoint-provenance',type=Path)
     a=p.parse_args()
+    if not 0<=a.shard_index<a.shard_count:
+        p.error('shard index must be in [0, shard count)')
     if a.output.exists():
         raise FileExistsError(a.output)
     torch.set_num_threads(4)
