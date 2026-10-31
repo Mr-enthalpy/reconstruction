@@ -163,3 +163,12 @@ def test_partition_merge_rejects_missing_and_incompatible_sources(tmp_path):
     docs[1]['provenance']['kernel']='same'
     paths[1].write_text(json.dumps(docs[1]))
     with pytest.raises(ValueError,match='unique'): merge(paths)
+
+
+def test_basis_transport_proof_accepts_only_line_endings(tmp_path):
+    import hashlib
+    from experiments.d5_4.basis_identity import verify_basis
+    path=tmp_path/'basis.json'; raw=b'{\n  "direction": [1, -1]\n}\n'; path.write_bytes(raw)
+    hashes=[hashlib.sha256(x).hexdigest() for x in (raw,raw.replace(b'\n',b'\r\n'))]
+    assert len(verify_basis(path,hashes)['accepted_byte_sha256'])==2
+    with pytest.raises(ValueError): verify_basis(path,[hashlib.sha256(raw.replace(b'-1',b'-2')).hexdigest()])

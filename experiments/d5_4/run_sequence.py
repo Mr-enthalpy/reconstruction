@@ -16,7 +16,7 @@ def main():
     p.add_argument('--device',default='cuda')
     p.add_argument('--shard-index',type=int,default=0)
     p.add_argument('--shard-count',type=int,default=1)
-    p.add_argument('--stage',choices=['benchmark','operator','tune','inverse','frozen'],required=True)
+    p.add_argument('--stage',choices=['benchmark','operator','tune','inverse','frozen','reduced','reduced-benchmark'],required=True)
     a=p.parse_args()
     root=Path(__file__).resolve().parents[2]
     os.chdir(root)
@@ -33,7 +33,15 @@ def main():
             '--protocol',str(old/'seed_protocol.json'),'--device',a.device]
     def launch(module,extra):
         subprocess.run([sys.executable,'-X','utf8','-m','experiments.d5_4.'+module,*common,*extra],check=True)
-    if a.stage in ('benchmark','frozen'):
+    if a.stage in ('reduced','reduced-benchmark'):
+        options=['--max-cases','1'] if a.stage=='reduced-benchmark' else []
+        launch('reduced_oracle',['--inverse',str(report/'restricted_inverse_results.json'),
+            '--regularisation-policy',str(report/'regularisation_policy.json'),
+            '--checkpoint-provenance',str(report/'checkpoint_registry.json'),
+            '--run-dir',str(a.runs/'s1c_s20261021'),
+            '--shard-index',str(a.shard_index),'--shard-count',str(a.shard_count),
+            '--output',str(a.output/f'{a.stage}.json'),*options])
+    elif a.stage in ('benchmark','frozen'):
         # Verify all old registered hashes, then validate physics buffers through load_arm.
         sys.path.insert(0,str(root/'src'))
         from experiments.d5_3.reconstruction_response import load_arm

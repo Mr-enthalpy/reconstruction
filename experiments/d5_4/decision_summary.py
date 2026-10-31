@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import numpy as np
 from experiments.d5_4.evidence_audit import digest
+from experiments.d5_4.basis_identity import verify_basis
 
 
 def recovered(metric):
@@ -47,14 +48,19 @@ def main():
     p=argparse.ArgumentParser()
     for name in ('operator','inverse','frozen','output'):
         p.add_argument('--'+name,type=Path,required=True)
+    p.add_argument('--basis',type=Path)
     a=p.parse_args()
     docs={k:json.loads(getattr(a,k).read_text()) for k in ('operator','inverse','frozen')}
     if any(d['status']!='completed' for d in docs.values()):
         raise ValueError('benchmark or incomplete run cannot support final decision')
-    for field in ('kernel_array_sha256','basis_sha256'):
+    basis_proof=None
+    if a.basis:
+        basis_proof=verify_basis(a.basis,[d['provenance']['basis_sha256'] for d in docs.values()])
+    for field in ('kernel_array_sha256',) if a.basis else ('kernel_array_sha256','basis_sha256'):
         if len({d['provenance'][field] for d in docs.values()})!=1:
             raise ValueError('cross-run physical/basis provenance mismatch')
     result=dict(status='completed_diagnostic_gate_evaluation',
+        basis_transport_proof=basis_proof,
         source_sha256={k:digest(getattr(a,k)) for k in docs},
         operator=group(docs['operator']['rows'],'operator'),
         inverse=group(docs['inverse']['rows'],'inverse'),

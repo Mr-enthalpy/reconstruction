@@ -1,0 +1,1317 @@
+{
+  "status": "completed",
+  "source_sha256": "7899e373ca2bd86f11620c8e54cbd833be5bb8428c042307fad683a6c6fc8ef3",
+  "provenance": {
+    "code_commit": "34e65eb65dc055d029b72456c22299ab48a51e62",
+    "source_files": {
+      "compact_results.py": "554012dee3dc2177646c05529900ca6bef0e8405615addb4e9f0b5bc62567227",
+      "conditioning_probe.py": "e8ae619a3f83333c0664816c5f238986913f4d89a8baf49ff9d5047f1b2ee6e2",
+      "decision_summary.py": "aed2ad45ba0d808c8f284640f8f5c5fb2f0b965881e7a519ddb1221b8554e12b",
+      "evidence_audit.py": "65215654268968e0a044c07be3b93fb45905245acf9da49a82f4a6d7a55897f0",
+      "inverse_conditioning.py": "fe6e54f3b6bb9eb4d9a7a7df3c8a7bca48b4ee3d652a80c80ce040960ca444b7",
+      "merge_inverse.py": "4e1bb103370e093bbe2438159ab5ec52c7e59c1dde1cd327d4bb9aee4bde6790",
+      "natural_counterfactual.py": "e974cd70dcbbda89fb0190eb9ea8e7cd839f824ad4c4d1f9f7ec29cbe50cf177",
+      "natural_spectral_basis.py": "212cb9bb57553d74fa8b9a95c7656c91877bc5d41543ebdde8229568077c7ee5",
+      "noise_sweep.py": "6577732828f1c0ab462af0e6c4e3df499338f769346a86d64e2c5afbdd99f522",
+      "oracle_detection.py": "294a0de5d17cdf3f313a8462b406a577471aecd204baf819b9979f9bb3b0ba8f",
+      "restricted_inverse_operator.py": "6c045c5db6be3485f91b0e1f02c8174a13cd8912c3e7959cfb7adcbe5471c56d",
+      "run_sequence.py": "0a63e245051f7c3cfbe9109d194bb225c40a27d953ebdb695a3a8727bc6b8d09",
+      "summarize_d5_4.py": "bb29b318fc5a003430a8a3a273379299049b56e91f39d49b7f95200f72f05f95",
+      "write_observability_analysis.py": "300545ebbe584211f9d9edc18b20350cd5af4a13f520af2c7c7e15dd36f07d78",
+      "__init__.py": "a7c3f334920709fd3673a711d2f6acdaa28150d3acaa2729b3b6d1c046d490b8"
+    },
+    "config": {
+      "status": "implementation_protocol_not_yet_executed_on_research_data",
+      "seed": 20261030,
+      "basis_directions": 3,
+      "pixels_per_scene": 2048,
+      "minimum_band_sum": 0.021,
+      "value_range": [
+        0.0,
+        1.0
+      ],
+      "amplitude_quantiles": [
+        0.25,
+        0.5,
+        0.75
+      ],
+      "masks": [
+        "smooth",
+        "texture",
+        "local"
+      ],
+      "noise_fractions": [
+        0,
+        0.001,
+        0.005
+      ],
+      "reference_forward_rms": 3.4658713340759277,
+      "reference_rms_source": "D5.3 s1c_s20261021; not calibrated sensor DN",
+      "spectral_weights": "21 ones",
+      "shape": [
+        21,
+        512,
+        512
+      ],
+      "splits": {
+        "train": 39,
+        "val": 9
+      },
+      "test_access": "forbidden",
+      "inverse": {
+        "lambda_grid": [
+          1e-06,
+          0.0001,
+          0.01,
+          1.0
+        ],
+        "mu_grid": [
+          1e-08,
+          0.0001
+        ],
+        "rtol": 1e-06,
+        "maxiter": 1000
+      },
+      "hyperparameter_selection": "First three sorted training scenes, all three directions, local mask, middle amplitude; separate grid for each noise fraction. Minimise scene-mean coefficient relative L2 at common 1000-iteration cap; report nonconvergence. No val tuning. Earlier 100-iteration grids remain numerical pilot evidence.",
+      "s4": "gated; no training authorized by implementation completion"
+    },
+    "config_sha256": "bf50bbdc5ae36439890684ba89cf2447725b0527e75867c419ed7090a4a78400",
+    "basis_sha256": "a2a45de3900017f41cdbd02594ee8ef0ecc281cdbad8049c02453f3cd8e91fb9",
+    "regularisation_policy": {
+      "status": "frozen_before_validation_inverse",
+      "selection": "minimum training mean relative L2 among all-nine-converged candidates; finite grid unchanged",
+      "by_noise_fraction": {
+        "0": {
+          "lam": 0.0001,
+          "mu": 1e-08,
+          "mean_error": 0.09997090962453273,
+          "converged_cases": 9,
+          "unconstrained_minimum": {
+            "lam": 1e-06,
+            "mu": 1e-08,
+            "mean_error": 0.06764578794562963,
+            "converged_cases": 3
+          },
+          "source_sha256": "c9319c4666fe2d0877978ef29c28cc4e1e4224f420888e2e9ec3773185f85d77"
+        },
+        "0.001": {
+          "lam": 1.0,
+          "mu": 1e-08,
+          "mean_error": 0.9164007346636995,
+          "converged_cases": 9,
+          "unconstrained_minimum": {
+            "lam": 1.0,
+            "mu": 1e-08,
+            "mean_error": 0.9164007346636995,
+            "converged_cases": 9
+          },
+          "source_sha256": "85d0d3120b76d69f040b074f5b92392c63828d8bce7e4475c4ba5083cdedf53a"
+        },
+        "0.005": {
+          "lam": 1.0,
+          "mu": 0.0001,
+          "mean_error": 1.2493584745344903,
+          "converged_cases": 9,
+          "unconstrained_minimum": {
+            "lam": 1.0,
+            "mu": 0.0001,
+            "mean_error": 1.2493584745344903,
+            "converged_cases": 9
+          },
+          "source_sha256": "7a2688601ecf4259bfc2c6e1a907d5fcfe9a401c5a2907d91372e9b44fa7e916"
+        }
+      }
+    },
+    "inputs": {
+      "train_npz_sha256": "024d2b4c8956707387289242ddbadce08e3379a51ed6e0752a167666dbb32908",
+      "val_npz_sha256": "e61ac4f102d58a44bdb8f7174a960d13f2e102c5db00cc0bc408ea5583ff9247",
+      "manifest_sha256": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3",
+      "train_scenes": 39,
+      "validation_scenes": 9,
+      "test_policy": "test.npz is never downloaded, uploaded or loaded in D5.3"
+    },
+    "kernel_file_sha256": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+    "kernel_array_sha256": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04"
+  },
+  "aggregates": [
+    {
+      "arm": "achromatic_550",
+      "noise_fraction": 0,
+      "dataset_id": "CAVE",
+      "original_scenes": 5,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 135,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 0.0001,
+            "mu": 1e-08,
+            "measurement_residual": 1.7477572291273455e-16
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 0.0
+        }
+      }
+    },
+    {
+      "arm": "achromatic_550",
+      "noise_fraction": 0,
+      "dataset_id": "KAIST",
+      "original_scenes": 4,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 108,
+      "worst_case": {
+        "scene_id": "kaist_25",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 0.0001,
+            "mu": 1e-08,
+            "measurement_residual": 2.068160527226725e-16
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 0.0
+        }
+      }
+    },
+    {
+      "arm": "achromatic_550",
+      "noise_fraction": 0,
+      "dataset_id": "all",
+      "original_scenes": 9,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 243,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 0.0001,
+            "mu": 1e-08,
+            "measurement_residual": 1.7477572291273455e-16
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 0.0
+        }
+      }
+    },
+    {
+      "arm": "achromatic_550",
+      "noise_fraction": 0.001,
+      "dataset_id": "CAVE",
+      "original_scenes": 5,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 135,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 1e-08,
+            "measurement_residual": 1.7749974837785651
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 1.774526123046875
+        }
+      }
+    },
+    {
+      "arm": "achromatic_550",
+      "noise_fraction": 0.001,
+      "dataset_id": "KAIST",
+      "original_scenes": 4,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 108,
+      "worst_case": {
+        "scene_id": "kaist_25",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 1e-08,
+            "measurement_residual": 1.7744469440124953
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 1.774526123046875
+        }
+      }
+    },
+    {
+      "arm": "achromatic_550",
+      "noise_fraction": 0.001,
+      "dataset_id": "all",
+      "original_scenes": 9,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 243,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 1e-08,
+            "measurement_residual": 1.7749974837785651
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 1.774526123046875
+        }
+      }
+    },
+    {
+      "arm": "achromatic_550",
+      "noise_fraction": 0.005,
+      "dataset_id": "CAVE",
+      "original_scenes": 5,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 135,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 0.0001,
+            "measurement_residual": 8.863654663779363
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 8.872630615234375
+        }
+      }
+    },
+    {
+      "arm": "achromatic_550",
+      "noise_fraction": 0.005,
+      "dataset_id": "KAIST",
+      "original_scenes": 4,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 108,
+      "worst_case": {
+        "scene_id": "kaist_25",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 0.0001,
+            "measurement_residual": 8.846800014221795
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 8.872630615234375
+        }
+      }
+    },
+    {
+      "arm": "achromatic_550",
+      "noise_fraction": 0.005,
+      "dataset_id": "all",
+      "original_scenes": 9,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 243,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 0.0001,
+            "measurement_residual": 8.863654663779363
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 8.872630615234375
+        }
+      }
+    },
+    {
+      "arm": "achromatic_mean",
+      "noise_fraction": 0,
+      "dataset_id": "CAVE",
+      "original_scenes": 5,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 135,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 0.0001,
+            "mu": 1e-08,
+            "measurement_residual": 1.4563648648610018e-16
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 0.0
+        }
+      }
+    },
+    {
+      "arm": "achromatic_mean",
+      "noise_fraction": 0,
+      "dataset_id": "KAIST",
+      "original_scenes": 4,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 108,
+      "worst_case": {
+        "scene_id": "kaist_25",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 0.0001,
+            "mu": 1e-08,
+            "measurement_residual": 1.7291456204511573e-16
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 0.0
+        }
+      }
+    },
+    {
+      "arm": "achromatic_mean",
+      "noise_fraction": 0,
+      "dataset_id": "all",
+      "original_scenes": 9,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 243,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 0.0001,
+            "mu": 1e-08,
+            "measurement_residual": 1.4563648648610018e-16
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 0.0
+        }
+      }
+    },
+    {
+      "arm": "achromatic_mean",
+      "noise_fraction": 0.001,
+      "dataset_id": "CAVE",
+      "original_scenes": 5,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 135,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 1e-08,
+            "measurement_residual": 1.7749974837785651
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 1.774526123046875
+        }
+      }
+    },
+    {
+      "arm": "achromatic_mean",
+      "noise_fraction": 0.001,
+      "dataset_id": "KAIST",
+      "original_scenes": 4,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 108,
+      "worst_case": {
+        "scene_id": "kaist_25",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 1e-08,
+            "measurement_residual": 1.7744469440124953
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 1.774526123046875
+        }
+      }
+    },
+    {
+      "arm": "achromatic_mean",
+      "noise_fraction": 0.001,
+      "dataset_id": "all",
+      "original_scenes": 9,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 243,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 1e-08,
+            "measurement_residual": 1.7749974837785651
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 1.774526123046875
+        }
+      }
+    },
+    {
+      "arm": "achromatic_mean",
+      "noise_fraction": 0.005,
+      "dataset_id": "CAVE",
+      "original_scenes": 5,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 135,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 0.0001,
+            "measurement_residual": 8.863654663779363
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 8.872630615234375
+        }
+      }
+    },
+    {
+      "arm": "achromatic_mean",
+      "noise_fraction": 0.005,
+      "dataset_id": "KAIST",
+      "original_scenes": 4,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 108,
+      "worst_case": {
+        "scene_id": "kaist_25",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 0.0001,
+            "measurement_residual": 8.846800014221795
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 8.872630615234375
+        }
+      }
+    },
+    {
+      "arm": "achromatic_mean",
+      "noise_fraction": 0.005,
+      "dataset_id": "all",
+      "original_scenes": 9,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.0,
+        "cosine": null,
+        "correlation": null,
+        "projection_gain": 0.0,
+        "response_fraction": 0.0
+      },
+      "converged_cases": 0,
+      "total_cases": 243,
+      "worst_case": {
+        "scene_id": "fake_and_real_lemon_slices",
+        "direction": 0,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.0,
+            "improvement_over_zero": 0.0,
+            "response_fraction": 0.0,
+            "cosine": null,
+            "projection_gain": 0.0,
+            "correlation": null
+          },
+          "convergence": {
+            "converged": false,
+            "status": "unobservable",
+            "cg_info": null,
+            "iterations": 0,
+            "lambda_grad": 1.0,
+            "mu": 0.0001,
+            "measurement_residual": 8.863654663779363
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 8.872630615234375
+        }
+      }
+    },
+    {
+      "arm": "chromatic",
+      "noise_fraction": 0,
+      "dataset_id": "CAVE",
+      "original_scenes": 5,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 0.07582993598647174,
+        "cosine": 0.996177112618484,
+        "correlation": 0.9970575180355477,
+        "projection_gain": 0.9681307900767109,
+        "response_fraction": 0.9716414815641862
+      },
+      "converged_cases": 135,
+      "total_cases": 135,
+      "worst_case": {
+        "scene_id": "fake_and_real_strawberries",
+        "direction": 2,
+        "mask": "local",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 0.25034760608003964,
+            "improvement_over_zero": 0.7496523939199604,
+            "response_fraction": 0.8325440949955049,
+            "cosine": 0.97920083515257,
+            "projection_gain": 0.8152278731209388,
+            "correlation": 0.9856427025721181
+          },
+          "convergence": {
+            "converged": true,
+            "cg_info": 0,
+            "iterations": 176,
+            "lambda_grad": 0.0001,
+            "mu": 1e-08,
+            "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+            "normal_residual_relative": 9.26274486055163e-07,
+            "measurement_residual": 0.0004628552455799618,
+            "initialization": "zero; no GT coefficients supplied"
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 0.0
+        }
+      }
+    },
+    {
+      "arm": "chromatic",
+      "noise_fraction": 0,
+      "dataset_id": "KAIST",
+      "original_scenes": 4,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 0.07332391347834064,
+        "cosine": 0.9963742799186623,
+        "correlation": 0.9974288587581883,
+        "projection_gain": 0.966644255263687,
+        "response_fraction": 0.9699112517338043
+      },
+      "converged_cases": 108,
+      "total_cases": 108,
+      "worst_case": {
+        "scene_id": "kaist_28",
+        "direction": 2,
+        "mask": "local",
+        "level": 1,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 0.25723452676067887,
+            "improvement_over_zero": 0.7427654732393212,
+            "response_fraction": 0.8151340742764724,
+            "cosine": 0.9803748902948439,
+            "projection_gain": 0.7991369786443858,
+            "correlation": 0.9880890696093171
+          },
+          "convergence": {
+            "converged": true,
+            "cg_info": 0,
+            "iterations": 180,
+            "lambda_grad": 0.0001,
+            "mu": 1e-08,
+            "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+            "normal_residual_relative": 9.740545621501176e-07,
+            "measurement_residual": 0.007498826927122832,
+            "initialization": "zero; no GT coefficients supplied"
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 0.0
+        }
+      }
+    },
+    {
+      "arm": "chromatic",
+      "noise_fraction": 0,
+      "dataset_id": "all",
+      "original_scenes": 9,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 0.07471614820508014,
+        "cosine": 0.9962647425296743,
+        "correlation": 0.9972225583567214,
+        "projection_gain": 0.9674701079375893,
+        "response_fraction": 0.9708724905284609
+      },
+      "converged_cases": 243,
+      "total_cases": 243,
+      "worst_case": {
+        "scene_id": "kaist_28",
+        "direction": 2,
+        "mask": "local",
+        "level": 1,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 0.25723452676067887,
+            "improvement_over_zero": 0.7427654732393212,
+            "response_fraction": 0.8151340742764724,
+            "cosine": 0.9803748902948439,
+            "projection_gain": 0.7991369786443858,
+            "correlation": 0.9880890696093171
+          },
+          "convergence": {
+            "converged": true,
+            "cg_info": 0,
+            "iterations": 180,
+            "lambda_grad": 0.0001,
+            "mu": 1e-08,
+            "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+            "normal_residual_relative": 9.740545621501176e-07,
+            "measurement_residual": 0.007498826927122832,
+            "initialization": "zero; no GT coefficients supplied"
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 0.0
+        }
+      }
+    },
+    {
+      "arm": "chromatic",
+      "noise_fraction": 0.001,
+      "dataset_id": "CAVE",
+      "original_scenes": 5,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 0.9717471320543994,
+        "cosine": 0.3725241856090805,
+        "correlation": 0.38141143231701413,
+        "projection_gain": 0.14175633939417107,
+        "response_fraction": 0.40538917255973644
+      },
+      "converged_cases": 135,
+      "total_cases": 135,
+      "worst_case": {
+        "scene_id": "fake_and_real_strawberries",
+        "direction": 1,
+        "mask": "local",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 2.518551476383008,
+            "improvement_over_zero": -1.5185514763830081,
+            "response_fraction": 2.6604427386298166,
+            "cosine": 0.32604611276666257,
+            "projection_gain": 0.8674270131685458,
+            "correlation": 0.08570754674975657
+          },
+          "convergence": {
+            "converged": true,
+            "cg_info": 0,
+            "iterations": 22,
+            "lambda_grad": 1.0,
+            "mu": 1e-08,
+            "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+            "normal_residual_relative": 5.315706092995762e-07,
+            "measurement_residual": 1.7624894686692076,
+            "initialization": "zero; no GT coefficients supplied"
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 1.774526123046875
+        }
+      }
+    },
+    {
+      "arm": "chromatic",
+      "noise_fraction": 0.001,
+      "dataset_id": "KAIST",
+      "original_scenes": 4,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 0.9262312722948831,
+        "cosine": 0.42653032212515285,
+        "correlation": 0.439753776692634,
+        "projection_gain": 0.13448010692918771,
+        "response_fraction": 0.3249320892128772
+      },
+      "converged_cases": 108,
+      "total_cases": 108,
+      "worst_case": {
+        "scene_id": "kaist_29",
+        "direction": 2,
+        "mask": "smooth",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 1.3994005102588238,
+            "improvement_over_zero": -0.39940051025882384,
+            "response_fraction": 1.041378896604311,
+            "cosine": 0.06056787716339122,
+            "projection_gain": 0.0630741090900778,
+            "correlation": 0.0057954683826732445
+          },
+          "convergence": {
+            "converged": true,
+            "cg_info": 0,
+            "iterations": 8,
+            "lambda_grad": 1.0,
+            "mu": 1e-08,
+            "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+            "normal_residual_relative": 9.465127931610547e-08,
+            "measurement_residual": 1.7733362501852052,
+            "initialization": "zero; no GT coefficients supplied"
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 1.774526123046875
+        }
+      }
+    },
+    {
+      "arm": "chromatic",
+      "noise_fraction": 0.001,
+      "dataset_id": "all",
+      "original_scenes": 9,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 0.9515178610501699,
+        "cosine": 0.3965269129495571,
+        "correlation": 0.40734136315062297,
+        "projection_gain": 0.13852245829862292,
+        "response_fraction": 0.3696304688500212
+      },
+      "converged_cases": 243,
+      "total_cases": 243,
+      "worst_case": {
+        "scene_id": "fake_and_real_strawberries",
+        "direction": 1,
+        "mask": "local",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 2.518551476383008,
+            "improvement_over_zero": -1.5185514763830081,
+            "response_fraction": 2.6604427386298166,
+            "cosine": 0.32604611276666257,
+            "projection_gain": 0.8674270131685458,
+            "correlation": 0.08570754674975657
+          },
+          "convergence": {
+            "converged": true,
+            "cg_info": 0,
+            "iterations": 22,
+            "lambda_grad": 1.0,
+            "mu": 1e-08,
+            "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+            "normal_residual_relative": 5.315706092995762e-07,
+            "measurement_residual": 1.7624894686692076,
+            "initialization": "zero; no GT coefficients supplied"
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 1.774526123046875
+        }
+      }
+    },
+    {
+      "arm": "chromatic",
+      "noise_fraction": 0.005,
+      "dataset_id": "CAVE",
+      "original_scenes": 5,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.601797933112465,
+        "cosine": 0.13656444570316878,
+        "correlation": 0.13993967441088756,
+        "projection_gain": 0.12357572455664353,
+        "response_fraction": 1.2147184845387522
+      },
+      "converged_cases": 135,
+      "total_cases": 135,
+      "worst_case": {
+        "scene_id": "fake_and_real_strawberries",
+        "direction": 1,
+        "mask": "local",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 9.403873068998028,
+            "improvement_over_zero": -8.403873068998028,
+            "response_fraction": 9.329279640113278,
+            "cosine": -0.02129693340339426,
+            "projection_gain": -0.19868504719713445,
+            "correlation": -0.030762932134376215
+          },
+          "convergence": {
+            "converged": true,
+            "cg_info": 0,
+            "iterations": 16,
+            "lambda_grad": 1.0,
+            "mu": 0.0001,
+            "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+            "normal_residual_relative": 6.473365166081994e-07,
+            "measurement_residual": 8.83845018577491,
+            "initialization": "zero; no GT coefficients supplied"
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 8.872630615234375
+        }
+      }
+    },
+    {
+      "arm": "chromatic",
+      "noise_fraction": 0.005,
+      "dataset_id": "KAIST",
+      "original_scenes": 4,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.2498778032535185,
+        "cosine": 0.17528643416341366,
+        "correlation": 0.17857539745789974,
+        "projection_gain": 0.11294408009587434,
+        "response_fraction": 0.7817389544906275
+      },
+      "converged_cases": 108,
+      "total_cases": 108,
+      "worst_case": {
+        "scene_id": "kaist_29",
+        "direction": 0,
+        "mask": "local",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 3.519770531695262,
+            "improvement_over_zero": -2.519770531695262,
+            "response_fraction": 3.3884298244681124,
+            "cosine": 0.013674782178676242,
+            "projection_gain": 0.04633603977733161,
+            "correlation": -0.01699927571298184
+          },
+          "convergence": {
+            "converged": true,
+            "cg_info": 0,
+            "iterations": 21,
+            "lambda_grad": 1.0,
+            "mu": 0.0001,
+            "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+            "normal_residual_relative": 5.900450677249953e-07,
+            "measurement_residual": 8.723846304569363,
+            "initialization": "zero; no GT coefficients supplied"
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 8.872630615234375
+        }
+      }
+    },
+    {
+      "arm": "chromatic",
+      "noise_fraction": 0.005,
+      "dataset_id": "all",
+      "original_scenes": 9,
+      "conditions_per_scene": 27,
+      "scene_balanced_means": {
+        "relative_l2": 1.445388986508489,
+        "cosine": 0.1537742183521665,
+        "correlation": 0.15711110687622631,
+        "projection_gain": 0.11885054924074612,
+        "response_fraction": 1.0222831378506967
+      },
+      "converged_cases": 243,
+      "total_cases": 243,
+      "worst_case": {
+        "scene_id": "fake_and_real_strawberries",
+        "direction": 1,
+        "mask": "local",
+        "level": 0,
+        "inverse": {
+          "metrics": {
+            "relative_l2": 9.403873068998028,
+            "improvement_over_zero": -8.403873068998028,
+            "response_fraction": 9.329279640113278,
+            "cosine": -0.02129693340339426,
+            "projection_gain": -0.19868504719713445,
+            "correlation": -0.030762932134376215
+          },
+          "convergence": {
+            "converged": true,
+            "cg_info": 0,
+            "iterations": 16,
+            "lambda_grad": 1.0,
+            "mu": 0.0001,
+            "preconditioner": "exact Neumann regularizer inverse; original zero-boundary B/B* unchanged",
+            "normal_residual_relative": 6.473365166081994e-07,
+            "measurement_residual": 8.83845018577491,
+            "initialization": "zero; no GT coefficients supplied"
+          },
+          "prior": "known true baseline and known spectral direction; unknown spatial map",
+          "expected_noise_norm": 8.872630615234375
+        }
+      }
+    }
+  ]
+}
