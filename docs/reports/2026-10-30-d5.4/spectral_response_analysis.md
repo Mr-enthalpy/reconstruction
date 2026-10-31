@@ -42,6 +42,12 @@ threshold. Noiseless SNR is reported as undefined, with the scalar estimate
 reported separately. Achromatic templates are marked unidentifiable and are
 never divided by a near-zero template energy.
 
+Each condition uses one deterministic noise realization (a pair of independent
+draws where two observations are compared), shared across the matched arms.
+The theoretical scalar standard error assumes the stated independent white
+Gaussian noise. The SNR counts are not empirical repeated-detection success
+probabilities, and model seeds do not create additional independent noise trials.
+
 No unconditional SNR range is used. `observability_strata.json` lists each fixed
 direction/mask/scale at each nonzero noise level, with all nine scene values.
 `observability_noise_sweep.json` also retains per-case pixel RMS SNR, paired
