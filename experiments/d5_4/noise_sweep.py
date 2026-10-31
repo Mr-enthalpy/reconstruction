@@ -34,6 +34,8 @@ def cases(cubes, records, basis, cfg):
 
 
 def run(args):
+    execution_commit=os.environ.get('D54_CODE_COMMIT') or subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+    execution_source={p.name:digest(p) for p in Path(__file__).parent.glob('*.py')}
     cfg = json.loads(args.config.read_text())
     basis = json.loads(args.basis.read_text())
     protocol = json.loads(args.protocol.read_text())
@@ -148,8 +150,8 @@ def run(args):
         shard=dict(index=args.shard_index,count=args.shard_count),
         elapsed_seconds=time.perf_counter()-started,
         peak_cuda_bytes=torch.cuda.max_memory_allocated() if args.device.startswith('cuda') else None,
-        provenance=dict(code_commit=os.environ.get('D54_CODE_COMMIT') or subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
-            source_files={p.name:digest(p) for p in Path(__file__).parent.glob('*.py')},
+        provenance=dict(code_commit=execution_commit,
+            source_files=execution_source,
             config=cfg,config_sha256=digest(args.config),basis_sha256=digest(args.basis),
             regularisation_policy=None if not args.regularisation_policy else json.loads(args.regularisation_policy.read_text()),
             inputs=protocol['data'],kernel_file_sha256=digest(args.kernel_file),
