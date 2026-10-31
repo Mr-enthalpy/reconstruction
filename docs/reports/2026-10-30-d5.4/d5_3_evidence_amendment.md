@@ -38,7 +38,7 @@ Neither reference matches the chromatic operator at every frequency.
 One remaining wording issue is D5.3 scientific_conclusions.md table D's “550 nm and
 mean kernel equivalent — supported (small magnitude)”. The body reports differences;
 small differences do not establish equivalence without an equivalence margin and test.
-D5.4 therefore treats equivalence as unestablished. The previous files remain intact.
+D5.4 therefore treats equivalence as unestablished. A dated wording correction was added to that conclusion table; historical measured JSON files and experiment records remain unchanged.
 
 Spatial SSIM/gradient/residual passed the registered rule; PSNR/HF did not pass all
 clauses, and SAM went in the opposite direction. Frozen A6 failed on the old constructed
