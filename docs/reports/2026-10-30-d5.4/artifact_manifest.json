@@ -1,0 +1,279 @@
+{
+  "status": "completed_d54_diagnostics_with_reported_censoring",
+  "finalized_date": "2026-11-01",
+  "timezone": "Asia/Shanghai",
+  "scope": "validation-only measured-PSF simulation; no new hardware or task experiment",
+  "code_revision_at_final_reduction": "b30f92026fa9e5abe4250587044e1d6858e560e6",
+  "report_revision": "the enclosing Git commit; this manifest does not self-hash",
+  "base_main_commit": "ef07c1b0befbf28d6938c4e67006c8b4f5f8e37d",
+  "branch": "codex/d5.4-spectral-recoverability",
+  "shared_input_manifest": {
+    "train_npz_sha256": "024d2b4c8956707387289242ddbadce08e3379a51ed6e0752a167666dbb32908",
+    "val_npz_sha256": "e61ac4f102d58a44bdb8f7174a960d13f2e102c5db00cc0bc408ea5583ff9247",
+    "manifest_sha256": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3",
+    "train_scenes": 39,
+    "validation_scenes": 9,
+    "test_policy": "test.npz is never downloaded, uploaded or loaded in D5.3"
+  },
+  "test_policy": "D5.4 did not load, copy, upload or download test.npz; G4 unopened",
+  "psf": {
+    "file_sha256": "f07d9bbb7a4ff870433e8e72dcd19298d642e639c499afe1057a97eeb9206d4b",
+    "array_sha256": "070346a50f89735d4b17790221aeecbae41e25bbc1fad7df55deeb6da6eecf04",
+    "meaning": "21 signed shape-only kernels; existing zero-boundary linear convolution, equal spectral weights"
+  },
+  "basis_file": "natural_spectral_basis.json",
+  "basis_transport_proof": {
+    "accepted_byte_sha256": [
+      "17d914381c74f40cc345d4b16a9bd7646e7959e9e1817ae7d924b00b1ca4ca31",
+      "a2a45de3900017f41cdbd02594ee8ef0ecc281cdbad8049c02453f3cd8e91fb9"
+    ],
+    "canonical_json_sha256": "9cc30a62ace487df9b667cf666149352c26f3894a13e16452c6396a72cba3f49",
+    "explanation": "Exactly the supplied basis bytes with LF or CRLF. No numerical tolerance or unverified alias."
+  },
+  "checkpoint_registry": {
+    "file": "checkpoint_registry.json",
+    "sha256": "900be1d9991b2e7cbdb033d68ff44819dbfb141069044f837fc15442c6356aa7",
+    "scope": "nine D5.3 best checkpoints; original bytes and physics buffers checked; no reselection"
+  },
+  "config": {
+    "file": "experiments/d5_4/configs/diagnostics.json",
+    "sha256_lf": "bf50bbdc5ae36439890684ba89cf2447725b0527e75867c419ed7090a4a78400",
+    "historical_status_notice": "frozen configuration creation status is not current execution status",
+    "amendments": "natural_counterfactual_protocol.json; regularisation_policy.json"
+  },
+  "reduced_postprocessor": {
+    "file": "experiments/d5_4/summarize_reduced.py",
+    "code_commit": "b30f92026fa9e5abe4250587044e1d6858e560e6",
+    "sha256_lf": "8f3f227a54dc3d90df96521d4d16059df1a2ef2c4c8c810797d6521cd22acaf4"
+  },
+  "verification": {
+    "local_no_hardware_tests_passed": 128,
+    "remote_pytest": "not performed",
+    "primary_raw_sha256_verified": true,
+    "complete_gate_recomputation": "semantically identical to diagnostic_gates.json",
+    "reduced_partitions": "all 3 original byte hashes verified, exact 243 expected keys, common provenance",
+    "data_units": "nine original validation scenes; fixed conditions are not independent samples; model seeds retained separately"
+  },
+  "resource_state": "original compute lease expired after jobs completed; CPU-only retrieval lease released on 2026-11-01",
+  "s4": "not executed; no target-noise recoverability or causal capacity bottleneck established",
+  "g4": "not opened",
+  "meta_pin": "unchanged",
+  "artifacts": [
+    {
+      "file": "basis_reproduction_check.json",
+      "sha256": "7424b8ad6671393f69fa8447cfd672ed0c83f5f09622cff7c883aeee4c782fb3",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed_numerical_reproduction_check",
+      "recorded_code_commit": "fde1c23d30270d11ea05ede5bbd071d4aadb88de"
+    },
+    {
+      "file": "checkpoint_registry.json",
+      "sha256": "900be1d9991b2e7cbdb033d68ff44819dbfb141069044f837fc15442c6356aa7",
+      "hash_convention": "exact bytes",
+      "recorded_status": "metadata; see README and execution_history",
+      "recorded_code_commit": "49fafff"
+    },
+    {
+      "file": "conditioning_probes.json",
+      "sha256": "11ba9f677c4f61e0fbfd15f294df557d1a1f8297c64187754bf044da3db1f06f",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed_descriptive_probes",
+      "recorded_code_commit": null
+    },
+    {
+      "file": "d5_3_evidence_amendment.md",
+      "sha256": "2e887eeffc08b20a6fdd0adc96ccacf0b001fbe73c9bd21b9cd76ef78ef02069",
+      "hash_convention": "UTF-8 bytes with CRLF normalized to LF",
+      "role": "interpretive report; current status and actual execution limits are in the text"
+    },
+    {
+      "file": "diagnostic_gates.json",
+      "sha256": "b3fa19cc57a8a4ad415b81dacd016774bf28115e56db4c92039f489b86b58035",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed_diagnostic_gate_evaluation",
+      "recorded_code_commit": null,
+      "raw_source_sha256": {
+        "operator": "1cbfc46e89f26684dd5af9702ff337a3405064ab06572c3ccc2572e20f3736e4",
+        "inverse": "7899e373ca2bd86f11620c8e54cbd833be5bb8428c042307fad683a6c6fc8ef3",
+        "frozen": "2eade8aef2e88e997d9c5fd8a38dd7818800e408af87da35d6c9e7bad2b11cc9"
+      }
+    },
+    {
+      "file": "evidence_audit.json",
+      "sha256": "9f891ce82bc258b3722926a5fde48d7475af5012ed7cbeaf039a9bfc41d5c387",
+      "hash_convention": "exact bytes",
+      "recorded_status": "published_evidence_recomputed_not_artifact_revalidated",
+      "recorded_code_commit": "ef07c1b0befbf28d6938c4e67006c8b4f5f8e37d"
+    },
+    {
+      "file": "execution_history.md",
+      "sha256": "45ffcd79317582f84e4fd8200a1883edc82af693a3834f8bb03fa22f48b1b0ff",
+      "hash_convention": "UTF-8 bytes with CRLF normalized to LF",
+      "role": "interpretive report; current status and actual execution limits are in the text"
+    },
+    {
+      "file": "frozen_a6_noise_response.json",
+      "sha256": "2c4bc11b8fda979c25a16282e526812302f810c1260d38c92d4086718f02fb55",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "aba3c10",
+      "raw_source_sha256": "2eade8aef2e88e997d9c5fd8a38dd7818800e408af87da35d6c9e7bad2b11cc9"
+    },
+    {
+      "file": "frozen_a6_strata.json",
+      "sha256": "7ee6f681f82af0420b8cd068d1049db1300d489eb34a953cf8505128bf675734",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "aba3c10",
+      "raw_source_sha256": "2eade8aef2e88e997d9c5fd8a38dd7818800e408af87da35d6c9e7bad2b11cc9"
+    },
+    {
+      "file": "inverse_conditioning.md",
+      "sha256": "4cf67984c78aa51afc08a3163215b34743b4c4f7f17df92e544561f1319f02c8",
+      "hash_convention": "UTF-8 bytes with CRLF normalized to LF",
+      "role": "interpretive report; current status and actual execution limits are in the text"
+    },
+    {
+      "file": "model_capacity_and_spectral_loss.md",
+      "sha256": "e0d87560d8e330caee331f90a8a64d13ad3bc06a43d3bd9231cfcd646fe787ab",
+      "hash_convention": "UTF-8 bytes with CRLF normalized to LF",
+      "role": "interpretive report; current status and actual execution limits are in the text"
+    },
+    {
+      "file": "natural_counterfactual_protocol.json",
+      "sha256": "1785ed46ffcaaf1da91906b1be23cecd43b26766c4c7a1ea308b365a3d82a826",
+      "hash_convention": "exact bytes",
+      "recorded_status": "frozen_before_formal_inverse_and_network_evaluation",
+      "recorded_code_commit": null
+    },
+    {
+      "file": "natural_counterfactual_summary.json",
+      "sha256": "469dec5ef920ba190fd73d9c4cad7e2b4183a71a7889f7a62c09dbbbdde60a89",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "ef07c1b0befbf28d6938c4e67006c8b4f5f8e37d"
+    },
+    {
+      "file": "natural_spectral_basis.json",
+      "sha256": "a2a45de3900017f41cdbd02594ee8ef0ecc281cdbad8049c02453f3cd8e91fb9",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed_training_statistics",
+      "recorded_code_commit": null
+    },
+    {
+      "file": "numerical_budget_audit.json",
+      "sha256": "9bcc6ba4c7825fd1d72658fb1b2a9b2b105000c8a222d8ce0dec869e04977407",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed_numerical_budget_audit",
+      "recorded_code_commit": null
+    },
+    {
+      "file": "observability_noise_sweep.json",
+      "sha256": "ab59f73a301203399f46bc7376f7d4662ba89d718c4378e9010e6461306bebcb",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "22e13fb2193ba1220bb4cf94ca910e12bf8767b5",
+      "raw_source_sha256": "1cbfc46e89f26684dd5af9702ff337a3405064ab06572c3ccc2572e20f3736e4"
+    },
+    {
+      "file": "observability_strata.json",
+      "sha256": "0fe38f1464f8a09dbf4fb1a86408bab8084b25a612b0692dd162efd28cf9a8b0",
+      "hash_convention": "exact bytes",
+      "recorded_status": "metadata; see README and execution_history",
+      "recorded_code_commit": null,
+      "raw_source_sha256": "1cbfc46e89f26684dd5af9702ff337a3405064ab06572c3ccc2572e20f3736e4"
+    },
+    {
+      "file": "oracle_detection.json",
+      "sha256": "20427eca0c8a6616eb50a73e21ad62689c15c9fa304d9a1fded1a4a18524c3bf",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "22e13fb2193ba1220bb4cf94ca910e12bf8767b5",
+      "raw_source_sha256": "1cbfc46e89f26684dd5af9702ff337a3405064ab06572c3ccc2572e20f3736e4"
+    },
+    {
+      "file": "README.md",
+      "sha256": "d0ea993cc4ee7b63827504202bb80a56988cf77075fbd692958259d313754b7b",
+      "hash_convention": "UTF-8 bytes with CRLF normalized to LF",
+      "role": "interpretive report; current status and actual execution limits are in the text"
+    },
+    {
+      "file": "reduced_oracle_results.json",
+      "sha256": "fd0570e7b26c351d5003bcc8ecb79e2e390a010ff0bfb888708e6351f349f71e",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "037d20664ad144e9f503bcfbb2ac75928ca7bed2",
+      "raw_source_sha256": [
+        "6c51c90eb50a204eeddab301fc56bbc678ade85b749706317598fc2f59bc96e6",
+        "d5553a28015758ae535d736a802939b9aaf70c3a68a938cf9400a681a61878cb",
+        "03ff9bec3acac5a2156a1a96fc3061bc4be5e2f1bf154ad8e39c504e68332f4c"
+      ]
+    },
+    {
+      "file": "regularisation_policy.json",
+      "sha256": "60bc62099108e9283d3596986c0216409cbd7ae2ef8ab54498be223c57bf7bdb",
+      "hash_convention": "exact bytes",
+      "recorded_status": "frozen_before_validation_inverse",
+      "recorded_code_commit": null
+    },
+    {
+      "file": "restricted_inverse_results.json",
+      "sha256": "6af57f0a23dbef52f95d8e6e87c3945d6ecaac1198b0ee7ce1d40b9ee77d177e",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "34e65eb65dc055d029b72456c22299ab48a51e62",
+      "raw_source_sha256": "7899e373ca2bd86f11620c8e54cbd833be5bb8428c042307fad683a6c6fc8ef3"
+    },
+    {
+      "file": "restricted_inverse_summary.json",
+      "sha256": "64395055295de43e353eaca40cccec719aa5911d105d63f42c967967f60a0b87",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "34e65eb65dc055d029b72456c22299ab48a51e62",
+      "raw_source_sha256": "7899e373ca2bd86f11620c8e54cbd833be5bb8428c042307fad683a6c6fc8ef3"
+    },
+    {
+      "file": "scientific_decision.md",
+      "sha256": "03890e64b9b08397b9f824b316344425dbf1107a546d4e61e9c80815de50f206",
+      "hash_convention": "UTF-8 bytes with CRLF normalized to LF",
+      "role": "interpretive report; current status and actual execution limits are in the text"
+    },
+    {
+      "file": "spectral_response_analysis.md",
+      "sha256": "769a5f39ce0df711dad7cc48ac2269b983c4566f8ef00c60de3b9f0975a71bc2",
+      "hash_convention": "UTF-8 bytes with CRLF normalized to LF",
+      "role": "interpretive report; current status and actual execution limits are in the text"
+    },
+    {
+      "file": "training_regularisation.json",
+      "sha256": "f8ae098a79f292521922333daea5612e0025878ee29ab67df561443399112936",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": null
+    },
+    {
+      "file": "training_regularisation_final_0.001.json",
+      "sha256": "30ac0c2dacebb099ad4944283527c1c2b08dcfaf37ac67ddbcf4b9aa93c75ec4",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "14e8a1cf52643b805c19710e457ef1cf5765094c",
+      "raw_source_sha256": "85d0d3120b76d69f040b074f5b92392c63828d8bce7e4475c4ba5083cdedf53a"
+    },
+    {
+      "file": "training_regularisation_final_0.005.json",
+      "sha256": "3f62da08696fe4b0d11d6b0fb9c9ab3c7163d88be50a4f0401492f5c8cef10d7",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "14e8a1cf52643b805c19710e457ef1cf5765094c",
+      "raw_source_sha256": "7a2688601ecf4259bfc2c6e1a907d5fcfe9a401c5a2907d91372e9b44fa7e916"
+    },
+    {
+      "file": "training_regularisation_final_0.json",
+      "sha256": "f04b20b4d4e58be4ba67859725075989d5afe3dbcb772d23d99418ed1792eb14",
+      "hash_convention": "exact bytes",
+      "recorded_status": "completed",
+      "recorded_code_commit": "14e8a1cf52643b805c19710e457ef1cf5765094c",
+      "raw_source_sha256": "c9319c4666fe2d0877978ef29c28cc4e1e4224f420888e2e9ec3773185f85d77"
+    }
+  ]
+}

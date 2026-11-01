@@ -4,7 +4,7 @@ Started 2026-10-30 from reconstruction main `ef07c1b0befbf28d6938c4e67006c8b4f5f
 The member working tree was clean. Development branch: `codex/d5.4-spectral-recoverability`.
 Meta pins and the acquisition member are outside this change.
 
-## Current status (in progress)
+## Current status (completed diagnostics; finalized 2026-11-01)
 
 - S0: published SNR strata recomputed; all nine checkpoints' original bytes,
   selection epochs and physics buffers verified. See `d5_3_evidence_amendment.md`.
@@ -16,7 +16,8 @@ Meta pins and the acquisition member are outside this change.
 - S3: training-only noise-specific regularisation selection completed and committed
   before validation inversion. Full true-baseline inversion completed: all 27
   noiseless strata pass in 9/9 scenes; no noisy stratum passes. The predeclared
-  baseline-substitution sensitivity diagnostic is running on all 243 noiseless cases.
+  baseline-substitution sensitivity diagnostic completed all 243 noiseless cases:
+  no recovery passes, with 81 cases explicitly budget-censored.
 - S4: not executed; a noiseless privileged gap exists, but target-noise recovery
   and a causal neural-capacity bottleneck have not been demonstrated.
 - G4: not opened; no test-loading interface exists in D5.4.
@@ -34,3 +35,14 @@ registered gate at 0.1% and 0.5% noise with the fixed estimator. Frozen A6 large
 produces incorrectly directed or noise-driven differences at all three levels.
 This establishes a conditional distinction between detection and recovery; it
 does not establish task-level spectral benefit or a neural-capacity cause.
+
+Replacing the true baseline with A6's estimate introduces measurement bias whose
+median norm is 83.25 times the perturbation signal. This two-exposure sensitivity
+test fails even in its 162 converged cases. It is not a single-shot impossibility
+result: subtracting the granted clean reference directly would avoid that bias.
+
+Read `scientific_decision.md` for the noise-conditional B/C interpretation and G4
+recommendation, `inverse_conditioning.md` for all three prior levels, and
+`execution_history.md` for historical failures versus completed work. The artifact
+manifest inventories final report bytes, execution commits and shared provenance.
+S4 remains unexecuted; its absence is a research decision, not unfinished training.

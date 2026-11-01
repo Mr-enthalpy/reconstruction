@@ -3,7 +3,8 @@
 The full validation inverse completed under committed policy `04b5804` and
 runner `34e65eb65dc055d029b72456c22299ab48a51e62`: 2,187 arm/noise/case records,
 5,347.03 seconds, peak CUDA allocation 0.706 GiB. The conditional baseline
-substitution diagnostic is running separately. No model was trained.
+substitution diagnostic also completed, with censoring reported below. No model
+was trained.
 
 ## Validation result with true baseline and direction
 
@@ -31,6 +32,19 @@ gate fails. At the target 0.5%, the mean error is worse than returning zero. Thu
 the result is a detection-to-map-recovery gap for this fixed estimator and prior,
 not a proof of information-theoretic impossibility. The finite regularization
 grid and three-scene CAVE-only development selection remain material limitations.
+
+No individual case passes the recovery threshold at either nonzero noise level.
+The worst noiseless relative error is 0.257235 (`kaist_28`, direction 2, local,
+middle scale). The worst noisy case is `fake_and_real_strawberries`, direction 1,
+local, small scale: relative errors 2.518551 at 0.1% and 9.403873 at 0.5%.
+At 0.1% that same case has known-template single-observation SNR 6.144884 and
+scalar amplitude estimate 1.147725 for truth 1. Thus an identifiable global scalar
+does not imply a successfully recovered spatial coefficient map.
+
+Recomputed final normal residuals are below 1e-6 in every Chromatic solve. The
+iteration ranges are 169–937, 7–31 and 4–21 across zero, 0.1% and 0.5% noise.
+Faster convergence of the strongly regularized noisy objectives is not better
+recovery. All these quantities are retained in the scalar case results.
 
 ## Operator and numerical meaning
 
@@ -112,6 +126,10 @@ perturbation produces essentially boundary-only chromatic response: for directio
 with equal kernel sums; finite-image boundaries can still carry a response.
 The local smooth probe and different cosine probes have very different gains.
 
+The noiseless success is conditional on this finite zero-exterior model. It may
+use boundary information, and does not establish recoverability for an unknown
+scene extending outside a physical field of view.
+
 These are descriptive directional gains, not a singular-value decomposition or
 an exact condition-number estimate. Zero padding, cropping and regularization
 must remain explicit. The results cannot be used to claim that every spatial
@@ -136,3 +154,31 @@ would identify avoidable baseline-estimation bias in this diagnostic pipeline;
 it would not establish a fundamental failure caused by removing cube ground truth.
 This qualification follows from the design before the third-level scientific
 results are inspected. No favourable conditions or alternate baselines are selected.
+
+The completed third-level result is `reduced_oracle_results.json`: 243 cases,
+27 complete strata, zero passing cases and zero passing strata. Of the solves,
+162 converged and 81 reached 1,000 iterations (`budget_censored`). Iterations range
+from 196 to 1,000. There was no post-result extension or parameter change.
+The scene-balanced mean coefficient relative L2 is 149.022483, cosine 0.004932,
+correlation 0.001569 and projection gain -1.670023. These describe the recorded
+estimates, including censored cases, rather than fully converged performance.
+All 162 converged cases fail too: their relative errors range from 8.952481 to
+1532.321230. Thus censoring is not the sole explanation of this negative result.
+
+Baseline measurement-bias norm / true perturbation-response norm has fixed-case
+quantiles (min, Q25, median, Q75, max) 9.998814, 38.280661, 83.252249,
+214.596774, 1625.592882. These are descriptive case quantiles, not independent
+scene estimates. The largest coefficient error, 1532.321230, occurs for
+`fake_and_real_strawberries`, direction 2, local mask, smallest scale. CAVE and
+KAIST scene-balanced errors are 168.834817 and 124.257064; neither is a success.
+The baseline bias overwhelms the intended correction signal in this particular
+pipeline. No further baseline tuning is performed on these validation results.
+
+Three fixed partitions completed with matching source/input/policy identities
+and exact coverage. Their total worker time is 4,656.64 seconds (about 1.294
+GPU-worker hours), maximum partition time 1,628.72 seconds, peak allocation
+850,962,944 bytes. Results were retrieved after lease expiry, with all three
+remote SHA256 values verified. Source commit is
+`037d20664ad144e9f503bcfbb2ac75928ca7bed2`; the reducer is recorded in the artifact
+manifest. Raw full histories remain in ignored storage. The recovery failure
+is confined to this two-exposure baseline-substitution design.

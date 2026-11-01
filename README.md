@@ -8,6 +8,14 @@ quality is a necessary explanatory foundation, not an expendable intermediate.
 No hardware is operated and
 no Meta checkout or sibling Python package is required.
 
+The latest [D5.4 diagnostics](docs/reports/2026-10-30-d5.4/README.md) separate
+known-template detection, restricted coefficient-map inversion and frozen A6
+response. Noiseless inversion succeeds with true baseline/direction; the fixed
+inverse fails its recovery gate at 0.1% and 0.5% noise, and frozen A6 fails at all
+three levels. Results remain validation-only measured-PSF simulation. S4 model
+training was not started and G4 test data remain frozen. Earlier stage descriptions
+below retain their historical scope.
+
 The initial multi-exposure operator-handoff architecture was a proposal. D2 uses
 existing dense measured ROI PSFs through explicit operators without a new handoff
 framework. See [current architecture](docs/architecture.md) and [rules](AGENTS.md).

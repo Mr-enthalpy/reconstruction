@@ -1,4 +1,4 @@
-# Scientific decision — main sweeps complete, baseline sensitivity pending
+# Scientific decision — completed D5.4 diagnostics, 2026-11-01
 
 The decision is conditional on noise, prior information and the tested perturbation
 family. A single unconditional A/B/C/D/E label would hide the central result.
@@ -58,12 +58,22 @@ and constrained-prior diagnostics. For the noiseless gap, first separate noise
 distribution and baseline/direction privilege from model capacity. Any matched
 noise retraining would be a separately frozen variable with matched controls.
 
-The predeclared baseline-substitution test is being run on every noiseless group
-that passed, using the fixed first Chromatic seed. It grants an extra clean
-reference exposure. Direct measurement subtraction with that reference would
-already reproduce the ideal residual, so this test diagnoses avoidable A6
-baseline-estimation bias rather than the fundamental limit of a less privileged
-single-shot inverse. Its results must retain that narrower interpretation.
+The predeclared baseline-substitution test completed all 243 cases in every
+passing noiseless group, using the fixed first Chromatic seed. No case or group
+passes. Of these, 162 converge and 81 reach the unchanged iteration cap and are
+`budget_censored`; no selective extension was made. The scene-balanced relative
+L2 over the recorded estimates is 149.022483, with cosine 0.004932. This descriptive
+mean includes censored estimates and is not a converged performance bound.
+Every converged case also fails (relative L2 at least 8.952481).
+
+Baseline measurement bias is 83.25 times the true perturbation signal at the
+median across fixed cases. This test grants an extra clean reference exposure.
+Direct subtraction of that reference would already reproduce the ideal residual,
+so the negative result diagnoses avoidable A6 baseline-substitution bias rather
+than the fundamental limit of a less privileged single-shot inverse. It does not
+justify claiming that ground-truth-free recovery is impossible or that neural
+capacity caused the failure. All cases and both convergence categories remain in
+`reduced_oracle_results.json`.
 
 No dynamic display, classification, real-phone transfer, new model output
 representation or Meta pin update is proposed by these results.
@@ -88,5 +98,5 @@ test work is not automatically authorized by finishing these diagnostics.
 
 Evidence: `diagnostic_gates.json`, `restricted_inverse_summary.json`,
 `frozen_a6_strata.json`, `observability_strata.json`, `inverse_conditioning.md`,
-`spectral_response_analysis.md`, and the D5.3 evidence amendment. These retain
+`reduced_oracle_results.json`, `spectral_response_analysis.md`, and the D5.3 evidence amendment. These retain
 source hashes, original-scene strata and model seeds separately.
