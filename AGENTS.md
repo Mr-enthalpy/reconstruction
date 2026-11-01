@@ -2,8 +2,12 @@
 
 This independent repository owns offline measured-PSF simulation, dataset protocols,
 general spatial-spectral reconstruction, and independent task evaluation.
-Current D4 priority is standalone reconstruction quality, not Face / Non-face
-classification. N1 data eligibility and model selection must not depend on class
+Current D6 priority is a working LCD simulation prototype and migration interfaces,
+with A6 retained and D5.4 archived. The user authorized a once-frozen G4 test of
+the existing three-seed Chromatic/Achromatic models on the 14 held-out scenes;
+commit its protocol before access and never retune from test outcomes. Downstream
+feasibility no longer requires successful local spectral-difference recovery.
+N1 data eligibility and model selection must not depend on class
 labels, face proposals, class balance or downstream scores.
 
 Preserve originals and frozen subject/acquisition/scene splits. Keep raw/derived
@@ -37,6 +41,11 @@ in a future integrated experiment. They run independently; proposals select
 downstream C inputs, not N1's training targets or field of view. Scalar shape-only
 N1 simulations cannot establish same-RAW RGB fusion. Oracle RGB is explicitly
 privileged. Do not crop measured observations without checking PSF support.
+An explicit simulation-only R adapter may consume scalar observations, but its
+three-channel intensity proxy is neither Bayer nor calibrated RGB. D6 downstream
+claims must distinguish this proxy, privileged independent RGB, and future true
+same-Bayer-RAW inputs. Preserve source groups, hard negatives, matched capacity,
+and N1-training overlap audits before calling any task split independent.
 Reconstruction is the explanatory foundation: spatial and spectral quality must
 be measured seriously even though reconstruction metrics are not the ultimate
 research story. Preserve an untouched final integration holdout before training.
