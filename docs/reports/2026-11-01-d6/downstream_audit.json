@@ -1,0 +1,82 @@
+{
+  "task_manifest_sha256": "b228db0b28d3e3fa452613efe5f1a29d79e28199aab153791fa258ea70978d32",
+  "n1_manifest_sha256": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3",
+  "original_counts": [
+    {
+      "dataset": "CAVE",
+      "split": "test",
+      "label": "non_face",
+      "count": 6
+    },
+    {
+      "dataset": "CAVE",
+      "split": "train",
+      "label": "face",
+      "count": 3
+    },
+    {
+      "dataset": "CAVE",
+      "split": "train",
+      "label": "non_face",
+      "count": 15
+    },
+    {
+      "dataset": "CAVE",
+      "split": "val",
+      "label": "non_face",
+      "count": 5
+    },
+    {
+      "dataset": "UWA",
+      "split": "test",
+      "label": "face",
+      "count": 9
+    },
+    {
+      "dataset": "UWA",
+      "split": "test",
+      "label": "non_face",
+      "count": 9
+    },
+    {
+      "dataset": "UWA",
+      "split": "train",
+      "label": "face",
+      "count": 39
+    },
+    {
+      "dataset": "UWA",
+      "split": "train",
+      "label": "non_face",
+      "count": 39
+    },
+    {
+      "dataset": "UWA",
+      "split": "val",
+      "label": "face",
+      "count": 10
+    },
+    {
+      "dataset": "UWA",
+      "split": "val",
+      "label": "non_face",
+      "count": 10
+    }
+  ],
+  "n1_training_overlap_by_task_split": {
+    "train": 18,
+    "test": 6
+  },
+  "unmatched_task_records_by_source": {
+    "UWA": 116
+  },
+  "overlap_key": "dataset + source scene, expanded to N1 source_group_id family; raw group strings differ between manifests",
+  "limitations": [
+    "Legacy task test scenes were evaluated historically; not a fresh integration holdout",
+    "CAVE validation/test have no positive ROIs in this manifest",
+    "UWA and CAVE have different radiometry and acquisition distributions",
+    "D3 32x32 cropped observations cannot substitute for full-field 512x512 A6 inference",
+    "UWA absent from N1 manifest; unmatched IDs alone do not establish all historical exposure"
+  ],
+  "decision": "Do not claim independent RGB-versus-RGB+N1 gain from the legacy manifest. Freeze full-field candidates, matched capacity, source-balanced reporting and an untouched final holdout before a task experiment."
+}

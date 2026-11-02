@@ -1,0 +1,17 @@
+{
+  "reason": "NumPy int64 scene_direction_counts failed JSON serialization after all 126 rows were written",
+  "source_sha256": "a959e12a97262142f15df71d20ae7f4fcaaaaed92eb5633ecc3d75eeb60e4e8e",
+  "source_file": "g4_results.json",
+  "original_ledger": {
+    "status": "started",
+    "started_utc": "2026-11-02T13:14:53.067246+00:00",
+    "code_commit": "f56192d34985db075972bbc6452cf271931c5a9f",
+    "protocol_sha256": "14006d04975094874365ccdcf6fadf37ff3770f86b8fe5b9976996937df6c6d7"
+  },
+  "rows": 126,
+  "test_cubes_reopened": false,
+  "inference_repeated": false,
+  "procedure": "Parse complete top-level prefix before summary; recompute frozen summary from saved rows; convert NumPy scalar counts to native JSON numbers",
+  "recovered_utc": "2026-11-02T13:19:30.208320+00:00",
+  "result_sha256": "ef4d13bf7fcd212387608ae418e3842010867ac1f2c5ef7494b945ef79cfc36a"
+}

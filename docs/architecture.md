@@ -1,6 +1,15 @@
 # Independent RGB, general reconstruction and downstream classification
 
-## D4: current architecture and acceptance
+## D6: current prototype scope
+
+The 2026-11-01 direction revision retains independent R/N1 branches feeding C.
+G4 now records frozen reconstruction performance; successful local spectral
+difference recovery is not a prerequisite for prototype integration. The runnable
+D6 scalar adapter is explicitly simulation-only and its three repeated intensity
+channels are not RGB or Bayer RAW. See the [D6 report](reports/2026-11-01-d6/README.md)
+for execution evidence, the legacy task-split overlap audit and migration inputs.
+
+## D4: original architecture and acceptance (historical)
 
 ```text
                          one UDC RAW observation

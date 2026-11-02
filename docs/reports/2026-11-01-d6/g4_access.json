@@ -1,0 +1,10 @@
+{
+  "status": "completed_after_summary_serialization_recovery",
+  "started_utc": "2026-11-02T13:14:53.067246+00:00",
+  "code_commit": "f56192d34985db075972bbc6452cf271931c5a9f",
+  "protocol_sha256": "14006d04975094874365ccdcf6fadf37ff3770f86b8fe5b9976996937df6c6d7",
+  "result_file": "g4_results_recovered.json",
+  "result_sha256": "ef4d13bf7fcd212387608ae418e3842010867ac1f2c5ef7494b945ef79cfc36a",
+  "recovery_audit": "g4_serialization_audit.json",
+  "completed_utc": "2026-11-02T13:19:30.208320+00:00"
+}

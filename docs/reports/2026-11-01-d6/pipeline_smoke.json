@@ -1,0 +1,32 @@
+{
+  "status": "completed",
+  "scope": "simulation-only",
+  "observation_id": "CAVE:fake_and_real_lemon_slices",
+  "model_sha256": "b20d2b136316aeda2484295106ee0610c18c0ece6821f7c6ef3502f49b349f9f",
+  "observation_sha256": "49c3aa2c9b94ef28c4abcfce81a35f1095517ac6c55db6073190bebe90aa7ced",
+  "candidate_source": "two fixed geometry boxes; no detection or ground truth",
+  "classifier_id": "deterministic wiring fixture; untrained; no class semantics",
+  "classifier_status": "executed",
+  "coordinates": "full-field pixel xywh; half-open integer bounds; no resize",
+  "r_input": "same scalar observation; three identical signed intensity channels",
+  "r_claim": "not Bayer, calibrated RGB, deblurred RGB or independent spectral information",
+  "feature_order": "3 proxy channel means then 21 reconstructed band means",
+  "measurement_relative_l2": 0.013950674794614315,
+  "split": "val",
+  "candidates": 2,
+  "cube_shape": [
+    1,
+    21,
+    512,
+    512
+  ],
+  "feature_shape": [
+    2,
+    24
+  ],
+  "score_shape": [
+    2,
+    2
+  ],
+  "acceptance": "data flow only; no classifier accuracy, detector or physical validation"
+}
