@@ -1,0 +1,27 @@
+{
+  "by_source_and_reason": [
+    {
+      "count": 26,
+      "dataset_id": "CAVE",
+      "reason": "hardness unassessed"
+    },
+    {
+      "count": 4,
+      "dataset_id": "CAVE",
+      "reason": "semantic/quality review"
+    },
+    {
+      "count": 58,
+      "dataset_id": "UWA",
+      "reason": "hardness unassessed"
+    },
+    {
+      "count": 87,
+      "dataset_id": "UWA",
+      "reason": "semantic/quality review"
+    }
+  ],
+  "identities_and_coordinates": "private review_queue.json only",
+  "no_automatic_adjudication": true,
+  "private_items": 175
+}

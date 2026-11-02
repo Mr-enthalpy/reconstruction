@@ -1,0 +1,333 @@
+{
+  "access": {
+    "development_loader": "load_development requires externally recorded expected lock SHA256 and matching private manifest digest; refuses final_test before any file IO",
+    "future_final": "disabled in v1; new version must freeze independent groups and record hashes, code, exact checkpoints and exclusive started/completed/failed ledger before first access",
+    "reuse": "any final results used for mining/development consume that holdout and require a new version"
+  },
+  "arms": [
+    {
+      "dimensions": 22,
+      "features": "global mean plus row-major3x7 integer-partition spatial cell means",
+      "id": "B0",
+      "input": "same scalar observation only",
+      "parameters": 23
+    },
+    {
+      "dimensions": 43,
+      "features": "B0 22 +21 band means in identical ROI",
+      "id": "B1",
+      "input": "B0 features + frozen N1",
+      "parameters": 44
+    },
+    {
+      "dimensions": 43,
+      "features": "global mean plus row-major6x7 spatial cell means",
+      "id": "B0_capacity",
+      "input": "same scalar observation only",
+      "parameters": 44
+    }
+  ],
+  "candidates": {
+    "detector": "not used; no detector recall claim; future detector protocol must retain misses and false positives",
+    "paired_across_all_arms": true,
+    "source": "unchanged D3 candidate coordinates verified against D1/source evidence; fixed proposals are privileged, not detector-derived"
+  },
+  "capacity_control": "B0_capacity mandatory; report23 versus44 parameters; B1 advantage over B0 alone does not isolate feature content from capacity",
+  "classification_training_performed": false,
+  "final_holdout_status": "not_available",
+  "forbidden_claims": [
+    "real RGB from repeated scalar channels",
+    "live-versus-spoof classification",
+    "identity recognition",
+    "fresh test from D3/G4 reuse",
+    "physical extra spectral information",
+    "Axon20 or universal UDC performance"
+  ],
+  "full_field": {
+    "cave": "native 21x512x512 uint16 /65535; no per-scene energy normalization",
+    "noise": {
+      "absolute_sigma": 0.017329356670379638,
+      "rule": "UTF8(dataset_id+\":\"+original_source_id) SHA256 first8 bytes little-endian integer; NumPy default_rng(SeedSequence([20261102,integer])); normal(0,sigma,[1,1,512,512]) cast float32; one cached realization per source shared across arms and seeds",
+      "seed": 20261102
+    },
+    "normalization": "no clipping or per-observation fitted scaling; feature means/SD fitted on training only",
+    "physical_limits": "fixed signed shape-only operator; UWA sequential motion and unequal native radiometry remain",
+    "roi": "native xywh; floor mapped left/top, ceil right/bottom, fixed half-open512 bounds; reconstruct before ROI",
+    "uwa": "F_06..F_26 uint8 original full 1024x1024 bands /255, area-resize whole field to512; no per-ROI enlargement"
+  },
+  "hard_negatives": {
+    "ambiguous_cave_source_records": 4,
+    "confirmed_hard_negatives": 0,
+    "confirmed_types": [],
+    "evidence": "Legacy negative acceptance establishes semantic absence, not measured difficulty",
+    "format_or_label_review_sources": 1,
+    "mining": "training groups only; val and final candidates frozen; no error-based test-to-train recycling",
+    "missing_type_metrics": "hard-negative false-positive rate is null with reason no confirmed denominator",
+    "sources_requiring_human_semantic_review": 3,
+    "unassessed_negative_counts": [
+      {
+        "count": 6,
+        "dataset_id": "CAVE",
+        "protocol_role": "development_test"
+      },
+      {
+        "count": 15,
+        "dataset_id": "CAVE",
+        "protocol_role": "development_train"
+      },
+      {
+        "count": 5,
+        "dataset_id": "CAVE",
+        "protocol_role": "development_val"
+      },
+      {
+        "count": 9,
+        "dataset_id": "UWA",
+        "protocol_role": "development_test"
+      },
+      {
+        "count": 39,
+        "dataset_id": "UWA",
+        "protocol_role": "development_train"
+      },
+      {
+        "count": 10,
+        "dataset_id": "UWA",
+        "protocol_role": "development_val"
+      },
+      {
+        "count": 3,
+        "dataset_id": "UWA",
+        "protocol_role": "review_only"
+      }
+    ]
+  },
+  "label_encoding": {
+    "face": 1,
+    "non_face": 0
+  },
+  "label_policy": "label_policy_v1.json",
+  "metrics": [
+    "confusion counts",
+    "positive recall",
+    "negative recall",
+    "balanced accuracy",
+    "macro F1",
+    "AUROC",
+    "AUPRC",
+    "hard-negative false-positive rate",
+    "per-independent-group errors"
+  ],
+  "n1": {
+    "arm": "s1c",
+    "checkpoint_sha256": "b20d2b136316aeda2484295106ee0610c18c0ece6821f7c6ef3502f49b349f9f",
+    "frozen": true,
+    "inference_bundle_sha256": "1e3cd50cfd4faf52cf2356fa7c3404ca7624f5a81ee9fbe5af846e52aa797635",
+    "labels_and_classification_gradients_prohibited": true,
+    "original_physics_sha256": "dec5b2d71595e38128f184e8f2a5d464ca1bd07906613c9926f62d23124d7050",
+    "output_shape": [
+      1,
+      21,
+      512,
+      512
+    ],
+    "seed": 20261021,
+    "selection": "first pre-existing seed, fixed before classifier outcomes; not selected from G4 scores"
+  },
+  "pooling": "For HxW ROI, row cell bounds floor(i*H/rows)..floor((i+1)*H/rows), likewise columns; reject empty cells; mean signed values, no interpolation",
+  "private_manifest_sha256": "dbb8248db2d8c40694dd7909ec1d9bebc5d49cb9762de1161febbc3455b688c9",
+  "ranking_metrics": "AUROC average-rank ties; AUPRC average precision with recall-step weighting, not trapezoidal PR area; report ROI- and group-weighted variants",
+  "reporting": [
+    "pooled",
+    "UWA within-source",
+    "CAVE within-source where both classes available",
+    "source-by-class cross table",
+    "group-weighted and ROI-weighted results",
+    "three seed descriptive means and spread; groups nested; no pooled ROI significance"
+  ],
+  "scope": "simulation-only fixed candidate Face/Non-face feasibility; no physical spectral or real UDC claim",
+  "single_class_policy": "only present-class recall/error; balanced accuracy, macro F1, AUROC and AUPRC null with reason",
+  "source_class_counts": [
+    {
+      "confirmed_hard_negatives": 0,
+      "dataset_id": "CAVE",
+      "groups": 16,
+      "groups_by_label": {
+        "face": 1,
+        "non_face": 15
+      },
+      "labels": {
+        "face": 3,
+        "non_face": 15
+      },
+      "metrics": {
+        "auprc": "eligible",
+        "auroc": "eligible",
+        "balanced_accuracy": "eligible",
+        "binary_metrics_allowed": true,
+        "macro_f1": "eligible",
+        "report": "both class recalls"
+      },
+      "original_sources": 17,
+      "rois": 18,
+      "role": "development_train"
+    },
+    {
+      "confirmed_hard_negatives": 0,
+      "dataset_id": "CAVE",
+      "groups": 5,
+      "groups_by_label": {
+        "face": 0,
+        "non_face": 5
+      },
+      "labels": {
+        "non_face": 5
+      },
+      "metrics": {
+        "auprc": null,
+        "auroc": null,
+        "balanced_accuracy": null,
+        "binary_metrics_allowed": false,
+        "macro_f1": null,
+        "report": "present-class recall/error only; absent-class metrics undefined"
+      },
+      "original_sources": 5,
+      "rois": 5,
+      "role": "development_val"
+    },
+    {
+      "confirmed_hard_negatives": 0,
+      "dataset_id": "CAVE",
+      "groups": 6,
+      "groups_by_label": {
+        "face": 0,
+        "non_face": 6
+      },
+      "labels": {
+        "non_face": 6
+      },
+      "metrics": {
+        "auprc": null,
+        "auroc": null,
+        "balanced_accuracy": null,
+        "binary_metrics_allowed": false,
+        "macro_f1": null,
+        "report": "present-class recall/error only; absent-class metrics undefined"
+      },
+      "original_sources": 6,
+      "rois": 6,
+      "role": "development_test"
+    },
+    {
+      "confirmed_hard_negatives": 0,
+      "dataset_id": "UWA",
+      "groups": 28,
+      "groups_by_label": {
+        "face": 28,
+        "non_face": 28
+      },
+      "labels": {
+        "face": 39,
+        "non_face": 39
+      },
+      "metrics": {
+        "auprc": "eligible",
+        "auroc": "eligible",
+        "balanced_accuracy": "eligible",
+        "binary_metrics_allowed": true,
+        "macro_f1": "eligible",
+        "report": "both class recalls"
+      },
+      "original_sources": 39,
+      "rois": 78,
+      "role": "development_train"
+    },
+    {
+      "confirmed_hard_negatives": 0,
+      "dataset_id": "UWA",
+      "groups": 7,
+      "groups_by_label": {
+        "face": 7,
+        "non_face": 7
+      },
+      "labels": {
+        "face": 10,
+        "non_face": 10
+      },
+      "metrics": {
+        "auprc": "eligible",
+        "auroc": "eligible",
+        "balanced_accuracy": "eligible",
+        "binary_metrics_allowed": true,
+        "macro_f1": "eligible",
+        "report": "both class recalls"
+      },
+      "original_sources": 10,
+      "rois": 20,
+      "role": "development_val"
+    },
+    {
+      "confirmed_hard_negatives": 0,
+      "dataset_id": "UWA",
+      "groups": 6,
+      "groups_by_label": {
+        "face": 6,
+        "non_face": 6
+      },
+      "labels": {
+        "face": 9,
+        "non_face": 9
+      },
+      "metrics": {
+        "auprc": "eligible",
+        "auroc": "eligible",
+        "balanced_accuracy": "eligible",
+        "binary_metrics_allowed": true,
+        "macro_f1": "eligible",
+        "report": "both class recalls"
+      },
+      "original_sources": 9,
+      "rois": 18,
+      "role": "development_test"
+    }
+  ],
+  "source_confounding": {
+    "interpretation": "pooled improvements not sufficient; inspect within-source gains, spatial-scale and background shortcuts",
+    "source_only": "predict class from training source-specific class prevalence, threshold0.5, same group weights; unseen source uses train pooled prior",
+    "source_probe": "separate23-parameter affine source classifier using B0 features, UWA=1 CAVE=0, identical budget/group-weight procedure/threshold, no effect on task selection"
+  },
+  "split_protocol": "split_protocol_v1.json",
+  "status": "frozen_development_protocol_final_test_disabled",
+  "training": {
+    "augmentation": "none",
+    "batch": "full training partition",
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "budget_extension": false,
+    "checkpoint": "minimum group-weighted validation BCE; ties within1e-12 choose earliest epoch; improvement must exceed1e-8 to reset patience",
+    "classifier_precision": "float64; features pooled in float64 from float32 scalar/N1 outputs; deterministic algorithms",
+    "device": "cpu",
+    "epsilon": 1e-08,
+    "head": "one affine logit with sigmoid; bias included; no hidden layers",
+    "initialization": "all weights normal(0,0.01), bias0 under each fixed seed",
+    "learning_rate": 0.001,
+    "loss": "binary cross entropy; each training source group equal total weight then inverse weighted class frequency; weights normalized to mean1",
+    "max_epochs": 300,
+    "optimizer": "AdamW",
+    "patience": 30,
+    "seeds": [
+      20261102,
+      20261103,
+      20261104
+    ],
+    "standardization": "training-weighted per-feature mean and population SD; SD<1e-8 replaced by1; reuse for val/test",
+    "threshold": 0.5,
+    "threshold_search": false,
+    "validation_weights": "inverse count of ROIs in each validation group, normalized to mean1; no class balancing fitted to validation",
+    "weight_decay": 0.01,
+    "weight_decay_bias": false
+  },
+  "version": "D6.1-classification-v1"
+}

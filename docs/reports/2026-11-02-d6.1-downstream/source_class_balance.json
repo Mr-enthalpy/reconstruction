@@ -1,0 +1,144 @@
+[
+  {
+    "confirmed_hard_negatives": 0,
+    "dataset_id": "CAVE",
+    "groups": 16,
+    "groups_by_label": {
+      "face": 1,
+      "non_face": 15
+    },
+    "labels": {
+      "face": 3,
+      "non_face": 15
+    },
+    "metrics": {
+      "auprc": "eligible",
+      "auroc": "eligible",
+      "balanced_accuracy": "eligible",
+      "binary_metrics_allowed": true,
+      "macro_f1": "eligible",
+      "report": "both class recalls"
+    },
+    "original_sources": 17,
+    "rois": 18,
+    "role": "development_train"
+  },
+  {
+    "confirmed_hard_negatives": 0,
+    "dataset_id": "CAVE",
+    "groups": 5,
+    "groups_by_label": {
+      "face": 0,
+      "non_face": 5
+    },
+    "labels": {
+      "non_face": 5
+    },
+    "metrics": {
+      "auprc": null,
+      "auroc": null,
+      "balanced_accuracy": null,
+      "binary_metrics_allowed": false,
+      "macro_f1": null,
+      "report": "present-class recall/error only; absent-class metrics undefined"
+    },
+    "original_sources": 5,
+    "rois": 5,
+    "role": "development_val"
+  },
+  {
+    "confirmed_hard_negatives": 0,
+    "dataset_id": "CAVE",
+    "groups": 6,
+    "groups_by_label": {
+      "face": 0,
+      "non_face": 6
+    },
+    "labels": {
+      "non_face": 6
+    },
+    "metrics": {
+      "auprc": null,
+      "auroc": null,
+      "balanced_accuracy": null,
+      "binary_metrics_allowed": false,
+      "macro_f1": null,
+      "report": "present-class recall/error only; absent-class metrics undefined"
+    },
+    "original_sources": 6,
+    "rois": 6,
+    "role": "development_test"
+  },
+  {
+    "confirmed_hard_negatives": 0,
+    "dataset_id": "UWA",
+    "groups": 28,
+    "groups_by_label": {
+      "face": 28,
+      "non_face": 28
+    },
+    "labels": {
+      "face": 39,
+      "non_face": 39
+    },
+    "metrics": {
+      "auprc": "eligible",
+      "auroc": "eligible",
+      "balanced_accuracy": "eligible",
+      "binary_metrics_allowed": true,
+      "macro_f1": "eligible",
+      "report": "both class recalls"
+    },
+    "original_sources": 39,
+    "rois": 78,
+    "role": "development_train"
+  },
+  {
+    "confirmed_hard_negatives": 0,
+    "dataset_id": "UWA",
+    "groups": 7,
+    "groups_by_label": {
+      "face": 7,
+      "non_face": 7
+    },
+    "labels": {
+      "face": 10,
+      "non_face": 10
+    },
+    "metrics": {
+      "auprc": "eligible",
+      "auroc": "eligible",
+      "balanced_accuracy": "eligible",
+      "binary_metrics_allowed": true,
+      "macro_f1": "eligible",
+      "report": "both class recalls"
+    },
+    "original_sources": 10,
+    "rois": 20,
+    "role": "development_val"
+  },
+  {
+    "confirmed_hard_negatives": 0,
+    "dataset_id": "UWA",
+    "groups": 6,
+    "groups_by_label": {
+      "face": 6,
+      "non_face": 6
+    },
+    "labels": {
+      "face": 9,
+      "non_face": 9
+    },
+    "metrics": {
+      "auprc": "eligible",
+      "auroc": "eligible",
+      "balanced_accuracy": "eligible",
+      "binary_metrics_allowed": true,
+      "macro_f1": "eligible",
+      "report": "both class recalls"
+    },
+    "original_sources": 9,
+    "rois": 18,
+    "role": "development_test"
+  }
+]

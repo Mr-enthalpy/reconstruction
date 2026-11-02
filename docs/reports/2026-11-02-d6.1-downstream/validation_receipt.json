@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "new_synthetic_tests": 29,
+  "full_cpu_suite_passed": 173,
+  "source_inputs_rehashed_unchanged": true,
+  "private_manifest_deterministic_replay": true,
+  "frozen_lock_sha256": "6c5cbcc72820cedd0526bb5071db8a6bbedea16bb22d9a37e6cd4a0fa7c20d7e",
+  "private_manifest_sha256": "dbb8248db2d8c40694dd7909ec1d9bebc5d49cb9762de1161febbc3455b688c9",
+  "code_and_report_hash_verification": true,
+  "role_counts": {
+    "development_train": 96,
+    "development_val": 25,
+    "development_test": 24
+  },
+  "cave_positive_coordinates_and_semantics_preserved": true,
+  "publication_scan": "No private per-sample identities, labels, paths, image arrays or predictions in public report files",
+  "no_G4_cube_access": true,
+  "no_classifier_experiment": true,
+  "hardware_tests": false,
+  "note": "Post-freeze verification receipt; its own bytes are not part of the protocol lock to avoid circular hashes"
+}

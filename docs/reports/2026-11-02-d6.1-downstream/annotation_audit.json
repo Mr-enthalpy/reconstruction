@@ -1,0 +1,95 @@
+{
+  "active_development_labels": [
+    {
+      "count": 3,
+      "dataset_id": "CAVE",
+      "label": "face"
+    },
+    {
+      "count": 26,
+      "dataset_id": "CAVE",
+      "label": "non_face"
+    },
+    {
+      "count": 58,
+      "dataset_id": "UWA",
+      "label": "face"
+    },
+    {
+      "count": 58,
+      "dataset_id": "UWA",
+      "label": "non_face"
+    }
+  ],
+  "all_original_coordinates_preserved": true,
+  "cave_positive_policy": {
+    "conservative_groups": 1,
+    "coordinates_unchanged": true,
+    "physical_person": 2,
+    "printed_photo": 1,
+    "rois": 3,
+    "source_scenes": 2,
+    "train_only": true
+  },
+  "presentation_counts": [
+    {
+      "count": 26,
+      "dataset_id": "CAVE",
+      "presentation_type": "not_applicable"
+    },
+    {
+      "count": 2,
+      "dataset_id": "CAVE",
+      "presentation_type": "physical_person"
+    },
+    {
+      "count": 1,
+      "dataset_id": "CAVE",
+      "presentation_type": "printed_photo"
+    },
+    {
+      "count": 4,
+      "dataset_id": "CAVE",
+      "presentation_type": "unverified"
+    },
+    {
+      "count": 61,
+      "dataset_id": "UWA",
+      "presentation_type": "not_applicable"
+    },
+    {
+      "count": 61,
+      "dataset_id": "UWA",
+      "presentation_type": "physical_person"
+    },
+    {
+      "count": 84,
+      "dataset_id": "UWA",
+      "presentation_type": "unverified"
+    }
+  ],
+  "raw_historical_labels_unchanged": true,
+  "review_evidence": "D1 review_decisions, D2 CAVE decisions and D3 actual-image review records; no new visual inspection",
+  "review_states": [
+    {
+      "count": 4,
+      "dataset_id": "CAVE",
+      "label_review_status": "ambiguous"
+    },
+    {
+      "count": 29,
+      "dataset_id": "CAVE",
+      "label_review_status": "legacy_reviewed"
+    },
+    {
+      "count": 119,
+      "dataset_id": "UWA",
+      "label_review_status": "legacy_reviewed"
+    },
+    {
+      "count": 87,
+      "dataset_id": "UWA",
+      "label_review_status": "unreviewed"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "allowed_review_states": [
+    "legacy_reviewed",
+    "agent_reviewed",
+    "human_reviewed",
+    "human_adjudicated",
+    "unreviewed",
+    "ambiguous"
+  ],
+  "ambiguous": "unresolved statue/toy/mask/painting semantics require content review or human adjudication; never infer labels from names",
+  "cave_positive_preservation": {
+    "conservative_groups": 1,
+    "coordinates_unchanged": true,
+    "physical_person": 2,
+    "printed_photo": 1,
+    "rois": 3,
+    "source_scenes": 2,
+    "train_only": true
+  },
+  "excluded_tasks": [
+    "liveness",
+    "identity",
+    "real-versus-photo",
+    "authenticity",
+    "body detection"
+  ],
+  "hard_negative_rule": "confirmed non_face AND explicit content-supported hard_negative_type; no photo-as-negative shortcut",
+  "hard_negative_types": [
+    "nonhuman_face_structure",
+    "pareidolia_texture",
+    "head_or_eye_like_nonhuman_object",
+    "detector_false_positive_background",
+    "confirmed_negative_low_visibility"
+  ],
+  "negative": "no recognizable human face under the same definition",
+  "new_human_adjudications": 0,
+  "newly_reviewed_images": 0,
+  "positive": "recognizable human face in candidate region, including a clear photographed face",
+  "positive_presentations": [
+    "physical_person",
+    "printed_photo",
+    "screen_displayed_face",
+    "other_recognizable_human_face"
+  ],
+  "review_mapping": "Prior Agent evidence becomes legacy_reviewed with original reviewer retained; never human_reviewed",
+  "version": "D6.1-label-v1"
+}

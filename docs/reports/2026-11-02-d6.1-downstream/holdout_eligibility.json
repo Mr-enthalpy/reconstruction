@@ -1,0 +1,17 @@
+{
+  "additional_uwa_candidates": "D1 content/quality exposed; cross-session subjects overlap; not fresh final data",
+  "all_historical_task_tests_ineligible": true,
+  "consumed_g4_scenes": 14,
+  "eligible_records": 0,
+  "excluded_candidates": 239,
+  "exclusion_counts": {
+    "full_field_ineligible": 4,
+    "g4_consumed": 4,
+    "historical_exposure": 239,
+    "independence_not_verified": 239,
+    "known_n1_exposure": 179,
+    "label_review_required": 91
+  },
+  "final_holdout_status": "not_available",
+  "unreviewed_unmatched_data_not_promoted": true
+}

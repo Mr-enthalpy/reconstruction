@@ -1,0 +1,194 @@
+{
+  "a6_absent_uwa_is_not_proof": true,
+  "by_source": [
+    {
+      "active_development_groups": 27,
+      "active_development_rois": 29,
+      "active_development_sources": 28,
+      "admitted_labels": {
+        "face": 3,
+        "non_face": 26
+      },
+      "candidate_labels": {
+        "ambiguous": 4,
+        "face": 3,
+        "non_face": 26
+      },
+      "conservative_groups": 30,
+      "dataset_id": "CAVE",
+      "formal_test_ineligible": 33,
+      "full_fields_verified": 29,
+      "independence_status": {
+        "historically_exposed": 4,
+        "known_overlap": 29
+      },
+      "missing_derivative_records": 0,
+      "original_candidate_records": 33,
+      "original_sources": 32,
+      "source_records_without_verified_full_field": 4
+    },
+    {
+      "active_development_groups": 41,
+      "active_development_rois": 116,
+      "active_development_sources": 58,
+      "admitted_labels": {
+        "face": 58,
+        "non_face": 58
+      },
+      "candidate_labels": {
+        "face": 145,
+        "non_face": 61
+      },
+      "conservative_groups": 78,
+      "dataset_id": "UWA",
+      "formal_test_ineligible": 206,
+      "full_fields_verified": 206,
+      "independence_status": {
+        "historically_exposed": 146,
+        "independence_unverified": 60
+      },
+      "missing_derivative_records": 6,
+      "original_candidate_records": 206,
+      "original_sources": 145,
+      "source_records_without_verified_full_field": 0
+    }
+  ],
+  "counting": "ROI/candidate counts and source/family counts are distinct; counts of overlapping reasons are nonexclusive",
+  "d6_baseline_audit": {
+    "decision": "Do not claim independent RGB-versus-RGB+N1 gain from the legacy manifest. Freeze full-field candidates, matched capacity, source-balanced reporting and an untouched final holdout before a task experiment.",
+    "limitations": [
+      "Legacy task test scenes were evaluated historically; not a fresh integration holdout",
+      "CAVE validation/test have no positive ROIs in this manifest",
+      "UWA and CAVE have different radiometry and acquisition distributions",
+      "D3 32x32 cropped observations cannot substitute for full-field 512x512 A6 inference",
+      "UWA absent from N1 manifest; unmatched IDs alone do not establish all historical exposure"
+    ],
+    "n1_manifest_sha256": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3",
+    "n1_training_overlap_by_task_split": {
+      "test": 6,
+      "train": 18
+    },
+    "original_counts": [
+      {
+        "count": 6,
+        "dataset": "CAVE",
+        "label": "non_face",
+        "split": "test"
+      },
+      {
+        "count": 3,
+        "dataset": "CAVE",
+        "label": "face",
+        "split": "train"
+      },
+      {
+        "count": 15,
+        "dataset": "CAVE",
+        "label": "non_face",
+        "split": "train"
+      },
+      {
+        "count": 5,
+        "dataset": "CAVE",
+        "label": "non_face",
+        "split": "val"
+      },
+      {
+        "count": 9,
+        "dataset": "UWA",
+        "label": "face",
+        "split": "test"
+      },
+      {
+        "count": 9,
+        "dataset": "UWA",
+        "label": "non_face",
+        "split": "test"
+      },
+      {
+        "count": 39,
+        "dataset": "UWA",
+        "label": "face",
+        "split": "train"
+      },
+      {
+        "count": 39,
+        "dataset": "UWA",
+        "label": "non_face",
+        "split": "train"
+      },
+      {
+        "count": 10,
+        "dataset": "UWA",
+        "label": "face",
+        "split": "val"
+      },
+      {
+        "count": 10,
+        "dataset": "UWA",
+        "label": "non_face",
+        "split": "val"
+      }
+    ],
+    "overlap_key": "dataset + source scene, expanded to N1 source_group_id family; raw group strings differ between manifests",
+    "task_manifest_sha256": "b228db0b28d3e3fa452613efe5f1a29d79e28199aab153791fa258ea70978d32",
+    "unmatched_task_records_by_source": {
+      "UWA": 116
+    }
+  },
+  "final_exclusion_counts": {
+    "full_field_ineligible": 4,
+    "g4_consumed": 4,
+    "historical_exposure": 239,
+    "independence_not_verified": 239,
+    "known_n1_exposure": 179,
+    "label_review_required": 91
+  },
+  "historical_task_exposure_counts": {
+    "D1_oracle_test": 18,
+    "D1_oracle_train": 78,
+    "D1_oracle_val": 20,
+    "D2_task_test": 24,
+    "D2_task_test_subject_family": 22,
+    "D2_task_train": 93,
+    "D2_task_train_subject_family": 101,
+    "D2_task_val": 25,
+    "D2_task_val_subject_family": 23,
+    "D3_task_test": 24,
+    "D3_task_test_subject_family": 22,
+    "D3_task_train": 96,
+    "D3_task_train_subject_family": 101,
+    "D3_task_val": 25,
+    "D3_task_val_subject_family": 23
+  },
+  "n1_exposure_counts": {
+    "A6_model_selection_val": 5,
+    "A6_train_family": 24,
+    "D2_ROI_reconstructor_test": 24,
+    "D2_ROI_reconstructor_test_subject_family": 22,
+    "D2_ROI_reconstructor_train": 93,
+    "D2_ROI_reconstructor_train_subject_family": 101,
+    "D2_ROI_reconstructor_val": 25,
+    "D2_ROI_reconstructor_val_subject_family": 23,
+    "D3_ROI_reconstructor_test": 24,
+    "D3_ROI_reconstructor_test_subject_family": 22,
+    "D3_ROI_reconstructor_train": 96,
+    "D3_ROI_reconstructor_train_subject_family": 101,
+    "D3_ROI_reconstructor_val": 25,
+    "D3_ROI_reconstructor_val_subject_family": 23,
+    "D4_development_test": 6,
+    "D4_reserved_final": 3,
+    "D4_train": 18,
+    "D4_val": 5,
+    "G4_consumed_test": 4
+  },
+  "other_exposure_counts": {
+    "D1_source_and_quality_review": 206,
+    "D2_agent_content_review": 33,
+    "D4_UWA_whole_field_diagnostic_subject": 39,
+    "D5_D5.4_train_val_diagnostics": 29
+  },
+  "private_manifest_sha256": "dbb8248db2d8c40694dd7909ec1d9bebc5d49cb9762de1161febbc3455b688c9",
+  "scope": "All non-augmented D1 candidate records plus D3 CAVE ROIs and remaining CAVE inventory review records",
+  "verified_independent_records": 0
+}

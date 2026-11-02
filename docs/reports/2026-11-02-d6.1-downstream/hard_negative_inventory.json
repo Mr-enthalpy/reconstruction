@@ -1,0 +1,47 @@
+{
+  "ambiguous_cave_source_records": 4,
+  "confirmed_hard_negatives": 0,
+  "confirmed_types": [],
+  "evidence": "Legacy negative acceptance establishes semantic absence, not measured difficulty",
+  "format_or_label_review_sources": 1,
+  "mining": "training groups only; val and final candidates frozen; no error-based test-to-train recycling",
+  "missing_type_metrics": "hard-negative false-positive rate is null with reason no confirmed denominator",
+  "sources_requiring_human_semantic_review": 3,
+  "unassessed_negative_counts": [
+    {
+      "count": 6,
+      "dataset_id": "CAVE",
+      "protocol_role": "development_test"
+    },
+    {
+      "count": 15,
+      "dataset_id": "CAVE",
+      "protocol_role": "development_train"
+    },
+    {
+      "count": 5,
+      "dataset_id": "CAVE",
+      "protocol_role": "development_val"
+    },
+    {
+      "count": 9,
+      "dataset_id": "UWA",
+      "protocol_role": "development_test"
+    },
+    {
+      "count": 39,
+      "dataset_id": "UWA",
+      "protocol_role": "development_train"
+    },
+    {
+      "count": 10,
+      "dataset_id": "UWA",
+      "protocol_role": "development_val"
+    },
+    {
+      "count": 3,
+      "dataset_id": "UWA",
+      "protocol_role": "review_only"
+    }
+  ]
+}

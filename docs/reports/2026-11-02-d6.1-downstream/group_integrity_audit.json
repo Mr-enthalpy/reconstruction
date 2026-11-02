@@ -1,0 +1,10 @@
+{
+  "active_records": 145,
+  "all_native_to_512_coordinates_deterministic": true,
+  "group_keys_checked": 424,
+  "historical_derivatives_checked": 269,
+  "limits": "partition integrity is not proof of unknown cross-ID identity or background independence",
+  "original_cave_positive_coordinates_preserved": true,
+  "original_manifests_unchanged": true,
+  "status": "passed"
+}

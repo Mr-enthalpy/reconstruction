@@ -7,3 +7,5 @@ docs/reports/*/*_validation.json -text
 # D5.4 evidence/provenance JSONs retain the bytes used by their recorded hashes.
 docs/reports/2026-10-30-d5.4/*.json -text
 docs/reports/2026-11-01-d6/*.json -text
+# D6.1 protocol locks hash published report bytes consistently across platforms.
+docs/reports/2026-11-02-d6.1-downstream/* text eol=lf

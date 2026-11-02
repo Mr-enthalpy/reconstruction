@@ -1,0 +1,31 @@
+{
+  "additional_sources": "KAIST not admitted as labelled task data",
+  "assignment": "sorted sample ID; D3 original train/val/test preserved as development roles; all other candidates review_only",
+  "augmentation": "no augmentation in v1; all historical augmented examples excluded, ancestry validated",
+  "cave_group": "N1 source family; face and photo_and_face together; toy/chart family together",
+  "family_limits": "UWA cross-ID identities/shared backgrounds unverified; no global independence assertion",
+  "final_holdout_status": "not_available",
+  "historical_test": "development_test only; cannot select this version thresholds or checkpoint from it",
+  "new_random_roi_split": false,
+  "private_manifest_sha256": "dbb8248db2d8c40694dd7909ec1d9bebc5d49cb9762de1161febbc3455b688c9",
+  "role_counts": [
+    {
+      "count": 24,
+      "protocol_role": "development_test"
+    },
+    {
+      "count": 96,
+      "protocol_role": "development_train"
+    },
+    {
+      "count": 25,
+      "protocol_role": "development_val"
+    },
+    {
+      "count": 94,
+      "protocol_role": "review_only"
+    }
+  ],
+  "uwa_group": "subject_id includes all sessions, exposures, ROIs, derivatives; merge known aliases before version freeze",
+  "version": "D6.1-split-v1"
+}

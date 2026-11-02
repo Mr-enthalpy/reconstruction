@@ -1,0 +1,52 @@
+{
+  "implementation_sha256_lf": {
+    "__init__.py": "99e98ee81fd310413cf7a329a9a1a69aa97440e13c8da1a5d08773932dfc2182",
+    "audit_sources.py": "91176c0e84af3e72316fd1ac7e7614353fbbc14d7b2fa60087b30d1d6c445e87",
+    "freeze_classification_protocol.py": "93ec3ffb2cc4be85f459c404bd3212e5af9ee9c1e6051ca26193a3a3aa0ac30b",
+    "validate_groups.py": "2ce41c9328eb66f008ac50920da143234edcdcb3279fd273e1b0600f752c3560",
+    "verify_frozen.py": "ef8f86023d1c68df63455120e0ebc1b08236fbf2b01caaf6d0440da23ef80cfe"
+  },
+  "input_sha256": {
+    "cave_inventory": "28523730ccd8aab50283aa78bb8fd3de6012202a402833431fb2d75a781377f1",
+    "cave_review": "5511ac70969889662d41af0a2233dc0e67e1be35b7ac946c7d56897f8e3e5651",
+    "d1_crop_rejections": "885c8c0d19bc68e0276df096fd53afa94bbe63cf2794658164b6b26204f3d679",
+    "d1_manifest": "6b78be9362302780d75319852f4c46a944e5acdaf8ca01a30150fec431888da0",
+    "d1_oracle": "ba7ee347d39870d720f1a137ed2351857ed04a0f3db396d8d2c5d9aa939dc3a3",
+    "d1_review": "779915bb958809f92173f13796c59f03c2fc29cc7d34ab98f5b2acf546b4dccd",
+    "d1_splits": "a32f71e88bee1379237ae11db68c90fae6e45cf47a5098c5108ac0930ee8aac3",
+    "d2": "66ffc1deef97b98f96b5c96dc86a93d4c9af2ef4e96dcce4c6c31426ef2993f2",
+    "d4_manifest": "de334816a9b7a4dd381f193336a9db891b47db404a6b3c5c503c052c77d544bb",
+    "d4_uwa": "0f9155f2222e433763a6e47fdd617e754abbf30c6b602e1ea35f8330df786387",
+    "d6_audit": "86baa0a4f03be714821ee9b3e1bf8aecf1cfb5170ffb76d9ba972b0eb1de066b",
+    "g4_access": "526c3544425251877928bef7c18508bae87fadf98253c3d54459af6b11c3213e",
+    "g4_protocol": "14006d04975094874365ccdcf6fadf37ff3770f86b8fe5b9976996937df6c6d7",
+    "license_evidence": "1df7600a86f69daa36c85858fa0cb8005a3f995ab4f88288e7785a0a8ac20081",
+    "n1": "cfe89c34868b7eece4c6089d238d79fe224cd62c54db23df0a81ba7e40ef02f3",
+    "task": "b228db0b28d3e3fa452613efe5f1a29d79e28199aab153791fa258ea70978d32",
+    "uwa_archive": "34f78b92f496285d8f32374f94a777fae82896b433085d8e0fe40096715b9c53",
+    "uwa_receipt": "0cbf09cb53afb91ec07ddcf9f84c5e48fe08ad913324c01d98d362a83211c31d",
+    "uwa_samples": "266cf42b29ad8e77bbfb23eceb683e8a962144d33e8f50dda11bf4c56663f80c"
+  },
+  "policy": "Any changed samples, protocol or implementation requires an explicit new version; no silent overwrite",
+  "private_manifest_sha256": "dbb8248db2d8c40694dd7909ec1d9bebc5d49cb9762de1161febbc3455b688c9",
+  "public_file_sha256": {
+    "README.md": "69250d1c100b9c2e4602f56fa5181787a7dbdd728c0d613947d2d2cdd3b29d72",
+    "annotation_audit.json": "0c774b8dcddfac66c83abf7aeb3b61c6b44b2b8b8b3503d85d3aa75362dd0aed",
+    "classification_protocol_v1.json": "b8f1e04714e8dab6309e0aaccd5b5210a4ebc78d349c9115705613fe4ee369c3",
+    "classification_protocol_v1.md": "8e469d6d59c1a4087472517be342be30b02cdfa44f5db168906e26c30fb0c32e",
+    "data_gap_report.md": "d8e214fc31d474edd13d6b7490192138be67a86be386a7575679b33f4f369764",
+    "group_integrity_audit.json": "1ba9db7ffaedc0d6ae81037acf3e54b716db029a04486852edf03b0ba2836d95",
+    "hard_negative_coverage.md": "4b67f2048476a6341b2ac033f289169bbb9d89d489a7a2464f17cb85c9834f5d",
+    "hard_negative_inventory.json": "ec94625ab507039b296409fe6e25bd0a581008e790523a1e38580ad043131396",
+    "holdout_eligibility.json": "92e195437c4789167b786123d47b9a47bff637b4137c3b4505a6befa82220146",
+    "input_inventory.json": "fb2fd3d60ea9cf43cdbc65685dd550e8b2b2682e4b4640f6a9a1abf70efd6074",
+    "label_policy_v1.json": "5b6ee4db7c91450cf7a9614b7c47f74ada9a608120cc459b235b963e06875716",
+    "readiness_decision.json": "99c81340c883283efc90aa8ad8f001dd59bde0de2aa856b5f74acf157e882317",
+    "review_queue.json": "75da4a37d7452f03dceff39d8d9ede2ca42f1d38eeaa122bdc9f0b867abbce6b",
+    "source_class_balance.json": "f3b3fcb3e1de2e8b4441095bf02d153b65e8a70fa33ea75189c53e91bc686f37",
+    "source_exposure_analysis.md": "46ea905aec9cc63eab53c89098dc228dd7157e7906f54ff49cb695e9445d721c",
+    "source_exposure_audit.json": "52dfe2779637e0aada532d117f40a41797d6ba3208965a04be91e01e5eae7e2b",
+    "split_protocol_v1.json": "7e4a59eb753500af8ec113cd7f442d1df788d343aa7ad79053f0a7d542740675"
+  },
+  "version": "D6.1-lock-v1"
+}
